@@ -2,9 +2,9 @@
 /**
  * The template for displaying featured content
  *
- * @package WordPress
- * @subpackage Big_Blank
- * @since Big Blank 2.0
+ 
+ 
+
  */
 ?>
 
@@ -14,7 +14,7 @@
 		/**
 		 * Fires before the Big Blank featured content.
 		 *
-		 * @since Big Blank 2.0
+		
 		 */
 		do_action( 'bigblank_featured_posts_before' );
 
@@ -29,7 +29,7 @@
 		/**
 		 * Fires after the Big Blank featured content.
 		 *
-		 * @since Big Blank 2.0
+		
 		 */
 		do_action( 'bigblank_featured_posts_after' );
 

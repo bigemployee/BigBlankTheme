@@ -4,9 +4,9 @@
  *
  * The area of the page that contains comments and the comment form.
  *
- * @package WordPress
- * @subpackage Big_Blank
- * @since Big Blank 2.0
+ 
+ 
+
  */
 
 /*

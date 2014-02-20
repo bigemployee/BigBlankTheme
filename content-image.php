@@ -2,9 +2,9 @@
 /**
  * The template for displaying posts in the Image post format
  *
- * @package WordPress
- * @subpackage Big_Blank
- * @since Big Blank 2.0
+ 
+ 
+
  */
 ?>
 

@@ -2,9 +2,9 @@
 /**
  * The template for displaying a "No posts found" message
  *
- * @package WordPress
- * @subpackage Big_Blank
- * @since Big Blank 2.0
+ 
+ 
+
  */
 ?>
 

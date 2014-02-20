@@ -2,9 +2,9 @@
 /**
  * The template for displaying Search Results pages
  *
- * @package WordPress
- * @subpackage Big_Blank
- * @since Big Blank 2.0
+ 
+ 
+
  */
 
 get_header(); ?>

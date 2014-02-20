@@ -2,16 +2,16 @@
 /**
  * Custom template tags for Big Blank
  *
- * @package WordPress
- * @subpackage Big_Blank
- * @since Big Blank 2.0
+ 
+ 
+
  */
 
 if ( ! function_exists( 'bigblank_paging_nav' ) ) :
 /**
  * Display navigation to next/previous set of posts when applicable.
  *
- * @since Big Blank 2.0
+
  *
  * @return void
  */
@@ -66,7 +66,7 @@ if ( ! function_exists( 'bigblank_post_nav' ) ) :
 /**
  * Display navigation to next/previous post when applicable.
  *
- * @since Big Blank 2.0
+
  *
  * @return void
  */
@@ -101,7 +101,7 @@ if ( ! function_exists( 'bigblank_posted_on' ) ) :
 /**
  * Print HTML with meta information for the current post-date/time and author.
  *
- * @since Big Blank 2.0
+
  *
  * @return void
  */
@@ -124,7 +124,7 @@ endif;
 /**
  * Find out if blog has more than one category.
  *
- * @since Big Blank 2.0
+
  *
  * @return boolean true if blog has more than 1 category
  */
@@ -153,7 +153,7 @@ function bigblank_categorized_blog() {
 /**
  * Flush out the transients used in bigblank_categorized_blog.
  *
- * @since Big Blank 2.0
+
  *
  * @return void
  */
@@ -170,7 +170,7 @@ add_action( 'save_post',     'bigblank_category_transient_flusher' );
  * Wraps the post thumbnail in an anchor element on index
  * views, or a div element when on single views.
  *
- * @since Big Blank 2.0
+
  *
  * @return void
 */

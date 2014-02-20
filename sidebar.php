@@ -2,9 +2,9 @@
 /**
  * The Sidebar containing the main widget area
  *
- * @package WordPress
- * @subpackage Big_Blank
- * @since Big Blank 2.0
+ 
+ 
+
  */
 ?>
 <div id="secondary">

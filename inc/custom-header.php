@@ -2,15 +2,15 @@
 /**
  * Implement Custom Header functionality for Big Blank
  *
- * @package WordPress
- * @subpackage Big_Blank
- * @since Big Blank 2.0
+ 
+ 
+
  */
 
 /**
  * Set up the WordPress core custom header settings.
  *
- * @since Big Blank 2.0
+
  *
  * @uses bigblank_header_style()
  * @uses bigblank_admin_header_style()
@@ -20,7 +20,7 @@ function bigblank_custom_header_setup() {
 	/**
 	 * Filter Big Blank custom-header support arguments.
 	 *
-	 * @since Big Blank 2.0
+	
 	 *
 	 * @param array $args {
 	 *     An array of custom-header support arguments.
@@ -94,7 +94,7 @@ if ( ! function_exists( 'bigblank_admin_header_style' ) ) :
  *
  * @see bigblank_custom_header_setup()
  *
- * @since Big Blank 2.0
+
  */
 function bigblank_admin_header_style() {
 ?>
@@ -129,7 +129,7 @@ if ( ! function_exists( 'bigblank_admin_header_image' ) ) :
  *
  * @see bigblank_custom_header_setup()
  *
- * @since Big Blank 2.0
+
  */
 function bigblank_admin_header_image() {
 ?>

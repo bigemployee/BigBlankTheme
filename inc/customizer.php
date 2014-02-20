@@ -2,15 +2,15 @@
 /**
  * Big Blank Theme Customizer support
  *
- * @package WordPress
- * @subpackage Big_Blank
- * @since Big Blank 2.0
+ 
+ 
+
  */
 
 /**
  * Implement Theme Customizer additions and adjustments.
  *
- * @since Big Blank 2.0
+
  *
  * @param WP_Customize_Manager $wp_customize Theme Customizer object.
  */
@@ -58,7 +58,7 @@ add_action( 'customize_register', 'bigblank_customize_register' );
 /**
  * Sanitize the Featured Content layout value.
  *
- * @since Big Blank 2.0
+
  *
  * @param string $layout Layout type.
  * @return string Filtered layout type (grid|slider).
@@ -74,7 +74,7 @@ function bigblank_sanitize_layout( $layout ) {
 /**
  * Bind JS handlers to make Theme Customizer preview reload changes asynchronously.
  *
- * @since Big Blank 2.0
+
  */
 function bigblank_customize_preview_js() {
 	wp_enqueue_script( 'bigblank_customizer', get_template_directory_uri() . '/js/customizer.js', array( 'customize-preview' ), '20131205', true );
@@ -84,7 +84,7 @@ add_action( 'customize_preview_init', 'bigblank_customize_preview_js' );
 /**
  * Add contextual help to the Themes and Post edit screens.
  *
- * @since Big Blank 2.0
+
  *
  * @return void
  */

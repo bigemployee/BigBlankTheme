@@ -2,9 +2,9 @@
 /**
  * The template used for displaying page content
  *
- * @package WordPress
- * @subpackage Big_Blank
- * @since Big Blank 2.0
+ 
+ 
+
  */
 ?>
 

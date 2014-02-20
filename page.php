@@ -6,9 +6,9 @@
  * Please note that this is the WordPress construct of pages and that
  * other 'pages' on your WordPress site will use a different template.
  *
- * @package WordPress
- * @subpackage Big_Blank
- * @since Big Blank 2.0
+ 
+ 
+
  */
 
 get_header(); ?>

@@ -6,9 +6,9 @@
  *
  * @link http://codex.wordpress.org/Template_Hierarchy
  *
- * @package WordPress
- * @subpackage Big_Blank
- * @since Big Blank 2.0
+ 
+ 
+
  */
 
 get_header(); ?>

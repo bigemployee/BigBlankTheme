@@ -2,9 +2,9 @@
 /**
  * The template for displaying featured posts on the front page
  *
- * @package WordPress
- * @subpackage Big_Blank
- * @since Big Blank 2.0
+ 
+ 
+
  */
 ?>
 

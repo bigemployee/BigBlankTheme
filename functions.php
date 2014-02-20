@@ -20,9 +20,9 @@
  * For more information on hooks, actions, and filters,
  * @link http://codex.wordpress.org/Plugin_API
  *
- * @package WordPress
- * @subpackage Big_Blank
- * @since Big Blank 2.0
+ 
+ 
+
  */
 
 /**
@@ -30,7 +30,7 @@
  *
  * @see bigblank_content_width()
  *
- * @since Big Blank 2.0
+
  */
 if ( ! isset( $content_width ) ) {
 	$content_width = 474;
@@ -53,7 +53,7 @@ if ( ! function_exists( 'bigblank_setup' ) ) :
  * runs before the init hook. The init hook is too late for some features, such
  * as indicating support post thumbnails.
  *
- * @since Big Blank 2.0
+
  */
 function bigblank_setup() {
 
@@ -120,7 +120,7 @@ add_action( 'after_setup_theme', 'bigblank_setup' );
 /**
  * Adjust content_width value for image attachment template.
  *
- * @since Big Blank 2.0
+
  *
  * @return void
  */
@@ -134,7 +134,7 @@ add_action( 'template_redirect', 'bigblank_content_width' );
 /**
  * Getter function for Featured Content Plugin.
  *
- * @since Big Blank 2.0
+
  *
  * @return array An array of WP_Post objects.
  */
@@ -142,7 +142,7 @@ function bigblank_get_featured_posts() {
 	/**
 	 * Filter the featured posts to return in Big Blank.
 	 *
-	 * @since Big Blank 2.0
+	
 	 *
 	 * @param array|bool $posts Array of featured posts, otherwise false.
 	 */
@@ -152,7 +152,7 @@ function bigblank_get_featured_posts() {
 /**
  * A helper conditional function that returns a boolean value.
  *
- * @since Big Blank 2.0
+
  *
  * @return bool Whether there are featured posts.
  */
@@ -163,7 +163,7 @@ function bigblank_has_featured_posts() {
 /**
  * Register three Big Blank widget areas.
  *
- * @since Big Blank 2.0
+
  *
  * @return void
  */
@@ -204,7 +204,7 @@ add_action( 'widgets_init', 'bigblank_widgets_init' );
 /**
  * Register Lato Google font for Big Blank.
  *
- * @since Big Blank 2.0
+
  *
  * @return string
  */
@@ -224,7 +224,7 @@ function bigblank_font_url() {
 /**
  * Enqueue scripts and styles for the front end.
  *
- * @since Big Blank 2.0
+
  *
  * @return void
  */
@@ -269,7 +269,7 @@ add_action( 'wp_enqueue_scripts', 'bigblank_scripts' );
 /**
  * Enqueue Google fonts style to admin screen for custom header display.
  *
- * @since Big Blank 2.0
+
  *
  * @return void
  */
@@ -282,7 +282,7 @@ if ( ! function_exists( 'bigblank_the_attached_image' ) ) :
 /**
  * Print the attached image with a link to the next attached image.
  *
- * @since Big Blank 2.0
+
  *
  * @return void
  */
@@ -291,7 +291,7 @@ function bigblank_the_attached_image() {
 	/**
 	 * Filter the default Big Blank attachment size.
 	 *
-	 * @since Big Blank 2.0
+	
 	 *
 	 * @param array $dimensions {
 	 *     An array of height and width dimensions.
@@ -351,7 +351,7 @@ if ( ! function_exists( 'bigblank_list_authors' ) ) :
 /**
  * Print a list of all site contributors who published at least one post.
  *
- * @since Big Blank 2.0
+
  *
  * @return void
  */
@@ -404,7 +404,7 @@ endif;
  * 6. Single views.
  * 7. Featured content layout.
  *
- * @since Big Blank 2.0
+
  *
  * @param array $classes A list of existing body class values.
  * @return array The filtered body class list.
@@ -455,7 +455,7 @@ add_filter( 'body_class', 'bigblank_body_classes' );
  * Adds a post class to denote:
  * Non-password protected page with a post thumbnail.
  *
- * @since Big Blank 2.0
+
  *
  * @param array $classes A list of existing post class values.
  * @return array The filtered post class list.
@@ -473,7 +473,7 @@ add_filter( 'post_class', 'bigblank_post_classes' );
  * Create a nicely formatted and more specific title element text for output
  * in head of document, based on current view.
  *
- * @since Big Blank 2.0
+
  *
  * @param string $title Default title text for current view.
  * @param string $sep Optional separator.

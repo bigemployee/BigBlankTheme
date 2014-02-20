@@ -6,9 +6,9 @@
  * since this theme is not meant to be backward compatible beyond that
  * and relies on many newer functions and markup changes introduced in 3.6.
  *
- * @package WordPress
- * @subpackage Big_Blank
- * @since Big Blank 2.0
+ 
+ 
+
  */
 
 /**
@@ -16,7 +16,7 @@
  *
  * Switches to the default theme.
  *
- * @since Big Blank 2.0
+
  *
  * @return void
  */
@@ -33,7 +33,7 @@ add_action( 'after_switch_theme', 'bigblank_switch_theme' );
  * Prints an update nag after an unsuccessful attempt to switch to
  * Big Blank on WordPress versions prior to 3.6.
  *
- * @since Big Blank 2.0
+
  *
  * @return void
  */
@@ -45,7 +45,7 @@ function bigblank_upgrade_notice() {
 /**
  * Prevent the Theme Customizer from being loaded on WordPress versions prior to 3.6.
  *
- * @since Big Blank 2.0
+
  *
  * @return void
  */
@@ -59,7 +59,7 @@ add_action( 'load-customize.php', 'bigblank_customize' );
 /**
  * Prevent the Theme Preview from being loaded on WordPress versions prior to 3.4.
  *
- * @since Big Blank 2.0
+
  *
  * @return void
  */

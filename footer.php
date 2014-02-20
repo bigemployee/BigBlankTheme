@@ -4,9 +4,9 @@
  *
  * Contains footer content and the closing of the #main and #page div elements.
  *
- * @package WordPress
- * @subpackage Big_Blank
- * @since Big Blank 2.0
+ 
+ 
+
  */
 ?>
 

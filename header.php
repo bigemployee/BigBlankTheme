@@ -4,9 +4,9 @@
  *
  * Displays all of the <head> section and everything up till <div id="main">
  *
- * @package WordPress
- * @subpackage Big_Blank
- * @since Big Blank 2.0
+ 
+ 
+
  */
 ?><!DOCTYPE html>
 <!--[if IE 7]>
