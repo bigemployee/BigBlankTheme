@@ -1,19 +1,11 @@
-#  Based on Big Blank Theme // by BigEmployee.com
-#    ______ _         _____                 _
-#    | ___ (_)       |  ___|               | |
-#    | |_/ /_  __ _  | |__  _ __ ___  _ __ | | ___  _   _  ___  ___
-#    | ___ \ |/ _` | |  __|| '_ ` _ \| '_ \| |/ _ \| | | |/ _ \/ _ #    | |_/ / | (_| | | |___| | | | | | |_) | | (_) | |_| |  __/  __/
-#    \____/|_|\__, | \____/|_| |_| |_| .__/|_|\___/ \__, |\___|\___|
-#              __/ |                 | |             __/ |
-#             |___/                  |_|            |___/
-#
+# Based on Big Blank Theme // by BigEmployee.com
 # Dual Licensed under MIT and GPL3. Enjoy :]
 msgid ""
 msgstr ""
 "Project-Id-Version: Big Blank 2.0\n"
 "Report-Msgid-Bugs-To: http://wordpress.org/tags/bigblank\n"
-"POT-Creation-Date: 2014-02-20 08:11-0800\n"
-"PO-Revision-Date: 2014-02-20 08:11-0800\n"
+"POT-Creation-Date: 2014-02-20 08:44-0800\n"
+"PO-Revision-Date: 2014-02-20 08:44-0800\n"
 "Last-Translator: Norik Davtian <@NorikDavtian>\n"
 "Language-Team: Big Employee <@NorikDavtian>\n"
 "Language: en\n"
@@ -26,267 +18,267 @@ msgstr ""
 "X-Poedit-Basepath: ..\n"
 "X-Poedit-SearchPath-0: .\n"
 
-#: 404.php:17
+#: 404.php:11
 msgid "Not Found"
 msgstr ""
 
-#: 404.php:21
+#: 404.php:14
 msgid "It looks like nothing was found at this location. Maybe try a search?"
 msgstr ""
 
-#: archive.php:31
+#: archive.php:25
 #, php-format
 msgid "Daily Archives: %s"
 msgstr ""
 
-#: archive.php:34
+#: archive.php:27
 #, php-format
 msgid "Monthly Archives: %s"
 msgstr ""
 
-#: archive.php:34
+#: archive.php:27
 msgid "F Y"
 msgstr ""
 
-#: archive.php:37
+#: archive.php:29
 #, php-format
 msgid "Yearly Archives: %s"
 msgstr ""
 
-#: archive.php:37
+#: archive.php:29
 msgid "Y"
 msgstr ""
 
-#: archive.php:40 taxonomy-post_format.php:51
+#: archive.php:31 taxonomy-post_format.php:38
 msgid "Archives"
 msgstr ""
 
-#: author.php:31
+#: author.php:24
 #, php-format
 msgid "All posts by %s"
 msgstr ""
 
-#: category.php:20
+#: category.php:14
 #, php-format
 msgid "Category Archives: %s"
 msgstr ""
 
-#: comments.php:27
+#: comments.php:20
 #, php-format
 msgid "One thought on &ldquo;%2$s&rdquo;"
 msgstr ""
 
-#: comments.php:34 comments.php:52
+#: comments.php:25 comments.php:41
 msgid "Comment navigation"
 msgstr ""
 
-#: comments.php:35 comments.php:53
+#: comments.php:26 comments.php:42
 msgid "&larr; Older Comments"
 msgstr ""
 
-#: comments.php:36 comments.php:54
+#: comments.php:27 comments.php:43
 msgid "Newer Comments &rarr;"
 msgstr ""
 
-#: comments.php:59
+#: comments.php:47
 msgid "Comments are closed."
 msgstr ""
 
-#: content-aside.php:17 content-audio.php:17 content-featured-post.php:28
-#: content-gallery.php:17 content-image.php:17 content-link.php:17
-#: content-quote.php:17 content-video.php:17 content.php:19
+#: content-aside.php:12 content-audio.php:12 content-featured-post.php:23
+#: content-gallery.php:12 content-image.php:12 content-link.php:12
+#: content-quote.php:12 content-video.php:12 content.php:14
 msgid ", "
 msgstr ""
 
-#: content-aside.php:37 content-audio.php:37 content-gallery.php:37
-#: content-image.php:37 content-link.php:37 content-quote.php:37
-#: content-video.php:37 content.php:38 inc/widgets.php:180
+#: content-aside.php:28 content-audio.php:28 content-gallery.php:28
+#: content-image.php:28 content-link.php:28 content-quote.php:28
+#: content-video.php:28 content.php:30 inc/widgets.php:151
 msgid "Leave a comment"
 msgstr ""
 
-#: content-aside.php:37 content-audio.php:37 content-gallery.php:37
-#: content-image.php:37 content-link.php:37 content-quote.php:37
-#: content-video.php:37 content.php:38 inc/widgets.php:180
+#: content-aside.php:28 content-audio.php:28 content-gallery.php:28
+#: content-image.php:28 content-link.php:28 content-quote.php:28
+#: content-video.php:28 content.php:30 inc/widgets.php:151
 msgid "1 Comment"
 msgstr ""
 
-#: content-aside.php:37 content-audio.php:37 content-gallery.php:37
-#: content-image.php:37 content-link.php:37 content-quote.php:37
-#: content-video.php:37 content.php:38 inc/widgets.php:180
+#: content-aside.php:28 content-audio.php:28 content-gallery.php:28
+#: content-image.php:28 content-link.php:28 content-quote.php:28
+#: content-video.php:28 content.php:30 inc/widgets.php:151
 msgid "% Comments"
 msgstr ""
 
-#: content-aside.php:40 content-audio.php:40 content-gallery.php:40
-#: content-image.php:40 content-link.php:40 content-page.php:28
-#: content-quote.php:40 content-video.php:40 content.php:42 image.php:34
-#: page-templates/contributors.php:35
+#: content-aside.php:30 content-audio.php:30 content-gallery.php:30
+#: content-image.php:30 content-link.php:30 content-page.php:22
+#: content-quote.php:30 content-video.php:30 content.php:33 image.php:23
+#: page-templates/contributors.php:26
 msgid "Edit"
 msgstr ""
 
-#: content-aside.php:46 content-audio.php:46 content-gallery.php:46
-#: content-image.php:46 content-link.php:46 content-quote.php:46
-#: content-video.php:46 content.php:54 inc/widgets.php:113 inc/widgets.php:158
+#: content-aside.php:35 content-audio.php:35 content-gallery.php:35
+#: content-image.php:35 content-link.php:35 content-quote.php:35
+#: content-video.php:35 content.php:44 inc/widgets.php:100 inc/widgets.php:137
 msgid "Continue reading <span class=\"meta-nav\">&rarr;</span>"
 msgstr ""
 
-#: content-aside.php:48 content-audio.php:48 content-gallery.php:48
-#: content-image.php:48 content-link.php:48 content-page.php:22
-#: content-quote.php:48 content-video.php:48 content.php:56 image.php:54
+#: content-aside.php:37 content-audio.php:37 content-gallery.php:37
+#: content-image.php:37 content-link.php:37 content-page.php:17
+#: content-quote.php:37 content-video.php:37 content.php:46 image.php:40
 msgid "Pages:"
 msgstr ""
 
-#: content-none.php:12
+#: content-none.php:8
 msgid "Nothing Found"
 msgstr ""
 
-#: content-none.php:18
+#: content-none.php:12
 #, php-format
 msgid ""
 "Ready to publish your first post? <a href=\"%1$s\">Get started here</a>."
 msgstr ""
 
-#: content-none.php:22
+#: content-none.php:14
 msgid ""
 "Sorry, but nothing matched your search terms. Please try again with some "
 "different keywords."
 msgstr ""
 
-#: content-none.php:27
+#: content-none.php:17
 msgid ""
 "It seems we can&rsquo;t find what you&rsquo;re looking for. Perhaps "
 "searching can help."
 msgstr ""
 
-#: footer.php:21
+#: footer.php:14
 msgid "http://bigblanktheme.com/"
 msgstr ""
 
-#: footer.php:21
+#: footer.php:14
 #, php-format
 msgid "Proudly powered by %s"
 msgstr ""
 
-#: functions.php:83
+#: functions.php:71
 msgid "Top primary menu"
 msgstr ""
 
-#: functions.php:84
+#: functions.php:72
 msgid "Secondary menu in left sidebar"
 msgstr ""
 
-#: functions.php:175
+#: functions.php:154
 msgid "Primary Sidebar"
 msgstr ""
 
-#: functions.php:177
+#: functions.php:156
 msgid "Main sidebar that appears on the left."
 msgstr ""
 
-#: functions.php:184
+#: functions.php:163
 msgid "Content Sidebar"
 msgstr ""
 
-#: functions.php:186
+#: functions.php:165
 msgid "Additional sidebar that appears on the right."
 msgstr ""
 
-#: functions.php:193
+#: functions.php:172
 msgid "Footer Widget Area"
 msgstr ""
 
-#: functions.php:195
+#: functions.php:174
 msgid "Appears in the footer section of the site."
 msgstr ""
 
-#: functions.php:217
+#: functions.php:196
 msgid "on"
 msgstr ""
 
-#: functions.php:260
+#: functions.php:230
 msgid "Previous"
 msgstr ""
 
-#: functions.php:261
+#: functions.php:231
 msgid "Next"
 msgstr ""
 
-#: functions.php:384
+#: functions.php:342
 #, php-format
 msgid "%d Article"
 msgstr ""
 
-#: functions.php:500
+#: functions.php:442
 #, php-format
 msgid "Page %s"
 msgstr ""
 
-#: header.php:48
+#: header.php:42
 msgid "Search"
 msgstr ""
 
-#: header.php:52
+#: header.php:45
 msgid "Primary Menu"
 msgstr ""
 
-#: header.php:53
+#: header.php:46
 msgid "Skip to content"
 msgstr ""
 
-#: image.php:65
+#: image.php:50
 msgid "Previous Image"
 msgstr ""
 
-#: image.php:66
+#: image.php:51
 msgid "Next Image"
 msgstr ""
 
-#: inc/back-compat.php:41 inc/back-compat.php:53 inc/back-compat.php:68
+#: inc/back-compat.php:38 inc/back-compat.php:49 inc/back-compat.php:64
 #, php-format
 msgid ""
 "Big Blank requires at least WordPress version 3.6. You are running version "
 "%s. Please upgrade and try again."
 msgstr ""
 
-#: inc/customizer.php:19 inc/customizer.php:20
+#: inc/customizer.php:16 inc/customizer.php:17
 msgid "Background may only be visible on wide screens."
 msgstr ""
 
-#: inc/customizer.php:28
+#: inc/customizer.php:23
 msgid "Site Title Color"
 msgstr ""
 
-#: inc/customizer.php:31
+#: inc/customizer.php:25
 msgid "Display Site Title &amp; Tagline"
 msgstr ""
 
-#: inc/customizer.php:35 inc/featured-content.php:408
+#: inc/customizer.php:28 inc/featured-content.php:359
 msgid "Featured Content"
 msgstr ""
 
-#: inc/customizer.php:36
+#: inc/customizer.php:29
 #, php-format
 msgid ""
 "Use a <a href=\"%1$s\">tag</a> to feature your posts. If no posts match the "
 "tag, <a href=\"%2$s\">sticky posts</a> will be displayed instead."
 msgstr ""
 
-#: inc/customizer.php:47
+#: inc/customizer.php:38
 msgid "Layout"
 msgstr ""
 
-#: inc/customizer.php:51
+#: inc/customizer.php:42
 msgid "Grid"
 msgstr ""
 
-#: inc/customizer.php:52
+#: inc/customizer.php:43
 msgid "Slider"
 msgstr ""
 
-#: inc/customizer.php:98
+#: inc/customizer.php:86
 msgid "Big Blank"
 msgstr ""
 
-#: inc/customizer.php:101
+#: inc/customizer.php:89
 #, php-format
 msgid ""
 "The home page features your choice of up to 6 posts prominently displayed in "
@@ -296,7 +288,7 @@ msgid ""
 "will be displayed instead."
 msgstr ""
 
-#: inc/customizer.php:102
+#: inc/customizer.php:90
 #, php-format
 msgid ""
 "Enhance your site design by using <a href=\"%s\">Featured Images</a> for "
@@ -306,14 +298,14 @@ msgid ""
 "and in the Featured Content area on the home page."
 msgstr ""
 
-#: inc/customizer.php:103
+#: inc/customizer.php:91
 #, php-format
 msgid ""
 "For an in-depth tutorial, and more tips and tricks, visit the <a href=\"%s"
 "\">Big Blank documentation</a>."
 msgstr ""
 
-#: inc/featured-content.php:409
+#: inc/featured-content.php:360
 #, php-format
 msgid ""
 "Use the <a href=\"%1$s\">\"featured\" tag</a> to feature your posts. You can "
@@ -321,112 +313,112 @@ msgid ""
 "\"%2$s\">sticky posts</a> will be displayed instead."
 msgstr ""
 
-#: inc/featured-content.php:428
+#: inc/featured-content.php:377
 msgid "Tag Name"
 msgstr ""
 
-#: inc/featured-content.php:433
+#: inc/featured-content.php:382
 msgid "Don&rsquo;t display tag on front end."
 msgstr ""
 
-#: inc/template-tags.php:47
+#: inc/template-tags.php:38
 msgid "&larr; Previous"
 msgstr ""
 
-#: inc/template-tags.php:48
+#: inc/template-tags.php:39
 msgid "Next &rarr;"
 msgstr ""
 
-#: inc/template-tags.php:55
+#: inc/template-tags.php:44
 msgid "Posts navigation"
 msgstr ""
 
-#: inc/template-tags.php:84
+#: inc/template-tags.php:71
 msgid "Post navigation"
 msgstr ""
 
-#: inc/template-tags.php:88
+#: inc/template-tags.php:75
 msgid "<span class=\"meta-nav\">Published In</span>%title"
 msgstr ""
 
-#: inc/template-tags.php:90
+#: inc/template-tags.php:77
 msgid "<span class=\"meta-nav\">Previous Post</span>%title"
 msgstr ""
 
-#: inc/template-tags.php:91
+#: inc/template-tags.php:78
 msgid "<span class=\"meta-nav\">Next Post</span>%title"
 msgstr ""
 
-#: inc/template-tags.php:110
+#: inc/template-tags.php:97
 msgid "Sticky"
 msgstr ""
 
-#: inc/widgets.php:44
+#: inc/widgets.php:38
 msgid "Big Blank Ephemera"
 msgstr ""
 
-#: inc/widgets.php:46
+#: inc/widgets.php:40
 msgid ""
 "Use this widget to list your recent Aside, Quote, Video, Audio, Image, "
 "Gallery, and Link posts"
 msgstr ""
 
-#: inc/widgets.php:53 taxonomy-post_format.php:30
+#: inc/widgets.php:46 taxonomy-post_format.php:24
 msgid "Asides"
 msgstr ""
 
-#: inc/widgets.php:54 taxonomy-post_format.php:33
+#: inc/widgets.php:47 taxonomy-post_format.php:26
 msgid "Images"
 msgstr ""
 
-#: inc/widgets.php:55 taxonomy-post_format.php:36
+#: inc/widgets.php:48 taxonomy-post_format.php:28
 msgid "Videos"
 msgstr ""
 
-#: inc/widgets.php:56 taxonomy-post_format.php:39
+#: inc/widgets.php:49 taxonomy-post_format.php:30
 msgid "Audio"
 msgstr ""
 
-#: inc/widgets.php:57 taxonomy-post_format.php:42
+#: inc/widgets.php:50 taxonomy-post_format.php:32
 msgid "Quotes"
 msgstr ""
 
-#: inc/widgets.php:58 taxonomy-post_format.php:45
+#: inc/widgets.php:51 taxonomy-post_format.php:34
 msgid "Links"
 msgstr ""
 
-#: inc/widgets.php:59 taxonomy-post_format.php:48
+#: inc/widgets.php:52 taxonomy-post_format.php:36
 msgid "Galleries"
 msgstr ""
 
-#: inc/widgets.php:148
+#: inc/widgets.php:130
 #, php-format
 msgid "This gallery contains <a href=\"%1$s\" rel=\"bookmark\">%2$s photo</a>."
 msgstr ""
 
-#: inc/widgets.php:189
+#: inc/widgets.php:159
 #, php-format
 msgid "More %s <span class=\"meta-nav\">&rarr;</span>"
 msgstr ""
 
-#: inc/widgets.php:236
+#: inc/widgets.php:199
 msgid "Title:"
 msgstr ""
 
-#: inc/widgets.php:239
+#: inc/widgets.php:201
 msgid "Number of posts to show:"
 msgstr ""
 
-#: inc/widgets.php:242
+#: inc/widgets.php:203
 msgid "Post format to show:"
 msgstr ""
 
-#: search.php:18
+#: search.php:12
 #, php-format
 msgid "Search Results for: %s"
 msgstr ""
 
-#: tag.php:22
+#: tag.php:16
 #, php-format
 msgid "Tag Archives: %s"
 msgstr ""
