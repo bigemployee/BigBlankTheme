@@ -1,16 +1,30 @@
-# Copyright (C) 2013 the WordPress team
-# This file is distributed under the GNU General Public License v2 or later.
+#  Based on Big Blank Theme // by BigEmployee.com
+#    ______ _         _____                 _
+#    | ___ (_)       |  ___|               | |
+#    | |_/ /_  __ _  | |__  _ __ ___  _ __ | | ___  _   _  ___  ___
+#    | ___ \ |/ _` | |  __|| '_ ` _ \| '_ \| |/ _ \| | | |/ _ \/ _ #    | |_/ / | (_| | | |___| | | | | | |_) | | (_) | |_| |  __/  __/
+#    \____/|_|\__, | \____/|_| |_| |_| .__/|_|\___/ \__, |\___|\___|
+#              __/ |                 | |             __/ |
+#             |___/                  |_|            |___/
+#
+# Dual Licensed under MIT and GPL3. Enjoy :]
 msgid ""
 msgstr ""
 "Project-Id-Version: Big Blank 2.0\n"
 "Report-Msgid-Bugs-To: http://wordpress.org/tags/bigblank\n"
-"POT-Creation-Date: 2013-12-12 05:25:07+00:00\n"
+"POT-Creation-Date: 2014-02-20 08:11-0800\n"
+"PO-Revision-Date: 2014-02-20 08:11-0800\n"
+"Last-Translator: Norik Davtian <@NorikDavtian>\n"
+"Language-Team: Big Employee <@NorikDavtian>\n"
+"Language: en\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"PO-Revision-Date: 2013-MO-DA HO:MI+ZONE\n"
-"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
-"Language-Team: LANGUAGE <LL@li.org>\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"X-Generator: Poedit 1.6.4\n"
+"X-Poedit-KeywordsList: __;_e;_n;_x;_ex;_nx\n"
+"X-Poedit-Basepath: ..\n"
+"X-Poedit-SearchPath-0: .\n"
 
 #: 404.php:17
 msgid "Not Found"
@@ -21,24 +35,25 @@ msgid "It looks like nothing was found at this location. Maybe try a search?"
 msgstr ""
 
 #: archive.php:31
+#, php-format
 msgid "Daily Archives: %s"
 msgstr ""
 
 #: archive.php:34
+#, php-format
 msgid "Monthly Archives: %s"
 msgstr ""
 
 #: archive.php:34
-msgctxt "monthly archives date format"
 msgid "F Y"
 msgstr ""
 
 #: archive.php:37
+#, php-format
 msgid "Yearly Archives: %s"
 msgstr ""
 
 #: archive.php:37
-msgctxt "yearly archives date format"
 msgid "Y"
 msgstr ""
 
@@ -47,18 +62,19 @@ msgid "Archives"
 msgstr ""
 
 #: author.php:31
+#, php-format
 msgid "All posts by %s"
 msgstr ""
 
 #: category.php:20
+#, php-format
 msgid "Category Archives: %s"
 msgstr ""
 
 #: comments.php:27
+#, php-format
 msgid "One thought on &ldquo;%2$s&rdquo;"
-msgid_plural "%1$s thoughts on &ldquo;%2$s&rdquo;"
-msgstr[0] ""
-msgstr[1] ""
+msgstr ""
 
 #: comments.php:34 comments.php:52
 msgid "Comment navigation"
@@ -79,7 +95,6 @@ msgstr ""
 #: content-aside.php:17 content-audio.php:17 content-featured-post.php:28
 #: content-gallery.php:17 content-image.php:17 content-link.php:17
 #: content-quote.php:17 content-video.php:17 content.php:19
-msgctxt "Used between list items, there is a space after the comma."
 msgid ", "
 msgstr ""
 
@@ -125,6 +140,7 @@ msgid "Nothing Found"
 msgstr ""
 
 #: content-none.php:18
+#, php-format
 msgid ""
 "Ready to publish your first post? <a href=\"%1$s\">Get started here</a>."
 msgstr ""
@@ -141,13 +157,12 @@ msgid ""
 "searching can help."
 msgstr ""
 
-#. #-#-#-#-#  bigblank.pot (Big Blank 2.0)  #-#-#-#-#
-#. Author URI of the plugin/theme
 #: footer.php:21
-msgid "http://wordpress.org/"
+msgid "http://bigblanktheme.com/"
 msgstr ""
 
 #: footer.php:21
+#, php-format
 msgid "Proudly powered by %s"
 msgstr ""
 
@@ -184,7 +199,6 @@ msgid "Appears in the footer section of the site."
 msgstr ""
 
 #: functions.php:217
-msgctxt "Lato font: on or off"
 msgid "on"
 msgstr ""
 
@@ -197,12 +211,12 @@ msgid "Next"
 msgstr ""
 
 #: functions.php:384
+#, php-format
 msgid "%d Article"
-msgid_plural "%d Articles"
-msgstr[0] ""
-msgstr[1] ""
+msgstr ""
 
 #: functions.php:500
+#, php-format
 msgid "Page %s"
 msgstr ""
 
@@ -227,9 +241,10 @@ msgid "Next Image"
 msgstr ""
 
 #: inc/back-compat.php:41 inc/back-compat.php:53 inc/back-compat.php:68
+#, php-format
 msgid ""
-"Big Blank requires at least WordPress version 3.6. You are running "
-"version %s. Please upgrade and try again."
+"Big Blank requires at least WordPress version 3.6. You are running version "
+"%s. Please upgrade and try again."
 msgstr ""
 
 #: inc/customizer.php:19 inc/customizer.php:20
@@ -249,6 +264,7 @@ msgid "Featured Content"
 msgstr ""
 
 #: inc/customizer.php:36
+#, php-format
 msgid ""
 "Use a <a href=\"%1$s\">tag</a> to feature your posts. If no posts match the "
 "tag, <a href=\"%2$s\">sticky posts</a> will be displayed instead."
@@ -266,13 +282,12 @@ msgstr ""
 msgid "Slider"
 msgstr ""
 
-#. #-#-#-#-#  bigblank.pot (Big Blank 2.0)  #-#-#-#-#
-#. Theme Name of the plugin/theme
 #: inc/customizer.php:98
 msgid "Big Blank"
 msgstr ""
 
 #: inc/customizer.php:101
+#, php-format
 msgid ""
 "The home page features your choice of up to 6 posts prominently displayed in "
 "a grid or slider, controlled by the <a href=\"%1$s\">featured</a> tag; you "
@@ -282,21 +297,24 @@ msgid ""
 msgstr ""
 
 #: inc/customizer.php:102
+#, php-format
 msgid ""
 "Enhance your site design by using <a href=\"%s\">Featured Images</a> for "
 "posts you&rsquo;d like to stand out (also known as post thumbnails). This "
-"allows you to associate an image with your post without inserting it. Twenty "
-"Fourteen uses featured images for posts and pages&mdash;above the "
-"title&mdash;and in the Featured Content area on the home page."
+"allows you to associate an image with your post without inserting it. Big "
+"Blank uses featured images for posts and pages&mdash;above the title&mdash;"
+"and in the Featured Content area on the home page."
 msgstr ""
 
 #: inc/customizer.php:103
+#, php-format
 msgid ""
 "For an in-depth tutorial, and more tips and tricks, visit the <a href=\"%s"
 "\">Big Blank documentation</a>."
 msgstr ""
 
 #: inc/featured-content.php:409
+#, php-format
 msgid ""
 "Use the <a href=\"%1$s\">\"featured\" tag</a> to feature your posts. You can "
 "change this to a tag of your choice; if no posts match the tag, <a href="
@@ -382,13 +400,12 @@ msgid "Galleries"
 msgstr ""
 
 #: inc/widgets.php:148
+#, php-format
 msgid "This gallery contains <a href=\"%1$s\" rel=\"bookmark\">%2$s photo</a>."
-msgid_plural ""
-"This gallery contains <a href=\"%1$s\" rel=\"bookmark\">%2$s photos</a>."
-msgstr[0] ""
-msgstr[1] ""
+msgstr ""
 
 #: inc/widgets.php:189
+#, php-format
 msgid "More %s <span class=\"meta-nav\">&rarr;</span>"
 msgstr ""
 
@@ -405,35 +422,11 @@ msgid "Post format to show:"
 msgstr ""
 
 #: search.php:18
+#, php-format
 msgid "Search Results for: %s"
 msgstr ""
 
 #: tag.php:22
+#, php-format
 msgid "Tag Archives: %s"
-msgstr ""
-
-#. Theme URI of the plugin/theme
-msgid "http://wordpress.org/themes/bigblank"
-msgstr ""
-
-#. Description of the plugin/theme
-msgid ""
-"In 2014, our default theme lets you create a responsive magazine website "
-"with a sleek, modern design. Feature your favorite homepage content in "
-"either a grid or a slider. Use the three widget areas to customize your "
-"website, and change your content's layout with a full-width page template "
-"and a contributor page to show off your authors. Creating a magazine website "
-"with WordPress has never been easier."
-msgstr ""
-
-#. Author of the plugin/theme
-msgid "the WordPress team"
-msgstr ""
-
-#. Template Name of the plugin/theme
-msgid "Contributor Page"
-msgstr ""
-
-#. Template Name of the plugin/theme
-msgid "Full Width Page"
 msgstr ""

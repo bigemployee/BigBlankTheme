@@ -18,7 +18,7 @@
 
 			<div class="site-info">
 				<?php do_action( 'bigblank_credits' ); ?>
-				<a href="<?php echo esc_url( __( 'http://wordpress.org/', 'bigblank' ) ); ?>"><?php printf( __( 'Proudly powered by %s', 'bigblank' ), 'WordPress' ); ?></a>
+				<a href="<?php echo esc_url( __( 'http://bigblanktheme.com/', 'bigblank' ) ); ?>"><?php printf( __( 'Proudly powered by %s', 'bigblank' ), 'WordPress' ); ?></a>
 			</div><!-- .site-info -->
 		</footer><!-- #colophon -->
 	</div><!-- #page -->
