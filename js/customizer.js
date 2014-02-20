@@ -1,5 +1,5 @@
 /**
- * Twenty Fourteen Theme Customizer enhancements for a better user experience.
+ * Big Blank Theme Customizer enhancements for a better user experience.
  *
  * Contains handlers to make Theme Customizer preview reload changes asynchronously.
  */

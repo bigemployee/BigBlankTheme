@@ -7,8 +7,8 @@
  * @link http://codex.wordpress.org/Widgets_API#Developing_Widgets
  *
  * @package WordPress
- * @subpackage Twenty_Fourteen
- * @since Twenty Fourteen 1.0
+ * @subpackage Big_Blank
+ * @since Big Blank 2.0
  */
 
 class Twenty_Fourteen_Ephemera_Widget extends WP_Widget {
@@ -17,7 +17,7 @@ class Twenty_Fourteen_Ephemera_Widget extends WP_Widget {
 	 * The supported post formats.
 	 *
 	 * @access private
-	 * @since Twenty Fourteen 1.0
+	 * @since Big Blank 2.0
 	 *
 	 * @var array
 	 */
@@ -27,7 +27,7 @@ class Twenty_Fourteen_Ephemera_Widget extends WP_Widget {
 	 * Pluralized post format strings.
 	 *
 	 * @access private
-	 * @since Twenty Fourteen 1.0
+	 * @since Big Blank 2.0
 	 *
 	 * @var array
 	 */
@@ -36,27 +36,27 @@ class Twenty_Fourteen_Ephemera_Widget extends WP_Widget {
 	/**
 	 * Constructor.
 	 *
-	 * @since Twenty Fourteen 1.0
+	 * @since Big Blank 2.0
 	 *
 	 * @return Twenty_Fourteen_Ephemera_Widget
 	 */
 	public function __construct() {
-		parent::__construct( 'widget_twentyfourteen_ephemera', __( 'Twenty Fourteen Ephemera', 'twentyfourteen' ), array(
-			'classname'   => 'widget_twentyfourteen_ephemera',
-			'description' => __( 'Use this widget to list your recent Aside, Quote, Video, Audio, Image, Gallery, and Link posts', 'twentyfourteen' ),
+		parent::__construct( 'widget_bigblank_ephemera', __( 'Big Blank Ephemera', 'bigblank' ), array(
+			'classname'   => 'widget_bigblank_ephemera',
+			'description' => __( 'Use this widget to list your recent Aside, Quote, Video, Audio, Image, Gallery, and Link posts', 'bigblank' ),
 		) );
 
 		/*
 		 * @todo http://core.trac.wordpress.org/ticket/23257: Add plural versions of Post Format strings
 		 */
 		$this->format_strings = array(
-			'aside'   => __( 'Asides',    'twentyfourteen' ),
-			'image'   => __( 'Images',    'twentyfourteen' ),
-			'video'   => __( 'Videos',    'twentyfourteen' ),
-			'audio'   => __( 'Audio',     'twentyfourteen' ),
-			'quote'   => __( 'Quotes',    'twentyfourteen' ),
-			'link'    => __( 'Links',     'twentyfourteen' ),
-			'gallery' => __( 'Galleries', 'twentyfourteen' ),
+			'aside'   => __( 'Asides',    'bigblank' ),
+			'image'   => __( 'Images',    'bigblank' ),
+			'video'   => __( 'Videos',    'bigblank' ),
+			'audio'   => __( 'Audio',     'bigblank' ),
+			'quote'   => __( 'Quotes',    'bigblank' ),
+			'link'    => __( 'Links',     'bigblank' ),
+			'gallery' => __( 'Galleries', 'bigblank' ),
 		);
 	}
 
@@ -64,7 +64,7 @@ class Twenty_Fourteen_Ephemera_Widget extends WP_Widget {
 	 * Output the HTML for this widget.
 	 *
 	 * @access public
-	 * @since Twenty Fourteen 1.0
+	 * @since Big Blank 2.0
 	 *
 	 * @param array $args     An array of standard parameters for widgets in this theme.
 	 * @param array $instance An array of settings for this widget instance.
@@ -110,7 +110,7 @@ class Twenty_Fourteen_Ephemera_Widget extends WP_Widget {
 							if ( has_post_format( 'gallery' ) ) :
 
 								if ( post_password_required() ) :
-									the_content( __( 'Continue reading <span class="meta-nav">&rarr;</span>', 'twentyfourteen' ) );
+									the_content( __( 'Continue reading <span class="meta-nav">&rarr;</span>', 'bigblank' ) );
 								else :
 									$images = array();
 
@@ -145,7 +145,7 @@ class Twenty_Fourteen_Ephemera_Widget extends WP_Widget {
 						<?php endif; ?>
 						<p class="wp-caption-text">
 							<?php
-								printf( _n( 'This gallery contains <a href="%1$s" rel="bookmark">%2$s photo</a>.', 'This gallery contains <a href="%1$s" rel="bookmark">%2$s photos</a>.', $total_images, 'twentyfourteen' ),
+								printf( _n( 'This gallery contains <a href="%1$s" rel="bookmark">%2$s photo</a>.', 'This gallery contains <a href="%1$s" rel="bookmark">%2$s photos</a>.', $total_images, 'bigblank' ),
 									esc_url( get_permalink() ),
 									number_format_i18n( $total_images )
 								);
@@ -155,7 +155,7 @@ class Twenty_Fourteen_Ephemera_Widget extends WP_Widget {
 								endif;
 
 							else :
-								the_content( __( 'Continue reading <span class="meta-nav">&rarr;</span>', 'twentyfourteen' ) );
+								the_content( __( 'Continue reading <span class="meta-nav">&rarr;</span>', 'bigblank' ) );
 							endif;
 						?>
 					</div><!-- .entry-content -->
@@ -177,7 +177,7 @@ class Twenty_Fourteen_Ephemera_Widget extends WP_Widget {
 
 								if ( ! post_password_required() && ( comments_open() || get_comments_number() ) ) :
 							?>
-							<span class="comments-link"><?php comments_popup_link( __( 'Leave a comment', 'twentyfourteen' ), __( '1 Comment', 'twentyfourteen' ), __( '% Comments', 'twentyfourteen' ) ); ?></span>
+							<span class="comments-link"><?php comments_popup_link( __( 'Leave a comment', 'bigblank' ), __( '1 Comment', 'bigblank' ), __( '% Comments', 'bigblank' ) ); ?></span>
 							<?php endif; ?>
 						</div><!-- .entry-meta -->
 					</header><!-- .entry-header -->
@@ -186,7 +186,7 @@ class Twenty_Fourteen_Ephemera_Widget extends WP_Widget {
 				<?php endwhile; ?>
 
 			</ol>
-			<a class="post-format-archive-link" href="<?php echo esc_url( get_post_format_link( $format ) ); ?>"><?php printf( __( 'More %s <span class="meta-nav">&rarr;</span>', 'twentyfourteen' ), $this->format_strings[ $format ] ); ?></a>
+			<a class="post-format-archive-link" href="<?php echo esc_url( get_post_format_link( $format ) ); ?>"><?php printf( __( 'More %s <span class="meta-nav">&rarr;</span>', 'bigblank' ), $this->format_strings[ $format ] ); ?></a>
 			<?php
 
 			echo $args['after_widget'];
@@ -204,7 +204,7 @@ class Twenty_Fourteen_Ephemera_Widget extends WP_Widget {
 	 *
 	 * Here is where any validation should happen.
 	 *
-	 * @since Twenty Fourteen 1.0
+	 * @since Big Blank 2.0
 	 *
 	 * @param array $new_instance New widget instance.
 	 * @param array $instance     Original widget instance.
@@ -223,7 +223,7 @@ class Twenty_Fourteen_Ephemera_Widget extends WP_Widget {
 	/**
 	 * Display the form for this widget on the Widgets page of the Admin area.
 	 *
-	 * @since Twenty Fourteen 1.0
+	 * @since Big Blank 2.0
 	 *
 	 * @param array $instance
 	 * @return void
@@ -233,13 +233,13 @@ class Twenty_Fourteen_Ephemera_Widget extends WP_Widget {
 		$number = empty( $instance['number'] ) ? 2 : absint( $instance['number'] );
 		$format = isset( $instance['format'] ) && in_array( $instance['format'], $this->formats ) ? $instance['format'] : 'aside';
 		?>
-			<p><label for="<?php echo esc_attr( $this->get_field_id( 'title' ) ); ?>"><?php _e( 'Title:', 'twentyfourteen' ); ?></label>
+			<p><label for="<?php echo esc_attr( $this->get_field_id( 'title' ) ); ?>"><?php _e( 'Title:', 'bigblank' ); ?></label>
 			<input id="<?php echo esc_attr( $this->get_field_id( 'title' ) ); ?>" class="widefat" name="<?php echo esc_attr( $this->get_field_name( 'title' ) ); ?>" type="text" value="<?php echo esc_attr( $title ); ?>"></p>
 
-			<p><label for="<?php echo esc_attr( $this->get_field_id( 'number' ) ); ?>"><?php _e( 'Number of posts to show:', 'twentyfourteen' ); ?></label>
+			<p><label for="<?php echo esc_attr( $this->get_field_id( 'number' ) ); ?>"><?php _e( 'Number of posts to show:', 'bigblank' ); ?></label>
 			<input id="<?php echo esc_attr( $this->get_field_id( 'number' ) ); ?>" name="<?php echo esc_attr( $this->get_field_name( 'number' ) ); ?>" type="text" value="<?php echo esc_attr( $number ); ?>" size="3"></p>
 
-			<p><label for="<?php echo esc_attr( $this->get_field_id( 'format' ) ); ?>"><?php _e( 'Post format to show:', 'twentyfourteen' ); ?></label>
+			<p><label for="<?php echo esc_attr( $this->get_field_id( 'format' ) ); ?>"><?php _e( 'Post format to show:', 'bigblank' ); ?></label>
 			<select id="<?php echo esc_attr( $this->get_field_id( 'format' ) ); ?>" class="widefat" name="<?php echo esc_attr( $this->get_field_name( 'format' ) ); ?>">
 				<?php foreach ( $this->formats as $slug ) : ?>
 				<option value="<?php echo esc_attr( $slug ); ?>"<?php selected( $format, $slug ); ?>><?php echo get_post_format_string( $slug ); ?></option>

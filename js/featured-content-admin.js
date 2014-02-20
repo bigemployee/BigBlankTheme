@@ -1,5 +1,5 @@
 /**
- * Twenty Fourteen Featured Content admin behavior: add a tag suggestion
+ * Big Blank Featured Content admin behavior: add a tag suggestion
  * when changing the tag.
  */
 /* global ajaxurl:true */

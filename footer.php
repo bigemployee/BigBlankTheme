@@ -5,8 +5,8 @@
  * Contains footer content and the closing of the #main and #page div elements.
  *
  * @package WordPress
- * @subpackage Twenty_Fourteen
- * @since Twenty Fourteen 1.0
+ * @subpackage Big_Blank
+ * @since Big Blank 2.0
  */
 ?>
 
@@ -17,8 +17,8 @@
 			<?php get_sidebar( 'footer' ); ?>
 
 			<div class="site-info">
-				<?php do_action( 'twentyfourteen_credits' ); ?>
-				<a href="<?php echo esc_url( __( 'http://wordpress.org/', 'twentyfourteen' ) ); ?>"><?php printf( __( 'Proudly powered by %s', 'twentyfourteen' ), 'WordPress' ); ?></a>
+				<?php do_action( 'bigblank_credits' ); ?>
+				<a href="<?php echo esc_url( __( 'http://wordpress.org/', 'bigblank' ) ); ?>"><?php printf( __( 'Proudly powered by %s', 'bigblank' ), 'WordPress' ); ?></a>
 			</div><!-- .site-info -->
 		</footer><!-- #colophon -->
 	</div><!-- #page -->

@@ -3,8 +3,8 @@
  * The Sidebar containing the main widget area
  *
  * @package WordPress
- * @subpackage Twenty_Fourteen
- * @since Twenty Fourteen 1.0
+ * @subpackage Big_Blank
+ * @since Big Blank 2.0
  */
 ?>
 <div id="secondary">

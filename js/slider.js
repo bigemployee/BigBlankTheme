@@ -1,5 +1,5 @@
 /*
- * Twenty Fourteen Featured Content Slider
+ * Big Blank Featured Content Slider
  *
  * Adapted from FlexSlider v2.2.0, copyright 2012 WooThemes
  * @link http://www.woothemes.com/flexslider/

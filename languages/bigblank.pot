@@ -2,8 +2,8 @@
 # This file is distributed under the GNU General Public License v2 or later.
 msgid ""
 msgstr ""
-"Project-Id-Version: Twenty Fourteen 1.0\n"
-"Report-Msgid-Bugs-To: http://wordpress.org/tags/twentyfourteen\n"
+"Project-Id-Version: Big Blank 2.0\n"
+"Report-Msgid-Bugs-To: http://wordpress.org/tags/bigblank\n"
 "POT-Creation-Date: 2013-12-12 05:25:07+00:00\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -141,7 +141,7 @@ msgid ""
 "searching can help."
 msgstr ""
 
-#. #-#-#-#-#  twentyfourteen.pot (Twenty Fourteen 1.0)  #-#-#-#-#
+#. #-#-#-#-#  bigblank.pot (Big Blank 2.0)  #-#-#-#-#
 #. Author URI of the plugin/theme
 #: footer.php:21
 msgid "http://wordpress.org/"
@@ -228,7 +228,7 @@ msgstr ""
 
 #: inc/back-compat.php:41 inc/back-compat.php:53 inc/back-compat.php:68
 msgid ""
-"Twenty Fourteen requires at least WordPress version 3.6. You are running "
+"Big Blank requires at least WordPress version 3.6. You are running "
 "version %s. Please upgrade and try again."
 msgstr ""
 
@@ -266,10 +266,10 @@ msgstr ""
 msgid "Slider"
 msgstr ""
 
-#. #-#-#-#-#  twentyfourteen.pot (Twenty Fourteen 1.0)  #-#-#-#-#
+#. #-#-#-#-#  bigblank.pot (Big Blank 2.0)  #-#-#-#-#
 #. Theme Name of the plugin/theme
 #: inc/customizer.php:98
-msgid "Twenty Fourteen"
+msgid "Big Blank"
 msgstr ""
 
 #: inc/customizer.php:101
@@ -293,7 +293,7 @@ msgstr ""
 #: inc/customizer.php:103
 msgid ""
 "For an in-depth tutorial, and more tips and tricks, visit the <a href=\"%s"
-"\">Twenty Fourteen documentation</a>."
+"\">Big Blank documentation</a>."
 msgstr ""
 
 #: inc/featured-content.php:409
@@ -344,7 +344,7 @@ msgid "Sticky"
 msgstr ""
 
 #: inc/widgets.php:44
-msgid "Twenty Fourteen Ephemera"
+msgid "Big Blank Ephemera"
 msgstr ""
 
 #: inc/widgets.php:46
@@ -413,7 +413,7 @@ msgid "Tag Archives: %s"
 msgstr ""
 
 #. Theme URI of the plugin/theme
-msgid "http://wordpress.org/themes/twentyfourteen"
+msgid "http://wordpress.org/themes/bigblank"
 msgstr ""
 
 #. Description of the plugin/theme

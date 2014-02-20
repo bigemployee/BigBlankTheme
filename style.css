@@ -4,11 +4,14 @@ Theme URI: http://bigemployee.com/projects/big-blank-responsive-wordpress-theme/
 Description: A responsive blank theme with semantic HTML5 code and a very minimal css styling. This is not a naked or barebone theme, but a clean starting boilerplate for a more complex theme development.
 Author: Big Employee
 Author URI: http://bigemployee.com
-Version: 1.2.2.1
+Version: 2.0
 Tags: fluid-layout, responsive-layout, custom-menu, microformats, sticky-post, theme-options, translation-ready, one-column, two-columns, right-sidebar, left-sidebar, light, white
 
-License: GPL2 & MIT
-License URI: http://www.gnu.org/licenses/gpl.html
+License: GNU General Public L & MIT
+License URI: license.txt
+Text Domain: bigblank
+Domain Path: /languages/
+
 */
 
 /**
@@ -773,7 +776,7 @@ img.aligncenter,
 .menu-toggle:before,
 .search-toggle:before,
 .slider-direction-nav a:before,
-.widget_twentyfourteen_ephemera .widget-title:before {
+.widget_bigblank_ephemera .widget-title:before {
     -webkit-font-smoothing: antialiased;
     display: inline-block;
     font: normal 16px/1 Genericons;
@@ -789,7 +792,7 @@ img.aligncenter,
 span + .byline:before,
 span + .comments-link:before,
 span + .edit-link:before,
-.widget_twentyfourteen_ephemera .entry-title:after {
+.widget_bigblank_ephemera .entry-title:after {
     content: "\0020\007c\0020";
 }
 
@@ -2316,67 +2319,67 @@ a.post-thumbnail:hover {
 
 /* Ephemera Widget*/
 
-.widget_twentyfourteen_ephemera > ol > li {
+.widget_bigblank_ephemera > ol > li {
     border-bottom: 1px solid rgba(255, 255, 255, 0.2);
     margin-bottom: 18px;
     padding: 0;
 }
 
-.widget_twentyfourteen_ephemera .hentry {
+.widget_bigblank_ephemera .hentry {
     margin: 0;
     max-width: 100%;
 }
 
-.widget_twentyfourteen_ephemera .entry-title,
-.widget_twentyfourteen_ephemera .entry-meta,
-.widget_twentyfourteen_ephemera .wp-caption-text,
-.widget_twentyfourteen_ephemera .post-format-archive-link,
-.widget_twentyfourteen_ephemera .entry-content table {
+.widget_bigblank_ephemera .entry-title,
+.widget_bigblank_ephemera .entry-meta,
+.widget_bigblank_ephemera .wp-caption-text,
+.widget_bigblank_ephemera .post-format-archive-link,
+.widget_bigblank_ephemera .entry-content table {
     font-size: 12px;
     line-height: 1.5;
 }
 
-.widget_twentyfourteen_ephemera .entry-title {
+.widget_bigblank_ephemera .entry-title {
     display: inline;
     font-weight: 400;
 }
 
-.widget_twentyfourteen_ephemera .entry-meta {
+.widget_bigblank_ephemera .entry-meta {
     margin-bottom: 18px;
 }
 
-.widget_twentyfourteen_ephemera .entry-meta a {
+.widget_bigblank_ephemera .entry-meta a {
     color: rgba(255, 255, 255, 0.7);
 }
 
-.widget_twentyfourteen_ephemera .entry-meta a:hover {
+.widget_bigblank_ephemera .entry-meta a:hover {
     color: #41a62a;
 }
 
-.widget_twentyfourteen_ephemera .entry-content ul,
-.widget_twentyfourteen_ephemera .entry-content ol {
+.widget_bigblank_ephemera .entry-content ul,
+.widget_bigblank_ephemera .entry-content ol {
     margin: 0 0 18px 20px;
 }
 
-.widget_twentyfourteen_ephemera .entry-content ul {
+.widget_bigblank_ephemera .entry-content ul {
     list-style: disc;
 }
 
-.widget_twentyfourteen_ephemera .entry-content ol {
+.widget_bigblank_ephemera .entry-content ol {
     list-style: decimal;
 }
 
-.widget_twentyfourteen_ephemera .entry-content li > ul,
-.widget_twentyfourteen_ephemera .entry-content li > ol {
+.widget_bigblank_ephemera .entry-content li > ul,
+.widget_bigblank_ephemera .entry-content li > ol {
     margin: 0 0 0 20px;
 }
 
-.widget_twentyfourteen_ephemera .entry-content th,
-.widget_twentyfourteen_ephemera .entry-content td {
+.widget_bigblank_ephemera .entry-content th,
+.widget_bigblank_ephemera .entry-content td {
     padding: 6px;
 }
 
-.widget_twentyfourteen_ephemera .post-format-archive-link {
+.widget_bigblank_ephemera .post-format-archive-link {
     font-weight: 700;
     text-transform: uppercase;
 }
@@ -2602,12 +2605,12 @@ a.post-thumbnail:hover {
 
 /* Ephemera widget*/
 
-.content-sidebar .widget_twentyfourteen_ephemera .widget-title {
+.content-sidebar .widget_bigblank_ephemera .widget-title {
     line-height: 1.2857142857;
     padding-top: 1px;
 }
 
-.content-sidebar .widget_twentyfourteen_ephemera .widget-title:before {
+.content-sidebar .widget_bigblank_ephemera .widget-title:before {
     background-color: #000;
     color: #fff;
     margin: -1px 9px 0 0;
@@ -2617,56 +2620,56 @@ a.post-thumbnail:hover {
     width: 36px;
 }
 
-.content-sidebar .widget_twentyfourteen_ephemera .video.widget-title:before {
+.content-sidebar .widget_bigblank_ephemera .video.widget-title:before {
     content: "\f104";
 }
 
-.content-sidebar .widget_twentyfourteen_ephemera .audio.widget-title:before {
+.content-sidebar .widget_bigblank_ephemera .audio.widget-title:before {
     content: "\f109";
 }
 
-.content-sidebar .widget_twentyfourteen_ephemera .image.widget-title:before {
+.content-sidebar .widget_bigblank_ephemera .image.widget-title:before {
     content: "\f473";
 }
 
-.content-sidebar .widget_twentyfourteen_ephemera .gallery.widget-title:before {
+.content-sidebar .widget_bigblank_ephemera .gallery.widget-title:before {
     content: "\f103";
 }
 
-.content-sidebar .widget_twentyfourteen_ephemera .aside.widget-title:before {
+.content-sidebar .widget_bigblank_ephemera .aside.widget-title:before {
     content: "\f101";
 }
 
-.content-sidebar .widget_twentyfourteen_ephemera .quote.widget-title:before {
+.content-sidebar .widget_bigblank_ephemera .quote.widget-title:before {
     content: "\f106";
 }
 
-.content-sidebar .widget_twentyfourteen_ephemera .link.widget-title:before {
+.content-sidebar .widget_bigblank_ephemera .link.widget-title:before {
     content: "\f107";
 }
 
-.content-sidebar .widget_twentyfourteen_ephemera > ol > li {
+.content-sidebar .widget_bigblank_ephemera > ol > li {
     border-bottom: 1px solid rgba(0, 0, 0, 0.1);
 }
 
-.content-sidebar .widget_twentyfourteen_ephemera .entry-meta {
+.content-sidebar .widget_bigblank_ephemera .entry-meta {
     color: #ccc;
 }
 
-.content-sidebar .widget_twentyfourteen_ephemera .entry-meta a {
+.content-sidebar .widget_bigblank_ephemera .entry-meta a {
     color: #767676;
 }
 
-.content-sidebar .widget_twentyfourteen_ephemera .entry-meta a:hover {
+.content-sidebar .widget_bigblank_ephemera .entry-meta a:hover {
     color: #41a62a;
 }
 
-.content-sidebar.widget_twentyfourteen_ephemera blockquote cite {
+.content-sidebar.widget_bigblank_ephemera blockquote cite {
     font-size: 13px;
     line-height: 1.3846153846;
 }
 
-.content-sidebar .widget_twentyfourteen_ephemera .post-format-archive-link {
+.content-sidebar .widget_bigblank_ephemera .post-format-archive-link {
     font-weight: 900;
 }
 
@@ -3776,16 +3779,16 @@ a.post-thumbnail:hover {
         margin-bottom: 18px;
     }
 
-    .footer-sidebar .widget_twentyfourteen_ephemera .entry-title,
-    .footer-sidebar .widget_twentyfourteen_ephemera .entry-meta,
-    .footer-sidebar .widget_twentyfourteen_ephemera .wp-caption-text,
-    .footer-sidebar .widget_twentyfourteen_ephemera .post-format-archive-link,
-    .footer-sidebar .widget_twentyfourteen_ephemera .entry-content table,
-    .primary-sidebar .widget_twentyfourteen_ephemera .entry-title,
-    .primary-sidebar .widget_twentyfourteen_ephemera .entry-meta,
-    .primary-sidebar .widget_twentyfourteen_ephemera .wp-caption-text,
-    .primary-sidebar .widget_twentyfourteen_ephemera .post-format-archive-link,
-    .primary-sidebar .widget_twentyfourteen_ephemera .entry-content table {
+    .footer-sidebar .widget_bigblank_ephemera .entry-title,
+    .footer-sidebar .widget_bigblank_ephemera .entry-meta,
+    .footer-sidebar .widget_bigblank_ephemera .wp-caption-text,
+    .footer-sidebar .widget_bigblank_ephemera .post-format-archive-link,
+    .footer-sidebar .widget_bigblank_ephemera .entry-content table,
+    .primary-sidebar .widget_bigblank_ephemera .entry-title,
+    .primary-sidebar .widget_bigblank_ephemera .entry-meta,
+    .primary-sidebar .widget_bigblank_ephemera .wp-caption-text,
+    .primary-sidebar .widget_bigblank_ephemera .post-format-archive-link,
+    .primary-sidebar .widget_bigblank_ephemera .entry-content table {
         font-size: 11px;
         line-height: 1.6363636363;
     }

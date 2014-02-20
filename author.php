@@ -5,8 +5,8 @@
  * @link http://codex.wordpress.org/Template_Hierarchy
  *
  * @package WordPress
- * @subpackage Twenty_Fourteen
- * @since Twenty Fourteen 1.0
+ * @subpackage Big_Blank
+ * @since Big Blank 2.0
  */
 
 get_header(); ?>
@@ -28,7 +28,7 @@ get_header(); ?>
 						 */
 						the_post();
 
-						printf( __( 'All posts by %s', 'twentyfourteen' ), get_the_author() );
+						printf( __( 'All posts by %s', 'bigblank' ), get_the_author() );
 					?>
 				</h1>
 				<?php if ( get_the_author_meta( 'description' ) ) : ?>
@@ -56,7 +56,7 @@ get_header(); ?>
 
 					endwhile;
 					// Previous/next page navigation.
-					twentyfourteen_paging_nav();
+					bigblank_paging_nav();
 
 				else :
 					// If no content, include the "No posts found" template.

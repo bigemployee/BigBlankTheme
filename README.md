@@ -55,7 +55,7 @@ Changelog
 -------------------------------------------------------------------
 **v2.0 (2014-02-20)**
   - Let's start again
-  - Base twentyfourteen
+  - Base bigblank
 
 **v1.2.2 (2013-12-12)**
   - Fallback menu support

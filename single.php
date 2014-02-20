@@ -3,8 +3,8 @@
  * The Template for displaying all single posts
  *
  * @package WordPress
- * @subpackage Twenty_Fourteen
- * @since Twenty Fourteen 1.0
+ * @subpackage Big_Blank
+ * @since Big Blank 2.0
  */
 
 get_header(); ?>
@@ -23,7 +23,7 @@ get_header(); ?>
 					get_template_part( 'content', get_post_format() );
 
 					// Previous/next post navigation.
-					twentyfourteen_post_nav();
+					bigblank_post_nav();
 
 					// If comments are open or we have at least one comment, load up the comment template.
 					if ( comments_open() || get_comments_number() ) {

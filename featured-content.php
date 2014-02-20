@@ -3,8 +3,8 @@
  * The template for displaying featured content
  *
  * @package WordPress
- * @subpackage Twenty_Fourteen
- * @since Twenty Fourteen 1.0
+ * @subpackage Big_Blank
+ * @since Big Blank 2.0
  */
 ?>
 
@@ -12,13 +12,13 @@
 	<div class="featured-content-inner">
 	<?php
 		/**
-		 * Fires before the Twenty Fourteen featured content.
+		 * Fires before the Big Blank featured content.
 		 *
-		 * @since Twenty Fourteen 1.0
+		 * @since Big Blank 2.0
 		 */
-		do_action( 'twentyfourteen_featured_posts_before' );
+		do_action( 'bigblank_featured_posts_before' );
 
-		$featured_posts = twentyfourteen_get_featured_posts();
+		$featured_posts = bigblank_get_featured_posts();
 		foreach ( (array) $featured_posts as $order => $post ) :
 			setup_postdata( $post );
 
@@ -27,11 +27,11 @@
 		endforeach;
 
 		/**
-		 * Fires after the Twenty Fourteen featured content.
+		 * Fires after the Big Blank featured content.
 		 *
-		 * @since Twenty Fourteen 1.0
+		 * @since Big Blank 2.0
 		 */
-		do_action( 'twentyfourteen_featured_posts_after' );
+		do_action( 'bigblank_featured_posts_after' );
 
 		wp_reset_postdata();
 	?>

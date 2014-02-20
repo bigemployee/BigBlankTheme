@@ -1,5 +1,5 @@
 /*
-Theme Name: Twenty Fourteen
+Theme Name: Big Blank
 Description: Adds support for languages written in a Right To Left (RTL) direction.
 It's easy, just a matter of overwriting all the horizontal positioning attributes
 of your CSS stylesheet in a separate stylesheet file named rtl.css.
@@ -325,13 +325,13 @@ td {
 	text-align: left;
 }
 
-.widget_twentyfourteen_ephemera .entry-content ul,
-.widget_twentyfourteen_ephemera .entry-content ol {
+.widget_bigblank_ephemera .entry-content ul,
+.widget_bigblank_ephemera .entry-content ol {
 	margin: 0 20px 18px 0;
 }
 
-.widget_twentyfourteen_ephemera .entry-content li > ul,
-.widget_twentyfourteen_ephemera .entry-content li > ol {
+.widget_bigblank_ephemera .entry-content li > ul,
+.widget_bigblank_ephemera .entry-content li > ol {
 	margin: 0 20px 0 0;
 }
 
@@ -347,7 +347,7 @@ td {
 	margin-left: auto;
 }
 
-.content-sidebar .widget_twentyfourteen_ephemera .widget-title:before {
+.content-sidebar .widget_bigblank_ephemera .widget-title:before {
 	margin: -1px 0 0 18px;
 }
 
