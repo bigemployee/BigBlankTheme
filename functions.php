@@ -205,9 +205,6 @@ function bigblank_scripts() {
     if (is_singular() && wp_attachment_is_image()) {
         wp_enqueue_script('bigblank-keyboard-image-navigation', get_template_directory_uri() . '/js/keyboard-image-navigation.js', array('jquery'), '20130402');
     }
-    if (is_active_sidebar('sidebar-3')) {
-        wp_enqueue_script('jquery-masonry');
-    }
     wp_enqueue_script('bigblank-script', get_template_directory_uri() . '/js/functions.js', array('jquery'), '20131209', true);
 }
 
