@@ -4,8 +4,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Big Blank 2.0\n"
 "Report-Msgid-Bugs-To: http://wordpress.org/tags/bigblank\n"
-"POT-Creation-Date: 2014-02-20 08:44-0800\n"
-"PO-Revision-Date: 2014-02-20 08:44-0800\n"
+"POT-Creation-Date: 2014-02-22 11:54-0800\n"
+"PO-Revision-Date: 2014-02-22 11:54-0800\n"
 "Last-Translator: Norik Davtian <@NorikDavtian>\n"
 "Language-Team: Big Employee <@NorikDavtian>\n"
 "Language: en\n"
@@ -49,7 +49,7 @@ msgstr ""
 msgid "Y"
 msgstr ""
 
-#: archive.php:31 taxonomy-post_format.php:38
+#: archive.php:31
 msgid "Archives"
 msgstr ""
 
@@ -84,9 +84,9 @@ msgstr ""
 msgid "Comments are closed."
 msgstr ""
 
-#: content-aside.php:12 content-audio.php:12 content-featured-post.php:23
-#: content-gallery.php:12 content-image.php:12 content-link.php:12
-#: content-quote.php:12 content-video.php:12 content.php:14
+#: content-aside.php:12 content-audio.php:12 content-gallery.php:12
+#: content-image.php:12 content-link.php:12 content-quote.php:12
+#: content-video.php:12 content.php:14
 msgid ", "
 msgstr ""
 
@@ -111,7 +111,7 @@ msgstr ""
 #: content-aside.php:30 content-audio.php:30 content-gallery.php:30
 #: content-image.php:30 content-link.php:30 content-page.php:22
 #: content-quote.php:30 content-video.php:30 content.php:33 image.php:23
-#: page-templates/contributors.php:26
+#: page-templates/contributors.php:20
 msgid "Edit"
 msgstr ""
 
@@ -166,61 +166,49 @@ msgstr ""
 msgid "Secondary menu in left sidebar"
 msgstr ""
 
-#: functions.php:154
+#: functions.php:156
 msgid "Primary Sidebar"
 msgstr ""
 
-#: functions.php:156
+#: functions.php:158
 msgid "Main sidebar that appears on the left."
 msgstr ""
 
-#: functions.php:163
+#: functions.php:165
 msgid "Content Sidebar"
 msgstr ""
 
-#: functions.php:165
+#: functions.php:167
 msgid "Additional sidebar that appears on the right."
 msgstr ""
 
-#: functions.php:172
+#: functions.php:174
 msgid "Footer Widget Area"
 msgstr ""
 
-#: functions.php:174
+#: functions.php:176
 msgid "Appears in the footer section of the site."
 msgstr ""
 
-#: functions.php:196
-msgid "on"
-msgstr ""
-
-#: functions.php:230
-msgid "Previous"
-msgstr ""
-
-#: functions.php:231
-msgid "Next"
-msgstr ""
-
-#: functions.php:342
+#: functions.php:302
 #, php-format
 msgid "%d Article"
 msgstr ""
 
-#: functions.php:442
+#: functions.php:390
 #, php-format
 msgid "Page %s"
 msgstr ""
 
-#: header.php:42
+#: header.php:27
 msgid "Search"
 msgstr ""
 
-#: header.php:45
+#: header.php:30
 msgid "Primary Menu"
 msgstr ""
 
-#: header.php:46
+#: header.php:31
 msgid "Skip to content"
 msgstr ""
 
@@ -235,90 +223,32 @@ msgstr ""
 #: inc/back-compat.php:38 inc/back-compat.php:49 inc/back-compat.php:64
 #, php-format
 msgid ""
-"Big Blank requires at least WordPress version 3.6. You are running version "
+"Big Blank requires at least WordPress version 3.8. You are running version "
 "%s. Please upgrade and try again."
 msgstr ""
 
-#: inc/customizer.php:16 inc/customizer.php:17
-msgid "Background may only be visible on wide screens."
-msgstr ""
-
-#: inc/customizer.php:23
-msgid "Site Title Color"
-msgstr ""
-
-#: inc/customizer.php:25
+#: inc/customizer.php:19
 msgid "Display Site Title &amp; Tagline"
 msgstr ""
 
-#: inc/customizer.php:28 inc/featured-content.php:359
-msgid "Featured Content"
-msgstr ""
-
-#: inc/customizer.php:29
-#, php-format
-msgid ""
-"Use a <a href=\"%1$s\">tag</a> to feature your posts. If no posts match the "
-"tag, <a href=\"%2$s\">sticky posts</a> will be displayed instead."
-msgstr ""
-
-#: inc/customizer.php:38
-msgid "Layout"
-msgstr ""
-
-#: inc/customizer.php:42
-msgid "Grid"
-msgstr ""
-
-#: inc/customizer.php:43
-msgid "Slider"
-msgstr ""
-
-#: inc/customizer.php:86
+#: inc/customizer.php:46
 msgid "Big Blank"
 msgstr ""
 
-#: inc/customizer.php:89
-#, php-format
-msgid ""
-"The home page features your choice of up to 6 posts prominently displayed in "
-"a grid or slider, controlled by the <a href=\"%1$s\">featured</a> tag; you "
-"can change the tag and layout in <a href=\"%2$s\">Appearance &rarr; "
-"Customize</a>. If no posts match the tag, <a href=\"%3$s\">sticky posts</a> "
-"will be displayed instead."
-msgstr ""
-
-#: inc/customizer.php:90
+#: inc/customizer.php:49
 #, php-format
 msgid ""
 "Enhance your site design by using <a href=\"%s\">Featured Images</a> for "
 "posts you&rsquo;d like to stand out (also known as post thumbnails). This "
 "allows you to associate an image with your post without inserting it. Big "
-"Blank uses featured images for posts and pages&mdash;above the title&mdash;"
-"and in the Featured Content area on the home page."
+"Blank uses featured images for posts and pages&mdash;above the title."
 msgstr ""
 
-#: inc/customizer.php:91
+#: inc/customizer.php:50
 #, php-format
 msgid ""
 "For an in-depth tutorial, and more tips and tricks, visit the <a href=\"%s"
 "\">Big Blank documentation</a>."
-msgstr ""
-
-#: inc/featured-content.php:360
-#, php-format
-msgid ""
-"Use the <a href=\"%1$s\">\"featured\" tag</a> to feature your posts. You can "
-"change this to a tag of your choice; if no posts match the tag, <a href="
-"\"%2$s\">sticky posts</a> will be displayed instead."
-msgstr ""
-
-#: inc/featured-content.php:377
-msgid "Tag Name"
-msgstr ""
-
-#: inc/featured-content.php:382
-msgid "Don&rsquo;t display tag on front end."
 msgstr ""
 
 #: inc/template-tags.php:38
@@ -363,31 +293,31 @@ msgid ""
 "Gallery, and Link posts"
 msgstr ""
 
-#: inc/widgets.php:46 taxonomy-post_format.php:24
+#: inc/widgets.php:46
 msgid "Asides"
 msgstr ""
 
-#: inc/widgets.php:47 taxonomy-post_format.php:26
+#: inc/widgets.php:47
 msgid "Images"
 msgstr ""
 
-#: inc/widgets.php:48 taxonomy-post_format.php:28
+#: inc/widgets.php:48
 msgid "Videos"
 msgstr ""
 
-#: inc/widgets.php:49 taxonomy-post_format.php:30
+#: inc/widgets.php:49
 msgid "Audio"
 msgstr ""
 
-#: inc/widgets.php:50 taxonomy-post_format.php:32
+#: inc/widgets.php:50
 msgid "Quotes"
 msgstr ""
 
-#: inc/widgets.php:51 taxonomy-post_format.php:34
+#: inc/widgets.php:51
 msgid "Links"
 msgstr ""
 
-#: inc/widgets.php:52 taxonomy-post_format.php:36
+#: inc/widgets.php:52
 msgid "Galleries"
 msgstr ""
 
