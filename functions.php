@@ -99,7 +99,7 @@ function bigblank_content_width() {
 
 add_action('template_redirect', 'bigblank_content_width');
 
-/** 
+/**
  * Let's remove some code and cleanup <head>
  */
 function be_head_cleanup() {
@@ -122,26 +122,26 @@ add_action('init', 'be_head_cleanup');
  * .recentcomments a{display:inline !important;padding:0 !important;margin:0 !important;}
  * @global type $wp_widget_factory
  */
-function be_remove_recent_comments_style() {  
-    global $wp_widget_factory;  
-    remove_action( 'wp_head', array( $wp_widget_factory->widgets['WP_Widget_Recent_Comments'], 'recent_comments_style' ) );  
-}  
+function be_remove_recent_comments_style() {
+    global $wp_widget_factory;
+    remove_action('wp_head', array($wp_widget_factory->widgets['WP_Widget_Recent_Comments'], 'recent_comments_style'));
+}
 
-add_action( 'widgets_init', 'be_remove_recent_comments_style');
+add_action('widgets_init', 'be_remove_recent_comments_style');
 
 /**
  * Remove version from CSS and JS files for Caching
  * @param string|array $src Query key or keys to remove.
  * @return string New URL query string.
  */
-function bigblank_remove_wp_ver_css_js( $src ) {
-    if ( strpos( $src, 'ver=' ) )
-        $src = remove_query_arg( 'ver', $src );
+function bigblank_remove_wp_ver_css_js($src) {
+    if (strpos($src, 'ver='))
+        $src = remove_query_arg('ver', $src);
     return $src;
 }
 
-add_filter( 'style_loader_src', 'bigblank_remove_wp_ver_css_js');
-add_filter( 'script_loader_src', 'bigblank_remove_wp_ver_css_js');
+add_filter('style_loader_src', 'bigblank_remove_wp_ver_css_js');
+add_filter('script_loader_src', 'bigblank_remove_wp_ver_css_js');
 
 /**
  * Register three Big Blank widget areas.
@@ -183,7 +183,6 @@ function bigblank_widgets_init() {
 
 add_action('widgets_init', 'bigblank_widgets_init');
 
-
 /**
  * Enqueue scripts and styles for the front end.
  *
@@ -202,8 +201,8 @@ function bigblank_scripts() {
     if (is_singular() && comments_open() && get_option('thread_comments')) {
         wp_enqueue_script('comment-reply');
     }
-    wp_enqueue_script('script', get_template_directory_uri() . '/js/scripts.min.js', array('jquery'), '20140222', true);
-    wp_enqueue_script('main', get_template_directory_uri() . '/js/main.js', array('jquery', ''), '20140222', true);
+    wp_enqueue_script('scripts', get_template_directory_uri() . '/js/scripts.min.js', array('jquery'), '20140222', true);
+    wp_enqueue_script('main', get_template_directory_uri() . '/js/main.js', array('jquery', 'scripts'), '20140222', true);
 }
 
 add_action('wp_enqueue_scripts', 'bigblank_scripts');

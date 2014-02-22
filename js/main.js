@@ -10,7 +10,7 @@
     }
 
     // jQuery stuff goes here
-    
+
     /**
      * Handlers for navigation, accessibility, header sizing
      */
@@ -62,55 +62,55 @@
         }
     });
 
-        // Search toggle.
-        $('.search-toggle').on('click.bigblank', function(event) {
-            var that = $(this),
-                    wrapper = $('.search-box-wrapper');
+    // Search toggle.
+    $('.search-toggle').on('click.bigblank', function(event) {
+        var that = $(this),
+                wrapper = $('.search-box-wrapper');
 
-            that.toggleClass('active');
-            wrapper.toggleClass('hide');
+        that.toggleClass('active');
+        wrapper.toggleClass('hide');
 
-            if (that.is('.active') || $('.search-toggle .screen-reader-text')[0] === event.target) {
-                wrapper.find('.search-field').focus();
-            }
-        });
+        if (that.is('.active') || $('.search-toggle .screen-reader-text')[0] === event.target) {
+            wrapper.find('.search-field').focus();
+        }
+    });
 
-        /*
-         * Fixed header for large screen.
-         * If the header becomes more than 48px tall, unfix the header.
-         *
-         * The callback on the scroll event is only added if there is a header
-         * image and we are not on mobile.
-         */
-        if (_window.width() > 781) {
-            var mastheadHeight = $('#masthead').height(),
-                    toolbarOffset, mastheadOffset;
+    /*
+     * Fixed header for large screen.
+     * If the header becomes more than 48px tall, unfix the header.
+     *
+     * The callback on the scroll event is only added if there is a header
+     * image and we are not on mobile.
+     */
+    if (_window.width() > 781) {
+        var mastheadHeight = $('#masthead').height(),
+                toolbarOffset, mastheadOffset;
 
-            if (mastheadHeight > 48) {
-                body.removeClass('masthead-fixed');
-            }
-
-            if (body.is('.header-image')) {
-                toolbarOffset = body.is('.admin-bar') ? $('#wpadminbar').height() : 0;
-                mastheadOffset = $('#masthead').offset().top - toolbarOffset;
-
-                _window.on('scroll.bigblank', function() {
-                    if ((window.scrollY > mastheadOffset) && (mastheadHeight < 49)) {
-                        body.addClass('masthead-fixed');
-                    } else {
-                        body.removeClass('masthead-fixed');
-                    }
-                });
-            }
+        if (mastheadHeight > 48) {
+            body.removeClass('masthead-fixed');
         }
 
-        // Focus styles for menus.
-        $('.primary-navigation, .secondary-navigation').find('a').on('focus.bigblank blur.bigblank', function() {
-            $(this).parents().toggleClass('focus');
-        });
+        if (body.is('.header-image')) {
+            toolbarOffset = body.is('.admin-bar') ? $('#wpadminbar').height() : 0;
+            mastheadOffset = $('#masthead').offset().top - toolbarOffset;
+
+            _window.on('scroll.bigblank', function() {
+                if ((window.scrollY > mastheadOffset) && (mastheadHeight < 49)) {
+                    body.addClass('masthead-fixed');
+                } else {
+                    body.removeClass('masthead-fixed');
+                }
+            });
+        }
+    }
+
+    // Focus styles for menus.
+    $('.primary-navigation, .secondary-navigation').find('a').on('focus.bigblank blur.bigblank', function() {
+        $(this).parents().toggleClass('focus');
+    });
 
 
-    
+
     $(document).on('keydown.bigblank', function(e) {
         var url = false;
 
@@ -127,6 +127,6 @@
             window.location = url;
         }
     });
-    
+
 
 })(window.jQuery, window, window.document);
