@@ -229,7 +229,11 @@ function filter_ptags_on_images($content) {
 
 add_filter('the_content', 'filter_ptags_on_images');
 
-// set post excerpt length
+/**
+ * Set Excerpt length
+ * @param int $length
+ * @return int set post excerpt length
+ */
 function be_excerpt_length($length) {
     return 140;
 }
