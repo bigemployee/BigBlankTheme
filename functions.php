@@ -78,13 +78,6 @@ if (!function_exists('bigblank_setup')) :
         add_theme_support('html5', array(
             'search-form', 'comment-form', 'comment-list',
         ));
-        /*
-         * Enable support for Post Formats.
-         * See http://codex.wordpress.org/Post_Formats
-         */
-        add_theme_support('post-formats', array(
-            'aside', 'image', 'video', 'audio', 'quote', 'link', 'gallery',
-        ));
         // Add support for featured content.
         add_theme_support('featured-content', array(
             'featured_content_filter' => 'bigblank_get_featured_posts',
