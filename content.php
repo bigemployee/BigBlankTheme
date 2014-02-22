@@ -41,7 +41,7 @@
     <?php else : ?>
         <div class="entry-content">
             <?php
-            the_content(__('Continue reading <span class="meta-nav">&rarr;</span>', 'bigblank'));
+            the_content(sprintf(__('Continue Reading %s <span class="meta-nav">&rarr;</span>', 'bigblank'), get_the_title()));
             wp_link_pages(array(
                 'before' => '<div class="page-links"><span class="page-links-title">' . __('Pages:', 'bigblank') . '</span>',
                 'after' => '</div>',
