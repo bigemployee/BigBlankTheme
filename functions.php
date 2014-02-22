@@ -185,8 +185,7 @@ add_action('widgets_init', 'bigblank_widgets_init');
  * @return void
  */
 function bigblank_scripts() {
-    // Add Lato font, used in the main stylesheet.
-    wp_enqueue_style('bigblank-lato', bigblank_font_url(), array(), null);
+
     // Add Genericons font, used in the main stylesheet.
     wp_enqueue_style('genericons', get_template_directory_uri() . '/genericons/genericons.css', array(), '3.0.2');
     // Load our main stylesheet.
