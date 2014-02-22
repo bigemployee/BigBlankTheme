@@ -28,7 +28,7 @@
  *
  */
 if (!isset($content_width)) {
-    $content_width = 474;
+    $content_width = 800;
 }
 /**
  * Big Blank only works in WordPress 3.6 or later.
@@ -59,7 +59,7 @@ if (!function_exists('bigblank_setup')) :
          */
         load_theme_textdomain('bigblank', get_template_directory() . '/languages');
         // This theme styles the visual editor to resemble the theme style.
-        add_editor_style(array('css/editor-style.css', bigblank_font_url()));
+        add_editor_style(array('css/editor-style.css'));
         // Add RSS feed links to <head> for posts and comments.
         add_theme_support('automatic-feed-links');
         // Enable support for Post Thumbnails, and declare two sizes.
@@ -85,10 +85,6 @@ if (!function_exists('bigblank_setup')) :
         add_theme_support('post-formats', array(
             'aside', 'image', 'video', 'audio', 'quote', 'link', 'gallery',
         ));
-        // This theme allows users to set a custom background.
-        add_theme_support('custom-background', apply_filters('bigblank_custom_background_args', array(
-            'default-color' => 'f5f5f5',
-        )));
         // Add support for featured content.
         add_theme_support('featured-content', array(
             'featured_content_filter' => 'bigblank_get_featured_posts',
@@ -109,7 +105,7 @@ add_action('after_setup_theme', 'bigblank_setup');
  */
 function bigblank_content_width() {
     if (is_attachment() && wp_attachment_is_image()) {
-        $GLOBALS['content_width'] = 810;
+        $GLOBALS['content_width'] = 960;
     }
 }
 
@@ -181,23 +177,6 @@ function bigblank_widgets_init() {
 
 add_action('widgets_init', 'bigblank_widgets_init');
 
-/**
- * Register Lato Google font for Big Blank.
- *
- *
- * @return string
- */
-function bigblank_font_url() {
-    $font_url = '';
-    /*
-     * Translators: If there are characters in your language that are not supported
-     * by Lato, translate this to 'off'. Do not translate into your own language.
-     */
-    if ('off' !== _x('on', 'Lato font: on or off', 'bigblank')) {
-        $font_url = add_query_arg('family', urlencode('Lato:300,400,700,900,300italic,400italic,700italic'), "//fonts.googleapis.com/css");
-    }
-    return $font_url;
-}
 
 /**
  * Enqueue scripts and styles for the front end.
