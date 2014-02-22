@@ -353,63 +353,6 @@ td {
 
 
 /**
- * 9.0 Featured Content
- * -----------------------------------------------------------------------------
- */
-
-.featured-content .post-thumbnail img {
-    right: 0;
-    left: auto;
-}
-
-.slider-viewport {
-    direction: ltr;
-}
-
-.slider .featured-content .entry-header {
-    right: 0;
-    left: auto;
-    text-align: right;
-}
-
-.slider-control-paging {
-    float: right;
-}
-
-.slider-control-paging li {
-    float: right;
-    margin: 2px 0 2px 4px;
-}
-
-.slider-control-paging li:last-child {
-    margin-right: auto;
-    margin-left: 0;
-}
-
-.slider-control-paging a:before {
-    right: 10px;
-    left: auto;
-}
-
-.slider-direction-nav li {
-    border-width: 2px 0 0 1px;
-    float: right;
-}
-
-.slider-direction-nav li:last-child {
-    border-width: 2px 1px 0 0;
-}
-
-.slider-direction-nav a:before {
-    content: "\f429";
-}
-
-.slider-direction-nav .slider-next:before {
-    content: "\f430";
-}
-
-
-/**
  * 10.0 Media Queries
  * -----------------------------------------------------------------------------
  */
