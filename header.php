@@ -1,9 +1,12 @@
 <?php
 /**
+ * Documentation & Quick Start Guide
+ * @link http://bigemployee.com/projects/big-blank-responsive-wordpress-theme/
+ * 
  * The Header for our theme
  *
  * Displays all of the <head> section and everything up till <div id="main">
- *
+ * 
  */
 ?>
 <!DOCTYPE html>
