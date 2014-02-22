@@ -9,7 +9,7 @@
 <!DOCTYPE html>
 <html <?php language_attributes(); ?>>
     <head>
-        <meta charset="<?php bloginfo('charset'); ?>">
+        <meta charset="utf-8">
         <title><?php wp_title('|', true, 'right'); ?></title>
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <!--[if lte IE 9]><script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script><![endif]-->
