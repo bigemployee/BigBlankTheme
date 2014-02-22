@@ -186,7 +186,8 @@ add_action('widgets_init', 'bigblank_widgets_init');
 /**
  * Enqueue scripts and styles for the front end.
  *
- *
+ * Read more about wp_register_script at: 
+ * @link http://codex.wordpress.org/Function_Reference/wp_register_script
  * @return void
  */
 function bigblank_scripts() {
@@ -198,8 +199,20 @@ function bigblank_scripts() {
     // Load the Internet Explorer specific stylesheet.
     wp_enqueue_style('ie', get_template_directory_uri() . '/css/ie.css', array('style', 'genericons'), '20140222');
     wp_style_add_data('ie', 'conditional', 'lt IE 9');
+
+    // jQuery.js
+    // 1. load the latest jQuery from theme library
+    //    wp_deregister_script('jquery');
+    //    wp_register_script('jquery', get_template_directory_uri() . '/js/jquery.js', false, '2.1.0', true);
+    // 2. load from Google CDN        
+    //    wp_register_script('jquery', '//ajax.googleapis.com/ajax/libs/jquery/2.1.0/jquery.min.js', false, false, true);
+    // 3. load from WP included library, Loading jQuery in footer sometimes causes 
+    //    for some plugins to not work since they do not register jQuery as dependancy 
+    //    wp_register_script('jquery', false, false, false, true);
+    // 4. or do nothing and jQuery will load from current WordPress install
+    
     if (is_singular() && comments_open() && get_option('thread_comments')) {
-        wp_enqueue_script('comment-reply');
+        wp_enqueue_script('comment-reply', false, false, false, true);
     }
     wp_enqueue_script('scripts', get_template_directory_uri() . '/js/scripts.min.js', array('jquery'), '20140222', true);
     wp_enqueue_script('main', get_template_directory_uri() . '/js/main.js', array('jquery', 'scripts'), '20140222', true);
