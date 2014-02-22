@@ -61,7 +61,7 @@ if (!function_exists('bigblank_setup')) :
         // This theme styles the visual editor to resemble the theme style.
         add_editor_style(array('css/editor-style.css'));
         // Add RSS feed links to <head> for posts and comments.
-        add_theme_support('automatic-feed-links');
+//        add_theme_support('automatic-feed-links');
         // Enable support for Post Thumbnails, and declare two sizes.
         add_theme_support('post-thumbnails');
         set_post_thumbnail_size(672, 372, true);
@@ -110,6 +110,50 @@ function bigblank_content_width() {
 }
 
 add_action('template_redirect', 'bigblank_content_width');
+
+/** 
+ * Let's remove some code and cleanup <head>
+ */
+function be_head_cleanup() {
+    /**
+     * remove Really Simple Discoverability; Roll it in if you want to use 
+     * Weblog Clients that use XML-RPC Support
+     * @link http://codex.wordpress.org/XML-RPC_Support
+     */
+    remove_action('wp_head', 'rsd_link');
+    // remove Windows Live Writer Manifest link
+    remove_action('wp_head', 'wlwmanifest_link');
+    // remove WordPress version meta
+    remove_action('wp_head', 'wp_generator');
+}
+
+add_action('init', 'be_head_cleanup');
+
+/**
+ * Remove recent comments inline style form WP <head>
+ * .recentcomments a{display:inline !important;padding:0 !important;margin:0 !important;}
+ * @global type $wp_widget_factory
+ */
+function be_remove_recent_comments_style() {  
+    global $wp_widget_factory;  
+    remove_action( 'wp_head', array( $wp_widget_factory->widgets['WP_Widget_Recent_Comments'], 'recent_comments_style' ) );  
+}  
+
+add_action( 'widgets_init', 'be_remove_recent_comments_style');
+
+/**
+ * Remove version from CSS and JS files for Caching
+ * @param string|array $src Query key or keys to remove.
+ * @return string New URL query string.
+ */
+function bigblank_remove_wp_ver_css_js( $src ) {
+    if ( strpos( $src, 'ver=' ) )
+        $src = remove_query_arg( 'ver', $src );
+    return $src;
+}
+
+add_filter( 'style_loader_src', 'bigblank_remove_wp_ver_css_js');
+add_filter( 'script_loader_src', 'bigblank_remove_wp_ver_css_js');
 
 /**
  * Getter function for Featured Content Plugin.
