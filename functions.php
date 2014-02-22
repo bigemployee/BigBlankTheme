@@ -31,9 +31,9 @@ if (!isset($content_width)) {
     $content_width = 800;
 }
 /**
- * Big Blank only works in WordPress 3.6 or later.
+ * Big Blank only works in WordPress 3.8 or later.
  */
-if (version_compare($GLOBALS['wp_version'], '3.6', '<')) {
+if (version_compare($GLOBALS['wp_version'], '3.8', '<')) {
     require get_template_directory() . '/inc/back-compat.php';
 }
 if (!function_exists('bigblank_setup')) :

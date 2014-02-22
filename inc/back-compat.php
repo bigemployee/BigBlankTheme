@@ -3,9 +3,9 @@
 /**
  * Big Blank back compat functionality
  *
- * Prevents Big Blank from running on WordPress versions prior to 3.6,
+ * Prevents Big Blank from running on WordPress versions prior to 3.8,
  * since this theme is not meant to be backward compatible beyond that
- * and relies on many newer functions and markup changes introduced in 3.6.
+ * and relies on many newer functions and markup changes introduced in 3.8.
  *
  */
 
@@ -29,24 +29,24 @@ add_action('after_switch_theme', 'bigblank_switch_theme');
  * Add message for unsuccessful theme switch.
  *
  * Prints an update nag after an unsuccessful attempt to switch to
- * Big Blank on WordPress versions prior to 3.6.
+ * Big Blank on WordPress versions prior to 3.8.
  *
  *
  * @return void
  */
 function bigblank_upgrade_notice() {
-    $message = sprintf(__('Big Blank requires at least WordPress version 3.6. You are running version %s. Please upgrade and try again.', 'bigblank'), $GLOBALS['wp_version']);
+    $message = sprintf(__('Big Blank requires at least WordPress version 3.8. You are running version %s. Please upgrade and try again.', 'bigblank'), $GLOBALS['wp_version']);
     printf('<div class="error"><p>%s</p></div>', $message);
 }
 
 /**
- * Prevent the Theme Customizer from being loaded on WordPress versions prior to 3.6.
+ * Prevent the Theme Customizer from being loaded on WordPress versions prior to 3.8.
  *
  *
  * @return void
  */
 function bigblank_customize() {
-    wp_die(sprintf(__('Big Blank requires at least WordPress version 3.6. You are running version %s. Please upgrade and try again.', 'bigblank'), $GLOBALS['wp_version']), '', array(
+    wp_die(sprintf(__('Big Blank requires at least WordPress version 3.8. You are running version %s. Please upgrade and try again.', 'bigblank'), $GLOBALS['wp_version']), '', array(
         'back_link' => true,
     ));
 }
@@ -61,7 +61,7 @@ add_action('load-customize.php', 'bigblank_customize');
  */
 function bigblank_preview() {
     if (isset($_GET['preview'])) {
-        wp_die(sprintf(__('Big Blank requires at least WordPress version 3.6. You are running version %s. Please upgrade and try again.', 'bigblank'), $GLOBALS['wp_version']));
+        wp_die(sprintf(__('Big Blank requires at least WordPress version 3.8. You are running version %s. Please upgrade and try again.', 'bigblank'), $GLOBALS['wp_version']));
     }
 }
 
