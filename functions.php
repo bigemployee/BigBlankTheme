@@ -61,7 +61,7 @@ if (!function_exists('bigblank_setup')) :
         // This theme styles the visual editor to resemble the theme style.
         add_editor_style(array('css/editor-style.css'));
         // Add RSS feed links to <head> for posts and comments.
-//        add_theme_support('automatic-feed-links');
+        add_theme_support('automatic-feed-links');
         // Enable support for Post Thumbnails, and declare two sizes.
         add_theme_support('post-thumbnails');
         set_post_thumbnail_size(672, 372, true);
@@ -213,17 +213,6 @@ function bigblank_scripts() {
 
 add_action('wp_enqueue_scripts', 'bigblank_scripts');
 
-/**
- * Enqueue Google fonts style to admin screen for custom header display.
- *
- *
- * @return void
- */
-function bigblank_admin_fonts() {
-    wp_enqueue_style('bigblank-lato', bigblank_font_url(), array(), null);
-}
-
-add_action('admin_print_scripts-appearance_page_custom-header', 'bigblank_admin_fonts');
 if (!function_exists('bigblank_the_attached_image')) :
 
     /**
@@ -332,11 +321,10 @@ endif;
  *
  * Adds body classes to denote:
  * 1. Single or multiple authors.
- * 2. Presence of header image.
- * 3. Index views.
- * 4. Full-width content layout.
- * 5. Presence of footer widgets.
- * 6. Single views.
+ * 2. Index views.
+ * 3. Full-width content layout.
+ * 4. Presence of footer widgets.
+ * 5. Single views.
  *
  *
  * @param array $classes A list of existing body class values.
@@ -345,11 +333,6 @@ endif;
 function bigblank_body_classes($classes) {
     if (is_multi_author()) {
         $classes[] = 'group-blog';
-    }
-    if (get_header_image()) {
-        $classes[] = 'header-image';
-    } else {
-        $classes[] = 'masthead-fixed';
     }
     if (is_archive() || is_search() || is_home()) {
         $classes[] = 'list-view';
@@ -416,8 +399,6 @@ function bigblank_wp_title($title, $sep) {
 }
 
 add_filter('wp_title', 'bigblank_wp_title', 10, 2);
-// Implement Custom Header features.
-require get_template_directory() . '/inc/custom-header.php';
 // Custom template tags for this theme.
 require get_template_directory() . '/inc/template-tags.php';
 // Add Theme Customizer functionality.

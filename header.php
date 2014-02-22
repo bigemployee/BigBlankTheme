@@ -20,13 +20,6 @@
     </head>
     <body <?php body_class(); ?>>
         <div id="page" class="hfeed site">
-            <?php if (get_header_image()) : ?>
-                <div id="site-header">
-                    <a href="<?php echo esc_url(home_url('/')); ?>" rel="home">
-                        <img src="<?php header_image(); ?>" width="<?php echo get_custom_header()->width; ?>" height="<?php echo get_custom_header()->height; ?>" alt="">
-                    </a>
-                </div>
-            <?php endif; ?>
             <header id="masthead" class="site-header" role="banner">
                 <div class="header-main">
                     <h1 class="site-title"><a href="<?php echo esc_url(home_url('/')); ?>" rel="home"><?php bloginfo('name'); ?></a></h1>

@@ -12,15 +12,9 @@
  * @param WP_Customize_Manager $wp_customize Theme Customizer object.
  */
 function bigblank_customize_register($wp_customize) {
-    // Add custom description to Colors and Background sections.
-    $wp_customize->get_section('colors')->description = __('Background may only be visible on wide screens.', 'bigblank');
-    $wp_customize->get_section('background_image')->description = __('Background may only be visible on wide screens.', 'bigblank');
     // Add postMessage support for site title and description.
     $wp_customize->get_setting('blogname')->transport = 'postMessage';
     $wp_customize->get_setting('blogdescription')->transport = 'postMessage';
-    $wp_customize->get_setting('header_textcolor')->transport = 'postMessage';
-    // Rename the label to "Site Title Color" because this only affects the site title in this theme.
-    $wp_customize->get_control('header_textcolor')->label = __('Site Title Color', 'bigblank');
     // Rename the label to "Display Site Title & Tagline" in order to make this option extra clear.
     $wp_customize->get_control('display_header_text')->label = __('Display Site Title &amp; Tagline', 'bigblank');
 }
