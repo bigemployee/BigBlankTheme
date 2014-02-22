@@ -195,17 +195,15 @@ function bigblank_scripts() {
     // Add Genericons font, used in the main stylesheet.
     wp_enqueue_style('genericons', get_template_directory_uri() . '/genericons/genericons.css', array(), '3.0.2');
     // Load our main stylesheet.
-    wp_enqueue_style('bigblank-style', get_stylesheet_uri(), array('genericons'));
+    wp_enqueue_style('style', get_stylesheet_uri(), array('genericons'));
     // Load the Internet Explorer specific stylesheet.
-    wp_enqueue_style('bigblank-ie', get_template_directory_uri() . '/css/ie.css', array('bigblank-style', 'genericons'), '20131205');
-    wp_style_add_data('bigblank-ie', 'conditional', 'lt IE 9');
+    wp_enqueue_style('ie', get_template_directory_uri() . '/css/ie.css', array('style', 'genericons'), '20140222');
+    wp_style_add_data('ie', 'conditional', 'lt IE 9');
     if (is_singular() && comments_open() && get_option('thread_comments')) {
         wp_enqueue_script('comment-reply');
     }
-    if (is_singular() && wp_attachment_is_image()) {
-        wp_enqueue_script('bigblank-keyboard-image-navigation', get_template_directory_uri() . '/js/keyboard-image-navigation.js', array('jquery'), '20130402');
-    }
-    wp_enqueue_script('bigblank-script', get_template_directory_uri() . '/js/functions.js', array('jquery'), '20131209', true);
+    wp_enqueue_script('script', get_template_directory_uri() . '/js/scripts.min.js', array('jquery'), '20140222', true);
+    wp_enqueue_script('main', get_template_directory_uri() . '/js/main.js', array('jquery', ''), '20140222', true);
 }
 
 add_action('wp_enqueue_scripts', 'bigblank_scripts');
