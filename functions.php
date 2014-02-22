@@ -221,13 +221,20 @@ function bigblank_scripts() {
 add_action('wp_enqueue_scripts', 'bigblank_scripts');
 
 /**
- *  filter p tags
+ *  filter <p> tags wrapping images
  */
 function filter_ptags_on_images($content) {
     return preg_replace('/<p>\s*(<a .*>)?\s*(<img .* \/>)\s*(<\/a>)?\s*<\/p>/iU', '\1\2\3', $content);
 }
 
 add_filter('the_content', 'filter_ptags_on_images');
+
+// set post excerpt length
+function be_excerpt_length($length) {
+    return 140;
+}
+
+add_filter('excerpt_length', 'be_excerpt_length');
 
 
 
