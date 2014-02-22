@@ -8,7 +8,7 @@
  * @link http://codex.wordpress.org/Widgets_API#Developing_Widgets
  *
  */
-class Twenty_Fourteen_Ephemera_Widget extends WP_Widget {
+class Big_Blank_Ephemera_Widget extends WP_Widget {
 
     /**
      * The supported post formats.
@@ -32,7 +32,7 @@ class Twenty_Fourteen_Ephemera_Widget extends WP_Widget {
      * Constructor.
      *
      *
-     * @return Twenty_Fourteen_Ephemera_Widget
+     * @return Big_Blank_Ephemera_Widget
      */
     public function __construct() {
         parent::__construct('widget_bigblank_ephemera', __('Big Blank Ephemera', 'bigblank'), array(

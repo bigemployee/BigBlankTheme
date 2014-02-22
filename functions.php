@@ -151,7 +151,7 @@ add_filter( 'script_loader_src', 'bigblank_remove_wp_ver_css_js');
  */
 function bigblank_widgets_init() {
     require get_template_directory() . '/inc/widgets.php';
-    register_widget('Twenty_Fourteen_Ephemera_Widget');
+    register_widget('Big_Blank_Ephemera_Widget');
     register_sidebar(array(
         'name' => __('Primary Sidebar', 'bigblank'),
         'id' => 'sidebar-1',
