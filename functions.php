@@ -78,11 +78,6 @@ if (!function_exists('bigblank_setup')) :
         add_theme_support('html5', array(
             'search-form', 'comment-form', 'comment-list',
         ));
-        // Add support for featured content.
-        add_theme_support('featured-content', array(
-            'featured_content_filter' => 'bigblank_get_featured_posts',
-            'max_posts' => 6,
-        ));
         // This theme uses its own gallery styles.
         add_filter('use_default_gallery_style', '__return_false');
     }
@@ -149,32 +144,6 @@ add_filter( 'style_loader_src', 'bigblank_remove_wp_ver_css_js');
 add_filter( 'script_loader_src', 'bigblank_remove_wp_ver_css_js');
 
 /**
- * Getter function for Featured Content Plugin.
- *
- *
- * @return array An array of WP_Post objects.
- */
-function bigblank_get_featured_posts() {
-    /**
-     * Filter the featured posts to return in Big Blank.
-     *
-     *
-     * @param array|bool $posts Array of featured posts, otherwise false.
-     */
-    return apply_filters('bigblank_get_featured_posts', array());
-}
-
-/**
- * A helper conditional function that returns a boolean value.
- *
- *
- * @return bool Whether there are featured posts.
- */
-function bigblank_has_featured_posts() {
-    return !is_paged() && (bool) bigblank_get_featured_posts();
-}
-
-/**
  * Register three Big Blank widget areas.
  *
  *
@@ -238,13 +207,6 @@ function bigblank_scripts() {
     }
     if (is_active_sidebar('sidebar-3')) {
         wp_enqueue_script('jquery-masonry');
-    }
-    if (is_front_page() && 'slider' == get_theme_mod('featured_content_layout')) {
-        wp_enqueue_script('bigblank-slider', get_template_directory_uri() . '/js/slider.js', array('jquery'), '20131205', true);
-        wp_localize_script('bigblank-slider', 'featuredSliderDefaults', array(
-            'prevText' => __('Previous', 'bigblank'),
-            'nextText' => __('Next', 'bigblank')
-        ));
     }
     wp_enqueue_script('bigblank-script', get_template_directory_uri() . '/js/functions.js', array('jquery'), '20131209', true);
 }
@@ -375,7 +337,6 @@ endif;
  * 4. Full-width content layout.
  * 5. Presence of footer widgets.
  * 6. Single views.
- * 7. Featured content layout.
  *
  *
  * @param array $classes A list of existing body class values.
@@ -401,11 +362,6 @@ function bigblank_body_classes($classes) {
     }
     if (is_singular() && !is_front_page()) {
         $classes[] = 'singular';
-    }
-    if (is_front_page() && 'slider' == get_theme_mod('featured_content_layout')) {
-        $classes[] = 'slider';
-    } elseif (is_front_page()) {
-        $classes[] = 'grid';
     }
     return $classes;
 }
@@ -466,12 +422,3 @@ require get_template_directory() . '/inc/custom-header.php';
 require get_template_directory() . '/inc/template-tags.php';
 // Add Theme Customizer functionality.
 require get_template_directory() . '/inc/customizer.php';
-/*
- * Add Featured Content functionality.
- *
- * To overwrite in a plugin, define your own Featured_Content class on or
- * before the 'setup_theme' hook.
- */
-if (!class_exists('Featured_Content') && 'plugins.php' !== $GLOBALS['pagenow']) {
-    require get_template_directory() . '/inc/featured-content.php';
-}
