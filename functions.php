@@ -409,5 +409,12 @@ function bigblank_wp_title($title, $sep) {
 }
 
 add_filter('wp_title', 'bigblank_wp_title', 10, 2);
+
+// Custom template tags for this theme.
+require get_template_directory() . '/inc/template-tags.php';
+
+// Helper functions
+require get_template_directory() . '/inc/helpers.php';
+
 // Add Theme Customizer functionality.
 require get_template_directory() . '/inc/customizer.php';

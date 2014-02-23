@@ -3,6 +3,130 @@
  * Custom template tags for Big Blank
  *
  */
+if (!function_exists('bigblank_main_menu')) :
+
+    /**
+     * Main navigation menu
+     */
+    function bigblank_main_menu() {
+        wp_nav_menu(array(
+            'menu' => 'main_menu',
+            'theme_location' => 'main_menu',
+            'container' => 'nav',
+            'depth' => 2,
+            'fallback_cb' => 'bigblank_menu_fallback',
+            'container_id' => 'nav'
+        ));
+    }
+
+endif;
+
+if (!function_exists('bigblank_footer_menu')) :
+
+    /**
+     * Footer menu
+     */
+    function bigblank_footer_menu() {
+        $walker = new bigblank_footer_menu_walker;
+        wp_nav_menu(array(
+            'menu' => 'footer_menu',
+            'theme_location' => 'footer_menu',
+            'container' => 'nav',
+            'container_id' => 'footer-nav',
+            'depth' => 1,
+            'fallback_cb' => 'bigblank_footer_menu_fallback',
+            'walker' => $walker
+        ));
+    }
+
+endif;
+
+if (!function_exists('bigblank_menu_fallback')) :
+
+    /**
+     * Default menu fallback
+     */
+    function bigblank_menu_fallback() {
+        $menus = wp_get_nav_menus();
+        if (!empty($menus)) {
+            return wp_nav_menu(array(
+                'container' => 'nav',
+                'depth' => 2,
+                'container_id' => 'nav'
+            ));
+        }
+    }
+
+endif;
+
+if (!function_exists('bigblank_footer_menu_fallback')) :
+
+    /**
+     * Footer menu fallback
+     */
+    function bigblank_footer_menu_fallback() {
+        $menus = wp_get_nav_menus();
+        if (!empty($menus)) {
+            return wp_nav_menu(array(
+                'container' => 'nav',
+                'depth' => 1,
+                'container_id' => 'footer-nav'
+            ));
+        }
+    }
+
+endif;
+
+/**
+ * Only one level deep menu for Footer
+ */
+class bigblank_footer_menu_walker extends Walker_Nav_Menu {
+
+    function start_lvl(&$output, $depth = 0, $args = array()) {
+        if ($depth != 0)
+            return;
+    }
+
+    function end_lvl(&$output, $depth = 0, $args = array()) {
+        if ($depth != 0)
+            return;
+    }
+
+    function start_el(&$output, $item, $depth = 0, $args = array(), $id = 0) {
+        if ($depth != 0)
+            return;
+        global $wp_query;
+        $indent = ( $depth ) ? str0_repeat("\t", $depth) : '';
+        $class_names = join(' ', apply_filters(
+                        'nav_menu_css_class', array_filter(
+                                empty($item->classes) ?
+                                        array() :
+                                        (array) $item->classes), $item));
+
+        $output .= $indent . '<li class="' . apply_filters('the_title', $item->title, $item->ID) . ' ' . esc_attr($class_names) . '">';
+
+        $attributes = !empty($item->attr_title) ? ' title="' . esc_attr($item->attr_title) . '"' : '';
+        $attributes .=!empty($item->target) ? ' target="' . esc_attr($item->target) . '"' : '';
+        $attributes .=!empty($item->xfn) ? ' rel="' . esc_attr($item->xfn) . '"' : '';
+        $attributes .=!empty($item->url) ? ' href="' . esc_attr($item->url) . '"' : '';
+
+        $item_output = $args->before;
+        $item_output .= '<a' . $attributes . '>';
+        $item_output .= $args->link_before . apply_filters('the_title', $item->title, $item->ID) . $args->link_after;
+        $item_output .= '</a>';
+        $item_output .= $args->after;
+
+        $output .= apply_filters('walker_nav_menu_start_el', $item_output, $item, $depth, $args);
+    }
+
+    function end_el(&$output, $item, $depth = 0, $args = array()) {
+        if ($depth != 0)
+            return;
+        $output .= "</li>\n";
+    }
+
+}
+
 if (!function_exists('bigblank_paging_nav')) :
 
     /**
@@ -159,7 +283,7 @@ function bigblank_post_thumbnail() {
         ?>
         <div class="post-thumbnail">
             <?php
-            if ((!is_active_sidebar('sidebar-2') || is_page_template('page-templates/full-width.php'))) {
+            if ((!is_active_sidebar('sidebar') || is_page_template('page-templates/full-width.php'))) {
                 the_post_thumbnail('bigblank-full-width');
             } else {
                 the_post_thumbnail();
@@ -169,7 +293,7 @@ function bigblank_post_thumbnail() {
     <?php else : ?>
         <a class="post-thumbnail" href="<?php the_permalink(); ?>">
             <?php
-            if ((!is_active_sidebar('sidebar-2') || is_page_template('page-templates/full-width.php'))) {
+            if ((!is_active_sidebar('sidebar') || is_page_template('page-templates/full-width.php'))) {
                 the_post_thumbnail('bigblank-full-width');
             } else {
                 the_post_thumbnail();
