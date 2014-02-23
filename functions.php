@@ -68,8 +68,8 @@ if (!function_exists('bigblank_setup')) :
         add_image_size('bigblank-full-width', 1038, 576, true);
         // This theme uses wp_nav_menu() in two locations.
         register_nav_menus(array(
-            'primary' => __('Top primary menu', 'bigblank'),
-            'secondary' => __('Secondary menu in left sidebar', 'bigblank'),
+            'main_menu' => __('Top Primary Menu', 'bigblank'),
+            'footer_menu' => __('Footer Menu', 'bigblank'),
         ));
         /*
          * Switch default core markup for search form, comment form, and comments
@@ -150,35 +150,18 @@ add_filter('script_loader_src', 'bigblank_remove_wp_ver_css_js');
  * @return void
  */
 function bigblank_widgets_init() {
-    require get_template_directory() . '/inc/widgets.php';
-    register_widget('Big_Blank_Ephemera_Widget');
+//    require get_template_directory() . '/inc/widgets.php';
+//    register_widget('Big_Blank_Button_Widget');
     register_sidebar(array(
         'name' => __('Primary Sidebar', 'bigblank'),
-        'id' => 'sidebar-1',
-        'description' => __('Main sidebar that appears on the left.', 'bigblank'),
+        'id' => 'sidebar',
+        'description' => __('Sidebar appears next to content.', 'bigblank'),
         'before_widget' => '<aside id="%1$s" class="widget %2$s">',
         'after_widget' => '</aside>',
-        'before_title' => '<h1 class="widget-title">',
-        'after_title' => '</h1>',
+        'before_title' => '<h4 class="widget-title">',
+        'after_title' => '</h4>',
     ));
-    register_sidebar(array(
-        'name' => __('Content Sidebar', 'bigblank'),
-        'id' => 'sidebar-2',
-        'description' => __('Additional sidebar that appears on the right.', 'bigblank'),
-        'before_widget' => '<aside id="%1$s" class="widget %2$s">',
-        'after_widget' => '</aside>',
-        'before_title' => '<h1 class="widget-title">',
-        'after_title' => '</h1>',
-    ));
-    register_sidebar(array(
-        'name' => __('Footer Widget Area', 'bigblank'),
-        'id' => 'sidebar-3',
-        'description' => __('Appears in the footer section of the site.', 'bigblank'),
-        'before_widget' => '<aside id="%1$s" class="widget %2$s">',
-        'after_widget' => '</aside>',
-        'before_title' => '<h1 class="widget-title">',
-        'after_title' => '</h1>',
-    ));
+
 }
 
 add_action('widgets_init', 'bigblank_widgets_init');
@@ -239,8 +222,6 @@ function be_excerpt_length($length) {
 }
 
 add_filter('excerpt_length', 'be_excerpt_length');
-
-
 
 if (!function_exists('bigblank_the_attached_image')) :
 
@@ -428,7 +409,5 @@ function bigblank_wp_title($title, $sep) {
 }
 
 add_filter('wp_title', 'bigblank_wp_title', 10, 2);
-// Custom template tags for this theme.
-require get_template_directory() . '/inc/template-tags.php';
 // Add Theme Customizer functionality.
 require get_template_directory() . '/inc/customizer.php';
