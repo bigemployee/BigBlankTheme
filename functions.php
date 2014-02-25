@@ -58,6 +58,10 @@ if (!function_exists('bigblank_setup')) :
          * template files.
          */
         load_theme_textdomain('bigblank', get_template_directory() . '/languages');
+        
+        // Theme options menu
+        require(get_template_directory() . '/inc/admin-theme-options.php');
+        
         // This theme styles the visual editor to resemble the theme style.
         add_editor_style(array('css/editor-style.css'));
         // Add RSS feed links to <head> for posts and comments.
@@ -80,6 +84,10 @@ if (!function_exists('bigblank_setup')) :
         ));
         // This theme uses its own gallery styles.
         add_filter('use_default_gallery_style', '__return_false');
+        
+        // add custom metaboxs and save the data
+        add_action('add_meta_boxes', 'bigblank_add_custom_box');
+        add_action('save_post', 'bigblank_save_post');
     }
 
 endif; // bigblank_setup
@@ -102,7 +110,7 @@ add_action('template_redirect', 'bigblank_content_width');
 /**
  * Let's remove some code and cleanup <head>
  */
-function be_head_cleanup() {
+function bigblank_head_cleanup() {
     /**
      * remove Really Simple Discoverability; Roll it in if you want to use 
      * Weblog Clients that use XML-RPC Support
@@ -115,7 +123,7 @@ function be_head_cleanup() {
     remove_action('wp_head', 'wp_generator');
 }
 
-add_action('init', 'be_head_cleanup');
+add_action('init', 'bigblank_head_cleanup');
 
 /**
  * Remove version from CSS and JS files for Caching

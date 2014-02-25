@@ -1,0 +1,36 @@
+/**
+ * Big Employee Responsive Blank theme Options css
+ *
+ * @package BigEmployee_Responsive_Blank_Theme
+ * @subpackage  Blank
+ * @since 1.0
+ */
+
+#wpcontent select option {
+    padding-right: 5px;
+}
+.image-radio-option td {
+    padding-top: 15px;
+    border: 1px solid red;
+}
+.image-radio-option label {
+    display: block;
+    float: left;
+    margin: 0 30px 20px 2px;
+    position: relative;
+}
+.image-radio-option input {
+    margin: 0 0 10px;
+}
+.image-radio-option span {
+    display: block;
+    width: 136px;
+}
+.image-radio-option img {
+    margin: 0 0 0 -2px;
+}
+
+body.rtl .image-radio-option label {
+    float: right;
+    margin: 0 2px 20px 30px;
+}

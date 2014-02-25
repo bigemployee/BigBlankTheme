@@ -5,7 +5,7 @@
  */
 
 /**
- * Used in header.php
+ * Menus are called from header and footer
  *
  * Optional $args contents:
  *
@@ -277,4 +277,73 @@ function bigblank_post_thumbnail() {
         </a>
     <?php
     endif; // End is_singular()
+}
+
+
+/**
+ *  post layout box
+ */
+function bigblank_layout_metabox($post) {
+
+    wp_nonce_field('post_layout_nonce', '_wpnonce_post_layout');
+    $post_layout = get_post_meta($post->ID, 'bigblank_post_layout', true);
+    ?>
+    <div class="layout image-radio-option theme-layout">
+        <label class="description">
+            <input type="radio" name="bigblank_post_layout"
+                   value="default_layout" <?php checked($post_layout, false); ?> />
+            Use Theme Default Layout
+        </label>
+    </div>
+    <br />
+    <?php
+    foreach (bigblank_layouts() as $layout):
+        ?>
+        <div class="layout image-radio-option theme-layout">
+            <label class="description">
+                <input type="radio" name="bigblank_post_layout"
+                       value="<?php echo esc_attr($layout['value']); ?>" <?php checked($post_layout, $layout['value']); ?> />
+                <span>
+                    <?php echo $layout['label']; ?>
+                    <br />
+                    <img src="<?php echo esc_url($layout['thumbnail']); ?>" width="136" height="122" alt="" />
+                </span>
+            </label>
+        </div>
+        <?php
+    endforeach;
+}
+
+/**
+ * add custom layout metaboxs
+ * initiated from functions on after_setup_theme hook
+ * add_action('add_meta_boxes', 'bigblank_add_custom_box');
+ */
+function bigblank_add_custom_box() {
+    add_meta_box('bigblank_layout_box', __('Post Layout', 'bigblank'), 'bigblank_layout_metabox', 'post', 'side', 'core');
+    add_meta_box('bigblank_layout_box', __('Page Layout', 'bigblank'), 'bigblank_layout_metabox', 'page', 'side', 'core');
+}
+
+/**
+ * save post metabox data
+ */
+function bigblank_save_post($post_id) {
+    if (defined('DOING_AUTOSAVE') && DOING_AUTOSAVE)
+        return;
+
+    if (isset($_POST['_wpnonce_post_layout']) && !wp_verify_nonce($_POST['_wpnonce_post_layout'], 'post_layout_nonce'))
+        return;
+
+    if (isset($_POST['post_type']) && 'page' == $_POST['post_type'])
+        if (!current_user_can('edit_page', $post_id))
+            return;
+        else
+        if (!current_user_can('edit_post', $post_id))
+            return;
+
+    $post_layout = isset($_POST['bigblank_post_layout']) ? $_POST['bigblank_post_layout'] : '';
+    if (array_key_exists($post_layout, bigblank_layouts())) {
+        update_post_meta($post_id, 'bigblank_post_layout', $post_layout);
+    } elseif ($post_layout == 'default_layout')
+        delete_post_meta($post_id, 'bigblank_post_layout');
 }

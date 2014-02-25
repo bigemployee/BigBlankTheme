@@ -17,6 +17,135 @@ function bigblank_customize_register($wp_customize) {
     $wp_customize->get_setting('blogdescription')->transport = 'postMessage';
     // Rename the label to "Display Site Title & Tagline" in order to make this option extra clear.
     $wp_customize->get_control('display_header_text')->label = __('Display Site Title &amp; Tagline', 'bigblank');
+    
+    $wp_customize->get_setting('blogname')->transport = 'postMessage';
+    $wp_customize->get_setting('blogdescription')->transport = 'postMessage';
+
+    $options = bigblank_get_theme_options();
+    $defaults = bigblank_get_default_theme_options();
+
+    // Contact Section
+    $wp_customize->add_section('contact', array(
+        'title' => __('Contact Settings', 'bigblank'),
+        'priority' => 50
+    ));
+    // phone text
+    $wp_customize->add_setting('bigblank_theme_options[phone]', array(
+        'type' => 'option',
+        'default' => $defaults['phone'],
+    ));
+    $wp_customize->add_control('bigblank_theme_options[phone]', array(
+        'label' => __('Phone Number', 'bigblank'),
+        'section' => 'contact',
+        'settings' => 'bigblank_theme_options[phone]',
+    ));
+    // address text
+    $wp_customize->add_setting('bigblank_theme_options[address]', array(
+        'type' => 'option',
+        'default' => $defaults['address'],
+    ));
+    $wp_customize->add_control('bigblank_theme_options[address]', array(
+        'label' => __('Address', 'bigblank'),
+        'section' => 'contact',
+        'settings' => 'bigblank_theme_options[address]',
+    ));
+
+    // social section
+    $wp_customize->add_section('social', array(
+        'title' => __('Social Links', 'bigblank'),
+        'priority' => 50
+    ));
+    // twitter
+    $wp_customize->add_setting('bigblank_theme_options[twitter]', array(
+        'type' => 'option',
+        'default' => $defaults['twitter'],
+    ));
+    $wp_customize->add_control('bigblank_theme_options[twitter]', array(
+        'label' => __('Twitter', 'bigblank'),
+        'section' => 'social',
+        'settings' => 'bigblank_theme_options[twitter]',
+    ));
+    // facebook
+    $wp_customize->add_setting('bigblank_theme_options[facebook]', array(
+        'type' => 'option',
+        'default' => $defaults['facebook'],
+    ));
+    $wp_customize->add_control('bigblank_theme_options[facebook]', array(
+        'label' => __('Facebook', 'bigblank'),
+        'section' => 'social',
+        'settings' => 'bigblank_theme_options[facebook]',
+    ));
+
+    // instagram
+    $wp_customize->add_setting('bigblank_theme_options[instagram]', array(
+        'type' => 'option',
+        'default' => $defaults['instagram'],
+    ));
+    $wp_customize->add_control('bigblank_theme_options[instagram]', array(
+        'label' => __('Instagram', 'bigblank'),
+        'section' => 'social',
+        'settings' => 'bigblank_theme_options[instagram]',
+    ));
+    // youtube
+    $wp_customize->add_setting('bigblank_theme_options[youtube]', array(
+        'type' => 'option',
+        'default' => $defaults['youtube'],
+    ));
+    $wp_customize->add_control('bigblank_theme_options[youtube]', array(
+        'label' => __('Youtube', 'bigblank'),
+        'section' => 'social',
+        'settings' => 'bigblank_theme_options[youtube]',
+    ));
+
+    // Default Layout
+    $wp_customize->add_section('bigblank_layout', array(
+        'title' => __('Layout', 'bigblank'),
+        'priority' => 50,
+    ));
+
+    $wp_customize->add_setting('bigblank_theme_options[theme_layout]', array(
+        'type' => 'option',
+        'default' => $defaults['theme_layout'],
+        'sanitize_callback' => 'sanitize_key',
+    ));
+
+    $layouts = bigblank_layouts();
+    $choices = array();
+    foreach ($layouts as $layout) {
+        $choices[$layout['value']] = $layout['label'];
+    }
+
+    $wp_customize->add_control('bigblank_theme_options[theme_layout]', array(
+        'section' => 'bigblank_layout',
+        'type' => 'radio',
+        'choices' => $choices,
+    ));
+
+    // Footer Section
+    $wp_customize->add_section('footer', array(
+        'title' => __('Footer Settings', 'bigblank'),
+        'priority' => 50
+    ));
+    // copyright text
+    $wp_customize->add_setting('bigblank_theme_options[footer_copyright]', array(
+        'type' => 'option',
+        'default' => $defaults['footer_copyright'],
+    ));
+    $wp_customize->add_control('bigblank_theme_options[footer_copyright]', array(
+        'label' => __('Copyright Text', 'bigblank'),
+        'section' => 'footer',
+        'settings' => 'bigblank_theme_options[footer_copyright]',
+    ));
+    // footer text
+    $wp_customize->add_setting('bigblank_theme_options[footer_text]', array(
+        'type' => 'option',
+        'default' => $defaults['footer_text'],
+    ));
+    $wp_customize->add_control('bigblank_theme_options[footer_text]', array(
+        'label' => __('Footer Text', 'bigblank'),
+        'section' => 'footer',
+        'settings' => 'bigblank_theme_options[footer_text]',
+    ));
 }
 
 add_action('customize_register', 'bigblank_customize_register');
