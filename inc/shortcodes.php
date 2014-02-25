@@ -38,7 +38,8 @@ add_shortcode('button', 'bigblank_add_shortcode_button');
  * Output: &#106;&#111;h&#110;&#46;&#100;&#111;&#101;&#64;mysit&#101;.&#99;&#111;&#109;
  * 
  * @link http://codex.wordpress.org/Function_Reference/antispambot
-*/
+ */
+
 function bigblank_hide_email($atts, $content = null) {
     if (!is_email($content))
         return;
