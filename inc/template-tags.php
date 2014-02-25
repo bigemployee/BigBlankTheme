@@ -1,6 +1,30 @@
 <?php
 /**
  * Custom template tags for Big Blank
+ * Used to create custom html output for our theme
+ */
+
+/**
+ * Used in header.php
+ *
+ * Optional $args contents:
+ *
+ * menu - The menu that is desired. Accepts (matching in order) id, slug, name. Defaults to blank.
+ * menu_class - CSS class to use for the ul element which forms the menu. Defaults to 'menu'.
+ * menu_id - The ID that is applied to the ul element which forms the menu. Defaults to the menu slug, incremented.
+ * container - Whether to wrap the ul, and what to wrap it with. Defaults to 'div'.
+ * container_class - the class that is applied to the container. Defaults to 'menu-{menu slug}-container'.
+ * container_id - The ID that is applied to the container. Defaults to blank.
+ * fallback_cb - If the menu doesn't exists, a callback function will fire. Defaults to 'wp_page_menu'. Set to false for no fallback.
+ * before - Text before the link text.
+ * after - Text after the link text.
+ * link_before - Text before the link.
+ * link_after - Text after the link.
+ * echo - Whether to echo the menu or return it. Defaults to echo.
+ * depth - how many levels of the hierarchy are to be included. 0 means all. Defaults to 0.
+ * walker - allows a custom walker to be specified.
+ * theme_location - the location in the theme to be used. Must be registered with register_nav_menu() in order to be selectable by the user.
+ * items_wrap - How the list items should be wrapped. Defaults to a ul with an id and class. Uses printf() format with numbered placeholders.
  *
  */
 if (!function_exists('bigblank_main_menu')) :
@@ -35,7 +59,6 @@ if (!function_exists('bigblank_footer_menu')) :
             'container_id' => 'footer-nav',
             'depth' => 1,
             'fallback_cb' => 'bigblank_footer_menu_fallback',
-            'walker' => $walker
         ));
     }
 
@@ -76,56 +99,6 @@ if (!function_exists('bigblank_footer_menu_fallback')) :
     }
 
 endif;
-
-/**
- * Only one level deep menu for Footer
- */
-class bigblank_footer_menu_walker extends Walker_Nav_Menu {
-
-    function start_lvl(&$output, $depth = 0, $args = array()) {
-        if ($depth != 0)
-            return;
-    }
-
-    function end_lvl(&$output, $depth = 0, $args = array()) {
-        if ($depth != 0)
-            return;
-    }
-
-    function start_el(&$output, $item, $depth = 0, $args = array(), $id = 0) {
-        if ($depth != 0)
-            return;
-        global $wp_query;
-        $indent = ( $depth ) ? str0_repeat("\t", $depth) : '';
-        $class_names = join(' ', apply_filters(
-                        'nav_menu_css_class', array_filter(
-                                empty($item->classes) ?
-                                        array() :
-                                        (array) $item->classes), $item));
-
-        $output .= $indent . '<li class="' . apply_filters('the_title', $item->title, $item->ID) . ' ' . esc_attr($class_names) . '">';
-
-        $attributes = !empty($item->attr_title) ? ' title="' . esc_attr($item->attr_title) . '"' : '';
-        $attributes .=!empty($item->target) ? ' target="' . esc_attr($item->target) . '"' : '';
-        $attributes .=!empty($item->xfn) ? ' rel="' . esc_attr($item->xfn) . '"' : '';
-        $attributes .=!empty($item->url) ? ' href="' . esc_attr($item->url) . '"' : '';
-
-        $item_output = $args->before;
-        $item_output .= '<a' . $attributes . '>';
-        $item_output .= $args->link_before . apply_filters('the_title', $item->title, $item->ID) . $args->link_after;
-        $item_output .= '</a>';
-        $item_output .= $args->after;
-
-        $output .= apply_filters('walker_nav_menu_start_el', $item_output, $item, $depth, $args);
-    }
-
-    function end_el(&$output, $item, $depth = 0, $args = array()) {
-        if ($depth != 0)
-            return;
-        $output .= "</li>\n";
-    }
-
-}
 
 if (!function_exists('bigblank_paging_nav')) :
 
@@ -175,6 +148,7 @@ if (!function_exists('bigblank_paging_nav')) :
     }
 
 endif;
+
 if (!function_exists('bigblank_post_nav')) :
 
     /**
@@ -208,6 +182,7 @@ if (!function_exists('bigblank_post_nav')) :
     }
 
 endif;
+
 if (!function_exists('bigblank_posted_on')) :
 
     /**
