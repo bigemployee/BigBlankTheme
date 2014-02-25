@@ -24,19 +24,19 @@
             return;
         }
 
-        button = nav.find('.menu-toggle');
+        button = nav.find('#menu-toggle');
         if (!button) {
             return;
         }
 
         // Hide button if menu is missing or empty.
-        menu = nav.find('.nav-menu');
+        menu = nav.find('.menu');
         if (!menu || !menu.children().length) {
             button.hide();
             return;
         }
 
-        $('.menu-toggle').on('click.bigblank', function() {
+        button.on('click.bigblank', function() {
             nav.toggleClass('toggled-on');
         });
     })();
