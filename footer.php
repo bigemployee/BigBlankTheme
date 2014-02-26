@@ -17,10 +17,11 @@ $footer_text = $options['footer_text'];
     <div id="site-info" class="site-info">
         <span id="copyright"><?php echo $footer_copyright; ?></span>
         <span id="footer-text"><?php echo $footer_text; ?></span>
-        <a href="<?php echo esc_url(__('http://bigblanktheme.com/', 'bigblank')); ?>"><?php printf(__('BigBlank by %s', 'bigblank'), 'Big Employee'); ?></a>
+        <div id="bigemployee"><?php _e('theme by', 'bigblank') ?> <a href="<?php echo esc_url(__('http://bigemployee.com/', 'bigblank')); ?>"><?php printf(__('%s', 'bigblank'), 'Big Employee'); ?></a></div>
     </div><!-- #site-info -->
 </footer><!-- #footer -->
 </div><!-- #page -->
 <?php wp_footer(); ?>
+<!-- @attribution: Based on Big Blank Theme for WordPress by BigEmployee.com -->
 </body>
 </html>
