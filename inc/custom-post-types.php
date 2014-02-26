@@ -7,7 +7,7 @@
  * 
  * @link http://codex.wordpress.org/Post_Types#Custom_Post_Types
  */
-function be_register_post_type() {
+function bigblank_register_post_type() {
     $teamLabels = array(
         'name' => 'Team',
         'singular_name' => 'Team',
@@ -56,4 +56,4 @@ function be_register_post_type() {
     flush_rewrite_rules();
 }
 
-add_action('init', 'be_register_post_type');
+add_action('init', 'bigblank_register_post_type');
