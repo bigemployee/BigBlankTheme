@@ -38,15 +38,54 @@ add_action('widgets_init', 'bigblank_remove_recent_comments_style');
  * @return void
  */
 function bigblank_widgets_init() {
+    // Main sidebar
     register_sidebar(array(
-        'name' => __('Primary Sidebar', 'bigblank'),
         'id' => 'sidebar',
+        'name' => __('Primary Sidebar', 'bigblank'),
         'description' => __('Sidebar appears next to content.', 'bigblank'),
         'before_widget' => '<aside id="%1$s" class="widget %2$s">',
         'after_widget' => '</aside>',
         'before_title' => '<h4 class="widget-title">',
         'after_title' => '</h4>',
     ));
+    
+    // Call to action block
+    register_sidebar(array(
+        'id' => 'call2action',
+        'name' => __('Footer Call to Action', 'bigblank'),
+        'description' => __('This "Call to Action" area appears after our content', 'bigblank'),
+        'before_widget' => '<div id="call2action">',
+        'after_widget' => '</div>',
+        'before_title' => '<h3>',
+        'after_title' => '</h3>',
+    ));
+    
+    // Newsletter Widget area
+    register_sidebar(array(
+        'id' => 'newsletter',
+        'name' => __('Newsletter', 'bigblank'),
+        'description' => __('Newsletter widget appears in footer section on every page.', 'bigblank'),
+        'before_widget' => '<div class="newsletter-widget"><i class="fa fa-envelope"></i>',
+        'after_widget' => '</div>',
+        'before_title' => '<h4>',
+        'after_title' => '</h4>',
+    ));
+    
+    // Footer sidebar
+    register_sidebar(array(
+        'id' => 'footer',
+        'name' => __('Footer', 'bigblank'),
+        'description' => __('Footer widget area', 'bigblank'),
+        'before_widget' => '<div id="%1$s" class="widget %2$s">',
+        'after_widget' => '</div>',
+        'before_title' => '<h4 class="widget-title">',
+        'after_title' => '</h4>',
+    ));
+    
+    // Register Widgets
+    // @param string $widget_class The name of a class that extends WP_Widget
+    register_widget('Title_Widget');
+    register_widget('Call_To_Action_Widget');
 }
 
 add_action('widgets_init', 'bigblank_widgets_init');
