@@ -6,14 +6,20 @@
  *
  */
 ?>
+<?php
+$options = bigblank_get_theme_options();
+$footer_copyright = $options['footer_copyright'];
+$footer_text = $options['footer_text'];
+?>
 </div><!-- #main -->
-<footer id="colophon" class="site-footer" role="contentinfo">
+<footer id="footer" class="site-footer" role="contentinfo">
     <?php get_sidebar('footer'); ?>
-    <div class="site-info">
-        <?php do_action('bigblank_credits'); ?>
-        <a href="<?php echo esc_url(__('http://bigblanktheme.com/', 'bigblank')); ?>"><?php printf(__('Proudly powered by %s', 'bigblank'), 'WordPress'); ?></a>
-    </div><!-- .site-info -->
-</footer><!-- #colophon -->
+    <div id="site-info" class="site-info">
+        <span id="copyright"><?php echo $footer_copyright; ?></span>
+        <span id="footer-text"><?php echo $footer_text; ?></span>
+        <a href="<?php echo esc_url(__('http://bigblanktheme.com/', 'bigblank')); ?>"><?php printf(__('BigBlank by %s', 'bigblank'), 'Big Employee'); ?></a>
+    </div><!-- #site-info -->
+</footer><!-- #footer -->
 </div><!-- #page -->
 <?php wp_footer(); ?>
 </body>
