@@ -111,8 +111,8 @@ function bigblank_get_default_theme_options() {
         'theme_layout' => 'content-sidebar',
         'page_comments' => 'on',
         'post_comments' => 'on',
-        'footer_copyright' => 'Copyright &copy; ' . date("Y") . ' <a href="' . site_url() . '">' . get_bloginfo('name') . '</a>',
-        'footer_text' => 'Powered by <a href="http://wordpress.org">WordPress</a>',
+        'footer_copyright' => __('Copyright', 'bigblank') . ' &copy; ' . date("Y") . ' <a href="' . site_url() . '">' . get_bloginfo('name') . '</a>',
+        'footer_text' => sprintf(__('Proudly powered by %s', 'bigblank'), '<a href="http://wordpress.org">WordPress</a>'),
         'footer_analytics' => ''
     );
     return apply_filters('bigblank_default_theme_options', $default_theme_options);
@@ -343,3 +343,13 @@ function bigblank_theme_options_validate($input) {
 
     return apply_filters('bigblank_theme_options_validate', $output, $input, $defaults);
 }
+
+/**
+ * Execute Analytics code further down the page
+ * @link https://codex.wordpress.org/Plugin_API/Action_Reference/wp_footer
+ */
+function bigblank_theme_options_render_analytics() {
+    $options = bigblank_get_theme_options();
+    echo $options['footer_analytics'];
+}
+add_action('wp_footer', 'bigblank_theme_options_render_analytics', 100);
