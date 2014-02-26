@@ -34,7 +34,7 @@ if (!isset($content_width)) {
  * Big Blank only works in WordPress 3.8 or later.
  */
 if (version_compare($GLOBALS['wp_version'], '3.8', '<')) {
-    require get_template_directory() . '/inc/admin-back-compat.php';
+    require_once(get_template_directory() . '/inc/admin-back-compat.php');
 }
 if (!function_exists('bigblank_setup')) :
 
@@ -178,16 +178,18 @@ function bigblank_scripts() {
 add_action('wp_enqueue_scripts', 'bigblank_scripts');
 
 // Widgets and Sidebars
-require get_template_directory() . '/inc/widgets-sidebars.php';
+require_once(get_template_directory() . '/inc/widget-title.php');
+require_once(get_template_directory() . '/inc/widget-call-to-action.php');
+require_once(get_template_directory() . '/inc/widgets-sidebars.php');
 
 // Custom post types
-require get_template_directory() . '/inc/custom-post-types.php';
+require_once(get_template_directory() . '/inc/custom-post-types.php');
 
 // Filters and functions to manipulate content
-require get_template_directory() . '/inc/filters.php';
+require_once(get_template_directory() . '/inc/filters.php');
 
 // Custom template tags for this theme.
-require get_template_directory() . '/inc/template-tags.php';
+require_once(get_template_directory() . '/inc/template-tags.php');
 
 // Add Theme Customizer functionality.
-require get_template_directory() . '/inc/admin-customizer.php';
+require_once(get_template_directory() . '/inc/admin-customizer.php');
