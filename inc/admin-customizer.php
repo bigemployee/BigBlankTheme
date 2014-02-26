@@ -7,7 +7,7 @@
 
 /**
  * Implement Theme Customizer additions and adjustments.
- *
+ * Static front page priority is 120, so we assign our section priorities higher
  *
  * @param WP_Customize_Manager $wp_customize Theme Customizer object.
  */
@@ -21,13 +21,12 @@ function bigblank_customize_register($wp_customize) {
     $wp_customize->get_setting('blogname')->transport = 'postMessage';
     $wp_customize->get_setting('blogdescription')->transport = 'postMessage';
 
-    $options = bigblank_get_theme_options();
     $defaults = bigblank_get_default_theme_options();
 
     // Contact Section
     $wp_customize->add_section('contact', array(
         'title' => __('Contact Settings', 'bigblank'),
-        'priority' => 50
+        'priority' => 140
     ));
     // phone text
     $wp_customize->add_setting('bigblank_theme_options[phone]', array(
@@ -53,7 +52,7 @@ function bigblank_customize_register($wp_customize) {
     // social section
     $wp_customize->add_section('social', array(
         'title' => __('Social Links', 'bigblank'),
-        'priority' => 50
+        'priority' => 150
     ));
     // twitter
     $wp_customize->add_setting('bigblank_theme_options[twitter]', array(
@@ -100,7 +99,7 @@ function bigblank_customize_register($wp_customize) {
     // Default Layout
     $wp_customize->add_section('bigblank_layout', array(
         'title' => __('Layout', 'bigblank'),
-        'priority' => 50,
+        'priority' => 130,
     ));
 
     $wp_customize->add_setting('bigblank_theme_options[theme_layout]', array(
@@ -124,7 +123,7 @@ function bigblank_customize_register($wp_customize) {
     // Footer Section
     $wp_customize->add_section('footer', array(
         'title' => __('Footer Settings', 'bigblank'),
-        'priority' => 50
+        'priority' => 160,
     ));
     // copyright text
     $wp_customize->add_setting('bigblank_theme_options[footer_copyright]', array(
