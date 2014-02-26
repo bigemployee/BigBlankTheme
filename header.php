@@ -20,7 +20,7 @@
     </head>
     <body <?php body_class(); ?>>
         <div id="page" class="hfeed site">
-            <header id="header" class="site-header">
+            <header id="header" class="site-header" role="banner">
                 <!--  if you would like to use logo instead of site title, you could reuse this commented code -->
                 
                     <a id="logo" href="<?php echo home_url(); ?>" rel="home">
