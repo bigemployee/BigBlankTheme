@@ -2884,7 +2884,7 @@ a.post-thumbnail:hover {
         text-transform: uppercase;
     }
 
-    .primary-navigation .menu-toggle {
+    #menu-toggle {
         display: none;
         padding: 0;
     }
@@ -2940,6 +2940,7 @@ a.post-thumbnail:hover {
         padding: 18px 12px;
         white-space: normal;
         width: 176px;
+        color: #fff;
     }
 
     .primary-navigation li:hover > a,
