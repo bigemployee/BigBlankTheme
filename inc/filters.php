@@ -1,5 +1,4 @@
 <?php
-
 /**
  * Filters are functions that WordPress passes data through, at certain points 
  * in execution, just before taking some action with the data (such as adding 
@@ -237,10 +236,13 @@ add_filter('the_content', 'anchor_content_h2');
 /**
  * Filter <p> tags wrapping images and iframes
  * comment out if you wish to keep them in <p> tags.
+ * \1\3\4\5 is the group of paranthesis returned
+ * "generally, the results of the captured groups are in the order in which they
+ * are defined (the open parenthesis)"
  * @link http://regexone.com/lesson/
  */
-function filter_ptags_on_images($content) {
-    return preg_replace('/<p>\s*(<a .*>)?\s*((<img .* \/>)|(<iframe .*>*.<\/iframe>))\s*(<\/a>)?\s*<\/p>/iU', '\1\2\3', $content);
+function remove_ptags_around_images_and_iframes($content) {
+    return preg_replace('/<p>\s*(<a .*>)?\s*((<img .* \/>)|(<iframe .*>*.<\/iframe>))\s*(<\/a>)?\s*<\/p>/iU', '\1\3\4\5', $content);
 }
 
-add_filter('the_content', 'filter_ptags_on_images');
+add_filter('the_content', 'remove_ptags_around_images_and_iframes');
