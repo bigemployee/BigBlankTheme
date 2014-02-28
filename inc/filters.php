@@ -115,10 +115,10 @@ if (!function_exists('bigblank_list_authors')) :
                     <div class="contributor-summary">
                         <h2 class="contributor-name"><?php echo get_the_author_meta('display_name', $contributor_id); ?></h2>
                         <p class="contributor-bio">
-                            <?php echo get_the_author_meta('description', $contributor_id); ?>
+            <?php echo get_the_author_meta('description', $contributor_id); ?>
                         </p>
                         <a class="contributor-posts-link" href="<?php echo esc_url(get_author_posts_url($contributor_id)); ?>">
-                            <?php printf(_n('%d Article', '%d Articles', $post_count, 'bigblank'), $post_count); ?>
+            <?php printf(_n('%d Article', '%d Articles', $post_count, 'bigblank'), $post_count); ?>
                         </a>
                     </div><!-- .contributor-summary -->
                 </div><!-- .contributor-info -->
@@ -126,6 +126,7 @@ if (!function_exists('bigblank_list_authors')) :
             <?php
         endforeach;
     }
+
 endif;
 
 /**
