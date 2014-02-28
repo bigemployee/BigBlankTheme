@@ -20,4 +20,4 @@ $options = bigblank_get_theme_options();
     <?php if (isset($options['youtube']) && $youtube = $options['youtube']) : ?>
         <a href="<?php echo $youtube; ?>" class="fa fa-youtube-play"></a>
     <?php endif; ?>
-</div>
+</div><!-- .social-media -->
