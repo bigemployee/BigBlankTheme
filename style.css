@@ -7,7 +7,7 @@ Author URI: http://bigemployee.com
 Version: 2.0
 Tags: fluid-layout, responsive-layout, custom-menu, microformats, sticky-post, theme-options, translation-ready, one-column, two-columns, right-sidebar, left-sidebar, light, white
 
-License: GNU General Public L & MIT
+License: GNU General Public License & MIT
 License URI: license.txt
 Text Domain: bigblank
 Domain Path: /languages/
@@ -823,7 +823,7 @@ span + .edit-link:before,
 }
 
 .site-content .entry-header,
-.site-content .entry-content,
+.site-content .entry-content p,
 .site-content .entry-summary,
 .site-content .entry-meta,
 .page-content {
@@ -834,7 +834,16 @@ span + .edit-link:before,
 .page-content {
     margin-bottom: 48px;
 }
-
+.site-content .entry-content{
+    text-align: center;
+}
+.site-content .entry-content p{
+    text-align: left;
+}
+.site-content .entry-content iframe,
+.site-content .entry-content img{
+    margin: 0.4em auto 0.6em;
+}
 
 /**
  * 6.1 Post Thumbnail
@@ -1887,7 +1896,7 @@ a.post-thumbnail:hover {
 }
 
 .widget a {
-    color: #fff;
+    /*color: #fff;*/
 }
 
 .widget a:hover {
@@ -2066,7 +2075,7 @@ a.post-thumbnail:hover {
 
 .widget-title,
 .widget-title a {
-    color: #fff;
+    /*color: #fff;*/
 }
 
 .widget-title a:hover {
@@ -2081,7 +2090,7 @@ a.post-thumbnail:hover {
 }
 
 .widget_calendar caption {
-    color: #fff;
+    /*color: #fff;*/
     font-weight: 700;
     line-height: 1.7142857142;
     margin-bottom: 18px;
@@ -2100,7 +2109,7 @@ a.post-thumbnail:hover {
 
 .widget_calendar tbody a {
     background-color: #24890d;
-    color: #fff;
+    /*color: #fff;*/
     display: block;
 }
 
@@ -2109,7 +2118,7 @@ a.post-thumbnail:hover {
 }
 
 .widget_calendar tbody a:hover {
-    color: #fff;
+    /*color: #fff;*/
 }
 
 .widget_calendar #prev {
