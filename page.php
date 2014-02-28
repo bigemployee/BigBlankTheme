@@ -25,7 +25,6 @@ get_header();
             ?>
         </div><!-- #content -->
     </div><!-- #primary -->
-    <?php get_sidebar('content'); ?>
 </div><!-- #main-content -->
 <?php
 get_sidebar();
