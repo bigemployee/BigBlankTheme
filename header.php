@@ -19,7 +19,6 @@
         <?php wp_head(); ?>
     </head>
     <body <?php body_class(); ?>>
-        <div id="page" class="hfeed site">
             <header id="header" class="site-header" role="banner">
                 <?php
                 /**

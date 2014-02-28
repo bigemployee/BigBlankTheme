@@ -203,8 +203,8 @@ input,
 select,
 textarea {
     color: #222;
-    font-family: Lato, sans-serif;
-    font-size: 16px;
+    font-family: "Open Sans Condensed", sans-serif;
+    font-size: 20px;
     font-weight: 400;
     line-height: 1.5;
 }
@@ -649,7 +649,7 @@ span + .edit-link:before,
 
 .site-title a,
 .site-title a:hover {
-    color: #fff;
+    /*color: #fff;*/
 }
 
 #logo{
@@ -828,7 +828,7 @@ span + .edit-link:before,
 .site-content .entry-meta,
 .page-content {
     margin: 0 auto;
-    max-width: 474px;
+    max-width: 480px;
 }
 
 .page-content {
@@ -839,6 +839,7 @@ span + .edit-link:before,
 }
 .site-content .entry-content p{
     text-align: left;
+    margin-bottom: 1.5em;
 }
 .site-content .entry-content iframe,
 .site-content .entry-content img{

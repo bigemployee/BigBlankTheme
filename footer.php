@@ -24,7 +24,6 @@ $footer_text = $options['footer_text'];
         <div id="bigemployee"><?php _e('theme by', 'bigblank') ?> <a href="<?php echo esc_url(__('http://bigemployee.com/', 'bigblank')); ?>"><?php printf(__('%s', 'bigblank'), 'Big Employee'); ?></a></div>
     </div><!-- #site-info -->
 </footer><!-- #footer -->
-</div><!-- #page -->
 <?php wp_footer(); ?>
 <!-- @attribution: Based on Big Blank Theme for WordPress by BigEmployee.com -->
 </body>

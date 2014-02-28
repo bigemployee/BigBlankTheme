@@ -42,11 +42,11 @@ if (!function_exists('bigblank_the_attached_image')) :
          * @param array $dimensions {
          *     An array of height and width dimensions.
          *
-         *     @type int $height Height of the image in pixels. Default 800.
-         *     @type int $width  Width of the image in pixels. Default 800.
+         *     @type int $height Height of the image in pixels. Default 810.
+         *     @type int $width  Width of the image in pixels. Default 810.
          * }
          */
-        $attachment_size = apply_filters('bigblank_attachment_size', array(800, 800));
+        $attachment_size = apply_filters('bigblank_attachment_size', array(810, 810));
         $next_attachment_url = wp_get_attachment_url();
         /*
          * Grab the IDs of all the image attachments in a gallery so we can get the URL
@@ -86,7 +86,6 @@ if (!function_exists('bigblank_the_attached_image')) :
     }
 
 endif;
-
 if (!function_exists('bigblank_list_authors')) :
 
     /**
@@ -115,10 +114,10 @@ if (!function_exists('bigblank_list_authors')) :
                     <div class="contributor-summary">
                         <h2 class="contributor-name"><?php echo get_the_author_meta('display_name', $contributor_id); ?></h2>
                         <p class="contributor-bio">
-            <?php echo get_the_author_meta('description', $contributor_id); ?>
+                            <?php echo get_the_author_meta('description', $contributor_id); ?>
                         </p>
                         <a class="contributor-posts-link" href="<?php echo esc_url(get_author_posts_url($contributor_id)); ?>">
-            <?php printf(_n('%d Article', '%d Articles', $post_count, 'bigblank'), $post_count); ?>
+                            <?php printf(_n('%d Article', '%d Articles', $post_count, 'bigblank'), $post_count); ?>
                         </a>
                     </div><!-- .contributor-summary -->
                 </div><!-- .contributor-info -->
@@ -128,6 +127,21 @@ if (!function_exists('bigblank_list_authors')) :
     }
 
 endif;
+
+/**
+ * Extend the default WordPress body classes.
+ *
+ * Adds body classes to hAtom Schema purpose
+ * No need for additional div wrapper
+ * 
+ * @param array $classes A list of existing body class values.
+ * @return array The filtered body class list.
+ */
+function bigblank_body_classes($classes) {
+    $classes[] = 'hfeed site';
+    return $classes;
+}
+add_filter('body_class', 'bigblank_body_classes');
 
 /**
  * Create a nicely formatted and more specific title element text for output
