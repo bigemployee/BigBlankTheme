@@ -22,7 +22,8 @@
             <header id="header" class="site-header" role="banner">
                 <?php
                 /**
-                 * Use Logo instead of site title
+                 * Use Logo instead of site title. Also use double the size for 
+                 * logo to look sharp in Retina displays.
                  */
                 ?>
                 <a id="logo" href="<?php echo home_url(); ?>" rel="home">
@@ -40,4 +41,3 @@
                     <?php bigblank_main_menu(); ?>
                 </nav>
             </header><!-- #header -->
-            <div id="main" class="site-main">

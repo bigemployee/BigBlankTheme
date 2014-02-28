@@ -11,7 +11,6 @@ $options = bigblank_get_theme_options();
 $footer_copyright = $options['footer_copyright'];
 $footer_text = $options['footer_text'];
 ?>
-</div><!-- #main -->
 <footer id="footer" role="contentinfo">
     <?php get_sidebar('footer'); ?>
     <?php
