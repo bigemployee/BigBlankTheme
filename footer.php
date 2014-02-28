@@ -14,6 +14,10 @@ $footer_text = $options['footer_text'];
 </div><!-- #main -->
 <footer id="footer" class="site-footer" role="contentinfo">
     <?php get_sidebar('footer'); ?>
+    <?php
+    // Social media links (social-links.php)
+    get_template_part('social', 'links');
+    ?>
     <div id="site-info" class="site-info">
         <span id="copyright"><?php echo $footer_copyright; ?></span>
         <span id="footer-text"><?php echo $footer_text; ?></span>
