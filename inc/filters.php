@@ -235,12 +235,12 @@ function anchor_content_h2($content) {
 add_filter('the_content', 'anchor_content_h2');
 
 /**
- * Filter <p> tags wrapping images
- * Uncomment if you wish, good practice to keep content in paragraph tags
- * @link http://css-tricks.com/snippets/wordpress/remove-paragraph-tags-from-around-images/
+ * Filter <p> tags wrapping images and iframes
+ * comment out if you wish to keep them in <p> tags.
+ * @link http://regexone.com/lesson/
  */
-//function filter_ptags_on_images($content) {
-//    return preg_replace('/<p>\s*(<a .*>)?\s*(<img .* \/>)\s*(<\/a>)?\s*<\/p>/iU', '\1\2\3', $content);
-//}
-//
-//add_filter('the_content', 'filter_ptags_on_images');
+function filter_ptags_on_images($content) {
+    return preg_replace('/<p>\s*(<a .*>)?\s*((<img .* \/>)|(<iframe .*>*.<\/iframe>))\s*(<\/a>)?\s*<\/p>/iU', '\1\2\3', $content);
+}
+
+add_filter('the_content', 'filter_ptags_on_images');
