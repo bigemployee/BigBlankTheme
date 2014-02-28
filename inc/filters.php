@@ -42,11 +42,11 @@ if (!function_exists('bigblank_the_attached_image')) :
          * @param array $dimensions {
          *     An array of height and width dimensions.
          *
-         *     @type int $height Height of the image in pixels. Default 810.
-         *     @type int $width  Width of the image in pixels. Default 810.
+         *     @type int $height Height of the image in pixels. Default 800.
+         *     @type int $width  Width of the image in pixels. Default 800.
          * }
          */
-        $attachment_size = apply_filters('bigblank_attachment_size', array(810, 810));
+        $attachment_size = apply_filters('bigblank_attachment_size', array(800, 800));
         $next_attachment_url = wp_get_attachment_url();
         /*
          * Grab the IDs of all the image attachments in a gallery so we can get the URL
@@ -86,6 +86,7 @@ if (!function_exists('bigblank_the_attached_image')) :
     }
 
 endif;
+
 if (!function_exists('bigblank_list_authors')) :
 
     /**
@@ -125,62 +126,7 @@ if (!function_exists('bigblank_list_authors')) :
             <?php
         endforeach;
     }
-
 endif;
-
-/**
- * Extend the default WordPress body classes.
- *
- * Adds body classes to denote:
- * 1. Single or multiple authors.
- * 2. Index views.
- * 3. Full-width content layout.
- * 4. Presence of footer widgets.
- * 5. Single views.
- *
- *
- * @param array $classes A list of existing body class values.
- * @return array The filtered body class list.
- */
-function bigblank_body_classes($classes) {
-    if (is_multi_author()) {
-        $classes[] = 'group-blog';
-    }
-    if (is_archive() || is_search() || is_home()) {
-        $classes[] = 'list-view';
-    }
-    if ((!is_active_sidebar('sidebar-2') ) || is_page_template('page-templates/full-width.php') || is_page_template('page-templates/contributors.php') || is_attachment()) {
-        $classes[] = 'full-width';
-    }
-    if (is_active_sidebar('sidebar-3')) {
-        $classes[] = 'footer-widgets';
-    }
-    if (is_singular() && !is_front_page()) {
-        $classes[] = 'singular';
-    }
-    return $classes;
-}
-
-add_filter('body_class', 'bigblank_body_classes');
-
-/**
- * Extend the default WordPress post classes.
- *
- * Adds a post class to denote:
- * Non-password protected page with a post thumbnail.
- *
- *
- * @param array $classes A list of existing post class values.
- * @return array The filtered post class list.
- */
-function bigblank_post_classes($classes) {
-    if (!post_password_required() && has_post_thumbnail()) {
-        $classes[] = 'has-post-thumbnail';
-    }
-    return $classes;
-}
-
-add_filter('post_class', 'bigblank_post_classes');
 
 /**
  * Create a nicely formatted and more specific title element text for output
