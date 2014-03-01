@@ -5,6 +5,8 @@
  * Used for both single and index/archive/search.
  *
  */
+$options = bigblank_get_theme_options();
+$comments = $options['page_comments'];
 ?>
 <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
     <?php bigblank_post_thumbnail(); ?>
@@ -25,7 +27,7 @@
             <?php
             if ('post' == get_post_type())
                 bigblank_posted_on();
-            if (!post_password_required() && ( comments_open() || get_comments_number() )) :
+            if ((!post_password_required() && (comments_open() || get_comments_number())) && $comments == 'on') :
                 ?>
                 <span class="comments-link"><?php comments_popup_link(__('Leave a comment', 'bigblank'), __('1 Comment', 'bigblank'), __('% Comments', 'bigblank')); ?></span>
                 <?php

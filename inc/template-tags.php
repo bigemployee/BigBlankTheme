@@ -51,7 +51,6 @@ if (!function_exists('bigblank_footer_menu')) :
      * Footer menu
      */
     function bigblank_footer_menu() {
-        $walker = new bigblank_footer_menu_walker;
         wp_nav_menu(array(
             'menu' => 'footer_menu',
             'theme_location' => 'footer_menu',
@@ -257,23 +256,11 @@ function bigblank_post_thumbnail() {
     if (is_singular()) :
         ?>
         <div class="post-thumbnail">
-            <?php
-            if ((!is_active_sidebar('sidebar') || is_page_template('page-templates/full-width.php'))) {
-                the_post_thumbnail('bigblank-full-width');
-            } else {
-                the_post_thumbnail();
-            }
-            ?>
+            <?php the_post_thumbnail('post-thumbnail', 'itemprop=image'); ?>
         </div>
     <?php else : ?>
         <a class="post-thumbnail" href="<?php the_permalink(); ?>">
-            <?php
-            if ((!is_active_sidebar('sidebar') || is_page_template('page-templates/full-width.php'))) {
-                the_post_thumbnail('bigblank-full-width');
-            } else {
-                the_post_thumbnail();
-            }
-            ?>
+            <?php the_post_thumbnail('post-thumbnail', 'itemprop=image'); ?>
         </a>
     <?php
     endif; // End is_singular()

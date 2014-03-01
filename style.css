@@ -819,7 +819,7 @@ span + .edit-link:before,
 
 .hentry {
     margin: 0 auto 48px;
-    max-width: 672px;
+    /*max-width: 672px;*/
 }
 
 .site-content .entry-header,
@@ -828,7 +828,7 @@ span + .edit-link:before,
 .site-content .entry-meta,
 .page-content {
     margin: 0 auto;
-    max-width: 480px;
+    max-width: 500px;
 }
 
 .page-content {
@@ -3476,8 +3476,8 @@ a.post-thumbnail:hover {
     .site-content .entry-content,
     .site-content .entry-summary,
     .site-content footer.entry-meta {
-        padding-right: 30px;
-        padding-left: 30px;
+/*        padding-right: 30px;
+        padding-left: 30px;*/
     }
 }
 
@@ -3492,7 +3492,7 @@ a.post-thumbnail:hover {
     .site-content .entry-content,
     .site-content .entry-summary,
     .site-content footer.entry-meta {
-        margin-right: 54px;
+        /*margin-right: 54px;*/
     }
 
     .full-width .archive-header,

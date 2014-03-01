@@ -68,8 +68,7 @@ if (!function_exists('bigblank_setup')) :
         add_theme_support('automatic-feed-links');
         // Enable support for Post Thumbnails, and declare two sizes.
         add_theme_support('post-thumbnails');
-        set_post_thumbnail_size(672, 372, true);
-        add_image_size('bigblank-full-width', 1038, 576, true);
+        set_post_thumbnail_size(800, 350, true);
         // This theme uses wp_nav_menu() in two locations.
         register_nav_menus(array(
             'main_menu' => __('Top Primary Menu', 'bigblank'),
@@ -167,8 +166,9 @@ function bigblank_scripts() {
     //    for some plugins to not work since they do not register jQuery as dependancy 
     //    wp_register_script('jquery', false, false, false, true);
     // 4. or do nothing and jQuery will load from current WordPress install
-    
-    if (is_singular() && comments_open() && get_option('thread_comments')) {
+    $options = bigblank_get_theme_options();
+    $comments = $options['page_comments'];
+    if (is_singular() && comments_open() && get_option('thread_comments') && $comments == 'on') {
         wp_enqueue_script('comment-reply', false, false, false, true);
     }
     wp_enqueue_script('scripts', get_template_directory_uri() . '/js/scripts.min.js', array('jquery'), '20140222', true);
