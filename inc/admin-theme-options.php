@@ -109,8 +109,8 @@ function bigblank_get_default_theme_options() {
         'instagram' => '',
         'youtube' => '',
         'theme_layout' => 'content-sidebar',
-        'page_comments' => 'open',
-        'post_comments' => 'open',
+        'page_comments' => 'on',
+        'post_comments' => 'on',
         'footer_copyright' => __('Copyright', 'bigblank') . ' &copy; ' . date("Y") . ' <a href="' . site_url() . '">' . get_bloginfo('name') . '</a>',
         'footer_text' => sprintf(__('Proudly powered by %s', 'bigblank'), '<a href="http://wordpress.org">WordPress</a>'),
         'footer_analytics' => ''
@@ -233,7 +233,7 @@ function bigblank_settings_field_comments() {
         <div class="commnet checkbox-input theme-comment">
             <label class="description">
                 <input type="checkbox" name="bigblank_theme_options[<?php echo esc_attr($comment['key']) ?>]"
-                       <?php checked($options[$comment['key']], 'open'); ?>  />
+                       <?php checked($options[$comment['key']], 'on'); ?>  />
                 <span>
                     <?php echo $comment['label']; ?>
                 </span>
@@ -329,7 +329,7 @@ function bigblank_theme_options_validate($input) {
     if (array_key_exists('post_comments', $input)) {
         $output['post_comments'] = $input['post_comments'];
     } else {
-        $output['post_comments'] = $input['post_comments'];
+        $output['post_comments'] = '';
     }
     if (isset($input['footer_copyright'])) {
         $output['footer_copyright'] = $input['footer_copyright'];
