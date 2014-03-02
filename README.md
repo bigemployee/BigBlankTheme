@@ -34,6 +34,9 @@ Team
 + Site: [http://bigemployee.com][BigEmployee]
 + Twitter: [@BigEmployee]
 
+Contribution
+-------------------------------------------------------------------
++ Fork and send a pull request. Will add more protocols if it gets unmanageable.
 
 Tech
 -------------------------------------------------------------------
@@ -55,7 +58,7 @@ Changelog
 -------------------------------------------------------------------
 **v2.0 (2014-02-20)**
   - Let's start again
-  - Base bigblank
+  - Base bigblank && Twenty Fourteen
 
 **v1.2.2 (2013-12-12)**
   - Fallback menu support
@@ -88,8 +91,5 @@ MIT & GPL
 [WordPress]: http://wordpress.org
 [Font Awesome]: http://fortawesome.github.io/Font-Awesome/
 [jQuery]: http://jquery.com
-[jQuery.event.swipe]: http://stephband.info/jquery.event.swipe/
-[jQuery.event.move]: http://stephband.info/jquery.event.move/
-[jQuery.refineslide]: http://alexdunphy.github.io/refineslide/
 [HTML5 Boilerplate]: http://html5boilerplate.com/
 [Modernizr]: http://modernizr.com/
