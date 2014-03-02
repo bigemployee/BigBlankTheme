@@ -334,3 +334,37 @@ function bigblank_save_post($post_id) {
     } elseif ($post_layout == 'default_layout')
         delete_post_meta($post_id, 'bigblank_post_layout');
 }
+
+if (!function_exists('bigblank_get_layout')) :
+
+    /**
+     * get our theme layout (content, content-sidebar, sidebar-content)
+     *
+     * @return String Name of our theme layout
+     */
+    function bigblank_get_layout() {
+        if(is_single() || is_page()){
+            $layout = get_post_meta(get_the_ID(), 'be_post_layout', true);
+        }
+        if (!$layout) {
+            $options = bigblank_get_theme_options();
+            $layout = $options['theme_layout'];
+        }
+        return $layout;
+    }
+    
+endif;
+
+if (!function_exists('bigblank_has_sidebar')) :
+
+    /**
+     * Check layout to see if layout has a sidebar
+     *
+     * @return boolean
+     */
+    function bigblank_has_sidebar() {
+        $layout = bigblank_get_layout();
+        return ($layout == 'content-sidebar' || $layout == 'sidebar-content');
+    }
+    
+endif;

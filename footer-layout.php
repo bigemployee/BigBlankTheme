@@ -6,7 +6,7 @@
  */
 ?>
     </div><!-- #main -->
-    <?php if ($layout == 'content-sidebar' || $layout == 'sidebar-content'): ?>
+    <?php if (bigblank_has_sidebar()): ?>
         <?php get_sidebar(); ?>
     <?php endif; ?>
 </div><!-- #content -->

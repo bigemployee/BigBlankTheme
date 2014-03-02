@@ -27,7 +27,7 @@ $comments = $options['page_comments'];
             <?php
             if ('post' == get_post_type())
                 bigblank_posted_on();
-            if ((!post_password_required() && (comments_open() || get_comments_number())) && $comments == 'on') :
+            if (!post_password_required() && (comments_open() || get_comments_number())) :
                 ?>
                 <span class="comments-link"><?php comments_popup_link(__('Leave a comment', 'bigblank'), __('1 Comment', 'bigblank'), __('% Comments', 'bigblank')); ?></span>
                 <?php

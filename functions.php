@@ -168,7 +168,7 @@ function bigblank_scripts() {
     // 4. or do nothing and jQuery will load from current WordPress install
     $options = bigblank_get_theme_options();
     $comments = $options['page_comments'];
-    if (is_singular() && comments_open() && get_option('thread_comments') && $comments == 'on') {
+    if (is_singular() && comments_open() && get_option('thread_comments')) {
         wp_enqueue_script('comment-reply', false, false, false, true);
     }
     wp_enqueue_script('scripts', get_template_directory_uri() . '/js/scripts.min.js', array('jquery'), '20140222', true);
