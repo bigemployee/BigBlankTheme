@@ -56,7 +56,7 @@ if (!function_exists('bigblank_the_attached_image')) :
          *     @type int $width  Width of the image in pixels. Default 810.
          * }
          */
-        $attachment_size = apply_filters('bigblank_attachment_size', array(810, 810));
+        $attachment_size = apply_filters('bigblank_attachment_size', array(960, 640));
         $next_attachment_url = wp_get_attachment_url();
         /*
          * Grab the IDs of all the image attachments in a gallery so we can get the URL
