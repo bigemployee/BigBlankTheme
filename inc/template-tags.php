@@ -3,7 +3,6 @@
  * Custom template tags for Big Blank
  * Used to create custom html output for our theme
  */
-
 /**
  * Menus are called from header and footer
  *
@@ -266,7 +265,6 @@ function bigblank_post_thumbnail() {
     endif; // End is_singular()
 }
 
-
 /**
  *  post layout box
  */
@@ -291,7 +289,7 @@ function bigblank_layout_metabox($post) {
                 <input type="radio" name="bigblank_post_layout"
                        value="<?php echo esc_attr($layout['value']); ?>" <?php checked($post_layout, $layout['value']); ?> />
                 <span>
-                    <?php echo $layout['label']; ?>
+        <?php echo $layout['label']; ?>
                     <br />
                     <img src="<?php echo esc_url($layout['thumbnail']); ?>" width="136" height="122" alt="" />
                 </span>
@@ -343,20 +341,19 @@ if (!function_exists('bigblank_get_layout')) :
      * @return String Name of our theme layout
      */
     function bigblank_get_layout() {
-        if(is_single() || is_page()){
+        if (is_single() || is_page()) {
             $layout = get_post_meta(get_the_ID(), 'bigblank_post_layout', true);
             if (!$layout) {
                 $options = bigblank_get_theme_options();
                 $layout = $options['theme_layout'];
             }
-        }
-        else {
+        } else {
             $options = bigblank_get_theme_options();
             $layout = $options['theme_layout'];
         }
         return $layout;
     }
-    
+
 endif;
 
 if (!function_exists('bigblank_has_sidebar')) :
@@ -370,5 +367,31 @@ if (!function_exists('bigblank_has_sidebar')) :
         $layout = bigblank_get_layout();
         return ($layout == 'content-sidebar' || $layout == 'sidebar-content');
     }
-    
+
 endif;
+
+/**
+ * Check theme options for comments settings, and overwrite comments open
+ * @link https://codex.wordpress.org/Function_Reference/comments_open
+ * 
+ * 
+ * @param bool        $open    Whether the current post is open for comments.
+ * @param int|WP_Post $post_id The post ID or WP_Post object.
+ * @return boolean
+ */
+function bigblank_comments_open($open, $post_id) {
+    $post = get_post($post_id);
+    $options = bigblank_get_theme_options();
+
+    if ('page' == $post->post_type) {
+        $comments = $options['page_comments'];
+    } else {
+        $comments = $options['post_comments'];
+    }
+    if ($comments !== 'open') {
+        $open = false;
+    }
+    return $open;
+}
+
+add_filter('comments_open', 'bigblank_comments_open', 10, 2);
