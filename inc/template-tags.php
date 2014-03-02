@@ -289,7 +289,7 @@ function bigblank_layout_metabox($post) {
                 <input type="radio" name="bigblank_post_layout"
                        value="<?php echo esc_attr($layout['value']); ?>" <?php checked($post_layout, $layout['value']); ?> />
                 <span>
-        <?php echo $layout['label']; ?>
+                    <?php echo $layout['label']; ?>
                     <br />
                     <img src="<?php echo esc_url($layout['thumbnail']); ?>" width="136" height="122" alt="" />
                 </span>
