@@ -197,37 +197,82 @@ hr{background-color:rgba(0,0,0,.1);border:0;height:1px;margin-bottom:23px}
     src: local('Open Sans Extrabold'), local('OpenSans-Extrabold'), url(http://themes.googleusercontent.com/static/fonts/opensans/v7/EInbV5DfGHOiMmvb1Xr-hnhCUOGz7vYGh680lGh-uXM.woff) format('woff');
 }
 
+@font-face {
+  font-family: 'PT Sans Narrow';
+  font-style: normal;
+  font-weight: 400;
+  src: local('PT Sans Narrow'), local('PTSans-Narrow'), url(http://themes.googleusercontent.com/static/fonts/ptsansnarrow/v5/UyYrYy3ltEffJV9QueSi4RdbPw3QSf9R-kE0EsQUn2A.woff) format('woff');
+}
+@font-face {
+  font-family: 'PT Sans Narrow';
+  font-style: normal;
+  font-weight: 700;
+  src: local('PT Sans Narrow Bold'), local('PTSans-NarrowBold'), url(http://themes.googleusercontent.com/static/fonts/ptsansnarrow/v5/Q_pTky3Sc3ubRibGToTAYiylde52zikAzebNtJS89aM.woff) format('woff');
+}
+@font-face {
+  font-family: 'Source Sans Pro';
+  font-style: normal;
+  font-weight: 200;
+  src: local('Source Sans Pro ExtraLight'), local('SourceSansPro-ExtraLight'), url(http://themes.googleusercontent.com/static/fonts/sourcesanspro/v7/toadOcfmlt9b38dHJxOBGMa9awK0IKUjIWABZIchFI8.woff) format('woff');
+}
+@font-face {
+  font-family: 'Source Sans Pro';
+  font-style: normal;
+  font-weight: 300;
+  src: local('Source Sans Pro Light'), local('SourceSansPro-Light'), url(http://themes.googleusercontent.com/static/fonts/sourcesanspro/v7/toadOcfmlt9b38dHJxOBGNbE_oMaV8t2eFeISPpzbdE.woff) format('woff');
+}
+@font-face {
+  font-family: 'Source Sans Pro';
+  font-style: normal;
+  font-weight: 400;
+  src: local('Source Sans Pro'), local('SourceSansPro-Regular'), url(http://themes.googleusercontent.com/static/fonts/sourcesanspro/v7/ODelI1aHBYDBqgeIAH2zlBM0YzuT7MdOe03otPbuUS0.woff) format('woff');
+}
+@font-face {
+  font-family: 'Source Sans Pro';
+  font-style: normal;
+  font-weight: 600;
+  src: local('Source Sans Pro Semibold'), local('SourceSansPro-Semibold'), url(http://themes.googleusercontent.com/static/fonts/sourcesanspro/v7/toadOcfmlt9b38dHJxOBGJ6-ys_j0H4QL65VLqzI3wI.woff) format('woff');
+}
+@font-face {
+  font-family: 'Source Sans Pro';
+  font-style: normal;
+  font-weight: 700;
+  src: local('Source Sans Pro Bold'), local('SourceSansPro-Bold'), url(http://themes.googleusercontent.com/static/fonts/sourcesanspro/v7/toadOcfmlt9b38dHJxOBGFkQc6VGVFSmCnC_l7QZG60.woff) format('woff');
+}
+@font-face {
+  font-family: 'Source Sans Pro';
+  font-style: normal;
+  font-weight: 900;
+  src: local('Source Sans Pro Black'), local('SourceSansPro-Black'), url(http://themes.googleusercontent.com/static/fonts/sourcesanspro/v7/toadOcfmlt9b38dHJxOBGHiec-hVyr2k4iOzEQsW1iE.woff) format('woff');
+}
+
+
 body,
 button,
 input,
 select,
 textarea {
-    color: #222;
+    color: #333;
     font-family: "Open Sans Condensed", sans-serif;
-    font-size: 20px;
+    font-size: 23px;
     font-weight: 400;
     line-height: 1.5;
 }
-
-a {
-    color: #24890d;
-    text-decoration: none;
+a,
+a:visited{
+    color: #910000;
+    -webkit-transition: all 0.1s ease-out;
+    -moz-transition: all 0.1s ease-out;
+    -ms-transition: all 0.1s ease-out;
+    transition: all 0.1s ease-out;
 }
-
-a:focus {
+a:focus {       
     outline: thin dotted;
 }
-
-a:hover,
-a:active {
-    outline: 0;
-}
-
 a:active,
 a:hover {
-    color: #41a62a;
+    color: #c00;
 }
-
 h1,
 h2,
 h3,
@@ -235,7 +280,13 @@ h4,
 h5,
 h6 {
     clear: both;
-    font-weight: 700;
+    font-family: 'Oswald', Helvetica, Arial, Tahoma, sans-serif;
+    font-smooth: always;
+    -webkit-font-smoothing: antialiased;
+    font-weight: 400;
+    line-height: 1.4;
+    color: #444;
+    text-rendering: optimizeLegibility;
     margin: 36px 0 12px;
 }
 
@@ -609,6 +660,15 @@ span + .edit-link:before,
     width: 100%;
 }
 
+#header,
+#footer{
+    margin: 0 auto;
+    max-width: 980px;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
 
 /**
  * 4.0 Header
@@ -627,7 +687,7 @@ span + .edit-link:before,
 }
 
 .site-header {
-    background-color: #fcfcfc;
+    /*background-color: #fcfcfc;*/
     max-width: 1260px;
     position: relative;
     width: 100%;
@@ -717,6 +777,105 @@ span + .edit-link:before,
  * 5.0 Navigation
  * -----------------------------------------------------------------------------
  */
+/* Main Menu
+============================================================================ */
+#nav{
+    float: right;
+    margin: 10px auto 2px; 
+    font: 400 0.8em/2.2em 'Oswald', Helvetica, Arial, Tahoma, sans-serif;
+    text-align: center;
+    position: relative;
+    z-index: 15;
+}
+#nav ul{
+    float: left;
+    margin: 0 auto;
+    text-align: left;
+    list-style: none;
+}
+#nav li{
+    margin: 0 4px;
+    padding: 0 8px;
+    float: left;
+    position: relative;
+    white-space: nowrap;
+    -webkit-border-radius: 3px;
+    -moz-border-radius: 3px;
+    border-radius: 3px;
+    -webkit-transition: all 0.25s linear;
+    -moz-transition: all 0.25s linear;
+    -ms-transition: all 0.25s linear;
+    transition: all 0.25s linear;
+}
+#nav li a{
+    padding: 4px 0;
+    text-decoration: none;
+    color: #424242;
+}
+#nav li:hover a{
+    color: #d00;
+}
+#nav li:hover li a{
+    color: #424242;
+}
+#nav li:hover a:hover{
+    color: #d00;
+}
+#nav li:hover a{}
+#nav li ul{
+    display: none;
+    position: absolute;
+    background: #fff;
+    box-shadow: 0 1px 1px rgba(0,0,0,0.2);
+    left: 0;
+    z-index: 10;
+    margin-left: -5px;
+
+}
+#nav li:hover ul{
+    display: block;
+}
+#nav li li{
+    right: 0;
+    margin: 0;
+    padding: 0;
+    float: left;
+    width: 100%;
+}
+#nav li li a,
+#nav li li a:visited{
+    float: left;
+    width: 100%;
+    padding: 4px 15px;
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    -box-sizing: border-box;
+}
+#nav > ul > li:first-child{
+    margin-left: 0;
+}
+#nav > ul > li:last-child{
+    margin-right: 5px;
+    margin-left: 15px;
+    border: 1px solid #444;
+}
+#nav > ul > li:last-child:hover{
+    border: 1px solid #c00;
+}
+#nav .menu-item-has-children:hover{
+    color: #d00;
+}
+#nav .menu-item-has-children:after{
+    content: "\f107";
+    display: inline-block;
+    margin-left: 2px;
+    font-family: FontAwesome;
+    font-style: normal;
+    font-weight: normal;
+    line-height: 1;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
 
 .site-navigation ul {
     list-style: none;
@@ -828,7 +987,7 @@ span + .edit-link:before,
 .site-content .entry-meta,
 .page-content {
     margin: 0 auto;
-    max-width: 500px;
+    max-width: 560px;
 }
 
 .page-content {
