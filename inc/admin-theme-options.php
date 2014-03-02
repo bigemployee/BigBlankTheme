@@ -2,7 +2,7 @@
 /**
  * Big Blank Theme Options
  *
-*/
+ */
 
 /**
  * enqueue styles and scripts for admin option page
@@ -18,9 +18,9 @@ add_action('admin_print_styles-appearance_page_theme_options', 'bigblank_admin_e
  */
 function bigblank_theme_options_init() {
     register_setting('bigblank_options', 'bigblank_theme_options', 'bigblank_theme_options_validate');
-    
+
     // register settings field group
-    add_settings_section('contact', __('Contact Setting', 'bigblank'), '__return_false', 'theme_options');
+    add_settings_section('contact', __('Contact Settings', 'bigblank'), '__return_false', 'theme_options');
     add_settings_section('social', __('Social Media Links', 'bigblank'), '__return_false', 'theme_options');
     add_settings_section('general', __('General Layout Settings', 'bigblank'), '__return_false', 'theme_options');
     add_settings_section('footer', __('Footer Settings', 'bigblank'), '__return_false', 'theme_options');
@@ -35,7 +35,8 @@ function bigblank_theme_options_init() {
     add_settings_field('comments', __('Comment Settings', 'bigblank'), 'bigblank_settings_field_comments', 'theme_options', 'general');
     add_settings_field('footer-copyright', __('Footer Copyright', 'bigblank'), 'bigblank_settings_field_footer_copyright', 'theme_options', 'footer', array('label_for' => 'footer-copyright'));
     add_settings_field('footer-text', __('Footer Text', 'bigblank'), 'bigblank_settings_field_footer_text', 'theme_options', 'footer', array('label_for' => 'footer-text'));
-    add_settings_field('footer-analytics', __('Analytics JavaScript', 'bigblank'), 'bigblank_settings_field_footer_analytics', 'theme_options', 'footer', array('label_for' => 'footer-analytics'));}
+    add_settings_field('footer-analytics', __('Analytics JavaScript', 'bigblank'), 'bigblank_settings_field_footer_analytics', 'theme_options', 'footer', array('label_for' => 'footer-analytics'));
+}
 
 add_action('admin_init', 'bigblank_theme_options_init');
 
@@ -67,10 +68,31 @@ function bigblank_theme_options_add_page() {
 add_action('admin_menu', 'bigblank_theme_options_add_page');
 
 /**
- * @betodo: add options page help tabs
- */
+* Add theme specific contextual help
+*/
 function bigblank_theme_options_help() {
-    
+
+    $help = '<p>' . __('Few notes about these Theme Options:', 'bigblank') . '</p>' .
+            '<p>' . __('Page and Post layout settings overwrite these Theme Option settings.', 'bigblank') . '</p>' .
+            '<p>' . __('Comment settings in Theme Options overwrite the individual Page and Post settings:', 'bigblank') . '</p>' .
+            '<p>' . __('Remember to click "Save Changes" to save any changes you have made to the theme options.', 'bigblank') . '</p>';
+
+    $sidebar = '<p><strong>' . __('For more information:', 'bigblank') . '</strong></p>' .
+            '<p>' . __('<a href="http://bigemployee.com/projects/big-blank-responsive-wordpress-theme/" target="_blank">Theme Project Page</a>', 'bigblank') . '</p>' .
+            '<p>' . __('<a href="http://codex.wordpress.org/Appearance_Theme_Options_Screen" target="_blank">Documentation on Theme Options</a>', 'bigblank') . '</p>' .
+            '<p>' . __('<a href="http://wordpress.org/support/" target="_blank">Support Forums</a>', 'bigblank') . '</p>';
+
+    $screen = get_current_screen();
+
+    if (method_exists($screen, 'add_help_tab')) {
+        $screen->add_help_tab(array(
+            'title' => __('Overview', 'bigblank'),
+            'id' => 'theme-options-help',
+            'content' => $help,
+        ));
+
+        $screen->set_help_sidebar($sidebar);
+    }
 }
 
 /**
@@ -300,23 +322,23 @@ function bigblank_theme_options_render_page() {
 function bigblank_theme_options_validate($input) {
     $output = $defaults = bigblank_get_default_theme_options();
 
-    if (isset($input['phone'])){
+    if (isset($input['phone'])) {
         $output['phone'] = $input['phone'];
     }
-    if (isset($input['address'])){
+    if (isset($input['address'])) {
         $output['address'] = $input['address'];
     }
-    if (isset($input['twitter'])){
+    if (isset($input['twitter'])) {
         $output['twitter'] = $input['twitter'];
     }
-    if (isset($input['facebook'])){
+    if (isset($input['facebook'])) {
         $output['facebook'] = $input['facebook'];
     }
-    if (isset($input['instagram'])){
+    if (isset($input['instagram'])) {
         $output['instagram'] = $input['instagram'];
     }
-    if (isset($input['youtube'])){
-        $output['youtube'] = $input['youtube'];    
+    if (isset($input['youtube'])) {
+        $output['youtube'] = $input['youtube'];
     }
     if (isset($input['theme_layout']) && array_key_exists($input['theme_layout'], bigblank_layouts())) {
         $output['theme_layout'] = $input['theme_layout'];
@@ -337,7 +359,7 @@ function bigblank_theme_options_validate($input) {
     if (isset($input['footer_text'])) {
         $output['footer_text'] = $input['footer_text'];
     }
-    if (isset($input['footer_analytics'])){
+    if (isset($input['footer_analytics'])) {
         $output['footer_analytics'] = $input['footer_analytics'];
     }
 
@@ -352,4 +374,5 @@ function bigblank_theme_options_render_analytics() {
     $options = bigblank_get_theme_options();
     echo $options['footer_analytics'];
 }
+
 add_action('wp_footer', 'bigblank_theme_options_render_analytics', 100);
