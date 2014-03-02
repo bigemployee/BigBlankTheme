@@ -109,8 +109,8 @@ function bigblank_get_default_theme_options() {
         'instagram' => '',
         'youtube' => '',
         'theme_layout' => 'content-sidebar',
-        'page_comments' => 'on',
-        'post_comments' => 'on',
+        'page_comments' => 'open',
+        'post_comments' => 'open',
         'footer_copyright' => __('Copyright', 'bigblank') . ' &copy; ' . date("Y") . ' <a href="' . site_url() . '">' . get_bloginfo('name') . '</a>',
         'footer_text' => sprintf(__('Proudly powered by %s', 'bigblank'), '<a href="http://wordpress.org">WordPress</a>'),
         'footer_analytics' => ''
@@ -233,7 +233,7 @@ function bigblank_settings_field_comments() {
         <div class="commnet checkbox-input theme-comment">
             <label class="description">
                 <input type="checkbox" name="bigblank_theme_options[<?php echo esc_attr($comment['key']) ?>]"
-                       <?php checked($options[$comment['key']], 'on'); ?>  />
+                       <?php checked($options[$comment['key']], 'open'); ?>  />
                 <span>
                     <?php echo $comment['label']; ?>
                 </span>
