@@ -388,7 +388,7 @@ function bigblank_comments_open($open, $post_id) {
     } else {
         $comments = $options['post_comments'];
     }
-    if ($comments !== 'open') {
+    if ($comments !== 'on') {
         $open = false;
     }
     return $open;
