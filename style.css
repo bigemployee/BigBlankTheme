@@ -149,67 +149,6 @@ hr{background-color:rgba(0,0,0,.1);border:0;height:1px;margin-bottom:23px}
     src: local('Oswald Regular'), local('Oswald-Regular'), url(http://themes.googleusercontent.com/static/fonts/oswald/v8/-g5pDUSRgvxvOl5u-a_WHw.woff) format('woff');
 }
 @font-face {
-    font-family: 'Open Sans Condensed';
-    font-style: normal;
-    font-weight: 300;
-    src: local('Open Sans Cond Light'), local('OpenSans-CondensedLight'), url(http://themes.googleusercontent.com/static/fonts/opensanscondensed/v7/gk5FxslNkTTHtojXrkp-xF1YPouZEKgzpqZW9wN-3Ek.woff) format('woff');
-}
-@font-face {
-    font-family: 'Open Sans Condensed';
-    font-style: normal;
-    font-weight: 700;
-    src: local('Open Sans Condensed Bold'), local('OpenSans-CondensedBold'), url(http://themes.googleusercontent.com/static/fonts/opensanscondensed/v7/gk5FxslNkTTHtojXrkp-xONSK5BxN3NFS4EJkViHIqo.woff) format('woff');
-}
-@font-face {
-    font-family: 'Open Sans Condensed';
-    font-style: italic;
-    font-weight: 300;
-    src: local('Open Sans Cond Light Italic'), local('OpenSans-CondensedLightItalic'), url(http://themes.googleusercontent.com/static/fonts/opensanscondensed/v7/jIXlqT1WKafUSwj6s9AzV6XnXbwdDC8wAz6IIzmCDUP3rGVtsTkPsbDajuO5ueQw.woff) format('woff');
-}
-@font-face {
-    font-family: 'Open Sans';
-    font-style: normal;
-    font-weight: 300;
-    src: local('Open Sans Light'), local('OpenSans-Light'), url(http://themes.googleusercontent.com/static/fonts/opensans/v7/DXI1ORHCpsQm3Vp6mXoaTXhCUOGz7vYGh680lGh-uXM.woff) format('woff');
-}
-@font-face {
-    font-family: 'Open Sans';
-    font-style: normal;
-    font-weight: 400;
-    src: local('Open Sans'), local('OpenSans'), url(http://themes.googleusercontent.com/static/fonts/opensans/v7/cJZKeOuBrn4kERxqtaUH3T8E0i7KZn-EPnyo3HZu7kw.woff) format('woff');
-}
-@font-face {
-    font-family: 'Open Sans';
-    font-style: normal;
-    font-weight: 600;
-    src: local('Open Sans Semibold'), local('OpenSans-Semibold'), url(http://themes.googleusercontent.com/static/fonts/opensans/v7/MTP_ySUJH_bn48VBG8sNSnhCUOGz7vYGh680lGh-uXM.woff) format('woff');
-}
-@font-face {
-    font-family: 'Open Sans';
-    font-style: normal;
-    font-weight: 700;
-    src: local('Open Sans Bold'), local('OpenSans-Bold'), url(http://themes.googleusercontent.com/static/fonts/opensans/v7/k3k702ZOKiLJc3WVjuplzHhCUOGz7vYGh680lGh-uXM.woff) format('woff');
-}
-@font-face {
-    font-family: 'Open Sans';
-    font-style: normal;
-    font-weight: 800;
-    src: local('Open Sans Extrabold'), local('OpenSans-Extrabold'), url(http://themes.googleusercontent.com/static/fonts/opensans/v7/EInbV5DfGHOiMmvb1Xr-hnhCUOGz7vYGh680lGh-uXM.woff) format('woff');
-}
-
-@font-face {
-  font-family: 'PT Sans Narrow';
-  font-style: normal;
-  font-weight: 400;
-  src: local('PT Sans Narrow'), local('PTSans-Narrow'), url(http://themes.googleusercontent.com/static/fonts/ptsansnarrow/v5/UyYrYy3ltEffJV9QueSi4RdbPw3QSf9R-kE0EsQUn2A.woff) format('woff');
-}
-@font-face {
-  font-family: 'PT Sans Narrow';
-  font-style: normal;
-  font-weight: 700;
-  src: local('PT Sans Narrow Bold'), local('PTSans-NarrowBold'), url(http://themes.googleusercontent.com/static/fonts/ptsansnarrow/v5/Q_pTky3Sc3ubRibGToTAYiylde52zikAzebNtJS89aM.woff) format('woff');
-}
-@font-face {
   font-family: 'Source Sans Pro';
   font-style: normal;
   font-weight: 200;
@@ -253,8 +192,8 @@ input,
 select,
 textarea {
     color: #333;
-    font-family: "Open Sans Condensed", sans-serif;
-    font-size: 23px;
+    font-family: "Source Sans Pro", sans-serif;
+    font-size: 16px;
     font-weight: 400;
     line-height: 1.5;
 }
@@ -280,18 +219,17 @@ h4,
 h5,
 h6 {
     clear: both;
-    font-family: 'Oswald', Helvetica, Arial, Tahoma, sans-serif;
+    font-weight: 700;
     font-smooth: always;
     -webkit-font-smoothing: antialiased;
-    font-weight: 400;
-    line-height: 1.4;
     color: #444;
     text-rendering: optimizeLegibility;
     margin: 36px 0 12px;
 }
 
 h1 {
-    font-size: 26px;
+    font-size: 34px;
+    font-weight: 900;
     line-height: 1.3846153846;
 }
 
@@ -781,8 +719,9 @@ span + .edit-link:before,
 ============================================================================ */
 #nav{
     float: right;
-    margin: 10px auto 2px; 
-    font: 400 0.8em/2.2em 'Oswald', Helvetica, Arial, Tahoma, sans-serif;
+    margin: 10px auto 2px;
+    line-height: 2.2em;
+    font-weight: 600;
     text-align: center;
     position: relative;
     z-index: 15;
@@ -794,7 +733,7 @@ span + .edit-link:before,
     list-style: none;
 }
 #nav li{
-    margin: 0 4px;
+    margin: 0 6px;
     padding: 0 8px;
     float: left;
     position: relative;
@@ -855,7 +794,7 @@ span + .edit-link:before,
     margin-left: 0;
 }
 #nav > ul > li:last-child{
-    margin-right: 5px;
+    margin-right: 9px;
     margin-left: 15px;
     border: 1px solid #444;
 }
@@ -1039,8 +978,6 @@ a.post-thumbnail:hover {
 }
 
 .entry-title {
-    font-size: 33px;
-    font-weight: 300;
     line-height: 1.0909090909;
     margin-bottom: 12px;
     margin: 0 0 12px 0;
@@ -2685,6 +2622,71 @@ a.post-thumbnail:hover {
     color: #41a62a;
 }
 
+#footer-nav{
+    float: none;
+    /*width: 100%;*/
+    margin: 10px auto 2px;
+    line-height: 2.2em;
+    font-weight: 600;
+    text-align: center;
+    position: relative;
+    z-index: 15;
+}
+#footer-nav ul{
+    float: left;
+    margin: 0 auto;
+    text-align: left;
+    list-style: none;
+}
+#footer-nav li{
+    margin: 0 6px;
+    padding: 0 8px;
+    float: left;
+    position: relative;
+    white-space: nowrap;
+}
+
+.social-media{
+    float: right;
+    clear: both;
+    margin-top: 10px;
+}
+.social-media a,
+.social-media a:visited{
+    float: left;
+    font-size: 1.2em;
+    line-height: 30px;
+    width: 30px;
+    height: 30px;
+    border-radius: 15px;
+    margin: 5px;
+    text-decoration: none;
+    background: #999;
+    color: #fff;
+    text-align: center;
+}
+.social-media a:hover{
+    color: #fff;
+    background: #000;
+}
+.social-media a:first{
+    margin-left: 0;
+}
+.social-media a:last-child{
+    margin-right: 0;
+}
+.social-media .fa-facebook:hover{
+    background: #3b5998;
+}
+.social-media .fa-twitter:hover{
+    background: #00aced;
+}
+.social-media .fa-instagram:hover{
+    background: #517fa4;
+}
+.social-media .fa-youtube-play:hover{
+    background: #b00;
+}
 
 /**
  * 10.0 Multisite
