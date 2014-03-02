@@ -5,8 +5,6 @@
  * Used for both single and index/archive/search.
  *
  */
-$options = bigblank_get_theme_options();
-$comments = $options['page_comments'];
 ?>
 <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
     <?php bigblank_post_thumbnail(); ?>
