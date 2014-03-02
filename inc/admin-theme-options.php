@@ -68,8 +68,8 @@ function bigblank_theme_options_add_page() {
 add_action('admin_menu', 'bigblank_theme_options_add_page');
 
 /**
-* Add theme specific contextual help
-*/
+ * Add theme specific contextual help
+ */
 function bigblank_theme_options_help() {
 
     $help = '<p>' . __('Few notes about these Theme Options:', 'bigblank') . '</p>' .
@@ -78,7 +78,6 @@ function bigblank_theme_options_help() {
             '<p>' . __('Remember to click "Save Changes" to save any changes you have made to the theme options.', 'bigblank') . '</p>';
 
     $sidebar = '<p><strong>' . __('For more information:', 'bigblank') . '</strong></p>' .
-            '<p>' . __('<a href="http://bigemployee.com/projects/big-blank-responsive-wordpress-theme/" target="_blank">Theme Project Page</a>', 'bigblank') . '</p>' .
             '<p>' . __('<a href="http://codex.wordpress.org/Appearance_Theme_Options_Screen" target="_blank">Documentation on Theme Options</a>', 'bigblank') . '</p>' .
             '<p>' . __('<a href="http://wordpress.org/support/" target="_blank">Support Forums</a>', 'bigblank') . '</p>';
 
