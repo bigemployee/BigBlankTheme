@@ -14,9 +14,8 @@
  *
  */
 get_header();
+get_header('layout');
 ?>
-<section id="primary" class="content-area">
-    <div id="content" class="site-content" role="main">
         <?php if (have_posts()) : ?>
             <header class="page-header">
                 <h1 class="page-title">
@@ -50,8 +49,6 @@ get_header();
             get_template_part('content', 'none');
         endif;
         ?>
-    </div><!-- #content -->
-</section><!-- #primary -->
 <?php
-get_sidebar();
+get_footer('layout');
 get_footer();
