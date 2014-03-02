@@ -15,15 +15,25 @@
  */
 
 /**
- * Set Excerpt length
+ * Set Excerpt length in words
  * @param int $length
  * @return int set post excerpt length
+ * @link http://codex.wordpress.org/Function_Reference/the_excerpt
  */
-function be_excerpt_length($length) {
-    return 140;
+function bigblank_excerpt_length($length) {
+    return 23; // Just for Jordan
 }
 
-add_filter('excerpt_length', 'be_excerpt_length');
+add_filter('excerpt_length', 'bigblank_excerpt_length');
+
+/**
+ *  add ... and return excerpt more
+ */
+function bigblank_excerpt_more($more) {
+    return ' &hellip;';
+}
+
+add_filter('excerpt_more', 'bigblank_excerpt_more');
 
 if (!function_exists('bigblank_the_attached_image')) :
 
