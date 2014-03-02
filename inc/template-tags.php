@@ -346,7 +346,7 @@ if (!function_exists('bigblank_get_layout')) :
         if(is_single() || is_page()){
             $layout = get_post_meta(get_the_ID(), 'be_post_layout', true);
         }
-        if (!$layout) {
+        else {
             $options = bigblank_get_theme_options();
             $layout = $options['theme_layout'];
         }
