@@ -186,7 +186,7 @@ select,
 textarea {
     color: #333;
     font-family: "Source Sans Pro", Helvetica, Arial, sans-serif;
-    font-size: 16px;
+    font-size: 18px;
     font-weight: 400;
     line-height: 1.5;
 }
@@ -217,7 +217,7 @@ h6 {
     -webkit-font-smoothing: antialiased;
     color: #444;
     text-rendering: optimizeLegibility;
-    margin: 36px 0 12px;
+    margin: 1em 0 0.5em;
 }
 
 h1 {
@@ -227,7 +227,7 @@ h1 {
 }
 
 h2 {
-    font-size: 24px;
+    font-size: 28px;
     line-height: 1;
 }
 
@@ -1021,6 +1021,7 @@ a.post-thumbnail:hover {
     padding: 3px 7px;
     position: relative;
     text-transform: uppercase;
+    text-decoration: none;
 }
 
 .entry-meta .tag-links a:hover {
@@ -1036,8 +1037,12 @@ a.post-thumbnail:hover {
     height: 0;
     position: absolute;
     top: 0;
-    left: -7px;
+    left: -8px;
     width: 0;
+    -webkit-transition: all 0.2s ease-out;
+    -moz-transition: all 0.2s ease-out;
+    -ms-transition: all 0.2s ease-out;
+    transition: all 0.2s ease-out;
 }
 
 .entry-meta .tag-links a:hover:before {
@@ -1106,14 +1111,12 @@ a.post-thumbnail:hover {
 .entry-summary a,
 .page-content a,
 .comment-content a {
-    text-decoration: underline;
 }
 
 .entry-content a:hover,
 .entry-summary a:hover,
 .page-content a:hover,
 .comment-content a:hover {
-    text-decoration: none;
 }
 
 .entry-content table,
@@ -1432,7 +1435,7 @@ a.post-thumbnail:hover {
 /* Paging Navigation */
 
 .paging-navigation {
-    border-top: 5px solid #000;
+    border-top: 5px solid #eee;
     margin: 48px 0;
 }
 
@@ -2568,39 +2571,40 @@ a.post-thumbnail:hover {
     color: #c00;
 }
 
-#footer-nav{
-    float: none;
-    /*width: 100%;*/
-    margin: 10px auto 2px;
-    line-height: 2.2em;
-    font-weight: 600;
+#footer-nav,
+#site-info,
+.social-media{
+    float: left;
+    width: 100%;
+    clear: both;
     text-align: center;
     position: relative;
-    z-index: 15;
+    margin-bottom: 1.5em;
 }
 #footer-nav ul{
-    float: left;
+    display: inline-block;
     margin: 0 auto;
     text-align: left;
     list-style: none;
 }
 #footer-nav li{
-    margin: 0 6px;
-    padding: 0 8px;
+    margin: 0 4px;
+    padding: 0 4px;
     float: left;
     position: relative;
     white-space: nowrap;
 }
-
-.social-media{
-    float: right;
-    clear: both;
-    margin-top: 10px;
+#footer-nav a,
+#site-info a{
+    color: #222;
+}
+#footer-nav a:hover,
+#site-info a:hover{
+    color: #c00;
 }
 .social-media a,
 .social-media a:visited{
-    float: left;
-    font-size: 1.2em;
+    font-size: 1.1em;
     line-height: 30px;
     width: 30px;
     height: 30px;
