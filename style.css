@@ -138,16 +138,9 @@ hr{background-color:rgba(0,0,0,.1);border:0;height:1px;margin-bottom:23px}
 
 /**
  * Define our Web Fonts
- * Default: 'Open Sans Condensed'
- * Headings: 'Oswald'
+ * Default: 'Source Sans Pro'
  * http://www.google.com/fonts
  */
-@font-face {
-    font-family: 'Oswald';
-    font-style: normal;
-    font-weight: 400;
-    src: local('Oswald Regular'), local('Oswald-Regular'), url(http://themes.googleusercontent.com/static/fonts/oswald/v8/-g5pDUSRgvxvOl5u-a_WHw.woff) format('woff');
-}
 @font-face {
   font-family: 'Source Sans Pro';
   font-style: normal;
@@ -185,14 +178,13 @@ hr{background-color:rgba(0,0,0,.1);border:0;height:1px;margin-bottom:23px}
   src: local('Source Sans Pro Black'), local('SourceSansPro-Black'), url(http://themes.googleusercontent.com/static/fonts/sourcesanspro/v7/toadOcfmlt9b38dHJxOBGHiec-hVyr2k4iOzEQsW1iE.woff) format('woff');
 }
 
-
 body,
 button,
 input,
 select,
 textarea {
     color: #333;
-    font-family: "Source Sans Pro", sans-serif;
+    font-family: "Source Sans Pro", Helvetica, Arial, sans-serif;
     font-size: 16px;
     font-weight: 400;
     line-height: 1.5;
@@ -950,7 +942,7 @@ span + .edit-link:before,
  */
 
 .post-thumbnail {
-    background: #b2b2b2 url(images/pattern-light.svg) repeat fixed;
+    background: #444;
     display: block;
     position: relative;
     width: 100%;
