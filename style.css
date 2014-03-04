@@ -17,8 +17,8 @@ Domain Path: /languages/
 /**
  * Table of Contents:
  *
- * 1.0 - Reset
- * 1.5 - Typography
+ * 0.0 - Reset
+ * 1.0 - Typography
  * 2.0 - Repeatable Patterns
  * 3.0 - Basic Structure
  * 4.0 - Header
@@ -45,12 +45,13 @@ Domain Path: /languages/
  * 10.0 - Multisite
  * 11.0 - Media Queries
  * 12.0 - Print
+ * 13.0 - Plugins and Testing CSS
  * -----------------------------------------------------------------------------
  */
 
 
 /**
- * 1.0 Reset
+ * 0.0 Reset
  *
  * Minified and repositioned reset
  * Resetting and rebuilding styles have been helped along thanks to the fine
@@ -121,7 +122,7 @@ hr{background-color:rgba(0,0,0,.1);border:0;height:1px;margin-bottom:23px}
 ::-moz-selection {background: #ffe26e; color: #000; text-shadow: none;}
 
 /**
- * 1.5 Typography
+ * 1.0 Typography
  * 
  * Here we define our font icons and web fonts
  * Make sure to change the font src whenever you upgrade to latest version of 
@@ -192,10 +193,10 @@ textarea {
 a,
 a:visited{
     color: #910000;
-    -webkit-transition: all 0.1s ease-out;
-    -moz-transition: all 0.1s ease-out;
-    -ms-transition: all 0.1s ease-out;
-    transition: all 0.1s ease-out;
+    -webkit-transition: all 0.2s ease-out;
+    -moz-transition: all 0.2s ease-out;
+    -ms-transition: all 0.2s ease-out;
+    transition: all 0.2s ease-out;
 }
 a:focus {       
     outline: thin dotted;
@@ -590,6 +591,9 @@ span + .edit-link:before,
     width: 100%;
 }
 
+#header{
+    border-bottom: 1px solid #999;
+}
 #header,
 #footer{
     margin: 0 auto;
@@ -646,7 +650,7 @@ span + .edit-link:before,
     float:  left;
     width: 200px;
     height: 29px;
-    padding: 10px;
+    padding: 20px 20px 16px;
 }
 
 /* Search in the header */
@@ -709,9 +713,13 @@ span + .edit-link:before,
  */
 /* Main Menu
 ============================================================================ */
+#menu{
+    float: right;
+    margin: 19px 20px 5px 0;
+}
 #nav{
     float: right;
-    margin: 10px auto 2px;
+    margin: 0 auto;
     line-height: 2.2em;
     font-weight: 600;
     text-align: center;
@@ -786,9 +794,10 @@ span + .edit-link:before,
     margin-left: 0;
 }
 #nav > ul > li:last-child{
-    margin-right: 9px;
+    margin-right: 0;
     margin-left: 15px;
     border: 1px solid #444;
+    margin-top: -1px; /* Fix 1px border push down */
 }
 #nav > ul > li:last-child:hover{
     border: 1px solid #c00;
@@ -985,7 +994,6 @@ a.post-thumbnail:hover {
 }
 
 .site-content .entry-header {
-    background-color: #fff;
     padding: 0 10px 12px;
 }
 
@@ -1119,7 +1127,6 @@ a.post-thumbnail:hover {
 .site-content .entry-content,
 .site-content .entry-summary,
 .page-content {
-    background-color: #fff;
     padding: 12px 10px 0;
 }
 
@@ -3797,4 +3804,100 @@ a.post-thumbnail:hover {
     .page-title {
         margin: 0 10px 48px;
     }
+}
+
+/**
+ * 13.0 Plugins and Testing (@todo to be removed on Production)
+ * -----------------------------------------------------------------------------
+ */
+
+/**
+ * Grid
+ */
+#grid{
+
+    /* Dimensions - same width as your grid with gutters */
+    width: 980px;
+
+    /* Grid (left-aligned)
+    position: absolute;
+    top: 0;
+    left: 0;
+    */
+
+    /* Grid (centered) */
+    position: absolute;
+    top: 0;
+    left: 50%;
+    margin-left: -490px;
+
+}
+
+/**
+ * Vertical grid lines
+ *
+ * Set the column width taking the borders into consideration,
+ * and use margins to set column gutters.
+ */
+#grid div.vert{
+
+    width: 139px;
+    border: solid darkturquoise;
+    border-width: 0 1px;
+    margin-right: 19px;
+
+}
+
+#grid div.vert.first-line{
+
+    margin-left: 19px;
+
+}
+
+
+/**
+ * Horizontal grid lines, defined by your base line height
+ *
+ * Remember, the CSS properties that define the box model:
+ * visible height = height + borders + margins + padding
+ */
+#grid div.horiz{
+
+    /* 20px line height */
+    height: 26px;
+    border-bottom: 1px dotted darkgray;
+    margin: 0;
+    padding: 0;
+
+}
+
+/**
+* Classes for multiple grids
+*
+* When using more than one grid, remember to set the numberOfGrids 
+* option in the hashgrid.js file.
+*/
+#grid.grid-1 div.vert{
+
+    /* Vertical grid line colour for grid 1 */
+    border-color: darkturquoise;
+}
+#grid.grid-2{
+
+    /* Adjustments */
+    padding: 0 160px;
+    width: 660px;
+}
+#grid.grid-2 div.vert{
+
+    /* Vertical grid line colour for grid 2 */
+    border-color: crimson;
+
+}
+
+#grid div.vert-container{
+    left: 1px;
+}
+#grid div.first-line{
+    height: 41px;
 }
