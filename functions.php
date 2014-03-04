@@ -68,7 +68,7 @@ if (!function_exists('bigblank_setup')) :
         add_theme_support('automatic-feed-links');
         // Enable support for Post Thumbnails, and declare thumbnail sizes.
         add_theme_support('post-thumbnails');
-        set_post_thumbnail_size(480, 320, true);
+        set_post_thumbnail_size(960, 480, true);
         // This theme uses wp_nav_menu() in two locations.
         register_nav_menus(array(
             'main_menu' => __('Top Primary Menu', 'bigblank'),
