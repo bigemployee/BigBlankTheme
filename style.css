@@ -143,6 +143,12 @@ hr{background-color:rgba(0,0,0,.1);border:0;height:1px;margin-bottom:23px}
  * http://www.google.com/fonts
  */
 @font-face {
+    font-family: 'Oswald';
+    font-style: normal;
+    font-weight: 400;
+    src: local('Oswald Regular'), local('Oswald-Regular'), url(http://themes.googleusercontent.com/static/fonts/oswald/v8/-g5pDUSRgvxvOl5u-a_WHw.woff) format('woff');
+}
+@font-face {
   font-family: 'Source Sans Pro';
   font-style: normal;
   font-weight: 200;
@@ -178,6 +184,14 @@ hr{background-color:rgba(0,0,0,.1);border:0;height:1px;margin-bottom:23px}
   font-weight: 900;
   src: local('Source Sans Pro Black'), local('SourceSansPro-Black'), url(http://themes.googleusercontent.com/static/fonts/sourcesanspro/v7/toadOcfmlt9b38dHJxOBGHiec-hVyr2k4iOzEQsW1iE.woff) format('woff');
 }
+
+/*html{
+    background: #fefefe
+}
+body{
+    background: #fff;
+    box-shadow: 0 0 6px rgba(0,0,0,0.1);
+}*/
 
 body,
 button,
@@ -439,8 +453,6 @@ img.aligncenter,
 
 .site-content blockquote.alignleft,
 .site-content blockquote.alignright {
-    border-top: 1px solid rgba(0, 0, 0, 0.1);
-    border-bottom: 1px solid rgba(0, 0, 0, 0.1);
     padding-top: 17px;
     width: 50%;
 }
@@ -448,6 +460,44 @@ img.aligncenter,
 .site-content blockquote.alignleft p,
 .site-content blockquote.alignright p {
     margin-bottom: 17px;
+}
+
+blockquote{
+    margin: 10px auto;
+    border-left: 2px solid #c00;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+blockquote p{
+    text-indent: 20px;
+    text-align: justify;
+    font: 400 1em/1 Georgia, Times, serif;
+    padding: 0 10px;
+}
+blockquote:before{
+    content: "“ ";
+    float: left;
+    font: bold 4.0em/0.9 Georgia, Times, serif;
+    color: #c00;
+    height: 20px;
+    width: 20px;
+    text-indent: 0;
+    margin: 6px 0 0 8px;
+}
+blockquote cite,
+blockquote p > strong:last-of-type{
+    font-size: 0.9em;
+    font-weight: 300;
+    font-style: italic;
+    margin: 0;
+    padding: 0;
+    float: right;
+}
+blockquote:after{
+    content: ""; 
+    display: table;
+    clear: both;
 }
 
 .wp-caption {
@@ -601,6 +651,47 @@ span + .edit-link:before,
     -webkit-box-sizing: border-box;
     -moz-box-sizing: border-box;
     box-sizing: border-box;
+}
+
+.content-sidebar #main,
+.sidebar-content #main{
+    width: 75%;
+}
+#sidebar{
+    width: 25%;
+}
+#sidebar li{
+    list-style: none;
+}
+
+/* 2 Column content=sidebar
+============================================================================ */
+.content-sidebar{}
+.content-sidebar #main{
+    float: left;
+}
+.content-sidebar #sidebar{
+    float: right;
+}
+
+/* 2 Column sidebar-content
+============================================================================ */
+.sidebar-content{}
+.sidebar-content #main{
+    float: right;
+}
+.sidebar-content #sidebar{
+    float: left;
+}
+/* fullpage
+============================================================================ */
+.content,
+.content #main{
+    float: left;
+    width: 100%;
+}
+.site-content{
+    /*border-bottom: 1px solid #ddd;*/
 }
 
 
@@ -867,27 +958,42 @@ span + .edit-link:before,
     margin: 0 auto 48px;
     /*max-width: 672px;*/
 }
-
-.site-content .entry-header,
-.site-content .entry-content p,
-.site-content .entry-summary,
-.site-content .entry-meta,
-.page-content {
-    margin: 0 auto;
-    max-width: 560px;
-}
-
-.page-content {
-    margin-bottom: 48px;
-}
 .site-content .entry-content{
     text-align: center;
 }
-.site-content .entry-content p{
-    text-align: left;
+.site-content .entry-header,
+.site-content table,
+.site-content p,
+.site-content dl,
+.site-content ol,
+.site-content ul,
+.site-content blockquote,
+.site-content .gallery,
+.site-content pre,
+.site-content .entry-summary,
+.site-content .entry-meta,
+.page-content {
     margin: 0 auto 1.5em;
+    max-width: 560px;
+    text-align: left;
 }
+.site-content ol,
+.site-content ul{
+    padding: 0 0 24px 20px;
+    list-style-position: inside;    
+}
+.site-content table,
+.site-content blockquote,
+.site-content .gallery,
+.site-content pre{
+    max-width: 780px;
+}
+.page-content {
+    margin-bottom: 48px;
+}
+.site-content .entry-content p,
 .site-content .entry-content iframe,
+.site-content .post-thumbnail,
 .site-content .entry-content img{
     margin: 0 auto 1.5em;
 }
@@ -927,9 +1033,8 @@ a.post-thumbnail:hover {
 }
 
 .entry-title {
-    line-height: 1.0909090909;
-    margin-bottom: 12px;
-    margin: 0 0 12px 0;
+    line-height: 1.1;
+    margin: 0 0 0.25em 0;
     text-transform: uppercase;
 }
 
@@ -942,11 +1047,11 @@ a.post-thumbnail:hover {
 }
 
 .site-content .entry-header {
-    padding: 0 10px 12px;
+    /*padding: 0 10px 12px;*/
 }
 
 .site-content .has-post-thumbnail .entry-header {
-    padding-top: 24px;
+    /*padding-top: 24px;*/
 }
 
 
@@ -999,12 +1104,12 @@ a.post-thumbnail:hover {
 }
 
 .site-content .entry-meta {
-    margin-bottom: 8px;
+    margin-bottom: 0.5em;
 }
 
 .site-content footer.entry-meta {
-    margin: 24px auto 0;
-    padding: 0 10px;
+/*    margin: 24px auto 0;
+    padding: 0 10px;*/
 }
 
 /* Tag links style */
@@ -1079,7 +1184,7 @@ a.post-thumbnail:hover {
 .site-content .entry-content,
 .site-content .entry-summary,
 .page-content {
-    padding: 12px 7px 0;
+    padding: 0 7px;
 }
 
 .page .entry-content {
@@ -1436,7 +1541,7 @@ a.post-thumbnail:hover {
 
 .paging-navigation {
     border-top: 5px solid #eee;
-    margin: 48px 0;
+    margin: 1em 0 2em;
 }
 
 .paging-navigation .loop-pagination {
@@ -1498,16 +1603,13 @@ a.post-thumbnail:hover {
 
 .archive-header,
 .page-header {
-    margin: 24px auto;
-    max-width: 474px;
 }
 
 .archive-title,
 .page-title {
-    font-size: 16px;
-    font-weight: 900;
-    line-height: 1.5;
-    margin: 0;
+    font-weight: 200;
+    margin: 1em 0 0.5em;
+    text-align: center;
 }
 
 .taxonomy-description,
@@ -2571,6 +2673,9 @@ a.post-thumbnail:hover {
     color: #c00;
 }
 
+#footer-nav{
+    margin: 1.5em 0 0;
+}
 #footer-nav,
 #site-info,
 .social-media{
@@ -2872,8 +2977,6 @@ a.post-thumbnail:hover {
 
     .archive-header,
     .page-header {
-        margin: 0 auto 60px;
-        padding: 0 10px;
     }
 
     .error404 .page-header {
