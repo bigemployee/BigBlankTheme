@@ -997,6 +997,14 @@ span + .edit-link:before,
 .site-content .entry-content img{
     margin: 0 auto 1.5em;
 }
+.site-content .entry-content p:first-child:first-letter{
+    font-size: 4.1em;
+    line-height: 0.74;
+    /*background: red;*/
+    font-weight: 900;
+    float: left;
+    margin: 0 5px 0 0;
+}
 
 /**
  * 6.1 Post Thumbnail
