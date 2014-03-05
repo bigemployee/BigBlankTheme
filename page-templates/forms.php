@@ -17,7 +17,24 @@ get_header();
                 ?>
                 <div class="entry-content">
                     <?php the_content(); ?>
+                    <p class="alert alert-success">
+                      <strong>Well done!</strong> You successfully read <a href="#" class="">this important alert message</a>.
+                    </p>
+                    <p class="alert alert-info">
+                      <strong>Heads up!</strong> This <a href="#" class="">alert needs your attention</a>, but it's not super important.
+                    </p>
+                    <p class="alert alert-warning">
+                      <strong>Warning!</strong> Better check yourself, you're <a href="#" class="">not looking too good</a>.
+                    </p>
+                    <p class="alert alert-danger">
+                        <strong>Oh snap!</strong> <a href="#" class="">Change a few things up</a> and try submitting again.
+                    </p>
                     <form role="form">
+                        <div class="form-group">
+                            <label for="exampleInputText">Input <small>(type="text")</small></label>
+                            <input type="text" class="form-control" id="exampleInputText" placeholder="Write Something" value="This is some text as value">
+                            <span class="help-block">A block of help text that breaks onto a new line and may extend beyond one line.</span>
+                        </div>                        
                         <div class="form-group">
                             <label for="exampleInputText">Input <small>(type="text")</small></label>
                             <input type="text" class="form-control" id="exampleInputText" placeholder="Write Something">
