@@ -1,6 +1,7 @@
 <?php
 /**
  * Template Name: Forms
+ * This template is used for testing purpose only, to demo form styles
  *
  */
 get_header();
