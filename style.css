@@ -191,13 +191,13 @@ hr{background-color:rgba(0,0,0,.1);border:0;height:1px;margin-bottom:23px}
   src: local('Source Sans Pro Black'), local('SourceSansPro-Black'), url(http://themes.googleusercontent.com/static/fonts/sourcesanspro/v7/toadOcfmlt9b38dHJxOBGHiec-hVyr2k4iOzEQsW1iE.woff) format('woff');
 }
 
-/*html{
-    background: #fefefe
+html{
+    background: #444;
 }
 body{
     background: #fff;
     box-shadow: 0 0 6px rgba(0,0,0,0.1);
-}*/
+}
 
 body,
 button,
@@ -2699,6 +2699,9 @@ a.post-thumbnail:hover {
     text-align: center;
     position: relative;
     margin-bottom: 1.5em;
+}
+#site-info{
+    font-size: 80%;
 }
 #footer-nav ul{
     display: inline-block;
