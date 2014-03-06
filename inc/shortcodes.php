@@ -7,8 +7,10 @@
 
 /**
  * A simple button shortcode, with option to pass link and additional class
- * [button link="http://bigemployee.com/" class="fa-angle-right"]Big Employee[/button]
- * @return: <a href="http://bigemployee.com/" class="button fa-angle-right">Big Employee</a>
+ * You can pass your custom classes or font awesome icons.
+ * @link http://fontawesome.io/icons/
+ * [button link="http://bigemployee.com/" class="big fa-angle-right"]Big Employee[/button]
+ * @return: <a href="http://bigemployee.com/" class="button big fa-angle-right">Big Employee</a>
  */
 function bigblank_add_shortcode_button($atts, $content = null) {
     extract(
