@@ -18,13 +18,13 @@ get_header();
                 <div class="entry-content">
                     <?php the_content(); ?>
                     <p class="alert alert-success">
-                      <strong>Well done!</strong> You successfully read <a href="#" class="">this important alert message</a>.
+                        <strong>Well done!</strong> You successfully read <a href="#" class="">this important alert message</a>.
                     </p>
                     <p class="alert alert-info">
-                      <strong>Heads up!</strong> This <a href="#" class="">alert needs your attention</a>, but it's not super important.
+                        <strong>Heads up!</strong> This <a href="#" class="">alert needs your attention</a>, but it's not super important.
                     </p>
                     <p class="alert alert-warning">
-                      <strong>Warning!</strong> Better check yourself, you're <a href="#" class="">not looking too good</a>.
+                        <strong>Warning!</strong> Better check yourself, you're <a href="#" class="">not looking too good</a>.
                     </p>
                     <p class="alert alert-danger">
                         <strong>Oh snap!</strong> <a href="#" class="">Change a few things up</a> and try submitting again.
@@ -34,7 +34,7 @@ get_header();
                             <label for="exampleInputText">Input <small>(type="text")</small></label>
                             <input type="text" class="form-control" id="exampleInputText" placeholder="Write Something" value="This is some text as value">
                             <span class="help-block">A block of help text that breaks onto a new line and may extend beyond one line.</span>
-                        </div>                        
+                        </div>
                         <div class="form-group">
                             <label for="exampleInputText">Input <small>(type="text")</small></label>
                             <input type="text" class="form-control" id="exampleInputText" placeholder="Write Something">
@@ -76,22 +76,28 @@ get_header();
                                 Option two can be something else and selecting it will deselect option one
                             </label>
                         </div>
-                        <select class="form-control">
-                            <option>1</option>
-                            <option>2</option>
-                            <option>3</option>
-                            <option>4</option>
-                            <option>5</option>
-                        </select>
-
-                        <select multiple class="form-control">
-                            <option>1</option>
-                            <option>2</option>
-                            <option>3</option>
-                            <option>4</option>
-                            <option>5</option>
-                        </select>
-                        <input class="form-control" id="disabledInput" type="text" placeholder="Disabled input here..." disabled>
+                        <div class="form-group">
+                            <label for="selectInput">Select Something</label>
+                            <select id="selectInput" class="form-control">
+                                <option>1</option>
+                                <option>2</option>
+                                <option>3</option>
+                                <option>4</option>
+                                <option>5</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label for="selectMultiInput">Select Multiple</label>
+                            <select multiple id="selectMultiInput" class="form-control">
+                                <option>1</option>
+                                <option>2</option>
+                                <option>3</option>
+                                <option>4</option>
+                                <option>5</option>
+                            </select>
+                        </div>
+                        <textarea class="form-control" rows="3"></textarea>
+                        <button type="submit" class="button fa-angle-right">Submit</button>
                         <fieldset disabled>
                             <div class="form-group">
                                 <label for="disabledTextInput">Disabled input</label>
@@ -99,7 +105,7 @@ get_header();
                             </div>
                             <div class="form-group">
                                 <label for="disabledSelect">Disabled select menu</label>
-                                <select id="disabledSelect" class="form-control">
+                                <select id="disabledSelect" class="form-control" disabled="disabled" >
                                     <option>Disabled select</option>
                                 </select>
                             </div>
@@ -110,10 +116,13 @@ get_header();
                             </div>
                             <button type="submit" class="button button-primary">Submit</button>
                         </fieldset>
-                        <textarea class="form-control" rows="3"></textarea>
-                        <button type="submit" class="button button-default">Submit</button>
-                        <a href="#" class="button button-primary button-lg disabled" role="button">Primary link</a>
-                        <a href="#" class="button button-default button-lg disabled" role="button">Link</a>
+                        <div class="form-group">
+                            <label for="exampleInputText3">Input <small>(type="text")</small></label>
+                            <input type="text" class="form-control" id="exampleInputText3" placeholder="Write Something" value="This is a disabled text field" disabled="dsiabled">
+                        </div>
+                        <button type="submit" class="button" disabled="disabled">Disabled Submit</button>
+                        <input type="submit" class="button" value="Disabled Input" disabled="dsiabled">
+                        <a href="#" class="button disabled" role="button">Disabled Link Button</a>
                     </form>
                 </div><!-- .entry-content -->
             </article><!-- #home -->
