@@ -143,10 +143,10 @@ hr{background-color:rgba(0,0,0,.1);border:0;height:1px;margin-bottom:23px}
  * http://www.google.com/fonts
  */
 @font-face {
-    font-family: 'Oswald';
-    font-style: normal;
-    font-weight: 400;
-    src: local('Oswald Regular'), local('Oswald-Regular'), url(http://themes.googleusercontent.com/static/fonts/oswald/v8/-g5pDUSRgvxvOl5u-a_WHw.woff) format('woff');
+  font-family: 'Playfair Display';
+  font-style: italic;
+  font-weight: 400;
+  src: local('Playfair Display Italic'), local('PlayfairDisplay-Italic'), url(http://themes.googleusercontent.com/static/fonts/playfairdisplay/v8/9MkijrV-dEJ0-_NWV7E6N3aqFElqJjV-H5EUExnZgmU.woff) format('woff');
 }
 @font-face {
     font-family: 'Source Sans Pro';
@@ -676,7 +676,7 @@ embed,
 iframe,
 object,
 video {
-    margin-bottom: 24px;
+    margin-bottom: 1.5em;
     max-width: 100%;
 }
 
@@ -687,6 +687,72 @@ span > embed,
 span > iframe,
 span > object {
     margin-bottom: 0;
+}
+
+/* Blockquote */
+
+blockquote{
+    margin: 0.25em auto 0.5em;
+    border-left: 2px solid #c00;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+blockquote p{
+    text-indent: 24px;
+    text-align: justify;
+    font: 400 1.4em/1.4 'Playfair Display', Georgia, Times, serif;
+    padding: 0 10px;
+    font-style: italic;
+}
+blockquote:before{
+    content: "“ ";
+    float: left;
+    font: bold 4.0em/0.92 'Playfair Display', Georgia, Times, serif;
+    color: #c00;
+    height: 20px;
+    width: 20px;
+    text-indent: 0;
+    margin: 0 0 0 6px;
+}
+blockquote cite,
+blockquote p > strong:last-of-type{
+    font-size: 0.9em;
+    font-weight: 300;
+    font-style: italic;
+    margin: 0;
+    padding: 0;
+    float: right;
+}
+blockquote:after{
+    content: ""; 
+    display: table;
+    clear: both;
+}
+
+/* Code */
+pre, address{
+    padding: 5px 10px;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    background-color: #efefef;
+    margin: 0 0 10px;
+}
+pre, code{
+    background: #fdf9ed;
+    border-left: 3px solid #ffc42f;
+    overflow-x: scroll;
+    word-break: normal;
+    word-wrap: normal;
+    white-space: pre;
+}
+code{
+    padding: 0 3px;
+    border-left: 0 none;
+}
+pre code{
+    padding: 0;
 }
 
 /* Alignment */
@@ -707,20 +773,20 @@ span > object {
 
 blockquote.alignleft,
 img.alignleft {
-    margin: 7px 24px 7px 0;
+    margin: 0.25em 1em 0.5em 0;
 }
 
 .wp-caption.alignleft {
-    margin: 7px 14px 7px 0;
+    margin: 0.25em 1em 0.5em 0;
 }
 
 blockquote.alignright,
 img.alignright {
-    margin: 7px 0 7px 24px;
+    margin: 0.25em 0 0.5em 1em;
 }
 
 .wp-caption.alignright {
-    margin: 7px 0 7px 14px;
+    margin: 0.25em 0 0.5em 1em;
 }
 
 blockquote.aligncenter,
@@ -732,51 +798,17 @@ img.aligncenter,
 
 .site-content blockquote.alignleft,
 .site-content blockquote.alignright {
-    padding-top: 17px;
-    width: 50%;
+    width: 30%;
+    margin-left: 20%;
+}
+.site-content blockquote.alignright {
+    margin-left: 14px;
+    margin-right: 20%;
 }
 
 .site-content blockquote.alignleft p,
 .site-content blockquote.alignright p {
-    margin-bottom: 17px;
-}
-
-blockquote{
-    margin: 10px auto;
-    border-left: 2px solid #c00;
-    -webkit-box-sizing: border-box;
-    -moz-box-sizing: border-box;
-    box-sizing: border-box;
-}
-blockquote p{
-    text-indent: 20px;
-    text-align: justify;
-    font: 400 1em/1 Georgia, Times, serif;
-    padding: 0 10px;
-}
-blockquote:before{
-    content: "“ ";
-    float: left;
-    font: bold 4.0em/0.9 Georgia, Times, serif;
-    color: #c00;
-    height: 20px;
-    width: 20px;
-    text-indent: 0;
-    margin: 6px 0 0 8px;
-}
-blockquote cite,
-blockquote p > strong:last-of-type{
-    font-size: 0.9em;
-    font-weight: 300;
-    font-style: italic;
-    margin: 0;
-    padding: 0;
-    float: right;
-}
-blockquote:after{
-    content: ""; 
-    display: table;
-    clear: both;
+    margin-bottom: 0;
 }
 
 .wp-caption {
@@ -844,16 +876,8 @@ blockquote:after{
 
 /* Clearing floats */
 
-.footer-sidebar:before,
-.footer-sidebar:after,
 .hentry:before,
 .hentry:after,
-.slider-direction-nav:before,
-.slider-direction-nav:after,
-.contributor-info:before,
-.contributor-info:after,
-.search-box:before,
-.search-box:after,
 [class*="content"]:before,
 [class*="content"]:after,
 [class*="site"]:before,
@@ -862,11 +886,7 @@ blockquote:after{
     display: table;
 }
 
-.footer-sidebar:after,
 .hentry:after,
-.slider-direction-nav:after,
-.contributor-info:after,
-.search-box:after,
 [class*="content"]:after,
 [class*="site"]:after {
     clear: both;
@@ -879,7 +899,6 @@ blockquote:after{
 .comment-reply-link:before,
 .comment-reply-login:before,
 .comment-reply-title small a:before,
-.contributor-posts-link:before,
 .menu-toggle:before,
 .search-toggle:before,
 .slider-direction-nav a:before,
@@ -1247,7 +1266,6 @@ span + .edit-link:before,
 .site-content dl,
 .site-content ol,
 .site-content ul,
-.site-content blockquote,
 .site-content .gallery,
 .site-content pre,
 .site-content .entry-summary,
@@ -1277,10 +1295,15 @@ span + .edit-link:before,
 .site-content .entry-content img{
     margin: 0 auto 1.5em;
 }
-.site-content .entry-content p:first-child:first-letter{
-    font-size: 4.1em;
-    line-height: 0.74;
-    /*background: red;*/
+.site-content .entry-content > p:first-of-type{
+    font-size: 1.25em;
+    line-height: 1.4;
+    font-weight: 300;
+}
+.site-content .entry-content > p:first-of-type:first-letter{
+    font-size: 3.5em;
+    line-height: 0.75em;
+    text-transform: uppercase;
     font-weight: 900;
     float: left;
     margin: 0 5px 0 0;
@@ -1328,6 +1351,7 @@ a.post-thumbnail:hover {
 
 .entry-title a {
     color: #2b2b2b;
+    text-decoration: none;
 }
 
 .entry-title a:hover {
@@ -1934,7 +1958,7 @@ a.post-thumbnail:hover {
  * -----------------------------------------------------------------------------
  */
 
-.contributor {
+/*.contributor {
     border-bottom: 1px solid rgba(0, 0, 0, 0.1);
     -webkit-box-sizing: border-box;
     -moz-box-sizing: border-box;
@@ -1981,7 +2005,7 @@ a.post-thumbnail:hover {
 
 .contributor-posts-link:before {
     content: "\f443";
-}
+}*/
 
 
 /**
@@ -4015,19 +4039,6 @@ a.post-thumbnail:hover {
 }
 
 @media screen and (min-width: 1260px) {
-    .site-content blockquote.alignleft,
-    .site-content blockquote.alignright {
-        width: -webkit-calc(50% + 18px);
-        width:         calc(50% + 18px);
-    }
-
-    .site-content blockquote.alignleft {
-        margin-left: -18%;
-    }
-
-    .site-content blockquote.alignright {
-        margin-right: -18%;
-    }
 }
 
 
