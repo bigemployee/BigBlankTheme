@@ -143,10 +143,10 @@ hr{background-color:rgba(0,0,0,.1);border:0;height:1px;margin-bottom:23px}
  * http://www.google.com/fonts
  */
 @font-face {
-  font-family: 'Playfair Display';
-  font-style: italic;
-  font-weight: 400;
-  src: local('Playfair Display Italic'), local('PlayfairDisplay-Italic'), url(http://themes.googleusercontent.com/static/fonts/playfairdisplay/v8/9MkijrV-dEJ0-_NWV7E6N3aqFElqJjV-H5EUExnZgmU.woff) format('woff');
+    font-family: 'Playfair Display';
+    font-style: italic;
+    font-weight: 400;
+    src: local('Playfair Display Italic'), local('PlayfairDisplay-Italic'), url(http://themes.googleusercontent.com/static/fonts/playfairdisplay/v8/9MkijrV-dEJ0-_NWV7E6N3aqFElqJjV-H5EUExnZgmU.woff) format('woff');
 }
 @font-face {
     font-family: 'Source Sans Pro';
@@ -635,43 +635,14 @@ fieldset[disabled] .checkbox label{
     color: #843534;
 }
 
-
 /* Responsive images. Fluid images for posts, comments, and widgets */
-
-.comment-content img,
-.entry-content img,
-.entry-summary img,
-#site-header img,
-.widget img,
+.site-content img,
 .wp-caption {
     max-width: 100%;
-}
-
-/**
- * Make sure images with WordPress-added height and width attributes are
- * scaled correctly.
- */
-
-.comment-content img[height],
-.entry-content img,
-.entry-summary img,
-img[class*="align"],
-img[class*="wp-image-"],
-img[class*="attachment-"],
-#site-header img {
     height: auto;
-}
-
-img.size-full,
-img.size-large,
-.wp-post-image,
-.post-thumbnail img {
-    height: auto;
-    max-width: 100%;
 }
 
 /* Make sure embeds and iframes fit their containers */
-
 embed,
 iframe,
 object,
@@ -679,7 +650,6 @@ video {
     margin-bottom: 1.5em;
     max-width: 100%;
 }
-
 p > embed,
 p > iframe,
 p > object,
@@ -692,11 +662,15 @@ span > object {
 /* Blockquote */
 
 blockquote{
-    margin: 0.25em auto 0.5em;
+    margin: 0 auto 1.5em;
     border-left: 2px solid #c00;
     -webkit-box-sizing: border-box;
     -moz-box-sizing: border-box;
     box-sizing: border-box;
+}
+blockquote.alignleft,
+blockquote.alignright{
+    margin: 0.25em auto 0.5em;
 }
 blockquote p{
     text-indent: 24px;
@@ -756,46 +730,37 @@ pre code{
 }
 
 /* Alignment */
-
 .alignleft {
     float: left;
 }
-
 .alignright {
     float: right;
 }
-
 .aligncenter {
     display: block;
     margin-left: auto;
     margin-right: auto;
 }
-
 blockquote.alignleft,
 img.alignleft {
     margin: 0.25em 1em 0.5em 0;
 }
-
 .wp-caption.alignleft {
     margin: 0.25em 1em 0.5em 0;
 }
-
 blockquote.alignright,
 img.alignright {
     margin: 0.25em 0 0.5em 1em;
 }
-
 .wp-caption.alignright {
     margin: 0.25em 0 0.5em 1em;
 }
-
 blockquote.aligncenter,
 img.aligncenter,
 .wp-caption.aligncenter {
     margin-top: 7px;
     margin-bottom: 7px;
 }
-
 .site-content blockquote.alignleft,
 .site-content blockquote.alignright {
     width: 30%;
@@ -805,25 +770,20 @@ img.aligncenter,
     margin-left: 14px;
     margin-right: 20%;
 }
-
 .site-content blockquote.alignleft p,
 .site-content blockquote.alignright p {
     margin-bottom: 0;
 }
-
 .wp-caption {
     margin-bottom: 24px;
 }
-
 .wp-caption img[class*="wp-image-"] {
     display: block;
     margin: 0;
 }
-
 .wp-caption {
     color: #767676;
 }
-
 .wp-caption-text {
     -webkit-box-sizing: border-box;
     -moz-box-sizing:    border-box;
@@ -834,7 +794,6 @@ img.aligncenter,
     margin: 9px 0;
     padding-right: 10px;
 }
-
 .wp-smiley {
     border: 0;
     margin-bottom: 0;
@@ -843,7 +802,6 @@ img.aligncenter,
 }
 
 /* Assistive text */
-
 .screen-reader-text {
     clip: rect(1px, 1px, 1px, 1px);
     position: absolute;
@@ -1285,6 +1243,9 @@ span + .edit-link:before,
 .site-content .gallery,
 .site-content pre{
     max-width: 780px;
+}
+.site-content blockquote p{
+    max-width: 100%;
 }
 .page-content {
     margin-bottom: 48px;
