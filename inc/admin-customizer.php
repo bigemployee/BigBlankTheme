@@ -74,7 +74,6 @@ function bigblank_customize_register($wp_customize) {
         'section' => 'social',
         'settings' => 'bigblank_theme_options[facebook]',
     ));
-
     // instagram
     $wp_customize->add_setting('bigblank_theme_options[instagram]', array(
         'type' => 'option',
@@ -94,6 +93,16 @@ function bigblank_customize_register($wp_customize) {
         'label' => __('Youtube', 'bigblank'),
         'section' => 'social',
         'settings' => 'bigblank_theme_options[youtube]',
+    ));
+    // pinterest
+    $wp_customize->add_setting('bigblank_theme_options[pinterest]', array(
+        'type' => 'option',
+        'default' => $defaults['pinterest'],
+    ));
+    $wp_customize->add_control('bigblank_theme_options[pinterest]', array(
+        'label' => __('Pinterest', 'bigblank'),
+        'section' => 'social',
+        'settings' => 'bigblank_theme_options[pinterest]',
     ));
 
     // Default Layout

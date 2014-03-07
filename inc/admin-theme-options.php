@@ -31,6 +31,7 @@ function bigblank_theme_options_init() {
     add_settings_field('social-facebook', __('Facebook', 'bigblank'), 'bigblank_settings_field_facebook', 'theme_options', 'social', array('label_for' => 'social-facebook'));
     add_settings_field('social-instagram', __('Instagram', 'bigblank'), 'bigblank_settings_field_instagram', 'theme_options', 'social', array('label_for' => 'social-instagram'));
     add_settings_field('social-youtube', __('Youtube', 'bigblank'), 'bigblank_settings_field_youtube', 'theme_options', 'social', array('label_for' => 'social-youtube'));
+    add_settings_field('social-pinterest', __('Pinterest', 'bigblank'), 'bigblank_settings_field_pinterest', 'theme_options', 'social', array('label_for' => 'social-pinterest'));
     add_settings_field('layout', __('Default Layout', 'bigblank'), 'bigblank_settings_field_layout', 'theme_options', 'general');
     add_settings_field('comments', __('Comment Settings', 'bigblank'), 'bigblank_settings_field_comments', 'theme_options', 'general');
     add_settings_field('footer-copyright', __('Footer Copyright', 'bigblank'), 'bigblank_settings_field_footer_copyright', 'theme_options', 'footer', array('label_for' => 'footer-copyright'));
@@ -129,6 +130,7 @@ function bigblank_get_default_theme_options() {
         'facebook' => '',
         'instagram' => '',
         'youtube' => '',
+        'pinterest' => '',
         'theme_layout' => 'content-sidebar',
         'page_comments' => 'on',
         'post_comments' => 'on',
@@ -187,7 +189,7 @@ function bigblank_settings_field_facebook() {
 }
 
 /**
- * render the facebook settings
+ * render the instagram settings
  */
 function bigblank_settings_field_instagram() {
     $options = bigblank_get_theme_options();
@@ -197,12 +199,22 @@ function bigblank_settings_field_instagram() {
 }
 
 /**
- * render the facebook settings
+ * render the youtube settings
  */
 function bigblank_settings_field_youtube() {
     $options = bigblank_get_theme_options();
     ?>
     <input type="text" class="large-text" id="social-youtube" name="bigblank_theme_options[youtube]" value="<?php echo esc_attr($options['youtube']); ?>" />
+    <?php
+}
+
+/**
+ * render the youtube settings
+ */
+function bigblank_settings_field_pinterest() {
+    $options = bigblank_get_theme_options();
+    ?>
+    <input type="text" class="large-text" id="social-pinterest" name="bigblank_theme_options[pinterest]" value="<?php echo esc_attr($options['pinterest']); ?>" />
     <?php
 }
 
@@ -338,6 +350,9 @@ function bigblank_theme_options_validate($input) {
     }
     if (isset($input['youtube'])) {
         $output['youtube'] = $input['youtube'];
+    }
+    if (isset($input['pinterest'])) {
+        $output['pinterest'] = $input['pinterest'];
     }
     if (isset($input['theme_layout']) && array_key_exists($input['theme_layout'], bigblank_layouts())) {
         $output['theme_layout'] = $input['theme_layout'];

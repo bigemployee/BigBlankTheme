@@ -2961,7 +2961,11 @@ a.post-thumbnail:hover {
 .site-info a {
     color: rgba(255, 255, 255, 0.7);
 }
-
+#footer-tel,
+#footer-address{
+    display: block;
+    clear: both;
+}
 .site-footer {
     background-color: #000;
     font-size: 12px;
@@ -3056,6 +3060,9 @@ a.post-thumbnail:hover {
 }
 .social-media .fa-youtube-play:hover{
     background: #b00;
+}
+.social-media .fa-pinterest:hover{
+    background: #cc2127;
 }
 
 /**
