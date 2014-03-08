@@ -166,13 +166,20 @@ add_filter('the_content', 'anchor_content_h2');
 /**
  * Filter <p> tags wrapping images and iframes
  * comment out if you wish to keep them in <p> tags.
- * \1\3\4\5 is the group of paranthesis returned
+ * \2 a tag open
+ * \4 image tag
+ * \6 iframe tag
+ * \7 a tag close
+ * \1-8 is the group of paranthesis returned
  * "generally, the results of the captured groups are in the order in which they
  * are defined (the open parenthesis)"
+ * Exclude alignleft and alignright images, and also images middle of  the 
+ * paragraphs. Also remove wrapping paragraph of images inside spans.
  * @link http://regexone.com/lesson/
+ * @link http://rubular.com/r/ZybUS108Vq
  */
 function remove_ptags_around_images_and_iframes($content) {
-    return preg_replace('/<p.*(<a .*>)?\s*((<img .* \/>)|(<iframe .*>*.<\/iframe>))\s*(<\/a>)?\s*<\/p>/iU', '\1\3\4\5\6', $content);
+    return preg_replace('/<p.?>\s?(<span .*>)?\s*(<a .*>)?\s*((<img[^>]+class="(?!(?:.+\s)?alignleft|alignright(?:\s.+)?")([^"]+)".*\/>)|(<iframe .*>*.<\/iframe>))\s*(<\/a>)?\s*(<\/span>)?\s*<\/p>/iU', '\2\4\6\7', $content);
 }
 
 add_filter('the_content', 'remove_ptags_around_images_and_iframes');
