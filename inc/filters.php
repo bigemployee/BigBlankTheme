@@ -172,7 +172,7 @@ add_filter('the_content', 'anchor_content_h2');
  * @link http://regexone.com/lesson/
  */
 function remove_ptags_around_images_and_iframes($content) {
-    return preg_replace('/<p>\s*(<a .*>)?\s*((<img .* \/>)|(<iframe .*>*.<\/iframe>))\s*(<\/a>)?\s*<\/p>/iU', '\1\3\4\5', $content);
+    return preg_replace('/<p.*(<a .*>)?\s*((<img .* \/>)|(<iframe .*>*.<\/iframe>))\s*(<\/a>)?\s*<\/p>/iU', '\1\3\4\5\6', $content);
 }
 
 add_filter('the_content', 'remove_ptags_around_images_and_iframes');
