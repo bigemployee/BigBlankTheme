@@ -193,6 +193,7 @@ add_filter('the_content', 'bigblank_replace_ptags_around_images_with_figure');
  */
 function bigblank_remove_ptags_around_iframes($content) {
     $content = preg_replace('/<p.?>\s?(<iframe .*>*.<\/iframe>)\s*<\/p>/iU', '\1', $content);
+    return $content;    
 }
 add_filter('the_content', 'bigblank_remove_ptags_around_iframes');
 
