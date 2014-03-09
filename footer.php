@@ -8,6 +8,8 @@
 ?>
 <?php
 $options = bigblank_get_theme_options();
+$phone = $options['phone'];
+$address = $options['address'];
 $footer_copyright = $options['footer_copyright'];
 $footer_text = $options['footer_text'];
 ?>
@@ -19,9 +21,19 @@ $footer_text = $options['footer_text'];
     get_template_part('social', 'links');
     ?>
     <div id="site-info">
-        <span id="copyright"><?php echo $footer_copyright; ?></span>
-        <span id="footer-text"><?php echo $footer_text; ?></span>
-        <div id="bigemployee"><?php _e('theme by', 'bigblank') ?> <a href="<?php echo esc_url(__('http://bigemployee.com/', 'bigblank')); ?>"><?php printf(__('%s', 'bigblank'), 'Big Employee'); ?></a></div>
+        <?php if ($phone) : ?>
+            <a href="/contact/" id="footer-tel" class="tel"><i class="fa fa-phone"></i><?php echo $phone; ?></a>
+        <?php endif; ?>
+        <?php if ($address) : ?>
+            <a href="http://maps.google.com/maps?daddr=<?php echo urlencode($address); ?>&amp;saddr=" id="footer-address" class="address"><i class="fa fa-map-marker"></i><?php echo $address; ?></a>
+        <?php endif; ?>
+        <?php if ($footer_copyright) : ?>
+            <span id="copyright"><?php echo $footer_copyright; ?></span>
+        <?php endif; ?>
+        <?php if ($footer_text) : ?>
+            <span id="footer-text"><?php echo $footer_text; ?></span>
+        <?php endif; ?>
+        <div id="bigemployee"><?php _e('theme by', 'bigblank'); ?> <a href="<?php echo esc_url(__('http://bigemployee.com/', 'bigblank')); ?>"><?php printf(__('%s', 'bigblank'), 'Big Employee'); ?></a></div>
     </div><!-- #site-info -->
 </footer><!-- #footer -->
 <?php wp_footer(); ?>
