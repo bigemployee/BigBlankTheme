@@ -144,7 +144,7 @@ add_filter('wp_title', 'bigblank_wp_title', 10, 2);
 
 // This function adds nice anchor with id attribute to our h2 tags for reference
 // Ref: http://www.w3.org/TR/html4/struct/links.html#h-12.2.3
-function anchor_content_h2($content) {
+function bigblank_anchor_content_h2($content) {
 
     // Pattern that we want to match
     $pattern = '/<h2>(.*?)<\/h2>/';
@@ -161,25 +161,71 @@ function anchor_content_h2($content) {
     return $content;
 }
 
-add_filter('the_content', 'anchor_content_h2');
+add_filter('the_content', 'bigblank_anchor_content_h2');
 
 /**
- * Filter <p> tags wrapping images and iframes
+ * Filter <p> tags wrapping images
  * comment out if you wish to keep them in <p> tags.
  * \2 a tag open
- * \4 image tag
- * \6 iframe tag
- * \7 a tag close
- * \1-8 is the group of paranthesis returned
+ * \3 image tag
+ * \6 a tag close
+ * \n is the group of paranthesis returned
  * "generally, the results of the captured groups are in the order in which they
  * are defined (the open parenthesis)"
  * Exclude alignleft and alignright images, and also images middle of  the 
  * paragraphs. Also remove wrapping paragraph of images inside spans.
  * @link http://regexone.com/lesson/
- * @link http://rubular.com/r/ZybUS108Vq
+ * @link https://www.debuggex.com/r/i7aRALUMeTQJN4bR
  */
-function remove_ptags_around_images_and_iframes($content) {
-    return preg_replace('/<p.?>\s?(<span .*>)?\s*(<a .*>)?\s*((<img[^>]+class="(?!(?:.+\s)?alignleft|alignright(?:\s.+)?")([^"]+)".*\/>)|(<iframe .*>*.<\/iframe>))\s*(<\/a>)?\s*(<\/span>)?\s*<\/p>/iU', '\2\4\6\7', $content);
+function bigblank_replace_ptags_around_images_with_figure($content) {
+    $content = preg_replace('/<p.?>\s?(<span .*>)?\s*(<a .*>)?\s*(<img[^>]+class="(?!(?:.+\s)?(alignleft|alignright)(?:\s.+)?")([^"]+)".*\/>)\s*(<\/a>)?\s*(<\/span>)?\s*<\/p>/iU', '<figure>\2\3\6</figure>', $content);
+    $content = preg_replace('/<p.?>\s?(<span .*>)?\s*(<a .*>)?\s*(<img[^>]+class="(?:.+\s)?(alignleft|alignright)(?:\s.+)?"([^"]+)".*\/>)\s*(<\/a>)?\s*(<\/span>)?\s*<\/p>/iU', '<figure class="\4">\2\3\6</figure>', $content);
+    return $content;
 }
 
-add_filter('the_content', 'remove_ptags_around_images_and_iframes');
+add_filter('the_content', 'bigblank_replace_ptags_around_images_with_figure');
+
+/**
+ * Filter <p> tags wrapping iframes
+ * @todo might add objects and embeds too if necessary, but ok for now.
+ * 
+ * @param string $content
+ */
+function bigblank_remove_ptags_around_iframes($content) {
+    $content = preg_replace('/<p.?>\s?(<iframe .*>*.<\/iframe>)\s*<\/p>/iU', '\1', $content);
+}
+add_filter('the_content', 'bigblank_remove_ptags_around_iframes');
+
+
+/**
+ * Improves the caption shortcode with HTML5 figure & figcaption; microdata & wai-aria attributes
+ * 
+ * @param  string $val     Empty
+ * @param  array  $attr    Shortcode attributes
+ * @param  string $content Shortcode content
+ * @return string          Shortcode output
+ * @link http://codex.wordpress.org/Plugin_API/Filter_Reference/img_caption_shortcode
+ * @link http://joostkiens.com/improving-wp-caption-shortcode/
+ */
+function bigblank_img_caption_shortcode_filter($val, $attr, $content = null)
+{
+	extract(shortcode_atts(array(
+		'id'      => '',
+		'align'   => 'aligncenter',
+		'width'   => '',
+		'caption' => ''
+	), $attr));
+	
+	// No caption, no dice... But why width? 
+	if ( 1 > (int) $width || empty($caption) )
+		return $val;
+ 
+	if ( $id )
+		$id = esc_attr( $id );
+     
+	// Add itemprop="contentURL" to image - Ugly hack
+	$content = str_replace('<img', '<img itemprop="contentURL"', $content);
+
+	return '<figure id="' . $id . '" aria-describedby="figcaption_' . $id . '" class="wp-caption ' . esc_attr($align) . '" itemscope itemtype="http://schema.org/ImageObject">' . do_shortcode( $content ) . '<figcaption id="figcaption_'. $id . '" class="wp-caption-text" itemprop="description">' . $caption . '</figcaption></figure>';
+}
+add_filter( 'img_caption_shortcode', 'bigblank_img_caption_shortcode_filter', 10, 3 );
