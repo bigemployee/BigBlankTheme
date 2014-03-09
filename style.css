@@ -732,6 +732,10 @@ pre code{
 .alignright {
     float: right;
 }
+figure.alignleft,
+figure.alignright{
+    float: none;
+}
 .aligncenter {
     display: block;
     margin-left: auto;
@@ -744,13 +748,16 @@ pre code{
 .entry-content img{
     margin: 0 auto 1.5em;
 }
+.entry-content p img{
+    margin: 0.4em auto;
+}
 blockquote.alignleft,
-img.alignleft,
+.entry-content img.alignleft,
 .wp-caption.alignleft{
     margin: 0.4em 1em 0.4em 0;
 }
 blockquote.alignright,
-img.alignright,
+.entry-content img.alignright,
 .wp-caption.alignright{
     margin: 0.4em 0 0.4em 1em;
 }
@@ -768,14 +775,14 @@ img.alignright,
     margin-bottom: 0;
 }
 .wp-caption {
-    margin-bottom: 24px;
+    text-align: center;
+    color: #767676;
+    display: inline-block;
+    background: #f4f4f4;
 }
 .wp-caption img[class*="wp-image-"] {
     display: block;
-    margin: 0;
-}
-.wp-caption {
-    color: #767676;
+    margin: 0 auto;
 }
 .wp-caption-text {
     -webkit-box-sizing: border-box;
@@ -793,6 +800,7 @@ img.alignright,
     margin-top: 0;
     padding: 0;
 }
+
 
 /* Assistive text */
 .screen-reader-text {
@@ -1252,6 +1260,20 @@ span + .edit-link:before,
     float: left;
     margin: 0 5px 0 0;
 }
+figure.alignleft,
+figure.alignright{
+    max-width: 560px;
+    margin: 0 auto;
+}
+.site-content p img.alignleft,
+figure.alignleft img.alignleft{
+    margin-left: -100px;
+}
+.site-content p img.alignright,
+figure.alignright img.alignright{
+    margin-right: -100px;    
+}
+
 
 /**
  * 6.1 Post Thumbnail
