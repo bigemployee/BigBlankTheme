@@ -1332,7 +1332,7 @@ a.post-thumbnail:hover {
     color: #767676;
     font-size: 80%;
     line-height: 1.3333333333;
-    text-transform: uppercase;
+    text-transform: capitalize;
 }
 
 .entry-meta a {
@@ -1343,93 +1343,8 @@ a.post-thumbnail:hover {
     color: #c00;
 }
 
-.sticky .entry-date {
-    display: none;
-}
+/* @todo add entry meta icons here */
 
-/*.cat-links {
-    font-weight: 900;
-    text-transform: uppercase;
-}
-
-.cat-links a {
-    color: #2b2b2b;
-}
-
-.cat-links a:hover {
-    color: #c00;
-}*/
-
-.byline {
-    display: none;
-}
-
-.single .byline,
-.group-blog .byline {
-    display: inline;
-}
-
-.site-content .entry-meta {
-    margin-bottom: 0.5em;
-}
-
-.site-content footer.entry-meta {
-    /*    margin: 24px auto 0;
-        padding: 0 10px;*/
-}
-
-/* Tag links style */
-
-/*.entry-meta .tag-links a {
-    background-color: #767676;
-    border-radius: 0 2px 2px 0;
-    color: #fff;
-    display: inline-block;
-    font-size: 11px;
-    font-weight: 700;
-    line-height: 1.2727272727;
-    margin: 2px 4px 2px 10px;
-    padding: 3px 7px;
-    position: relative;
-    text-transform: uppercase;
-    text-decoration: none;
-}
-
-.entry-meta .tag-links a:hover {
-    background-color: #c00;
-    color: #fff;
-}
-
-.entry-meta .tag-links a:before {
-    border-top: 10px solid transparent;
-    border-right: 8px solid #767676;
-    border-bottom: 10px solid transparent;
-    content: "";
-    height: 0;
-    position: absolute;
-    top: 0;
-    left: -8px;
-    width: 0;
-    -webkit-transition: all 0.2s ease-out;
-    -moz-transition: all 0.2s ease-out;
-    -ms-transition: all 0.2s ease-out;
-    transition: all 0.2s ease-out;
-}
-
-.entry-meta .tag-links a:hover:before {
-    border-right-color: #c00;
-}
-
-.entry-meta .tag-links a:after {
-    background-color: #fff;
-    border-radius: 50%;
-    content: "";
-    height: 4px;
-    position: absolute;
-    top: 8px;
-    left: -2px;
-    width: 4px;
-}*/
 
 
 /**
