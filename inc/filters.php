@@ -178,8 +178,8 @@ add_filter('the_content', 'bigblank_anchor_content_h2');
  * @link https://www.debuggex.com/r/i7aRALUMeTQJN4bR
  */
 function bigblank_replace_ptags_around_images_with_figure($content) {
-    $content = preg_replace('/<p.*?>\s?(<span .*>)?\s*(<a .*>)?\s*(<img[^>]+class="(?!(?:.+\s)?(alignleft|alignright)(?:\s.+)?")([^"]+)".*\/>)\s*(<\/a>)?\s*(<\/span>)?\s*<\/p>/iU', '<figure>\2\3\6</figure>', $content);
-    $content = preg_replace('/<p.*?>\s?(<span .*>)?\s*(<a .*>)?\s*(<img[^>]+class="(?:.+\s)?(alignleft|alignright)(?:\s.+)?"([^"]+)".*\/>)\s*(<\/a>)?\s*(<\/span>)?\s*<\/p>/iU', '<figure class="\4">\2\3\6</figure>', $content);
+    $content = preg_replace('/<p.*?>\s?(<span .*>)?\s*(<a .*>)?\s*(<img[^>]+class="(?!(?:.+\s)?(alignleft|alignright)(?:\s.+)?")([^"]+)".*>)\s*(<\/a>)?\s*(<\/span>)?\s*<\/p>/iU', '<figure>\2\3\6</figure>', $content);
+    $content = preg_replace('/<p.*?>\s?(<span .*>)?\s*(<a .*>)?\s*(<img[^>]+class="(?:.+\s)?(alignleft|alignright)(?:\s.+)?"([^"]+)".*>)\s*(<\/a>)?\s*(<\/span>)?\s*<\/p>/iU', '<figure class="\4">\2\3\6</figure>', $content);
     return $content;
 }
 
