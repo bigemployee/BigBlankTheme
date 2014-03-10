@@ -838,7 +838,6 @@ figure.alignright figcaption{
 }
 
 /* Clearing floats */
-
 .hentry:before,
 .hentry:after,
 [class*="content"]:before,
@@ -2912,6 +2911,10 @@ a.post-thumbnail:hover {
 #footer-address{
     display: block;
     clear: both;
+}
+#footer-tel i,
+#footer-address i{
+    margin-right: 5px;
 }
 .site-footer {
     background-color: #000;
