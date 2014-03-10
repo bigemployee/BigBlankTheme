@@ -720,7 +720,8 @@ pre, code{
 }
 code{
     padding: 0 3px;
-    border-left: 0 none;
+    border: 1px solid #ffc42f;
+    border-radius: 3px;
 }
 pre code{
     padding: 0;
