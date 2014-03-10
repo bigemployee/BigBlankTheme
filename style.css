@@ -89,7 +89,7 @@ sub{top:.5ex}
 dl{margin-bottom:24px}
 dt{font-weight:700}
 dd{margin-bottom:24px}
-ol,ul{margin:0 0 24px 20px}
+ol,ul{margin:0 0 24px 20px;-webkit-box-sizing:border-box;-moz-box-sizing:border-box;box-sizing:border-box;}
 ul{list-style:disc}
 ol{list-style:decimal}
 li>ol,li>ul{margin:0 0 0 20px}
@@ -237,7 +237,9 @@ h6 {
     -webkit-font-smoothing: antialiased;
     color: #444;
     text-rendering: optimizeLegibility;
-    margin: 1em 0 0.5em;
+    margin: 1em auto 0.5em;
+    max-width: 560px;
+    text-align: left;
 }
 
 h1 {
@@ -1195,8 +1197,8 @@ figure.alignright figcaption{
 .site-content form,
 .site-content p,
 .site-content dl,
-.site-content ol,
-.site-content ul,
+.entry-content > ol,
+.entry-content > ul,
 .site-content .gallery,
 .site-content pre,
 .site-content address,
@@ -1207,10 +1209,10 @@ figure.alignright figcaption{
     max-width: 560px;
     text-align: left;
 }
-.site-content ol,
-.site-content ul{
-    padding: 0 0 24px 20px;
-    list-style-position: inside;    
+.entry-content ol,
+.entry-content ul{
+    padding: 0 0 0 0.5em;
+    list-style-position: inside;
 }
 .site-content table,
 .site-content blockquote,
