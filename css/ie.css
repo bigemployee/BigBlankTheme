@@ -208,16 +208,16 @@ a.post-thumbnail:hover {
     width: auto; /* Prevent stretching of full-size and large-size images with height and width attributes in IE8 */
 }
 
-.ie8 .full-size-link:before,
+/*.ie8 .full-size-link:before,
 .ie8 .parent-post-link:before,
 .ie8 .site-content span + .byline:before,
 .ie8 .site-content span + .comments-link:before,
 .ie8 .site-content span + .edit-link:before,
 .ie8 .site-content span + .entry-date:before {
     content: "";
-}
+}*/
 
-.ie8 .attachment span.entry-date:before,
+/*.ie8 .attachment span.entry-date:before,
 .ie8 .entry-content .edit-link a:before,
 .ie8 .entry-meta .edit-link a:before,
 .ie8 .site-content .byline a:before,
@@ -231,9 +231,9 @@ a.post-thumbnail:hover {
     font: normal 16px/1 Genericons;
     text-decoration: inherit;
     vertical-align: text-bottom;
-}
+}*/
 
-.ie8 .site-content .entry-meta > span {
+/*.ie8 .site-content .entry-meta > span {
     margin-right: 10px;
 }
 
@@ -308,7 +308,7 @@ a.post-thumbnail:hover {
 
 .ie8 .site-content .parent-post-link a:before {
     content: "\f301";
-}
+}*/
 
 .ie8 .main-content {
     float: left;
