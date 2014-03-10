@@ -784,10 +784,11 @@ figcaption {
     box-sizing: border-box;
     font-size: 90%;
     font-style: italic;
-    line-height: 2;
+    line-height: 1.5;
     clear: both;
     margin-top: 0;
     margin-bottom: 0.4em;
+    padding: 0.5em 1em;
     color: #767676;
     background: #f4f4f4;
 }
