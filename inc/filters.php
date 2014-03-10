@@ -178,8 +178,10 @@ add_filter('the_content', 'bigblank_anchor_content_h2');
  * @link https://www.debuggex.com/r/i7aRALUMeTQJN4bR
  */
 function bigblank_replace_ptags_around_images_with_figure($content) {
-    $content = preg_replace('/<p.*?>\s?(<span .*>)?\s*(<a .*>)?\s*(<img[^>]+class="(?!(?:.+\s)?(alignleft|alignright)(?:\s.+)?")([^"]+)".*>)\s*(<\/a>)?\s*(<\/span>)?\s*<\/p>/iU', '<figure>\2\3\6</figure>', $content);
-    $content = preg_replace('/<p.*?>\s?(<span .*>)?\s*(<a .*>)?\s*(<img[^>]+class="(?:.+\s)?(alignleft|alignright)(?:\s.+)?"([^"]+)".*>)\s*(<\/a>)?\s*(<\/span>)?\s*<\/p>/iU', '<figure class="\4">\2\3\6</figure>', $content);
+    /* For images with default WordPress alignement */
+    $content = preg_replace('/<p.*?>\s?(<span .*>)?\s*(<a .*>)?\s*(<img[^>]+class="(?:.+\s)?(aligncenter|alignnone|alignleft|alignright)(?:\s.+)?"([^"]+)".*>)\s*(<\/a>)?\s*(<\/span>)?\s*<\/p>/iU', '<figure class="\4">\2\3\6</figure>', $content);
+    /* For images copied with formatting that does not follow WordPress alignement and everything else */
+    $content = preg_replace('/<p.*?>\s?(<span .*>)?\s*(<a .*>)?\s*(<img[^>].*>)\s*(<\/a>)?\s*(<\/span>)?\s*<\/p>/iU', '<figure>\2\3\6</figure>', $content);
     return $content;
 }
 
