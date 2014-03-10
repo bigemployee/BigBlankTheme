@@ -178,8 +178,10 @@ add_filter('the_content', 'bigblank_anchor_content_h2');
  * @link https://www.debuggex.com/r/i7aRALUMeTQJN4bR
  */
 function bigblank_replace_ptags_around_images_with_figure($content) {
-    $content = preg_replace('/<p.*?>\s?(<span .*>)?\s*(<a .*>)?\s*(<img[^>]+class="(?!(?:.+\s)?(alignleft|alignright)(?:\s.+)?")([^"]+)".*\/>)\s*(<\/a>)?\s*(<\/span>)?\s*<\/p>/iU', '<figure>\2\3\6</figure>', $content);
-    $content = preg_replace('/<p.*?>\s?(<span .*>)?\s*(<a .*>)?\s*(<img[^>]+class="(?:.+\s)?(alignleft|alignright)(?:\s.+)?"([^"]+)".*\/>)\s*(<\/a>)?\s*(<\/span>)?\s*<\/p>/iU', '<figure class="\4">\2\3\6</figure>', $content);
+    /* For images with default WordPress alignement */
+    $content = preg_replace('/<p.*?>\s?(<span .*>)?\s*(<a .*>)?\s*(<img[^>]+class="(?:.+\s)?(aligncenter|alignnone|alignleft|alignright)(?:\s.+)?"([^"]+)".*>)\s*(<\/a>)?\s*(<\/span>)?\s*<\/p>/iU', '<figure class="\4">\2\3\6</figure>', $content);
+    /* For images copied with formatting that does not follow WordPress alignement and everything else */
+    $content = preg_replace('/<p.*?>\s?(<span .*>)?\s*(<a .*>)?\s*(<img[^>].*>)\s*(<\/a>)?\s*(<\/span>)?\s*<\/p>/iU', '<figure>\2\3\6</figure>', $content);
     return $content;
 }
 
@@ -227,6 +229,6 @@ function bigblank_img_caption_shortcode_filter($val, $attr, $content = null)
 	// Add itemprop="contentURL" to image - Ugly hack
 	$content = str_replace('<img', '<img itemprop="contentURL"', $content);
 
-	return '<figure id="' . $id . '" aria-describedby="figcaption_' . $id . '" class="wp-caption ' . esc_attr($align) . '" itemscope itemtype="http://schema.org/ImageObject">' . do_shortcode( $content ) . '<figcaption id="figcaption_'. $id . '" class="wp-caption-text" itemprop="description">' . $caption . '</figcaption></figure>';
+	return '<figure id="' . $id . '" aria-describedby="figcaption_' . $id . '" class="wp-caption ' . esc_attr($align) . '">' . do_shortcode( $content ) . '<figcaption id="figcaption_'. $id . '" class="wp-caption-text" itemprop="description" style="width: ' . (0 + (int) $width) . 'px">' . $caption . '</figcaption></figure>';
 }
 add_filter( 'img_caption_shortcode', 'bigblank_img_caption_shortcode_filter', 10, 3 );

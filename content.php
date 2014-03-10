@@ -9,12 +9,7 @@
 <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
     <?php bigblank_post_thumbnail(); ?>
     <header class="entry-header">
-        <?php if (in_array('category', get_object_taxonomies(get_post_type())) && bigblank_categorized_blog()) : ?>
-            <div class="entry-meta">
-                <span class="cat-links"><?php echo get_the_category_list(_x(', ', 'Used between list items, there is a space after the comma.', 'bigblank')); ?></span>
-            </div>
-            <?php
-        endif;
+        <?php
         if (is_single()) :
             the_title('<h1 class="entry-title">', '</h1>');
         else :
@@ -51,5 +46,14 @@
             ?>
         </div><!-- .entry-content -->
     <?php endif; ?>
-    <?php the_tags('<footer class="entry-meta"><span class="tag-links">', '', '</span></footer>'); ?>
+    <footer class="entry-meta">
+        <?php if (in_array('category', get_object_taxonomies(get_post_type())) && bigblank_categorized_blog()) : ?>
+            <div class="entry-meta">
+                <span class="entry-categories"><?php echo get_the_category_list(_x(', ', 'Used between list items, there is a space after the comma.', 'bigblank')); ?></span>
+            </div>
+            <?php
+        endif;
+        the_tags('<span class="tag-links">', _x(', ', 'Used between list items, there is a space after the comma.', 'bigblank'), '</span>');
+        ?>
+    </footer>
 </article><!-- #post-## -->
