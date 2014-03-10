@@ -1181,6 +1181,13 @@ figure.alignright figcaption{
  * -----------------------------------------------------------------------------
  */
 
+/* For Home Demo testing */
+#home .entry-content > iframe{
+    width: 1440px;
+    height: 600px;
+    max-width: 100%;
+}
+
 .content-area {
     padding-top: 48px;
 }
