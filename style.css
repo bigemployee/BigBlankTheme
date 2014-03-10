@@ -1293,7 +1293,6 @@ a.post-thumbnail:hover {
 
 .entry-title {
     line-height: 1.1;
-    margin: 0 0 0.25em 0;
     text-transform: uppercase;
 }
 
@@ -1323,8 +1322,7 @@ a.post-thumbnail:hover {
 .entry-meta {
     clear: both;
     color: #767676;
-    font-size: 12px;
-    font-weight: 400;
+    font-size: 80%;
     line-height: 1.3333333333;
     text-transform: uppercase;
 }
@@ -1341,7 +1339,7 @@ a.post-thumbnail:hover {
     display: none;
 }
 
-.cat-links {
+/*.cat-links {
     font-weight: 900;
     text-transform: uppercase;
 }
@@ -1352,7 +1350,7 @@ a.post-thumbnail:hover {
 
 .cat-links a:hover {
     color: #c00;
-}
+}*/
 
 .byline {
     display: none;
@@ -1374,7 +1372,7 @@ a.post-thumbnail:hover {
 
 /* Tag links style */
 
-.entry-meta .tag-links a {
+/*.entry-meta .tag-links a {
     background-color: #767676;
     border-radius: 0 2px 2px 0;
     color: #fff;
@@ -1423,7 +1421,7 @@ a.post-thumbnail:hover {
     top: 8px;
     left: -2px;
     width: 4px;
-}
+}*/
 
 
 /**
