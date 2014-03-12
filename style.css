@@ -1334,18 +1334,58 @@ a.post-thumbnail:hover {
     line-height: 1.3333333333;
     text-transform: capitalize;
 }
-
 .entry-meta a {
     color: #767676;
+    text-decoration: none;
 }
-
 .entry-meta a:hover {
     color: #c00;
 }
-
-/* @todo add entry meta icons here */
-
-
+/* Pseudo elements for icons */
+.entry-categories:before,
+.entry-tags:before,
+.entry-date:before,
+.entry-comments:before,
+.edit-link:before,
+.author:before,
+.parent-post-link:before,
+.full-size-link:before{
+    font-family: 'FontAwesome';
+    speak: none;
+    font-style: normal;
+    font-weight: normal;
+    font-variant: normal;
+    text-transform: none;
+    line-height: 1.5;
+    position: relative;
+    -webkit-font-smoothing: antialiased;
+    margin-left: 7px;
+    margin-right: 3px;
+}
+.entry-categories:before{
+    content:"\f02e";
+}
+.entry-tags:before{
+    content:"\f02b";
+}
+.entry-date:before{
+    content:"\f017";
+}
+.entry-comments:before{
+    content:"\f075";
+}
+.edit-link:before{
+    content:"\f040";
+}
+.author:before{
+    content:"\f007";
+}
+.parent-post-link:before{
+    content:"\f112";    
+}
+.full-size-link:before{
+    content:"\f065";    
+}
 
 /**
  * 6.4 Entry Content

@@ -22,7 +22,7 @@
                 bigblank_posted_on();
             if (!post_password_required() && (comments_open() || get_comments_number())) :
                 ?>
-                <span class="comments-link"><?php comments_popup_link(__('Leave a comment', 'bigblank'), __('1 Comment', 'bigblank'), __('% Comments', 'bigblank')); ?></span>
+                <?php comments_popup_link(__('Leave a comment', 'bigblank'), __('1 Comment', 'bigblank'), __('% Comments', 'bigblank'), "entry-comments"); ?>
                 <?php
             endif;
             edit_post_link(__('Edit', 'bigblank'), '<span class="edit-link">', '</span>');
@@ -48,12 +48,10 @@
     <?php endif; ?>
     <footer class="entry-meta">
         <?php if (in_array('category', get_object_taxonomies(get_post_type())) && bigblank_categorized_blog()) : ?>
-            <div class="entry-meta">
-                <span class="entry-categories"><?php echo get_the_category_list(_x(', ', 'Used between list items, there is a space after the comma.', 'bigblank')); ?></span>
-            </div>
+            <span class="entry-categories"><?php echo get_the_category_list(_x(', ', 'Used between list items, there is a space after the comma.', 'bigblank')); ?></span>
             <?php
         endif;
-        the_tags('<span class="tag-links">', _x(', ', 'Used between list items, there is a space after the comma.', 'bigblank'), '</span>');
+        the_tags('<span class="entry-tags">', _x(', ', 'Used between list items, there is a space after the comma.', 'bigblank'), '</span>');
         ?>
     </footer>
 </article><!-- #post-## -->
