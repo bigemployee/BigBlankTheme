@@ -16,9 +16,9 @@ while (have_posts()) : the_post();
         <header class="entry-header">
             <?php the_title('<h1 class="entry-title">', '</h1>'); ?>
             <div class="entry-meta">
-                <span class="entry-date"><time class="entry-date" datetime="<?php echo esc_attr(get_the_date('c')); ?>"><?php echo esc_html(get_the_date()); ?></time></span>
-                <span class="full-size-link"><a href="<?php echo wp_get_attachment_url(); ?>"><?php echo $metadata['width']; ?> &times; <?php echo $metadata['height']; ?></a></span>
-                <span class="parent-post-link"><a href="<?php echo get_permalink($post->post_parent); ?>" rel="gallery"><?php echo get_the_title($post->post_parent); ?></a></span>
+                <time class="entry-date" datetime="<?php echo esc_attr(get_the_date('c')); ?>"><?php echo esc_html(get_the_date()); ?></time>
+                <a href="<?php echo wp_get_attachment_url(); ?>" class="full-size-link"><?php echo $metadata['width']; ?> &times; <?php echo $metadata['height']; ?></a>
+                <a href="<?php echo get_permalink($post->post_parent); ?>" class="parent-post-link" rel="gallery"><?php echo get_the_title($post->post_parent); ?></a>
                 <?php edit_post_link(__('Edit', 'bigblank'), '<span class="edit-link">', '</span>'); ?>
             </div><!-- .entry-meta -->
         </header><!-- .entry-header -->
