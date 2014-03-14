@@ -159,11 +159,15 @@ if (!function_exists('bigblank_post_nav')) :
         // Don't print empty markup if there's nowhere to navigate.
         $previous = ( is_attachment() ) ? get_post(get_post()->post_parent) : get_adjacent_post(false, '', true);
         $next = get_adjacent_post(false, '', false);
+        $is_last_page = '';
         if (!$next && !$previous) {
             return;
         }
+        if(!$next){
+            $is_last_page = 'no-next';
+        }      
         ?>
-        <nav class="navigation post-navigation" role="navigation">
+        <nav class="navigation post-navigation <?php echo $is_last_page; ?>" role="navigation">
             <h1 class="screen-reader-text"><?php _e('Post navigation', 'bigblank'); ?></h1>
             <div class="nav-links">
                 <?php
