@@ -1164,6 +1164,7 @@ figure.alignright figcaption{
 .site-content .wp-video,
 .site-content .hentry .wp-audio-shortcode,
 .page-content,
+.author-description,
 #comments{
     margin: 0 auto 1.5em;
     max-width: 560px;
@@ -1300,7 +1301,7 @@ a.post-thumbnail:hover {
 .entry-date,
 .entry-comments,
 .edit-link,
-.author,
+.entry-meta .author,
 .parent-post-link,
 .full-size-link{
     margin-right: 8px;
@@ -1311,7 +1312,7 @@ a.post-thumbnail:hover {
 .entry-date:before,
 .entry-comments:before,
 .edit-link:before,
-.author:before,
+.entry-meta .author:before,
 .parent-post-link:before,
 .full-size-link:before{
     font-family: 'FontAwesome';
@@ -1339,7 +1340,7 @@ a.post-thumbnail:hover {
 .edit-link:before{
     content:"\f040";
 }
-.author:before{
+.entry-meta .author:before{
     content:"\f007";
 }
 .parent-post-link:before{
@@ -1805,38 +1806,10 @@ a.post-thumbnail:hover {
  * -----------------------------------------------------------------------------
  */
 
-.archive-header,
-.page-header {
-}
-
 .archive-title,
 .page-title {
     font-weight: 200;
     text-align: center;
-}
-
-.taxonomy-description,
-.author-description {
-}
-
-.taxonomy-description p,
-.author-description p {
-    margin-bottom: 18px;
-}
-
-.taxonomy-description p:last-child,
-.author-description p:last-child {
-    margin-bottom: 0;
-}
-
-.taxonomy-description a,
-.author-description a {
-    text-decoration: underline;
-}
-
-.taxonomy-description a:hover,
-.author-description a:hover {
-    text-decoration: none;
 }
 
 
