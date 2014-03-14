@@ -175,7 +175,7 @@ add_filter('the_content', 'bigblank_anchor_content_h2');
  * Exclude alignleft and alignright images, and also images middle of  the 
  * paragraphs. Also remove wrapping paragraph of images inside spans.
  * @link http://regexone.com/lesson/
- * @link https://www.debuggex.com/r/i7aRALUMeTQJN4bR
+ * @link https://www.debuggex.com/r/Xt9Qvb0_3FKQc4BF
  */
 function bigblank_replace_ptags_around_images_with_figure($content) {
     /* For images with default WordPress alignement */
@@ -188,16 +188,19 @@ function bigblank_replace_ptags_around_images_with_figure($content) {
 add_filter('the_content', 'bigblank_replace_ptags_around_images_with_figure');
 
 /**
- * Filter <p> tags wrapping iframes
- * @todo might add objects and embeds too if necessary, but ok for now.
+ * Filter <p> tags wrapping iframes and other embed elements
+ * I know, I know.. Just following WordPress Coding Standards
+ * @link http://make.wordpress.org/core/handbook/coding-standards/php/#clever-code
  * 
  * @param string $content
  */
-function bigblank_remove_ptags_around_iframes($content) {
+function bigblank_remove_ptags_around_embeds($content) {
+    $content = preg_replace('/<p.*?>\s?(<object .*>*.<\/object>)\s*<\/p>/iU', '\1', $content);
+    $content = preg_replace('/<p.*?>\s?(<embed .*>*.<\/embed>)\s*<\/p>/iU', '\1', $content);
     $content = preg_replace('/<p.*?>\s?(<iframe .*>*.<\/iframe>)\s*<\/p>/iU', '\1', $content);
     return $content;
 }
-add_filter('the_content', 'bigblank_remove_ptags_around_iframes');
+add_filter('the_content', 'bigblank_remove_ptags_around_embeds');
 
 
 /**
