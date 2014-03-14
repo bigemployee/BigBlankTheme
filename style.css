@@ -33,7 +33,7 @@ Domain Path: /languages/
  *   6.7 - Post/Image/Paging Navigation
  *   6.8 - Attachments
  *   6.9 - Archives
- *   6.10 - Contributor Page
+ *   6.10 - Author Info
  *   6.11 - 404 Page
  *   6.12 - Full-width
  *   6.13 - Singular
@@ -1814,58 +1814,37 @@ a.post-thumbnail:hover {
 
 
 /**
- * 6.10 Contributor Page
+ * 6.10 Author Info
  * -----------------------------------------------------------------------------
  */
 
-/*.contributor {
-    border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+.author-info{
+    float: left;
+    width: 100%;
+    margin-top: 45px;
+    padding: 10px 20px;
+    background: #f1f1f1;
     -webkit-box-sizing: border-box;
     -moz-box-sizing: border-box;
-    box-sizing:      border-box;
-    padding: 48px 10px;
+    box-sizing: border-box;
 }
-
-.contributor:first-of-type {
-    padding-top: 24px;
-}
-
-.contributor-info {
-    margin: 0 auto;
-    max-width: 474px;
-}
-
-.contributor-avatar {
-    border: 1px solid rgba(0, 0, 0, 0.1);
+.author-avatar{
     float: left;
-    margin: 0 30px 20px 0;
-    padding: 2px;
+    margin: -45px 5px 5px -15px;
 }
-
-.contributor-name {
-    font-size: 16px;
-    font-weight: 900;
-    line-height: 1.5;
-    margin: 0;
-}
-
-.contributor-bio a {
-    text-decoration: underline;
-}
-
-.contributor-bio a:hover {
+.author-link a{
+    float: left;
     text-decoration: none;
+    padding: 4px 10px;
+    border: 1px solid #333;
 }
-
-.contributor-posts-link {
-    display: inline-block;
-    line-height: normal;
-    padding: 10px 30px;
+.author-link a:hover{
+    background: #000;
+    color: #fff;
 }
-
-.contributor-posts-link:before {
-    content: "\f443";
-}*/
+.author-description h2{
+    margin-top: 0;
+}
 
 
 /**
@@ -1873,13 +1852,6 @@ a.post-thumbnail:hover {
  * -----------------------------------------------------------------------------
  */
 
-.error404 .page-content {
-    padding-top: 0;
-}
-
-.error404 .page-content .search-form {
-    margin-bottom: 24px;
-}
 
 
 /**
@@ -1887,9 +1859,6 @@ a.post-thumbnail:hover {
  * -----------------------------------------------------------------------------
  */
 
-.full-width .hentry {
-    max-width: 100%;
-}
 
 
 /**
@@ -1897,9 +1866,6 @@ a.post-thumbnail:hover {
  * -----------------------------------------------------------------------------
  */
 
-.singular .site-content .hentry.has-post-thumbnail {
-    margin-top: -48px;
-}
 
 
 /**
@@ -2077,33 +2043,7 @@ a.post-thumbnail:hover {
 #respond p{
     margin-bottom: 0.5em;
 }
-.author-info{
-    float: left;
-    width: 100%;
-    margin-top: 45px;
-    padding: 10px 20px;
-    background: #f1f1f1;
-    -webkit-box-sizing: border-box;
-    -moz-box-sizing: border-box;
-    box-sizing: border-box;
-}
-.author-avatar{
-    float: left;
-    margin: -45px 5px 5px -15px;
-}
-.author-link a{
-    float: left;
-    text-decoration: none;
-    padding: 4px 10px;
-    border: 1px solid #333;
-}
-.author-link a:hover{
-    background: #000;
-    color: #fff;
-}
-.author-description h2{
-    margin-top: 0;
-}
+
 
 
 /**
