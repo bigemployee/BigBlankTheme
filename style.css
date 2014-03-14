@@ -1135,7 +1135,7 @@ figure.alignright figcaption{
     content: "\f107";
     display: inline-block;
     margin-left: 2px;
-    font-family: FontAwesome;
+    font-family: 'FontAwesome';
     font-style: normal;
     font-weight: normal;
     line-height: 1;
@@ -1341,6 +1341,16 @@ a.post-thumbnail:hover {
 .entry-meta a:hover {
     color: #c00;
 }
+.entry-categories,
+.entry-tags,
+.entry-date,
+.entry-comments,
+.edit-link,
+.author,
+.parent-post-link,
+.full-size-link{
+    margin-right: 8px;
+}
 /* Pseudo elements for icons */
 .entry-categories:before,
 .entry-tags:before,
@@ -1359,7 +1369,6 @@ a.post-thumbnail:hover {
     line-height: 1.5;
     position: relative;
     -webkit-font-smoothing: antialiased;
-    margin-left: 7px;
     margin-right: 3px;
 }
 .entry-categories:before{
