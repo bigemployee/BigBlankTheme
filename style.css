@@ -309,7 +309,10 @@ input[type="submit"] {
     transition: none;
     border-radius: 3px;
 }
-
+/* Remove styling from video player buttons */
+.mejs-controls .mejs-button button{
+    box-shadow: none;
+}
 /* Pseudo elements for icons */
 button:before,
 .button:before,
@@ -1212,6 +1215,7 @@ figure.alignright figcaption{
 .site-content address,
 .site-content .entry-summary,
 .site-content .entry-meta,
+.wp-video,
 .page-content {
     margin: 0 auto 1.5em;
     max-width: 560px;
@@ -1225,7 +1229,8 @@ figure.alignright figcaption{
 .site-content table,
 .site-content blockquote,
 .site-content .gallery,
-.site-content pre{
+.site-content pre,
+.wp-video{
     max-width: 780px;
 }
 .site-content blockquote p{
