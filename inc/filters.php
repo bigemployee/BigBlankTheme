@@ -175,7 +175,7 @@ add_filter('the_content', 'bigblank_anchor_content_h2');
  * Exclude alignleft and alignright images, and also images middle of  the 
  * paragraphs. Also remove wrapping paragraph of images inside spans.
  * @link http://regexone.com/lesson/
- * @link https://www.debuggex.com/r/i7aRALUMeTQJN4bR
+ * @link https://www.debuggex.com/r/Xt9Qvb0_3FKQc4BF
  */
 function bigblank_replace_ptags_around_images_with_figure($content) {
     /* For images with default WordPress alignement */
