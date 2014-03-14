@@ -27,12 +27,13 @@ if (post_password_required()) {
                 <div class="nav-next"><?php next_comments_link(__('Newer Comments &rarr;', 'bigblank')); ?></div>
             </nav><!-- #comment-nav-above -->
         <?php endif; // Check for comment navigation.  ?>
-        <ol class="comment-list">
+        <ol id="comment-list" class="comment-list">
             <?php
             wp_list_comments(array(
                 'style' => 'ol',
+                'type' => 'all', /* Type of comments to list. Default 'all'. Accepts 'all', 'comment', 'pingback', 'trackback', 'pings'. */
                 'short_ping' => true,
-                'avatar_size' => 34,
+                'avatar_size' => 128,
             ));
             ?>
         </ol><!-- .comment-list -->
