@@ -780,6 +780,9 @@ figure.alignright img{
 figure.wp-caption {
     text-align: center;
 }
+.wp-caption{
+    max-width: 100%;
+}
 figure.wp-caption img{
     margin-bottom: 0;
 }
@@ -796,6 +799,7 @@ figcaption {
     padding: 0.5em 1em;
     color: #767676;
     background: #f4f4f4;
+    max-width: 100%;
 }
 figure.alignleft figcaption{
     margin-right: 1em;
@@ -879,7 +883,8 @@ figure.alignright figcaption{
     box-shadow: 0 5px 7px -7px rgba(0,0,0,0.2);
 }
 #header,
-#footer{
+#footer,
+.sidebar-content{
     margin: 0 auto;
     max-width: 1066px; /* 1440x0.74 = 1066px */
     -webkit-box-sizing: border-box;
@@ -983,8 +988,6 @@ figure.alignright figcaption{
  * 5.0 Navigation
  * -----------------------------------------------------------------------------
  */
-/* Main Menu
-============================================================================ */
 #menu{
     float: right;
     padding: 10px 7px 0;
@@ -1091,19 +1094,6 @@ figure.alignright figcaption{
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
 }
-
-/* Secondary Navigation */
-
-.secondary-navigation {
-    border-bottom: 1px solid rgba(255, 255, 255, 0.2);
-    font-size: 12px;
-    margin: 48px 0;
-}
-
-.secondary-navigation a {
-    padding: 9px 0;
-}
-
 #menu-toggle {
     cursor: pointer;
     font-size: 0;
@@ -1144,7 +1134,6 @@ figure.alignright figcaption{
 
 .hentry {
     margin: 0 auto 48px;
-    /*max-width: 672px;*/
 }
 .site-content .entry-content{
     text-align: center;
