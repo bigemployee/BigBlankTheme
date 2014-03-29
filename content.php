@@ -53,6 +53,11 @@
         endif;
         the_tags('<span class="entry-tags">', _x(', ', 'Used between list items, there is a space after the comma.', 'bigblank'), '</span>');
         ?>
+        <?php
+        if (is_sticky() && is_home() && !is_paged()) {
+            echo '<span class="featured-post">' . __('Sticky', 'bigblank') . '</span>';
+        }
+        ?>
         <?php if (is_singular() && get_the_author_meta('description') && is_multi_author()) : // If a user has filled out their description and this is a multi-author blog, show a bio on their entries. ?>
             <div class="author-info">
                 <div class="author-avatar">

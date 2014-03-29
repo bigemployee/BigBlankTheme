@@ -1044,8 +1044,8 @@ figure.alignright figcaption{
     box-shadow: 0 1px 1px rgba(0,0,0,0.2);
     top: 34px;
     left: 50%;
-    width: 160px;
-    margin-left: -80px;
+    width: 180px;
+    margin-left: -90px;
     z-index: 10;
 }
 #nav li:hover ul{
@@ -1324,7 +1324,8 @@ a.post-thumbnail:hover {
 .edit-link,
 .entry-meta .author,
 .parent-post-link,
-.full-size-link{
+.full-size-link,
+.featured-post{
     margin-right: 8px;
 }
 /* Pseudo elements for icons */
@@ -1335,7 +1336,8 @@ a.post-thumbnail:hover {
 .edit-link:before,
 .entry-meta .author:before,
 .parent-post-link:before,
-.full-size-link:before{
+.full-size-link:before,
+.featured-post:before{
     font-family: 'FontAwesome';
     speak: none;
     font-weight: normal;
@@ -1369,6 +1371,9 @@ a.post-thumbnail:hover {
 }
 .full-size-link:before{
     content:"\f065";    
+}
+.featured-post:before{
+    content:"\f087";
 }
 
 /**
