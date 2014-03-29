@@ -120,7 +120,7 @@ get_header();
                             <label for="exampleInputText3">Input <small>(type="text")</small></label>
                             <input type="text" class="form-control" id="exampleInputText3" placeholder="Write Something" value="This is a disabled text field" disabled="dsiabled">
                         </div>
-                        <button type="submit" class="button fa-dashboard" disabled="disabled">Disabled Submit</button>
+                        <button type="submit" class="button fa-angle-right" disabled="disabled">Disabled Submit</button>
                         <input type="submit" class="button" value="Disabled Input" disabled="dsiabled">
                         <a href="#" class="button disabled" role="button">Disabled Link Button</a>
                     </form>

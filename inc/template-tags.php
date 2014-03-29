@@ -38,7 +38,7 @@ if (!function_exists('bigblank_main_menu')) :
             'container' => 'nav',
             'depth' => 2,
             'fallback_cb' => 'bigblank_menu_fallback',
-            'container_id' => 'nav'
+            'container_id' => 'menu'
         ));
     }
 
@@ -163,9 +163,9 @@ if (!function_exists('bigblank_post_nav')) :
         if (!$next && !$previous) {
             return;
         }
-        if(!$next){
+        if (!$next) {
             $is_last_page = 'no-next';
-        }      
+        }
         ?>
         <nav class="navigation post-navigation <?php echo $is_last_page; ?>" role="navigation">
             <h1 class="screen-reader-text"><?php _e('Post navigation', 'bigblank'); ?></h1>
@@ -194,12 +194,8 @@ if (!function_exists('bigblank_posted_on')) :
      * @return void
      */
     function bigblank_posted_on() {
-        if (is_sticky() && is_home() && !is_paged()) {
-            echo '<span class="featured-post">' . __('Sticky', 'bigblank') . '</span>';
-        }
         // Set up and print post meta information.
-        printf('<a href="%1$s" class="entry-date" rel="bookmark"><time class="published" datetime="%2$s">%3$s</time></a> <a class="author vcard url fn n" href="%4$s" rel="author">%5$s</a>', esc_url(get_permalink()), esc_attr(get_the_date('c')), esc_html(get_the_date()), esc_url(get_author_posts_url(get_the_author_meta('ID'))), get_the_author()
-        );
+        printf('<a href="%1$s" class="entry-date" rel="bookmark"><time class="published" datetime="%2$s">%3$s</time></a> <a class="author vcard url fn n" href="%4$s" rel="author">%5$s</a>', esc_url(get_permalink()), esc_attr(get_the_date('c')), esc_html(get_the_date()), esc_url(get_author_posts_url(get_the_author_meta('ID'))), get_the_author());
     }
 
 endif;
