@@ -35,7 +35,7 @@
                  * <h1 class="site-title"><a href="<?php echo esc_url(home_url('/')); ?>" rel="home"><?php bloginfo('name'); ?></a></h1>
                  */
                 ?>
-                <nav id="menu" role="navigation">
+                <nav id="nav" role="navigation">
                     <h1 id="menu-toggle"><i class="fa fa-bars"></i><?php _e('Primary Menu', 'bigblank'); ?></h1>
                     <a class="screen-reader-text skip-link" href="#content"><?php _e('Skip to content', 'bigblank'); ?></a>
                     <?php bigblank_main_menu(); ?>

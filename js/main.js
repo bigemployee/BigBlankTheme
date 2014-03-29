@@ -19,7 +19,7 @@
 
     // Enable menu toggle for small screens.
     (function() {
-        var nav = $('#primary-navigation'), button, menu;
+        var nav = $('#nav'), button, menu;
         if (!nav) {
             return;
         }
@@ -30,13 +30,13 @@
         }
 
         // Hide button if menu is missing or empty.
-        menu = nav.find('.menu');
+        menu = nav.find('#menu');
         if (!menu || !menu.children().length) {
             button.hide();
             return;
         }
 
-        button.on('click.bigblank', function() {
+        button.on('click', function() {
             nav.toggleClass('toggled-on');
         });
     })();

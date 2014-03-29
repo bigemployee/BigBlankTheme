@@ -881,10 +881,12 @@ figure.alignright figcaption{
 #header{
     padding: 10px 0;
     box-shadow: 0 5px 7px -7px rgba(0,0,0,0.2);
+    text-align: center;
 }
 #header,
 #footer,
-.sidebar-content{
+.sidebar-content,
+.content-sidebar{
     margin: 0 auto;
     max-width: 1066px; /* 1440x0.74 = 1066px */
     -webkit-box-sizing: border-box;
@@ -988,23 +990,19 @@ figure.alignright figcaption{
  * 5.0 Navigation
  * -----------------------------------------------------------------------------
  */
-#menu{
-    float: right;
-    padding: 10px 7px 0;
-}
 #nav{
     float: right;
+    padding: 10px 7px 0;
     margin: 0 auto;
     line-height: 2em;
     font-weight: 600;
     text-align: center;
-    position: relative;
     z-index: 15;
 }
 #nav ul{
     float: left;
+    width: 100%;
     margin: 0 auto;
-    text-align: left;
     list-style: none;
 }
 #nav li{
@@ -1012,7 +1010,8 @@ figure.alignright figcaption{
     padding: 0 7px;
     float: left;
     position: relative;
-    white-space: nowrap;
+    /*white-space: nowrap;*/
+    display: inline-block;
 }
 #nav li a{
     padding: 4px 0;
@@ -1023,19 +1022,19 @@ figure.alignright figcaption{
     -box-sizing: border-box;
 }
 #nav li:hover a{
-    color: #d00;
+    /*color: #d00;*/
 }
 #nav li:hover li a{
-    color: #424242;
+    /*color: #424242;*/
 }
 #nav li:hover a:hover{
-    color: #d00;
+    /*color: #d00;*/
 }
 #nav li:hover a{}
-#nav .current_page_item > a,
-#nav .current_page_ancestor > a,
-#nav .current-menu-item > a,
-#nav .current-menu-ancestor > a{
+#menu > ul > .current_page_item > a,
+#menu > ul > .current_page_ancestor > a,
+#menu > ul > .current-menu-item > a,
+#menu > ul > .current-menu-ancestor > a{
     border-bottom: 2px solid #c00;
 }
 #nav li ul{
@@ -1043,47 +1042,53 @@ figure.alignright figcaption{
     position: absolute;
     background: #fff;
     box-shadow: 0 1px 1px rgba(0,0,0,0.2);
-    left: 0;
+    top: 34px;
+    left: 50%;
+    width: 160px;
+    margin-left: -80px;
     z-index: 10;
-    margin-left: -5px;
-
 }
 #nav li:hover ul{
     display: block;
 }
 #nav li li{
-    right: 0;
     margin: 0;
     padding: 0;
     float: left;
     width: 100%;
+    line-height: 1;
+    border-top: 1px solid #f4f4f4;
 }
 #nav li li a,
 #nav li li a:visited{
     float: left;
     width: 100%;
-    padding: 4px 15px;
+    padding: 10px 15px;
+    -webkit-transition: background 0.2s ease-out;
+    -moz-transition: background 0.2s ease-out;
+    -ms-transition: background 0.2s ease-out;
+    transition: background 0.2s ease-out;
 }
-#nav > ul > li:first-child{
+#menu > ul > li:first-child{
     margin-left: 0;
 }
-#nav > ul > li:last-child{
+#menu > ul > li:last-child{
     margin-right: 0;
     margin-left: 15px;
     border: 1px solid #444;
     margin-top: -1px; /* Fix 1px border push down */
 }
-#nav > ul > li:last-child:hover{
+#menu > ul > li:last-child:hover{
     border: 1px solid #c00;
 }
-#nav > ul > li.current_page_item:last-child,
-#nav > ul > li.current_menu_item:last-child{
+#menu > ul > li.current_page_item:last-child,
+#menu > ul > li.current_menu_item:last-child{
     border: 1px solid #f4f4f4;
 }
-#nav .menu-item-has-children:hover{
-    color: #d00;
+#menu .menu-item-has-children:hover{
+    color: #c00;
 }
-#nav .menu-item-has-children:after{
+#menu .menu-item-has-children:after{
     content: "\f107";
     display: inline-block;
     margin-left: 2px;
@@ -1094,19 +1099,44 @@ figure.alignright figcaption{
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
 }
+#menu li:hover li:hover a,
+#menu ul > li.current-menu-parent > ul > li.current-menu-item a{
+    color: #fff;
+    background: #c00;
+}
+#menu li > ul:before{
+    content: '';
+    display: block;
+    border-color: transparent transparent #c00 transparent;
+    border-style: solid;
+    border-width: 6px;
+    position: absolute;
+    top: -12px;
+    left: 50%;
+    margin-left: -10px;
+}
+#menu li > ul li:first-child:before{
+    content: '';
+    float: left;
+    width: 100%;
+    height: 2px;
+    position: relative;
+    margin-top: -2px;
+    background: #c00;
+}
 #menu-toggle {
     cursor: pointer;
     font-size: 0;
+    width: 48px;
     height: 48px;
-    margin: 0;
+    padding: 10px 7px 6px;
     overflow: hidden;
     position: absolute;
     top: 0;
     right: 0;           
     text-align: center;
-    width: 48px;
+    display: none;
 }
-
 #menu-toggle i {
     float: left;
     height: 48px;
@@ -1114,7 +1144,9 @@ figure.alignright figcaption{
     line-height: 48px;
     font-size: 32px;
 }
-
+#nav.toggled-on #nav{
+    /*display: block;*/
+}
 
 /**
  * 6.0 Content
@@ -2091,7 +2123,7 @@ a.post-thumbnail:hover {
     position: relative;
 }
 .search-form{
-    
+
 }
 .search-form label{
     width: 100%;
@@ -2375,10 +2407,25 @@ a.post-thumbnail:hover {
     width: device-width;
 }
 
-@media screen and (min-width: 768px) {
+@media screen and (max-width: 768px) {
+    body{
+        background: red;
+    }
+    #logo{
+        float: none;
+        display: inline-block;
+    }
     #menu-toggle {
-        display: none;
-        padding: 0;
+        /*display: block;*/
+    }
+    #nav{
+        width: 100%;
+        clear: both;
+        /*display: none;*/
+    }
+    #nav li{
+        float: none;
+        display: inline-block;
     }
 }
 

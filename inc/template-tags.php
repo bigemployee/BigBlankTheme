@@ -38,7 +38,7 @@ if (!function_exists('bigblank_main_menu')) :
             'container' => 'nav',
             'depth' => 2,
             'fallback_cb' => 'bigblank_menu_fallback',
-            'container_id' => 'nav'
+            'container_id' => 'menu'
         ));
     }
 
