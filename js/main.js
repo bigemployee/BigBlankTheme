@@ -37,7 +37,9 @@
         }
 
         button.on('click', function() {
+//   @todo: fix slide toggle, if toggled off on 480 and resized to 480+
             nav.toggleClass('toggled-on');
+            menu.slideToggle();
         });
     })();
 

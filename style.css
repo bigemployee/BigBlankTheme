@@ -992,12 +992,16 @@ figure.alignright figcaption{
  */
 #nav{
     float: right;
-    padding: 10px 7px 0;
+    padding: 0 7px;
     margin: 0 auto;
     line-height: 2em;
     font-weight: 600;
     text-align: center;
     z-index: 15;
+}
+#menu{
+    margin: 10px auto 0;
+    display: block;
 }
 #nav ul{
     float: left;
@@ -1022,13 +1026,13 @@ figure.alignright figcaption{
     -box-sizing: border-box;
 }
 #nav li:hover a{
-    /*color: #d00;*/
+    color: #c00;
 }
 #nav li:hover li a{
-    /*color: #424242;*/
+    color: #424242;
 }
 #nav li:hover a:hover{
-    /*color: #d00;*/
+    color: #c00;
 }
 #nav li:hover a{}
 #menu > ul > .current_page_item > a,
@@ -1084,9 +1088,6 @@ figure.alignright figcaption{
 #menu > ul > li.current_page_item:last-child,
 #menu > ul > li.current_menu_item:last-child{
     border: 1px solid #f4f4f4;
-}
-#menu .menu-item-has-children:hover{
-    color: #c00;
 }
 #menu .menu-item-has-children:after{
     content: "\f107";
@@ -2414,14 +2415,17 @@ a.post-thumbnail:hover {
 
 @media screen and (max-width: 768px) {
     body{
-        background: red;
+        /*background: red;*/
     }
     #logo{
         float: none;
         display: inline-block;
     }
     #menu-toggle {
-        /*display: block;*/
+        display: none;
+    }
+    #nav #menu{
+        display: block;
     }
     #nav{
         width: 100%;
@@ -2431,8 +2435,111 @@ a.post-thumbnail:hover {
     #nav li{
         float: none;
         display: inline-block;
+        margin: 0 5px;
+        padding: 0 5px;
     }
 }
+@media screen and (max-width: 480px) {
+    body{
+        /*background: pink;*/
+    }
+    #logo{
+        float: left;
+    }
+    #menu-toggle {
+        display: block;
+    }
+    #nav #menu{
+        display: none;
+    }
+    #nav{
+        -webkit-box-sizing: border-box;
+        -moz-box-sizing: border-box;
+        box-sizing: border-box;
+    }
+    #nav li li{
+        border: 0 none;
+    }
+    #nav li{
+        padding: 0;
+    }
+    #menu > ul > .current_page_item > a, 
+    #menu > ul > .current_page_ancestor > a, 
+    #menu > ul > .current-menu-item > a, 
+    #menu > ul > .current-menu-ancestor > a,
+    #nav li a{
+        border-bottom: 1px dotted #ccc;
+    }
+    #nav li a{
+        padding: 2px 8px;
+    }
+    #nav li,
+    #nav li a{
+        float: left;
+        width: 100%;
+        text-align: left;
+        margin: 0;
+        -webkit-box-sizing: border-box;
+        -moz-box-sizing: border-box;
+        box-sizing: border-box;
+    }
+    #nav li ul{
+        display: block;
+        position: relative;
+        width: 100%;
+        margin-left: 0;
+        left: 0;
+        top: 0;
+        box-shadow: none;
+    }
+    #menu > ul > li:last-child,
+    #menu > ul > li:last-child:hover{
+        margin: 10px 0 0;
+        border: 0 none;
+    }
+    #menu > ul > li:last-child a,
+    #menu > ul > li:last-child:hover a{
+        border-radius: 3px;
+        border: 1px solid #444;
+        text-align: center;
+    }
+    #menu > ul > li.current_page_item:last-child, 
+    #menu > ul > li.current_menu_item:last-child{
+        border: 0 none;
+    }
+    #menu > ul > li.current_page_item:last-child a,
+    #menu > ul > li.current_menu_item:last-child a,
+    #menu > ul > li:last-child:hover a{
+        border: 1px solid #c00;
+    }
+    #menu .menu-item-has-children:after{
+        position: absolute;
+        right: 0;
+        margin: 0;
+        font-size: 1.5em;
+        margin-right: 8px;
+        line-height: 1.5em;
+    }
+    #menu li.menu-item-has-children:hover:after,
+    #menu .current-menu-parent:after{
+        color: #fff;
+    }
+    #menu li > ul:before,
+    #menu li > ul li:first-child:before{
+        display: none;
+    }
+    #nav li:hover a:hover,
+    #menu > ul > li:hover > a,
+    #menu > ul > .current_page_item > a,
+    #menu > ul > .current_page_ancestor > a,
+    #menu > ul > .current-menu-item > a,
+    #menu > ul > .current-menu-ancestor > a{
+        border-color: #fff;
+        color: #fff;
+        background: #c00;
+    }
+}
+
 
 
 /**
