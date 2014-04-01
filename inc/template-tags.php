@@ -35,7 +35,7 @@ if (!function_exists('bigblank_main_menu')) :
         wp_nav_menu(array(
             'menu' => 'main_menu',
             'theme_location' => 'main_menu',
-            'container' => 'nav',
+//            'container' => 'nav',
             'depth' => 2,
             'fallback_cb' => 'bigblank_menu_fallback',
             'container_id' => 'menu'

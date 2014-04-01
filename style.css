@@ -218,7 +218,7 @@ a:visited{
     transition: all 0.2s ease-out;
 }
 a:focus {       
-    outline: thin dotted;
+    outline:#4d90fe auto 3px;
 }
 a:active,
 a:hover {
@@ -822,23 +822,15 @@ figure.alignright figcaption{
 }
 
 .screen-reader-text:focus {
-    background-color: #f1f1f1;
-    border-radius: 3px;
-    box-shadow: 0 0 2px 2px rgba(0, 0, 0, 0.6);
+    background: #c00;
+    color: #fff;
     clip: auto;
-    color: #21759b;
-    display: block;
-    font-size: 14px;
-    font-weight: bold;
-    height: auto;
-    line-height: normal;
-    padding: 15px 23px 14px;
+    padding: 0 20px;
     position: absolute;
     left: 5px;
     top: 5px;
     text-decoration: none;
     text-transform: none;
-    width: auto;
     z-index: 100000; /* Above WP toolbar */
 }
 
@@ -998,105 +990,118 @@ figure.alignright figcaption{
     font-weight: 600;
     text-align: center;
     z-index: 15;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
 }
 #menu{
+    float: left;
+    width: 100%;
     margin: 10px auto 0;
-    display: block;
+    height: auto;
+    -webkit-transition: all 0.5s ease-out;
+    -moz-transition: all 0.5s ease-out;
+    -ms-transition: all 0.5s ease-out;
+    transition: all 0.5s ease-out;
 }
-#nav ul{
+#menu ul{
     float: left;
     width: 100%;
     margin: 0 auto;
     list-style: none;
 }
-#nav li{
-    margin: 0 7px;
-    padding: 0 7px;
+#menu li{
+    margin: 0 15px;
     float: left;
     position: relative;
-    /*white-space: nowrap;*/
     display: inline-block;
+    vertical-align: top;
 }
-#nav li a{
-    padding: 4px 0;
+#menu li a{
+    float: left;
     text-decoration: none;
-    color: #424242;
     -webkit-box-sizing: border-box;
     -moz-box-sizing: border-box;
     -box-sizing: border-box;
 }
-#nav li:hover a{
+#menu li a:hover,
+#menu li a:focus,
+#menu .menu-item-has-children.focus:after,
+#menu .menu-item-has-children:hover:after{
     color: #c00;
 }
-#nav li:hover li a{
+#menu li a,
+#menu li:focus li a,
+#menu li:hover li a{
     color: #424242;
 }
-#nav li:hover a:hover{
-    color: #c00;
-}
-#nav li:hover a{}
 #menu > ul > .current_page_item > a,
 #menu > ul > .current_page_ancestor > a,
 #menu > ul > .current-menu-item > a,
 #menu > ul > .current-menu-ancestor > a{
     border-bottom: 2px solid #c00;
 }
-#nav li ul{
-    display: none;
+#menu li ul{
     position: absolute;
     background: #fff;
     box-shadow: 0 1px 1px rgba(0,0,0,0.2);
-    top: 34px;
+    top: 38px;
     left: 50%;
     width: 180px;
-    margin-left: -90px;
     z-index: 10;
+    margin-left: -999em; /* accessibility */
 }
-#nav li:hover ul{
-    display: block;
+#menu li.focus ul,
+#menu li:hover ul{
+    margin-left: -90px;
+    /*display: block;*/
 }
-#nav li li{
+#menu li li{
     margin: 0;
     padding: 0;
     float: left;
     width: 100%;
     line-height: 1;
-    border-top: 1px solid #f4f4f4;
 }
-#nav li li a,
-#nav li li a:visited{
-    float: left;
+#menu li li a{
     width: 100%;
     padding: 10px 15px;
-    -webkit-transition: background 0.2s ease-out;
-    -moz-transition: background 0.2s ease-out;
-    -ms-transition: background 0.2s ease-out;
-    transition: background 0.2s ease-out;
+    border-bottom: 1px solid #f4f4f4;
+    -webkit-transition: none 0.2s ease-out;
+    -moz-transition: none 0.2s ease-out;
+    -ms-transition: none 0.2s ease-out;
+    transition: none 0.2s ease-out;
+}
+#menu li li:last-child a{
+    border-bottom: 0 none;
 }
 #menu > ul > li:first-child{
     margin-left: 0;
 }
 #menu > ul > li:last-child{
     margin-right: 0;
-    margin-left: 15px;
+}
+#menu > ul > li:last-child a{
+    padding: 0 10px;
     border: 1px solid #444;
     margin-top: -1px; /* Fix 1px border push down */
 }
-#menu > ul > li:last-child:hover{
+#menu > ul > li:last-child a:hover{
     border: 1px solid #c00;
 }
-#menu > ul > li.current_page_item:last-child,
-#menu > ul > li.current_menu_item:last-child{
+#menu > ul > li.current_page_item:last-child a,
+#menu > ul > li.current_menu_item:last-child a{
     border: 1px solid #f4f4f4;
+    border-bottom: 2px solid #c00;
 }
 #menu .menu-item-has-children:after{
     content: "\f107";
-    display: inline-block;
-    margin-left: 2px;
+    float: right;
+    line-height: 2em;
+    margin-left: 5px;
     font-family: 'FontAwesome';
     font-style: normal;
     font-weight: normal;
-    line-height: 1;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
 }
@@ -1145,7 +1150,7 @@ figure.alignright figcaption{
     line-height: 48px;
     font-size: 32px;
 }
-#nav.toggled-on #nav{
+#nav.toggled-on #menu{
     /*display: block;*/
 }
 
@@ -2421,23 +2426,47 @@ a.post-thumbnail:hover {
         float: none;
         display: inline-block;
     }
-    #menu-toggle {
-        display: none;
-    }
-    #nav #menu{
-        display: block;
-    }
     #nav{
         width: 100%;
         clear: both;
-        /*display: none;*/
     }
-    #nav li{
+    #menu-toggle {
+        display: none;
+    }
+    #menu{
+        display: block;
+    }
+    #menu li{
         float: none;
-        display: inline-block;
         margin: 0 5px;
-        padding: 0 5px;
     }
+    #grid div.first-line {
+        margin-top: 34px !important;
+    }
+}
+@media screen and (max-width: 640px) {
+    .content-sidebar #main,
+    .sidebar-content #main,
+    #sidebar{
+        width: 100%;
+    }
+    .site-content p,
+    .site-content h1,
+    .site-content h2,
+    .site-content h3,
+    .site-content h4,
+    .site-content h5,
+    .site-content h6,
+    .site-content .entry-summary,
+    .site-content .entry-meta, 
+    #footer{
+        padding-left: 10px;
+        padding-right: 10px;
+        -webkit-box-sizing: border-box;
+        -moz-box-sizing: border-box;
+        box-sizing: border-box;
+    }
+
 }
 @media screen and (max-width: 480px) {
     body{
@@ -2449,32 +2478,28 @@ a.post-thumbnail:hover {
     #menu-toggle {
         display: block;
     }
-    #nav #menu{
+    #menu{
         display: none;
     }
-    #nav{
-        -webkit-box-sizing: border-box;
-        -moz-box-sizing: border-box;
-        box-sizing: border-box;
+    #nav.toggled-on #menu{
+        display: block;
     }
-    #nav li li{
-        border: 0 none;
-    }
-    #nav li{
-        padding: 0;
+    #menu li,
+    #menu li li{
+        line-height: 2.2;
     }
     #menu > ul > .current_page_item > a, 
     #menu > ul > .current_page_ancestor > a, 
     #menu > ul > .current-menu-item > a, 
     #menu > ul > .current-menu-ancestor > a,
-    #nav li a{
-        border-bottom: 1px dotted #ccc;
+    #menu li a{
+        border-bottom: 1px solid #f4f4f4;
     }
-    #nav li a{
-        padding: 2px 8px;
+    #menu li a{
+        padding: 0 10px;
     }
-    #nav li,
-    #nav li a{
+    #menu li,
+    #menu li a{
         float: left;
         width: 100%;
         text-align: left;
@@ -2483,14 +2508,20 @@ a.post-thumbnail:hover {
         -moz-box-sizing: border-box;
         box-sizing: border-box;
     }
-    #nav li ul{
-        display: block;
+    #menu li li a{
+        padding: 0 10px 0 25px;
+    }
+    #menu li ul{
         position: relative;
         width: 100%;
         margin-left: 0;
         left: 0;
         top: 0;
         box-shadow: none;
+    }
+    #menu li.focus ul,
+    #menu li:hover ul{
+        margin-left: 0;
     }
     #menu > ul > li:last-child,
     #menu > ul > li:last-child:hover{
@@ -2520,20 +2551,16 @@ a.post-thumbnail:hover {
         margin-right: 8px;
         line-height: 1.5em;
     }
-    #menu li.menu-item-has-children:hover:after,
-    #menu .current-menu-parent:after{
+    #menu .current-menu-item.menu-item-has-children:after{
         color: #fff;
     }
     #menu li > ul:before,
     #menu li > ul li:first-child:before{
         display: none;
     }
-    #nav li:hover a:hover,
-    #menu > ul > li:hover > a,
+    #menu li a:hover,
     #menu > ul > .current_page_item > a,
-    #menu > ul > .current_page_ancestor > a,
-    #menu > ul > .current-menu-item > a,
-    #menu > ul > .current-menu-ancestor > a{
+    #menu > ul > .current-menu-item > a{
         border-color: #fff;
         color: #fff;
         background: #c00;
