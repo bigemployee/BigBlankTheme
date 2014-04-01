@@ -8,7 +8,7 @@ get_header();
 <div id="home" class="site-content">
     <div id="main" role="main">
         <?php while (have_posts()) : the_post(); ?>
-            <article id="home-content" <?php post_class(); ?>>
+            <article id="content" <?php post_class(); ?>>
                 <div class="entry-content">
                     <?php the_content(); ?>
                 </div><!-- .entry-content -->
