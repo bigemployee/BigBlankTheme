@@ -59,6 +59,12 @@
         }
     });
 
+    
+    // Resonsive Videos via Fluidvids v2.2.0 
+    fluidvids.init({
+      selector: 'iframe',
+      players: ['www.youtube.com', 'player.vimeo.com', 'youtu.be']
+    });
 
     $(document).on('keydown', function(e) {
         var url = false;

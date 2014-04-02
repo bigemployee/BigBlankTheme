@@ -747,6 +747,7 @@ figure.alignright{
 }
 .entry-content p,
 .entry-content iframe,
+.fluidvids,
 .post-thumbnail,
 .entry-content figure{
     margin: 0 auto 1.5em;
@@ -1160,10 +1161,10 @@ figure.alignright figcaption{
  */
 
 /* For Home Demo testing */
-#home .entry-content > iframe{
+#home .entry-content > .fluidvids{
     width: 1440px;
     height: 603px;
-    max-width: 100%;
+    max-width: 100% !important;
 }
 
 .content-area {
@@ -2451,6 +2452,9 @@ a.post-thumbnail:hover {
         width: 100%;
     }
     .site-content p,
+    .site-content dl,
+    .entry-content > ol,
+    .entry-content > ul,
     .site-content h1,
     .site-content h2,
     .site-content h3,
@@ -2459,6 +2463,7 @@ a.post-thumbnail:hover {
     .site-content h6,
     .site-content .entry-summary,
     .site-content .entry-meta, 
+    #comment-list,
     #footer{
         padding-left: 10px;
         padding-right: 10px;
