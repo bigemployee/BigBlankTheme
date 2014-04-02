@@ -36,7 +36,9 @@ Team
 
 Contribution
 -------------------------------------------------------------------
++ All contributions are appreciated, even if it is just fixing a typo.
 + Fork and send a pull request. Will add more protocols if it gets unmanageable.
++ Will add credit for contributors.
 
 Tech
 -------------------------------------------------------------------
