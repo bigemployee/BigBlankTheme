@@ -218,7 +218,10 @@ a:visited{
     transition: all 0.2s ease-out;
 }
 a:focus {       
-    outline:#4d90fe auto 3px;
+    outline-color: #a4c6fd;
+    outline-offset: 3px;
+    outline-width: 2px;
+    outline-style: solid;    
 }
 a:active,
 a:hover {
@@ -1477,7 +1480,7 @@ a.post-thumbnail:hover {
     color: #c00;
 }
 
-/* Mediaelements */
+/* Media Elements */
 
 .hentry .mejs-container {
     margin: 12px 0 18px;
@@ -1561,6 +1564,25 @@ a.post-thumbnail:hover {
 /* Twitter embed */
 .twitter-tweet{
     margin: 0 auto 1.5em !important;
+}
+
+/* H2 Anchors */
+.entry-content h2{
+    position: relative;
+}
+a.anchor{
+    display: none;
+    margin-left: -25px;
+    padding: 8px 8px 8px 2px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    font-size: 1rem;
+    line-height: 1;
+    color: #999;
+}
+h2:hover a.anchor{
+    display: block;
 }
 
 
@@ -1681,6 +1703,11 @@ a.post-thumbnail:hover {
 .gallery-columns-8 .gallery-caption,
 .gallery-columns-9 .gallery-caption {
     display: none;
+}
+
+.fotorama--wp {
+    margin: 0 auto 1.5em;
+    display: inline-block;
 }
 
 
