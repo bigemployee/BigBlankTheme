@@ -155,7 +155,7 @@ function bigblank_anchor_content_h2($content) {
             function ($matches) {
         $title = $matches[1];
         $slug = sanitize_title_with_dashes($title);
-        return '<h2 id="' . $slug . '">' . $title . '</h2>';
+        return '<h2 id="' . $slug . '"><a class="anchor" href="#' . $slug . '"><i class="fa fa-link"></i></a>' . $title . '</h2>';
     }
             , $content);
     return $content;
