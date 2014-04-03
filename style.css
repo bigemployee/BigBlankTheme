@@ -2498,6 +2498,9 @@ h2:hover a.anchor{
         -moz-box-sizing: border-box;
         box-sizing: border-box;
     }
+    h2:hover a.anchor{
+        display: none;
+    }
 
 }
 @media screen and (max-width: 480px) {
