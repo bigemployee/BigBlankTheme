@@ -1080,10 +1080,10 @@ figure.alignright figcaption{
     width: 100%;
     padding: 10px 15px;
     border-bottom: 1px solid #f4f4f4;
-    -webkit-transition: none 0.2s ease-out;
-    -moz-transition: none 0.2s ease-out;
-    -ms-transition: none 0.2s ease-out;
-    transition: none 0.2s ease-out;
+    -webkit-transition: outline 0.2s ease-out;
+    -moz-transition: outline 0.2s ease-out;
+    -ms-transition: outline 0.2s ease-out;
+    transition: outline 0.2s ease-out;
 }
 #menu li li:last-child a{
     border-bottom: 0 none;
@@ -1746,7 +1746,15 @@ h2:hover a.anchor{
     hyphens:         auto;
     word-wrap: break-word;
 }
-
+.nav-links a{
+    -webkit-transition: outline 0.2s ease-out;
+    -moz-transition: outline 0.2s ease-out;
+    -ms-transition: outline 0.2s ease-out;
+    transition: outline 0.2s ease-out;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    -box-sizing: border-box;
+}
 .post-navigation,
 .image-navigation {
     margin: 0 auto;
@@ -1759,9 +1767,6 @@ h2:hover a.anchor{
     padding: 10px 25px;
     width: 50%;
     float: left;
-    -webkit-box-sizing: border-box;
-    -moz-box-sizing: border-box;
-    -box-sizing: border-box;
 }
 
 .post-navigation a:last-child,
