@@ -36,6 +36,14 @@ if (!isset($content_width)) {
 if (version_compare($GLOBALS['wp_version'], '3.8', '<')) {
     require_once(get_template_directory() . '/inc/admin-back-compat.php');
 }
+
+/**
+ * Download all the plugins required for our theme to work properly
+ * @link http://tgmpluginactivation.com/
+ */
+require_once(get_template_directory() . '/inc/admin-theme-plugins.php');
+
+
 if (!function_exists('bigblank_setup')) :
 
     /**
@@ -58,10 +66,10 @@ if (!function_exists('bigblank_setup')) :
          * template files.
          */
         load_theme_textdomain('bigblank', get_template_directory() . '/languages');
-        
+
         // Theme options menu
         require(get_template_directory() . '/inc/admin-theme-options.php');
-        
+
         // This theme styles the visual editor to resemble the theme style.
         add_editor_style(array('css/editor-style.css'));
         // Add RSS feed links to <head> for posts and comments.
@@ -83,7 +91,7 @@ if (!function_exists('bigblank_setup')) :
         ));
         // This theme uses its own gallery styles.
         add_filter('use_default_gallery_style', '__return_false');
-        
+
         // add custom metaboxs and save the data
         add_action('add_meta_boxes', 'bigblank_add_custom_box');
         add_action('save_post', 'bigblank_save_post');
@@ -137,7 +145,6 @@ function bigblank_remove_wp_ver_css_js($src) {
 
 add_filter('style_loader_src', 'bigblank_remove_wp_ver_css_js');
 add_filter('script_loader_src', 'bigblank_remove_wp_ver_css_js');
-
 
 /**
  * Enqueue scripts and styles for the front end.
