@@ -1085,12 +1085,12 @@ figure.alignright figcaption{
 #menu > ul > li:last-child{
     margin-right: 0;
 }
-#menu > ul > li:last-child a{
+#menu > ul > li:last-child > a{
     padding: 0 10px;
     border: 1px solid #444;
     margin-top: -1px; /* Fix 1px border push down */
 }
-#menu > ul > li:last-child a:hover{
+#menu > ul > li:last-child > a:hover{
     border: 1px solid #c00;
 }
 #menu > ul > li.current_page_item:last-child a,
@@ -1098,7 +1098,7 @@ figure.alignright figcaption{
     border: 1px solid #f4f4f4;
     border-bottom: 2px solid #c00;
 }
-#menu .menu-item-has-children:after{
+#menu > ul > li.menu-item-has-children:after{
     content: "\f107";
     float: right;
     line-height: 2em;
