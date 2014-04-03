@@ -211,7 +211,8 @@ textarea {
 }
 a,
 a:visited{
-    color: #910000;
+    color: #900;
+    text-decoration: none;
     -webkit-transition: all 0.2s ease-out;
     -moz-transition: all 0.2s ease-out;
     -ms-transition: all 0.2s ease-out;
@@ -225,7 +226,7 @@ a:focus {
 }
 a:active,
 a:hover {
-    color: #c00;
+    text-decoration: underline;
 }
 h1,
 h2,
@@ -1331,7 +1332,7 @@ a.post-thumbnail:hover {
 .entry-tags,
 .entry-date,
 .entry-comments,
-.edit-link,
+.post-edit-link,
 .entry-meta .author,
 .parent-post-link,
 .full-size-link,
@@ -1343,7 +1344,7 @@ a.post-thumbnail:hover {
 .entry-tags:before,
 .entry-date:before,
 .entry-comments:before,
-.edit-link:before,
+.post-edit-link:before,
 .entry-meta .author:before,
 .parent-post-link:before,
 .full-size-link:before,
@@ -1370,7 +1371,7 @@ a.post-thumbnail:hover {
 .entry-comments:before{
     content:"\f075";
 }
-.edit-link:before{
+.post-edit-link:before{
     content:"\f040";
 }
 .entry-meta .author:before{
@@ -1462,21 +1463,22 @@ a.post-thumbnail:hover {
     padding: 8px;
 }
 
-.entry-content .edit-link {
-    clear: both;
-    display: block;
-    font-size: 12px;
+.entry-content .post-edit-link {
+    margin: 0 0 1.5em;
+    font-size: 80%;
     font-weight: 400;
-    line-height: 1.3333333333;
-    text-transform: uppercase;
-}
-
-.entry-content .edit-link a {
     color: #767676;
+    text-transform: uppercase;
     text-decoration: none;
 }
 
-.entry-content .edit-link a:hover {
+.entry-content .post-edit-link:after{
+    content: ""; 
+    display: table;
+    clear: both;
+}
+
+.entry-content .post-edit-link:hover {
     color: #c00;
 }
 
@@ -1744,8 +1746,7 @@ h2:hover a.anchor{
     -webkit-hyphens: auto;
     -moz-hyphens:    auto;
     -ms-hyphens:     auto;
-    border-top: 1px solid rgba(0, 0, 0, 0.1);
-    border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+    border-top: 1px solid #ccc;
     hyphens:         auto;
     word-wrap: break-word;
 }
@@ -2062,16 +2063,16 @@ h2:hover a.anchor{
     /*display: block;*/
 }
 .comment-metadata a,
-.comment-edit-link{
+.comment-post-edit-link{
     text-decoration: none;
     color: #767676;
 }
 .comment-metadata time,
-#comment-list .edit-link{
+#comment-list .post-edit-link{
     font-size: 80%;
     color: #767676;
 }
-#comment-list .edit-link{
+#comment-list .post-edit-link{
     float: right;
 }
 .comment-content{
@@ -2288,9 +2289,10 @@ h2:hover a.anchor{
 .site-info a {
     color: rgba(255, 255, 255, 0.7);
 }
-#footer-tel,
-#footer-address{
-    display: block;
+#footer-tel:after,
+#footer-address:after{
+    content: ""; 
+    display: table;
     clear: both;
 }
 #footer-tel i,
@@ -2321,7 +2323,8 @@ h2:hover a.anchor{
 }
 
 #footer-nav{
-    margin: 1.5em 0 0;
+    border-top: 3px double #ccc;
+    padding: 1.5em 0 0;
 }
 #footer-nav,
 #site-info,
@@ -2343,20 +2346,27 @@ h2:hover a.anchor{
     list-style: none;
 }
 #footer-nav li{
-    margin: 0 4px;
-    padding: 0 4px;
     float: left;
     position: relative;
     white-space: nowrap;
+}
+#footer-nav,
+#site-info{
+    color: #999;
 }
 #footer-nav a,
 #site-info a{
     color: #222;
 }
-#footer-nav a:hover,
-#site-info a:hover{
-    color: #c00;
+#footer-nav li:after{
+    content: "\00b7";
+    margin: 0 10px;
+    font-weight: 900;
 }
+#footer-nav li:last-child:after{
+    display: none;
+}
+
 .social-media a,
 .social-media a:visited{
     font-size: 1.1em;
@@ -2636,7 +2646,7 @@ h2:hover a.anchor{
     .search-toggle,
     .site-navigation,
     .site-content nav,
-    .edit-link,
+    .post-edit-link,
     .page-links,
     .widget-area,
     .more-link,
