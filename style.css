@@ -778,6 +778,14 @@ figure.alignright img{
     margin-left: 14px;
     margin-right: 20%;
 }
+.content-sidebar blockquote.alignleft,
+.sidebar-content blockquote.alignleft{
+    margin-left: 0;
+}
+.content-sidebar blockquote.alignright,
+.sidebar-content blockquote.alignright {
+    margin-right: 0;    
+}
 .site-content blockquote.alignleft p,
 .site-content blockquote.alignright p {
     margin-bottom: 0;
@@ -1464,7 +1472,7 @@ a.post-thumbnail:hover {
 }
 
 .entry-content .post-edit-link {
-    margin: 0 0 1.5em;
+    margin: 0 auto 1.5em;
     font-size: 80%;
     font-weight: 400;
     color: #777;
@@ -1565,6 +1573,7 @@ a.anchor{
     position: absolute;
     top: 0;
     left: 0;
+    font-size: 18px;
     font-size: 1rem;
     line-height: 1;
     color: #999;
@@ -1824,7 +1833,6 @@ h2:hover a.anchor{
  * 6.8 Attachments
  * -----------------------------------------------------------------------------
  */
-
 .attachment #sidebar,
 .attachment .post-thumbnail {
     display: none;
@@ -1847,7 +1855,6 @@ h2:hover a.anchor{
  * 6.9 Archives
  * -----------------------------------------------------------------------------
  */
-
 .archive-title,
 .page-title {
     font-weight: 200;
@@ -1859,11 +1866,10 @@ h2:hover a.anchor{
  * 6.10 Author Info
  * -----------------------------------------------------------------------------
  */
-
 .author-info{
     float: left;
     width: 100%;
-    margin-top: 55px;
+    margin-top: 100px;
     border-top: 1px solid #eee;
     -webkit-box-sizing: border-box;
     -moz-box-sizing: border-box;
@@ -1871,11 +1877,8 @@ h2:hover a.anchor{
 }
 .author-avatar{
     float: left;
-    margin: -36px 10px 0 0;
+    margin: -42px 10px 0 0;
     background: #fff;
-}
-.author-avatar img{
-    border: 3px double #ccc;
 }
 .author-link a{
     float: left;
@@ -1890,14 +1893,20 @@ h2:hover a.anchor{
 }
 .author-description{
     position: relative;
+    padding: 4px 0 0;
 }
 .author-description h2{
     float: left;
-    margin: -65px 0 0 0;
+    margin: -62px 0 0 0;
     padding-left: 80px;
     -webkit-box-sizing: border-box;
     -moz-box-sizing: border-box;
     box-sizing: border-box;
+}
+.author-description p{
+    line-height: 1.5;
+    font-size: 18px;
+    font-size: 1rem;
 }
 
 
@@ -1981,7 +1990,7 @@ h2:hover a.anchor{
 .author-avatar .avatar{
     background-color: #fff;
     border-radius: 50%;
-    /*box-shadow: 0 1px 2px rgba(0, 0, 0, 0.2);*/
+    box-shadow: 0 1px 2px #999;
 }
 #comment-list .avatar,
 .author-avatar .avatar{
@@ -2099,12 +2108,10 @@ h2:hover a.anchor{
 }
 
 
-
 /**
  * 7.0 Sidebars
  * -----------------------------------------------------------------------------
  */
-
 #sidebar {
     -webkit-box-sizing: border-box;
     -moz-box-sizing:    border-box;
@@ -2133,8 +2140,6 @@ h2:hover a.anchor{
  */
 
 /* Primary Sidebar, Footer Sidebar */
-
-
 .widget {
     float: left;
     width: 100%;
@@ -2219,50 +2224,41 @@ h2:hover a.anchor{
     color: #ccc;
 }
 
-
 /* Calendar Widget */
-
 .widget_calendar table {
     line-height: 2;
     margin: 0;
 }
-
 .widget_calendar caption {
+    background: #444;
     color: #fff;
     font-weight: 700;
-    line-height: 1.7142857142;
-    margin-bottom: 18px;
-    text-align: left;
+    text-align: center;
+    padding: 2px 5px;
     text-transform: uppercase;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    position: relative;
 }
-
-.widget_calendar thead th {
-    background-color: rgba(255, 255, 255, 0.1);
-}
-
 .widget_calendar tbody td,
 .widget_calendar thead th {
     text-align: center;
 }
-
 .widget_calendar tbody a {
     background-color: #c00;
     color: #fff;
     display: block;
 }
-
 .widget_calendar tbody a:hover {
     background-color: #c00;
 }
-
 .widget_calendar tbody a:hover {
     color: #fff;
 }
-
 .widget_calendar #prev {
     padding-left: 5px;
 }
-
 .widget_calendar #next {
     padding-right: 5px;
     text-align: right;
