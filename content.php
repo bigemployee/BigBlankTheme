@@ -25,7 +25,7 @@
                 <?php comments_popup_link(__('Leave a comment', 'bigblank'), __('1 Comment', 'bigblank'), __('% Comments', 'bigblank'), "entry-comments"); ?>
                 <?php
             endif;
-            edit_post_link(__('Edit', 'bigblank'), '<span class="edit-link">', '</span>');
+            edit_post_link(__('Edit', 'bigblank'));
             ?>
         </div><!-- .entry-meta -->
     </header><!-- .entry-header -->

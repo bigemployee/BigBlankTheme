@@ -19,7 +19,7 @@
             'link_before' => '<span>',
             'link_after' => '</span>',
         ));
-        edit_post_link(__('Edit', 'bigblank'), '<span class="edit-link">', '</span>');
+        edit_post_link(__('Edit', 'bigblank'));
         ?>
     </div><!-- .entry-content -->
 </article><!-- #post-## -->

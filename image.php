@@ -19,7 +19,7 @@ while (have_posts()) : the_post();
                 <time class="entry-date" datetime="<?php echo esc_attr(get_the_date('c')); ?>"><?php echo esc_html(get_the_date()); ?></time>
                 <a href="<?php echo wp_get_attachment_url(); ?>" class="full-size-link"><?php echo $metadata['width']; ?> &times; <?php echo $metadata['height']; ?></a>
                 <a href="<?php echo get_permalink($post->post_parent); ?>" class="parent-post-link" rel="gallery"><?php echo get_the_title($post->post_parent); ?></a>
-                <?php edit_post_link(__('Edit', 'bigblank'), '<span class="edit-link">', '</span>'); ?>
+                <?php edit_post_link(__('Edit', 'bigblank')); ?>
             </div><!-- .entry-meta -->
         </header><!-- .entry-header -->
         <div class="entry-content">

@@ -17,6 +17,7 @@ get_header();
                 ?>
                 <div class="entry-content">
                     <?php the_content(); ?>
+                    <?php edit_post_link(__('Edit', 'bigblank')); ?>
                     <p class="alert alert-success">
                         <strong>Well done!</strong> You successfully read <a href="#" class="">this important alert message</a>.
                     </p>
