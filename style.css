@@ -1194,8 +1194,8 @@ figure.alignright figcaption{
 .site-content form,
 .site-content p,
 .site-content dl,
-.entry-content > ol,
-.entry-content > ul,
+.entry-content ol,
+.entry-content ul,
 .gallery,
 .site-content pre,
 .site-content address,
@@ -1210,11 +1210,6 @@ figure.alignright figcaption{
     max-width: 580px;
     text-align: left;
 }
-.entry-content ol,
-.entry-content ul{
-    padding: 0 0 0 0.5em;
-    list-style-position: inside;
-}
 .site-content table,
 .site-content blockquote,
 .site-content dl,
@@ -1223,6 +1218,16 @@ figure.alignright figcaption{
 .site-content .wp-video,
 .site-content .hentry .wp-audio-shortcode{
     max-width: 800px;
+}
+.entry-content ol,
+.entry-content ul{
+    list-style-position: inside;
+}
+.entry-content ol ol,
+.entry-content ol ul,
+.entry-content ul ol,
+.entry-content ul ul{
+    padding: 0 0 0 0.5em;
 }
 .site-content blockquote p{
     max-width: 100%;
@@ -1262,8 +1267,8 @@ figure.alignright img{
 }
 .site-content p,
 .site-content dl,
-.entry-content > ol,
-.entry-content > ul,
+.entry-content ol,
+.entry-content ul,
 .site-content h1,
 .site-content h2,
 .site-content h3,
