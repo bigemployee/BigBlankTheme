@@ -76,7 +76,7 @@ code,kbd,pre,samp,tt,var{font-family:monospace,serif;font-size:15px;-webkit-hyph
 pre{border:1px solid rgba(0,0,0,.1);-webkit-box-sizing:border-box;-moz-box-sizing:border-box;box-sizing:border-box;margin-bottom:24px;max-width:100%;overflow:auto;padding:12px;white-space:pre;white-space:pre-wrap;word-wrap:break-word}
 blockquote,q{-webkit-hyphens:none;-moz-hyphens:none;-ms-hyphens:none;hyphens:none;quotes:none}
 blockquote:after,blockquote:before,q:after,q:before{content:"";content:none}
-blockquote{color:#767676;font-size:19px;font-style:italic;font-weight:300;line-height:1.2631578947;margin-bottom:24px}
+blockquote{color:#777;font-size:19px;font-style:italic;font-weight:300;line-height:1.2631578947;margin-bottom:24px}
 blockquote cite,blockquote small{color:#2b2b2b;font-size:16px;font-weight:400;line-height:1.5}
 blockquote cite,blockquote em,blockquote i{font-style:normal}
 blockquote b,blockquote strong{font-weight:400}
@@ -111,7 +111,7 @@ table{border-collapse:separate;border-spacing:0;border-width:1px 0 0 1px;margin-
 caption,td,th{font-weight:400;text-align:left}
 th{border-width:0 1px 1px 0;font-weight:700}
 td{border-width:0 1px 1px 0}
-del{color:#767676}
+del{color:#777}
 hr{background-color:rgba(0,0,0,.1);border:0;height:1px;margin-bottom:23px}
 
 /* Support a widely-adopted but non-standard selector for text selection styles
@@ -802,7 +802,7 @@ figcaption {
     margin-top: 0;
     margin-bottom: 0.4em;
     padding: 0.5em 1em;
-    color: #767676;
+    color: #777;
     background: #f4f4f4;
     max-width: 100%;
 }
@@ -1317,13 +1317,13 @@ a.post-thumbnail:hover {
 
 .entry-meta {
     clear: both;
-    color: #767676;
+    color: #777;
     font-size: 80%;
     line-height: 1.3333333333;
     text-transform: capitalize;
 }
 .entry-meta a {
-    color: #767676;
+    color: #777;
     text-decoration: none;
 }
 .entry-meta a:hover {
@@ -1468,7 +1468,7 @@ a.post-thumbnail:hover {
     margin: 0 0 1.5em;
     font-size: 80%;
     font-weight: 400;
-    color: #767676;
+    color: #777;
     text-transform: uppercase;
     text-decoration: none;
 }
@@ -1863,29 +1863,41 @@ h2:hover a.anchor{
 .author-info{
     float: left;
     width: 100%;
-    margin-top: 45px;
-    padding: 10px 20px;
-    background: #f1f1f1;
+    margin-top: 55px;
+    border-top: 1px solid #eee;
     -webkit-box-sizing: border-box;
     -moz-box-sizing: border-box;
     box-sizing: border-box;
 }
 .author-avatar{
     float: left;
-    margin: -45px 5px 5px -15px;
+    margin: -36px 10px 0 0;
+    background: #fff;
+}
+.author-avatar img{
+    border: 3px double #ccc;
 }
 .author-link a{
     float: left;
     text-decoration: none;
     padding: 4px 10px;
-    border: 1px solid #333;
+    border: 1px solid #444;
 }
 .author-link a:hover{
-    background: #000;
+    background: #c00;
     color: #fff;
+    border: 1px solid #c00;
+}
+.author-description{
+    position: relative;
 }
 .author-description h2{
-    margin-top: 0;
+    float: left;
+    margin: -65px 0 0 0;
+    padding-left: 80px;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
 }
 
 
@@ -2046,12 +2058,12 @@ h2:hover a.anchor{
 .comment-metadata a,
 .comment-post-edit-link{
     text-decoration: none;
-    color: #767676;
+    color: #777;
 }
 .comment-metadata time,
 #comment-list .post-edit-link{
     font-size: 80%;
-    color: #767676;
+    color: #777;
 }
 #comment-list .post-edit-link{
     float: right;
