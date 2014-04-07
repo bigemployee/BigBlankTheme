@@ -1007,7 +1007,7 @@ figure.alignright figcaption{
     -moz-box-sizing: border-box;
     box-sizing: border-box;
 }
-#menu{
+#nav .menu{
     float: left;
     width: 100%;
     margin: 10px auto 0;
@@ -1017,44 +1017,44 @@ figure.alignright figcaption{
     -ms-transition: all 0.5s ease-out;
     transition: all 0.5s ease-out;
 }
-#menu ul{
+#nav .menu ul{
     float: left;
     width: 100%;
     margin: 0 auto;
     list-style: none;
 }
-#menu li{
+#nav .menu li{
     margin: 0 15px;
     float: left;
     position: relative;
     display: inline-block;
     vertical-align: top;
 }
-#menu li a{
+#nav .menu li a{
     float: left;
     text-decoration: none;
     -webkit-box-sizing: border-box;
     -moz-box-sizing: border-box;
     -box-sizing: border-box;
 }
-#menu li a:hover,
-#menu li a:focus,
-#menu .menu-item-has-children.focus:after,
-#menu .menu-item-has-children:hover:after{
+#nav .menu li a:hover,
+#nav .menu li a:focus,
+#nav .menu .menu-item-has-children.focus:after,
+#nav .menu .menu-item-has-children:hover:after{
     color: #c00;
 }
-#menu li a,
-#menu li:focus li a,
-#menu li:hover li a{
+#nav .menu li a,
+#nav .menu li:focus li a,
+#nav .menu li:hover li a{
     color: #424242;
 }
-#menu > ul > .current_page_item > a,
-#menu > ul > .current_page_ancestor > a,
-#menu > ul > .current-menu-item > a,
-#menu > ul > .current-menu-ancestor > a{
+#nav .menu > ul > .current_page_item > a,
+#nav .menu > ul > .current_page_ancestor > a,
+#nav .menu > ul > .current-menu-item > a,
+#nav .menu > ul > .current-menu-ancestor > a{
     border-bottom: 2px solid #c00;
 }
-#menu li ul{
+#nav .menu li ul{
     position: absolute;
     background: #fff;
     box-shadow: 0 1px 1px rgba(0,0,0,0.2);
@@ -1064,19 +1064,19 @@ figure.alignright figcaption{
     z-index: 10;
     margin-left: -999em; /* accessibility */
 }
-#menu li.focus ul,
-#menu li:hover ul{
+#nav .menu li.focus ul,
+#nav .menu li:hover ul{
     margin-left: -90px;
     /*display: block;*/
 }
-#menu li li{
+#nav .menu li li{
     margin: 0;
     padding: 0;
     float: left;
     width: 100%;
     line-height: 1;
 }
-#menu li li a{
+#nav .menu li li a{
     width: 100%;
     padding: 10px 15px;
     border-bottom: 1px solid #f4f4f4;
@@ -1085,29 +1085,29 @@ figure.alignright figcaption{
     -ms-transition: outline 0.2s ease-out;
     transition: outline 0.2s ease-out;
 }
-#menu li li:last-child a{
+#nav .menu li li:last-child a{
     border-bottom: 0 none;
 }
-#menu > ul > li:first-child{
+#nav .menu > ul > li:first-child{
     margin-left: 0;
 }
-#menu > ul > li:last-child{
+#nav .menu > ul > li:last-child{
     margin-right: 0;
 }
-#menu > ul > li:last-child > a{
+#nav .menu > ul > li:last-child > a{
     padding: 0 10px;
     border: 1px solid #444;
     margin-top: -1px; /* Fix 1px border push down */
 }
-#menu > ul > li:last-child > a:hover{
+#nav .menu > ul > li:last-child > a:hover{
     border: 1px solid #c00;
 }
-#menu > ul > li.current_page_item:last-child a,
-#menu > ul > li.current_menu_item:last-child a{
+#nav .menu > ul > li.current_page_item:last-child a,
+#nav .menu > ul > li.current_menu_item:last-child a{
     border: 1px solid #f4f4f4;
     border-bottom: 2px solid #c00;
 }
-#menu > ul > li.menu-item-has-children:after{
+#nav .menu > ul > li.menu-item-has-children:after{
     content: "\f107";
     float: right;
     line-height: 2em;
@@ -1118,12 +1118,12 @@ figure.alignright figcaption{
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
 }
-#menu li:hover li:hover a,
-#menu ul > li.current-menu-parent > ul > li.current-menu-item a{
+#nav .menu li:hover li:hover a,
+#nav .menu ul > li.current-menu-parent > ul > li.current-menu-item a{
     color: #fff;
     background: #c00;
 }
-#menu li > ul:before{
+#nav .menu li > ul:before{
     content: '';
     display: block;
     border-color: transparent transparent #c00 transparent;
@@ -1134,7 +1134,7 @@ figure.alignright figcaption{
     left: 50%;
     margin-left: -10px;
 }
-#menu li > ul li:first-child:before{
+#nav .menu li > ul li:first-child:before{
     content: '';
     float: left;
     width: 100%;
@@ -1143,7 +1143,7 @@ figure.alignright figcaption{
     margin-top: -2px;
     background: #c00;
 }
-#menu-toggle {
+#nav .menu-toggle {
     cursor: pointer;
     font-size: 0;
     width: 48px;
@@ -1156,14 +1156,14 @@ figure.alignright figcaption{
     text-align: center;
     display: none;
 }
-#menu-toggle i {
+#nav .menu-toggle i {
     float: left;
     height: 48px;
     width: 48px;
     line-height: 48px;
     font-size: 32px;
 }
-#nav.toggled-on #menu{
+#nav.toggled-on #nav .menu{
     /*display: block;*/
 }
 
@@ -2476,13 +2476,13 @@ h2:hover a.anchor{
         width: 100%;
         clear: both;
     }
-    #menu-toggle {
+    #nav .menu-toggle {
         display: none;
     }
-    #menu{
+    #nav .menu{
         display: block;
     }
-    #menu li{
+    #nav .menu li{
         float: none;
         margin: 0 5px;
     }
@@ -2508,31 +2508,31 @@ h2:hover a.anchor{
     #logo{
         float: left;
     }
-    #menu-toggle {
+    #nav .menu-toggle {
         display: block;
     }
-    #menu{
+    #nav .menu{
         display: none;
     }
-    #nav.toggled-on #menu{
+    #nav.toggled-on #nav .menu{
         display: block;
     }
-    #menu li,
-    #menu li li{
+    #nav .menu li,
+    #nav .menu li li{
         line-height: 2.2;
     }
-    #menu > ul > .current_page_item > a, 
-    #menu > ul > .current_page_ancestor > a, 
-    #menu > ul > .current-menu-item > a, 
-    #menu > ul > .current-menu-ancestor > a,
-    #menu li a{
+    #nav .menu > ul > .current_page_item > a, 
+    #nav .menu > ul > .current_page_ancestor > a, 
+    #nav .menu > ul > .current-menu-item > a, 
+    #nav .menu > ul > .current-menu-ancestor > a,
+    #nav .menu li a{
         border-bottom: 1px solid #f4f4f4;
     }
-    #menu li a{
+    #nav .menu li a{
         padding: 0 10px;
     }
-    #menu li,
-    #menu li a{
+    #nav .menu li,
+    #nav .menu li a{
         float: left;
         width: 100%;
         text-align: left;
@@ -2541,10 +2541,10 @@ h2:hover a.anchor{
         -moz-box-sizing: border-box;
         box-sizing: border-box;
     }
-    #menu li li a{
+    #nav .menu li li a{
         padding: 0 10px 0 25px;
     }
-    #menu li ul{
+    #nav .menu li ul{
         position: relative;
         width: 100%;
         margin-left: 0;
@@ -2552,31 +2552,31 @@ h2:hover a.anchor{
         top: 0;
         box-shadow: none;
     }
-    #menu li.focus ul,
-    #menu li:hover ul{
+    #nav .menu li.focus ul,
+    #nav .menu li:hover ul{
         margin-left: 0;
     }
-    #menu > ul > li:last-child,
-    #menu > ul > li:last-child:hover{
+    #nav .menu > ul > li:last-child,
+    #nav .menu > ul > li:last-child:hover{
         margin: 10px 0 0;
         border: 0 none;
     }
-    #menu > ul > li:last-child a,
-    #menu > ul > li:last-child:hover a{
+    #nav .menu > ul > li:last-child a,
+    #nav .menu > ul > li:last-child:hover a{
         border-radius: 3px;
         border: 1px solid #444;
         text-align: center;
     }
-    #menu > ul > li.current_page_item:last-child, 
-    #menu > ul > li.current_menu_item:last-child{
+    #nav .menu > ul > li.current_page_item:last-child, 
+    #nav .menu > ul > li.current_menu_item:last-child{
         border: 0 none;
     }
-    #menu > ul > li.current_page_item:last-child a,
-    #menu > ul > li.current_menu_item:last-child a,
-    #menu > ul > li:last-child:hover a{
+    #nav .menu > ul > li.current_page_item:last-child a,
+    #nav .menu > ul > li.current_menu_item:last-child a,
+    #nav .menu > ul > li:last-child:hover a{
         border: 1px solid #c00;
     }
-    #menu .menu-item-has-children:after{
+    #nav .menu .menu-item-has-children:after{
         position: absolute;
         right: 0;
         margin: 0;
@@ -2584,16 +2584,16 @@ h2:hover a.anchor{
         margin-right: 8px;
         line-height: 1.5em;
     }
-    #menu .current-menu-item.menu-item-has-children:after{
+    #nav .menu .current-menu-item.menu-item-has-children:after{
         color: #fff;
     }
-    #menu li > ul:before,
-    #menu li > ul li:first-child:before{
+    #nav .menu li > ul:before,
+    #nav .menu li > ul li:first-child:before{
         display: none;
     }
-    #menu li a:hover,
-    #menu > ul > .current_page_item > a,
-    #menu > ul > .current-menu-item > a{
+    #nav .menu li a:hover,
+    #nav .menu > ul > .current_page_item > a,
+    #nav .menu > ul > .current-menu-item > a{
         border-color: #fff;
         color: #fff;
         background: #c00;
