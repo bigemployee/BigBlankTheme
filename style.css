@@ -2146,6 +2146,7 @@ h2:hover a.anchor{
 #sidebar h4,
 #sidebar h5{
     margin: 0;
+    padding: 0;
 }
 #sidebar .search-form{
     margin-bottom: 0;
