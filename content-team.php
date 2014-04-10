@@ -21,7 +21,8 @@
         $wp_query = new WP_Query(array(
             'post_type' => 'team',
             'posts_per_page' => -1,
-            'order' => 'ASC'
+            'order' => 'ASC',
+            'paged'=>$paged
         ));
         ?>
         <?php if ($wp_query->have_posts()) : ?>
