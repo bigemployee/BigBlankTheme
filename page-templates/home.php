@@ -13,7 +13,7 @@ get_header();
                     <?php the_content(); ?>
                     <?php edit_post_link(__('Edit', 'bigblank')); ?>
                 </div><!-- .entry-content -->
-            </article><!-- #home -->
+            </article><!-- #content -->
         <?php endwhile; ?>
     </div><!-- #main -->
 </div><!-- #home -->
