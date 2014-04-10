@@ -1,10 +1,12 @@
 <?php
+
 /**
  * Custom post types are new post types you can create. A custom post type can 
  * be added to WordPress via the register_post_type() function. This function 
  * allows you to define a new post type by its labels, supported features, 
  * availability and other specifics.
  * 
+ * @link https://codex.wordpress.org/Function_Reference/register_post_type
  * @link http://codex.wordpress.org/Post_Types#Custom_Post_Types
  */
 function bigblank_register_post_type() {
@@ -53,7 +55,15 @@ function bigblank_register_post_type() {
     );
 
     register_post_type('team', $teamArgs);
-    flush_rewrite_rules();
 }
 
 add_action('init', 'bigblank_register_post_type');
+
+/**
+ * To get permalinks to work when you activate the theme
+ */
+function bigblank_rewrite_flush() {
+    flush_rewrite_rules();
+}
+
+add_action('after_switch_theme', 'bigblank_rewrite_flush');
