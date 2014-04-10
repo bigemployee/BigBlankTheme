@@ -1143,7 +1143,7 @@ figure.alignright figcaption{
     margin-top: -2px;
     background: #c00;
 }
-#nav .menu-toggle {
+#nav #menu-toggle {
     cursor: pointer;
     font-size: 0;
     width: 48px;
@@ -1156,7 +1156,7 @@ figure.alignright figcaption{
     text-align: center;
     display: none;
 }
-#nav .menu-toggle i {
+#nav #menu-toggle i {
     float: left;
     height: 48px;
     width: 48px;
@@ -2476,7 +2476,7 @@ h2:hover a.anchor{
         width: 100%;
         clear: both;
     }
-    #nav .menu-toggle {
+    #nav #menu-toggle {
         display: none;
     }
     #nav .menu{
@@ -2508,7 +2508,7 @@ h2:hover a.anchor{
     #logo{
         float: left;
     }
-    #nav .menu-toggle {
+    #nav #menu-toggle {
         display: block;
     }
     #nav .menu{
