@@ -126,9 +126,9 @@ get_header();
                         <a href="#" class="button disabled" role="button">Disabled Link Button</a>
                     </form>
                 </div><!-- .entry-content -->
-            </article><!-- #home -->
+            </article><!-- #content -->
         <?php endwhile; ?>
     </div><!-- #main -->
-</div><!-- #home -->
+</div><!-- #forms -->
 <?php
 get_footer();
