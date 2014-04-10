@@ -28,7 +28,8 @@
         <?php if ($wp_query->have_posts()) : ?>
             <?php while ($wp_query->have_posts()) : $wp_query->the_post(); ?>
                 <div class="team-member">
-                    <h2><?php the_title(); ?></h2>
+                    <?php $slug = sanitize_title_with_dashes(get_the_title()); ?>
+                    <h2 id="<?php echo $slug; ?>"><a class="anchor" href="#<?php echo $slug; ?>"><i class="fa fa-link"></i></a><?php the_title(); ?></h2>
                     <?php // $subtitle = get_post_meta(get_the_ID(), 'subtitle', true); ?>
                     <!--<strong class="subtitle"><?php // echo $subtitle; ?></strong>-->
                     <?php if (has_post_thumbnail()): ?>
