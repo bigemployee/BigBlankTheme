@@ -6,7 +6,7 @@
  */
 get_header();
 ?>
-<div id="home" class="site-content">
+<div id="forms" class="site-content">
     <div id="main" role="main">
         <?php while (have_posts()) : the_post(); ?>
             <article id="content" <?php post_class(); ?>>
