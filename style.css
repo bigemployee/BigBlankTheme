@@ -29,7 +29,7 @@ Domain Path: /languages/
  *   6.3 - Entry Meta
  *   6.4 - Entry Content
  *   6.5 - Galleries
- *   6.6 - Post Formats
+ *   6.6 - Custom Post Types
  *   6.7 - Post/Image/Paging Navigation
  *   6.8 - Attachments
  *   6.9 - Archives
@@ -1736,13 +1736,28 @@ h2:hover a.anchor{
 
 
 /**
- * 6.6 Custom Post Type
+ * 6.6 Custom Post Types (Team & Profile)
  * -----------------------------------------------------------------------------
  */
 .team-member .portrait{
     max-width: 128px;
     border-radius: 50%;
     box-shadow: 0 1px 2px #999;
+}
+.team-member h2 em,
+.profile .entry-header h2 em{
+    font: 300 italic 0.8em/1.5 'Playfair Display', Georgia, Times, serif;
+}
+.profile .entry-header,
+.profile .entry-header h1,
+.profile .entry-header h2{
+    text-align: center;
+}
+.profile .entry-header h1{
+    margin-bottom: 0;
+}
+.profile .entry-header h2{
+    margin-top: 0;
 }
 
 

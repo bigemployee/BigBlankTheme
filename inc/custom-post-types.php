@@ -67,3 +67,17 @@ function bigblank_rewrite_flush() {
 }
 
 add_action('after_switch_theme', 'bigblank_rewrite_flush');
+
+
+function bigblank_print($title='', $before = '', $after = '', $echo = true) {
+
+	if ( strlen($title) == 0 )
+		return;
+
+	$title = $before . $title . $after;
+
+	if ( $echo )
+		echo $title;
+	else
+		return $title;
+}

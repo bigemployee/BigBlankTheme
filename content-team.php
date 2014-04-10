@@ -29,9 +29,9 @@
             <?php while ($wp_query->have_posts()) : $wp_query->the_post(); ?>
                 <div class="team-member">
                     <?php $slug = sanitize_title_with_dashes(get_the_title()); ?>
-                    <h2 id="<?php echo $slug; ?>"><a class="anchor" href="#<?php echo $slug; ?>"><i class="fa fa-link"></i></a><?php the_title(); ?></h2>
-                    <?php // $subtitle = get_post_meta(get_the_ID(), 'subtitle', true); ?>
-                    <!--<strong class="subtitle"><?php // echo $subtitle; ?></strong>-->
+                    <?php $title = get_post_meta(get_the_ID(), 'title', true); ?>
+                    <?php $facebook = get_post_meta(get_the_ID(), 'facebook', true); ?>
+                    <h2 id="<?php echo $slug; ?>"><a class="anchor" href="#<?php echo $slug; ?>"><i class="fa fa-link"></i></a><?php the_title(); ?> <?php bigblank_print($title, '<em>(',')</em>'); ?></h2>
                     <?php if (has_post_thumbnail()): ?>
                         <?php the_post_thumbnail('medium', 'class=alignright portrait'); ?>
                     <?php endif ?>
