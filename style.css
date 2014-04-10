@@ -756,16 +756,16 @@ figure.alignright{
 .entry-content figure{
     margin: 0 auto 1.5em;
 }
-.entry-content p img{
+.entry-content img{
     margin: 0.4em auto;
 }
 blockquote.alignleft,
-.entry-content p img.alignleft,
+.entry-content img.alignleft,
 figure.alignleft img{
     margin: 0.4em 1em 0.4em 0;
 }
 blockquote.alignright,
-.entry-content p img.alignright,
+.entry-content img.alignright,
 figure.alignright img{
     margin: 0.4em 0 0.4em 1em;
 }
@@ -1205,6 +1205,7 @@ figure.alignright figcaption{
 .site-content .hentry .wp-audio-shortcode,
 .page-content,
 .author-description,
+.team-member,
 #comments{
     margin: 0 auto 1.5em;
     max-width: 580px;
@@ -1735,23 +1736,13 @@ h2:hover a.anchor{
 
 
 /**
- * 6.6 Post Formats
+ * 6.6 Custom Post Type
  * -----------------------------------------------------------------------------
  */
-
-.format-aside .entry-content,
-.format-aside .entry-summary,
-.format-quote .entry-content,
-.format-quote .entry-summary,
-.format-link .entry-content,
-.format-link .entry-summary {
-    padding-top: 0;
-}
-
-.site-content .format-link .entry-title,
-.site-content .format-aside .entry-title,
-.site-content .format-quote .entry-title {
-    display: none;
+.team-member .portrait{
+    max-width: 128px;
+    border-radius: 50%;
+    box-shadow: 0 1px 2px #999;
 }
 
 
