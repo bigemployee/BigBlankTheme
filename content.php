@@ -58,7 +58,7 @@
             echo '<span class="featured-post">' . __('Sticky', 'bigblank') . '</span>';
         }
         ?>
-        <?php if (is_singular() && get_the_author_meta('description') && is_multi_author()) : // If a user has filled out their description and this is a multi-author blog, show a bio on their entries. ?>
+        <?php if (is_singular() && get_the_author_meta('description') && is_multi_author() && get_post_type() == "post") : // If a user has filled out their description and this is a multi-author blog, show a bio on their entries. ?>
             <div class="author-info">
                 <div class="author-avatar">
                     <?php echo get_avatar(get_the_author_meta('user_email'), apply_filters('gravatar', 128)); ?>
