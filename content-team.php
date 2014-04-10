@@ -13,7 +13,7 @@
     <div class="entry-content">
         <?php
         the_content();
-
+        edit_post_link(__('Edit', 'bigblank'));
         // wp_reset_query() does not integrate well with pagination, 
         // so we assign $wp_query to a variable and we will reassing it back
         wp_reset_query();
@@ -39,6 +39,7 @@
                     ?>
                     <?php the_content('Get to know ' . get_the_title()); ?>
                 </div>
+                <?php edit_post_link(__('Edit', 'bigblank')); ?>
             <?php endwhile; ?>
             <?php
             // Previous/next post navigation.
@@ -47,6 +48,5 @@
         <?php endif; ?>
         <?php $wp_query = $orig_query; ?>
         <?php wp_reset_query(); ?>
-        <?php edit_post_link(__('Edit', 'bigblank')); ?>
     </div><!-- .entry-content -->
 </article><!-- #post-## -->
