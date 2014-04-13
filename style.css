@@ -1048,10 +1048,10 @@ figure.alignright figcaption{
 #nav .menu li:hover li a{
     color: #424242;
 }
-#nav .menu > ul > .current_page_item > a,
-#nav .menu > ul > .current_page_ancestor > a,
-#nav .menu > ul > .current-menu-item > a,
-#nav .menu > ul > .current-menu-ancestor > a{
+#nav ul.menu > .current_page_item > a,
+#nav ul.menu > .current_page_ancestor > a,
+#nav ul.menu > .current-menu-item > a,
+#nav ul.menu > .current-menu-ancestor > a{
     border-bottom: 2px solid #c00;
 }
 #nav .menu li ul{
@@ -1088,26 +1088,26 @@ figure.alignright figcaption{
 #nav .menu li li:last-child a{
     border-bottom: 0 none;
 }
-#nav .menu > ul > li:first-child{
+#nav ul.menu > li:first-child{
     margin-left: 0;
 }
-#nav .menu > ul > li:last-child{
+#nav ul.menu > li:last-child{
     margin-right: 0;
 }
-#nav .menu > ul > li:last-child > a{
+#nav ul.menu > li:last-child > a{
     padding: 0 10px;
     border: 1px solid #444;
     margin-top: -1px; /* Fix 1px border push down */
 }
-#nav .menu > ul > li:last-child > a:hover{
+#nav ul.menu > li:last-child > a:hover{
     border: 1px solid #c00;
 }
-#nav .menu > ul > li.current_page_item:last-child a,
-#nav .menu > ul > li.current_menu_item:last-child a{
+#nav ul.menu > li.current_page_item:last-child a,
+#nav ul.menu > li.current_menu_item:last-child a{
     border: 1px solid #f4f4f4;
     border-bottom: 2px solid #c00;
 }
-#nav .menu > ul > li.menu-item-has-children:after{
+#nav ul.menu > li.menu-item-has-children:after{
     content: "\f107";
     float: right;
     line-height: 2em;
@@ -2527,10 +2527,10 @@ h2:hover a.anchor{
     #nav .menu li li{
         line-height: 2.2;
     }
-    #nav .menu > ul > .current_page_item > a, 
-    #nav .menu > ul > .current_page_ancestor > a, 
-    #nav .menu > ul > .current-menu-item > a, 
-    #nav .menu > ul > .current-menu-ancestor > a,
+    #nav ul.menu > .current_page_item > a, 
+    #nav ul.menu > .current_page_ancestor > a, 
+    #nav ul.menu > .current-menu-item > a, 
+    #nav ul.menu > .current-menu-ancestor > a,
     #nav .menu li a{
         border-bottom: 1px solid #f4f4f4;
     }
@@ -2562,24 +2562,24 @@ h2:hover a.anchor{
     #nav .menu li:hover ul{
         margin-left: 0;
     }
-    #nav .menu > ul > li:last-child,
-    #nav .menu > ul > li:last-child:hover{
+    #nav ul.menu > li:last-child,
+    #nav ul.menu > li:last-child:hover{
         margin: 10px 0 0;
         border: 0 none;
     }
-    #nav .menu > ul > li:last-child a,
-    #nav .menu > ul > li:last-child:hover a{
+    #nav ul.menu > li:last-child a,
+    #nav ul.menu > li:last-child:hover a{
         border-radius: 3px;
         border: 1px solid #444;
         text-align: center;
     }
-    #nav .menu > ul > li.current_page_item:last-child, 
-    #nav .menu > ul > li.current_menu_item:last-child{
+    #nav ul.menu > li.current_page_item:last-child, 
+    #nav ul.menu > li.current_menu_item:last-child{
         border: 0 none;
     }
-    #nav .menu > ul > li.current_page_item:last-child a,
-    #nav .menu > ul > li.current_menu_item:last-child a,
-    #nav .menu > ul > li:last-child:hover a{
+    #nav ul.menu > li.current_page_item:last-child a,
+    #nav ul.menu > li.current_menu_item:last-child a,
+    #nav ul.menu > li:last-child:hover a{
         border: 1px solid #c00;
     }
     #nav .menu .menu-item-has-children:after{
@@ -2598,8 +2598,8 @@ h2:hover a.anchor{
         display: none;
     }
     #nav .menu li a:hover,
-    #nav .menu > ul > .current_page_item > a,
-    #nav .menu > ul > .current-menu-item > a{
+    #nav ul.menu > .current_page_item > a,
+    #nav ul.menu > .current-menu-item > a{
         border-color: #fff;
         color: #fff;
         background: #c00;
