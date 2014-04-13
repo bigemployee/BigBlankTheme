@@ -9,6 +9,9 @@ get_header();
     <div id="main" role="main">
         <?php while (have_posts()) : the_post(); ?>
             <article id="content" <?php post_class(); ?>>
+                <?php
+                bigblank_post_thumbnail();
+                ?>
                 <div class="entry-content">
                     <?php the_content(); ?>
                     <?php edit_post_link(__('Edit', 'bigblank')); ?>
