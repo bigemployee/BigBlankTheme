@@ -803,7 +803,7 @@ figcaption {
     -webkit-box-sizing: border-box;
     -moz-box-sizing: border-box;
     box-sizing: border-box;
-    font-size: 90%;
+    font-size: 0.9em;
     font-style: italic;
     line-height: 1.5;
     clear: both;
@@ -1308,7 +1308,25 @@ a.post-thumbnail:hover {
     display: block;
     margin: 0 auto;
 }
-
+p.post-thumbnail-description{
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    background: #000;
+    opacity: 0.75;
+    color: #ccc;
+    margin-bottom: 0;
+    padding: 5px 10px;
+    font-size: 0.7em;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+p.post-thumbnail-description a{
+    color: #fff;
+    border-bottom: 1px dotted #666;
+    text-decoration: none;
+}
 
 /**
  * 6.2 Entry Header
@@ -1351,7 +1369,7 @@ a.post-thumbnail:hover {
 .entry-meta {
     clear: both;
     color: #777;
-    font-size: 80%;
+    font-size: 0.8em;
     line-height: 1.3333333333;
     text-transform: capitalize;
 }
@@ -1499,7 +1517,7 @@ a.post-thumbnail:hover {
 
 .entry-content .post-edit-link {
     margin: 0 auto 1.5em;
-    font-size: 80%;
+    font-size: 0.8em;
     font-weight: 400;
     color: #777;
     text-transform: uppercase;
@@ -1565,7 +1583,7 @@ a.post-thumbnail:hover {
 .page-links a,
 .page-links > span {
     display: inline-block;
-    font-size: 80%;
+    font-size: 0.8em;
     font-weight: 700;
     margin: 0 1px 2px 0;
     padding: 7px 16px;
@@ -1823,7 +1841,7 @@ h2:hover a.anchor{
 }
 .post-navigation a{
     color: #222;
-    font-size: 80%;
+    font-size: 0.8em;
     font-weight: 700;
     text-transform: none;
 }
@@ -1841,7 +1859,7 @@ h2:hover a.anchor{
 }
 .paging-navigation .page-numbers {
     display: inline-block;
-    font-size: 80%;
+    font-size: 0.8em;
     font-weight: 700;
     margin-right: 1px;
     padding: 7px 16px;
@@ -1923,7 +1941,7 @@ h2:hover a.anchor{
 .author-description h2{
     float: left;
     margin: -62px 0 0 0;
-    padding-left: 80px;
+    padding-left: 75px;
     -webkit-box-sizing: border-box;
     -moz-box-sizing: border-box;
     box-sizing: border-box;
@@ -2025,7 +2043,7 @@ h2:hover a.anchor{
 #comment-list .comment-reply-login{
     float: right;
     margin-top: -38px;
-    font-size: 85%;
+    font-size: 0.8em;
     padding: 4px 10px;
     display: none;
 }
@@ -2095,7 +2113,7 @@ h2:hover a.anchor{
 }
 .comment-metadata time,
 #comment-list .post-edit-link{
-    font-size: 80%;
+    font-size: 0.8em;
     color: #777;
 }
 #comment-list .post-edit-link{
@@ -2119,7 +2137,7 @@ h2:hover a.anchor{
     background: #e4f5ff;
 }
 #allowed_tags{
-    font-size: 80%;
+    font-size: 0.8em;
 }
 #allowed_tags code{
     color: #333;
@@ -2351,7 +2369,7 @@ h2:hover a.anchor{
     margin-bottom: 1.5em;
 }
 #site-info{
-    font-size: 80%;
+    font-size: 0.8em;
 }
 #footer-nav ul{
     display: inline-block;
@@ -2603,6 +2621,9 @@ h2:hover a.anchor{
         border-color: #fff;
         color: #fff;
         background: #c00;
+    }
+    p.post-thumbnail-description{
+        position: relative;
     }
 }
 
