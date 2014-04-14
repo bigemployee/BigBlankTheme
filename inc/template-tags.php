@@ -256,6 +256,7 @@ function bigblank_post_thumbnail() {
         ?>
         <div class="post-thumbnail">
             <?php the_post_thumbnail('post-thumbnail', 'itemprop=image'); ?>
+            <p class="post-thumbnail-description"><?php echo get_post( get_post_thumbnail_id())->post_content; ?></p>
         </div>
     <?php else : ?>
         <a class="post-thumbnail" href="<?php the_permalink(); ?>">

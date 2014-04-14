@@ -1327,6 +1327,9 @@ p.post-thumbnail-description a{
     border-bottom: 1px dotted #666;
     text-decoration: none;
 }
+p.post-thumbnail-description a:hover{
+    border-bottom: 1px solid #ccc;
+}
 
 /**
  * 6.2 Entry Header
