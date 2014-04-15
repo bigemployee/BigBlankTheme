@@ -68,16 +68,15 @@ function bigblank_rewrite_flush() {
 
 add_action('after_switch_theme', 'bigblank_rewrite_flush');
 
+function bigblank_print($title = '', $before = '', $after = '', $echo = true) {
 
-function bigblank_print($title='', $before = '', $after = '', $echo = true) {
+    if (strlen($title) == 0)
+        return;
 
-	if ( strlen($title) == 0 )
-		return;
+    $title = $before . $title . $after;
 
-	$title = $before . $title . $after;
-
-	if ( $echo )
-		echo $title;
-	else
-		return $title;
+    if ($echo)
+        echo $title;
+    else
+        return $title;
 }
