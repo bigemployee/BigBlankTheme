@@ -29,6 +29,7 @@ function bigblank_theme_options_init() {
     add_settings_field('contact-address', __('Address', 'bigblank'), 'bigblank_settings_field_address', 'theme_options', 'contact', array('label_for' => 'contact-address'));
     add_settings_field('social-twitter', __('Twitter', 'bigblank'), 'bigblank_settings_field_twitter', 'theme_options', 'social', array('label_for' => 'social-twitter'));
     add_settings_field('social-facebook', __('Facebook', 'bigblank'), 'bigblank_settings_field_facebook', 'theme_options', 'social', array('label_for' => 'social-facebook'));
+    add_settings_field('social-googleplus', __('Google+', 'bigblank'), 'bigblank_settings_field_googleplus', 'theme_options', 'social', array('label_for' => 'social-googleplus'));
     add_settings_field('social-instagram', __('Instagram', 'bigblank'), 'bigblank_settings_field_instagram', 'theme_options', 'social', array('label_for' => 'social-instagram'));
     add_settings_field('social-youtube', __('Youtube', 'bigblank'), 'bigblank_settings_field_youtube', 'theme_options', 'social', array('label_for' => 'social-youtube'));
     add_settings_field('social-pinterest', __('Pinterest', 'bigblank'), 'bigblank_settings_field_pinterest', 'theme_options', 'social', array('label_for' => 'social-pinterest'));
@@ -128,6 +129,7 @@ function bigblank_get_default_theme_options() {
         'address' => '',
         'twitter' => '',
         'facebook' => '',
+        'googleplus' => '',
         'instagram' => '',
         'youtube' => '',
         'pinterest' => '',
@@ -185,6 +187,16 @@ function bigblank_settings_field_facebook() {
     $options = bigblank_get_theme_options();
     ?>
     <input type="text" class="large-text" id="social-facebook" name="bigblank_theme_options[facebook]" value="<?php echo esc_attr($options['facebook']); ?>" />
+    <?php
+}
+
+/**
+ * render the google+ settings
+ */
+function bigblank_settings_field_googleplus() {
+    $options = bigblank_get_theme_options();
+    ?>
+    <input type="text" class="large-text" id="social-googleplus" name="bigblank_theme_options[googleplus]" value="<?php echo esc_attr($options['googleplus']); ?>" />
     <?php
 }
 
@@ -344,6 +356,9 @@ function bigblank_theme_options_validate($input) {
     }
     if (isset($input['facebook'])) {
         $output['facebook'] = $input['facebook'];
+    }
+    if (isset($input['googleplus'])) {
+        $output['googleplus'] = $input['googleplus'];
     }
     if (isset($input['instagram'])) {
         $output['instagram'] = $input['instagram'];

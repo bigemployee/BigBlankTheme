@@ -74,6 +74,16 @@ function bigblank_customize_register($wp_customize) {
         'section' => 'social',
         'settings' => 'bigblank_theme_options[facebook]',
     ));
+    // google+
+    $wp_customize->add_setting('bigblank_theme_options[googleplus]', array(
+        'type' => 'option',
+        'default' => $defaults['googleplus'],
+    ));
+    $wp_customize->add_control('bigblank_theme_options[googleplus]', array(
+        'label' => __('Google+', 'bigblank'),
+        'section' => 'social',
+        'settings' => 'bigblank_theme_options[googleplus]',
+    ));
     // instagram
     $wp_customize->add_setting('bigblank_theme_options[instagram]', array(
         'type' => 'option',

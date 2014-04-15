@@ -2430,6 +2430,9 @@ h2:hover a.anchor{
 .social-media .fa-twitter:hover{
     background: #00aced;
 }
+.social-media .fa-google-plus:hover{
+    background: #dd4b39;
+}
 .social-media .fa-instagram:hover{
     background: #517fa4;
 }
