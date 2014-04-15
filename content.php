@@ -47,6 +47,7 @@
         </div><!-- .entry-content -->
     <?php endif; ?>
     <footer class="entry-meta">
+        <?php bigblank_share_post(get_permalink(), get_the_title()); ?>
         <?php if (in_array('category', get_object_taxonomies(get_post_type())) && bigblank_categorized_blog()) : ?>
             <span class="entry-categories"><?php echo get_the_category_list(_x(', ', 'Used between list items, there is a space after the comma.', 'bigblank')); ?></span>
             <?php

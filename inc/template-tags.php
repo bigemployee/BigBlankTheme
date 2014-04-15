@@ -403,3 +403,31 @@ function bigblank_comments_open($open, $post_id) {
 }
 
 add_filter('comments_open', 'bigblank_comments_open', 10, 2);
+
+
+/**
+ * Social Media Share Buttons Template Inspired by Ghost Kasper Theme
+ * @param string    $url    link to share
+ * @param string    $title  the post title to be shared
+ * @link https://github.com/rosario/kasper
+ */
+
+function bigblank_share_post($url, $title) {
+?>
+    <section class="share">
+        <h5>Share this post</h5>
+        <a class="fa fa-twitter fa-2x" href="http://twitter.com/share?text=<?php echo urlencode($title) ?>&amp;url=<?php echo urlencode($url) ?>"
+            onclick="window.open(this.href, 'twitter-share', 'width=550,height=235');return false;">
+            <span class="screen-reader-text">Twitter</span>
+        </a>
+        <a class="fa fa-facebook-square fa-2x" href="https://www.facebook.com/sharer/sharer.php?u=<?php echo urlencode($url) ?>"
+            onclick="window.open(this.href, 'facebook-share','width=580,height=296');return false;">
+            <span class="screen-reader-text">Facebook</span>
+        </a>
+        <a class="fa fa-google-plus-square fa-2x" href="https://plus.google.com/share?url=<?php echo urlencode($url) ?>"
+           onclick="window.open(this.href, 'google-plus-share', 'width=490,height=530');return false;">
+            <span class="screen-reader-text">Google+</span>
+        </a>
+    </section>
+<?php
+}
