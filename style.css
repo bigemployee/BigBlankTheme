@@ -1119,7 +1119,7 @@ figure.alignright figcaption{
     -moz-osx-font-smoothing: grayscale;
 }
 #nav .menu li:hover li:hover a,
-#nav .menu ul > li.current-menu-parent > ul > li.current-menu-item a{
+#nav .menu li.current-menu-parent > ul > li.current-menu-item a{
     color: #fff;
     background: #c00;
 }
@@ -1175,7 +1175,6 @@ figure.alignright figcaption{
 /* For Home Demo testing */
 #home .entry-content > .fluidvids{
     width: 1440px;
-    height: 603px;
     max-width: 100% !important;
 }
 
@@ -2541,7 +2540,7 @@ h2:hover a.anchor{
     #nav .menu{
         display: none;
     }
-    #nav.toggled-on #nav .menu{
+    #nav.toggled-on .menu{
         display: block;
     }
     #nav .menu li,
