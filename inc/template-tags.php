@@ -256,11 +256,18 @@ function bigblank_post_thumbnail() {
         ?>
         <div class="post-thumbnail">
             <?php the_post_thumbnail('post-thumbnail', 'itemprop=image'); ?>
-            <p class="post-thumbnail-description"><?php echo get_post( get_post_thumbnail_id())->post_content; ?></p>
+            <?php
+            $thumb_description = get_post(get_post_thumbnail_id())->post_content;
+            if (strlen($thumb_description) !== 0):
+                ?>
+                <p class="post-thumbnail-description"><?php echo get_post(get_post_thumbnail_id())->post_content; ?></p>
+                <?php
+            endif;
+            ?>
         </div>
-    <?php else : ?>
+        <?php else : ?>
         <a class="post-thumbnail" href="<?php the_permalink(); ?>">
-            <?php the_post_thumbnail('post-thumbnail', 'itemprop=image'); ?>
+        <?php the_post_thumbnail('post-thumbnail', 'itemprop=image'); ?>
         </a>
     <?php
     endif; // End is_singular()
@@ -290,7 +297,7 @@ function bigblank_layout_metabox($post) {
                 <input type="radio" name="bigblank_post_layout"
                        value="<?php echo esc_attr($layout['value']); ?>" <?php checked($post_layout, $layout['value']); ?> />
                 <span>
-                    <?php echo $layout['label']; ?>
+        <?php echo $layout['label']; ?>
                     <br />
                     <img src="<?php echo esc_url($layout['thumbnail']); ?>" width="136" height="122" alt="" />
                 </span>
