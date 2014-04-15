@@ -72,9 +72,7 @@ function bigblank_print($title = '', $before = '', $after = '', $echo = true) {
 
     if (strlen($title) == 0)
         return;
-
     $title = $before . $title . $after;
-
     if ($echo)
         echo $title;
     else
