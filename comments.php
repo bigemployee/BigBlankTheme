@@ -22,9 +22,9 @@ if (post_password_required()) {
         </h2>
         <?php if (get_comment_pages_count() > 1 && get_option('page_comments')) : ?>
             <nav id="comment-nav-above" class="navigation comment-navigation" role="navigation">
-                <h1 class="screen-reader-text"><?php _e('Comment navigation', 'bigblank'); ?></h1>
-                <div class="nav-previous"><?php previous_comments_link(__('&larr; Older Comments', 'bigblank')); ?></div>
-                <div class="nav-next"><?php next_comments_link(__('Newer Comments &rarr;', 'bigblank')); ?></div>
+                <h3 class="screen-reader-text"><?php _e('Comment navigation', 'bigblank'); ?></h3>
+                <span class="nav-prev"><?php previous_comments_link(__('&larr; Older Comments', 'bigblank')); ?></span>
+                <span class="nav-next"><?php next_comments_link(__('Newer Comments &rarr;', 'bigblank')); ?></span>
             </nav><!-- #comment-nav-above -->
         <?php endif; // Check for comment navigation.  ?>
         <ol id="comment-list" class="comment-list">
@@ -32,16 +32,16 @@ if (post_password_required()) {
             wp_list_comments(array(
                 'style' => 'ol',
                 'type' => 'all', /* Type of comments to list. Default 'all'. Accepts 'all', 'comment', 'pingback', 'trackback', 'pings'. */
-                'short_ping' => true,
+//                'short_ping' => true,
                 'avatar_size' => 128,
             ));
             ?>
         </ol><!-- .comment-list -->
         <?php if (get_comment_pages_count() > 1 && get_option('page_comments')) : ?>
             <nav id="comment-nav-below" class="navigation comment-navigation" role="navigation">
-                <h1 class="screen-reader-text"><?php _e('Comment navigation', 'bigblank'); ?></h1>
-                <div class="nav-previous"><?php previous_comments_link(__('&larr; Older Comments', 'bigblank')); ?></div>
-                <div class="nav-next"><?php next_comments_link(__('Newer Comments &rarr;', 'bigblank')); ?></div>
+                <h3 class="screen-reader-text"><?php _e('Comment navigation', 'bigblank'); ?></h3>
+                <span class="nav-prev"><?php previous_comments_link(__('&larr; Older Comments', 'bigblank')); ?></span>
+                <span class="nav-next"><?php next_comments_link(__('Newer Comments &rarr;', 'bigblank')); ?></span>
             </nav><!-- #comment-nav-below -->
         <?php endif; // Check for comment navigation.  ?>
         <?php if (!comments_open()) : ?>

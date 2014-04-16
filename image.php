@@ -46,8 +46,8 @@ while (have_posts()) : the_post();
     </article><!-- #post-## -->
     <nav id="image-navigation" class="navigation image-navigation">
         <div class="nav-links">
-            <?php previous_image_link(false, '<div class="previous-image">' . __('Previous Image', 'bigblank') . '</div>'); ?>
-            <?php next_image_link(false, '<div class="next-image">' . __('Next Image', 'bigblank') . '</div>'); ?>
+            <?php previous_image_link(false, '<span class="previous-image">' . __('Previous Image', 'bigblank') . '</span>'); ?>
+            <?php next_image_link(false, '<span class="next-image">' . __('Next Image', 'bigblank') . '</span>'); ?>
         </div><!-- .nav-links -->
     </nav><!-- #image-navigation -->
     <?php comments_template(); ?>

@@ -1399,6 +1399,7 @@ p.post-thumbnail-description a:hover{
 .entry-date:before,
 .entry-comments:before,
 .post-edit-link:before,
+.comment-edit-link:before,
 .entry-meta .author:before,
 .parent-post-link:before,
 .full-size-link:before,
@@ -1425,7 +1426,8 @@ p.post-thumbnail-description a:hover{
 .entry-comments:before{
     content:"\f075";
 }
-.post-edit-link:before{
+.post-edit-link:before,
+.comment-edit-link:before{
     content:"\f040";
 }
 .entry-meta .author:before{
@@ -1539,22 +1541,10 @@ p.post-thumbnail-description a:hover{
     padding: 8px;
 }
 
-.entry-content .post-edit-link {
+.post-edit-link {
     margin: 0 auto 1.5em;
-    font-size: 0.8em;
-    font-weight: 400;
-    color: #777;
-    text-transform: uppercase;
-    text-decoration: none;
 }
-
-.entry-content .post-edit-link:after{
-    content: ""; 
-    display: table;
-    clear: both;
-}
-
-.entry-content .post-edit-link:hover {
+.post-edit-link:hover {
     color: #c00;
 }
 
@@ -1838,6 +1828,9 @@ h2:hover a.anchor{
     padding: 10px 25px;
     width: 50%;
     float: left;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    -box-sizing: border-box;
 }
 .post-navigation a:last-child,
 .image-navigation .next-image {
@@ -1856,7 +1849,7 @@ h2:hover a.anchor{
 .image-navigation a,
 .post-navigation .meta-nav {
     color: #777;
-    font: 400 1.2em/1.5 'Playfair Display', Georgia, Times, serif;
+    font: 400 1.2rem/1.5 'Playfair Display', Georgia, Times, serif;
     font-style: italic;
     display: block;
 }
@@ -2009,13 +2002,47 @@ h2:hover a.anchor{
 .required {
     color: #c0392b;
 }
-.comment-navigation .nav-next,
-.comment-navigation .nav-previous {
-    display: inline-block;
-    font-weight: 600;
+.comment-navigation {
+    float: left;
+    width: 100%;
+    margin-bottom: 1.5em;
+    -webkit-hyphens: auto;
+    -moz-hyphens:    auto;
+    -ms-hyphens:     auto;
+    hyphens:         auto;
+    word-wrap: break-word;
+    border-top: 1px solid #eee;
+    border-bottom: 1px solid #eee;
 }
-.comment-navigation .nav-previous a {
-    margin-right: 10px;
+.comment-navigation span{
+    width: 50%;
+    float: left;
+}
+.comment-navigation a{
+    float: left;
+    width: 100%;
+    padding: 10px 25px;
+    color: #777;
+    font: 400 1em/1.5 'Playfair Display', Georgia, Times, serif;
+    font-style: italic;
+    text-transform: none;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    -box-sizing: border-box;
+    -webkit-transition: outline 0.2s ease-out;
+    -moz-transition: outline 0.2s ease-out;
+    -ms-transition: outline 0.2s ease-out;
+    transition: outline 0.2s ease-out;
+}
+.comment-navigation span.nav-next,
+.comment-navigation .nav-next a{
+    float: right;
+    text-align: right;
+}
+.comment-navigation a:hover{
+    color: #fff;
+    background: #c00;
+    text-decoration: none;
 }
 
 /* Comments */
@@ -2041,16 +2068,12 @@ h2:hover a.anchor{
 #comment-list ol{
     margin-left: 25px;
 }
-#comment-list article{
+.comment-body{
     float: left;
     width: 100%;
     -webkit-box-sizing: border-box;
     -moz-box-sizing: border-box;
     box-sizing: border-box;    
-}
-#comment-list .comment_content ul li,
-#comment-list .comment_content ol li{
-    list-style-type: inherit;
 }
 #comment-list .avatar,
 .author-avatar .avatar{
@@ -2104,7 +2127,6 @@ h2:hover a.anchor{
 }
 #comment-list .comment-author{
     position: relative;
-    /*margin-top: -35px;*/
 }
 #comment-list .avatar{
     position: absolute;
@@ -2113,8 +2135,7 @@ h2:hover a.anchor{
 .comment-author b{
     float: left;
     margin-left: 70px;
-    height: 26px;
-    margin-top: -26px;
+    margin-top: -1.5em;
     font-weight: 600;
 }
 .comment-metadata{
@@ -2131,17 +2152,16 @@ h2:hover a.anchor{
     /*display: block;*/
 }
 .comment-metadata a,
-.comment-post-edit-link{
+.comment-edit-link{
     text-decoration: none;
     color: #777;
-}
-.comment-metadata time,
-#comment-list .post-edit-link{
     font-size: 0.8em;
-    color: #777;
 }
-#comment-list .post-edit-link{
-    float: right;
+.comment-edit-link{
+    margin-left: 8px;
+}
+.comment-edit-link:hover {
+    color: #c00;
 }
 .comment-content{
     float: left;
@@ -2157,8 +2177,8 @@ h2:hover a.anchor{
     text-align: center;
     border-radius: 5px;
 }
-#comment-list .bypostauthor .comment_content{
-    background: #e4f5ff;
+#comment-list .bypostauthor{
+    background: #f9f9f9;
 }
 #allowed_tags{
     font-size: 0.8em;
@@ -2651,6 +2671,16 @@ h2:hover a.anchor{
     }
     p.post-thumbnail-description{
         position: relative;
+    }
+    .post-navigation a,
+    .image-navigation .previous-image,
+    .image-navigation .next-image,
+    .comment-navigation span{
+        width: 100%;
+    }
+    #comment-list ul, 
+    #comment-list ol {
+        margin-left: 0;
     }
 }
 
