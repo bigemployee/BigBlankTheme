@@ -32,7 +32,7 @@ if (post_password_required()) {
             wp_list_comments(array(
                 'style' => 'ol',
                 'type' => 'all', /* Type of comments to list. Default 'all'. Accepts 'all', 'comment', 'pingback', 'trackback', 'pings'. */
-//                'short_ping' => true,
+                'short_ping' => true,
                 'avatar_size' => 128,
             ));
             ?>
