@@ -19,7 +19,10 @@
             'link_before' => '<span>',
             'link_after' => '</span>',
         ));
-        edit_post_link(__('Edit', 'bigblank'));
         ?>
     </div><!-- .entry-content -->
+    <footer class="entry-meta">
+        <?php bigblank_share_post(get_permalink(), get_the_title()); ?>
+        <?php edit_post_link(__('Edit', 'bigblank')); ?>
+    </footer><!-- .entry-meta -->
 </article><!-- #post-## -->
