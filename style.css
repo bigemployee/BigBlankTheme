@@ -1033,7 +1033,7 @@ figure.alignright figcaption{
     text-decoration: none;
     -webkit-box-sizing: border-box;
     -moz-box-sizing: border-box;
-    -box-sizing: border-box;
+    box-sizing: border-box;
 }
 #nav .menu li a:hover,
 #nav .menu li a:focus,
@@ -1813,7 +1813,7 @@ h2:hover a.anchor{
     transition: outline 0.2s ease-out;
     -webkit-box-sizing: border-box;
     -moz-box-sizing: border-box;
-    -box-sizing: border-box;
+    box-sizing: border-box;
 }
 .post-navigation,
 .image-navigation {
@@ -1828,7 +1828,7 @@ h2:hover a.anchor{
     float: left;
     -webkit-box-sizing: border-box;
     -moz-box-sizing: border-box;
-    -box-sizing: border-box;
+    box-sizing: border-box;
 }
 .post-navigation a:last-child,
 .image-navigation .next-image {
@@ -2005,7 +2005,7 @@ h2:hover a.anchor{
     text-transform: none;
     -webkit-box-sizing: border-box;
     -moz-box-sizing: border-box;
-    -box-sizing: border-box;
+    box-sizing: border-box;
     -webkit-transition: outline 0.2s ease-out;
     -moz-transition: outline 0.2s ease-out;
     -ms-transition: outline 0.2s ease-out;

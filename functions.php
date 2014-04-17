@@ -138,8 +138,9 @@ add_action('init', 'bigblank_head_cleanup');
  * @return string New URL query string.
  */
 function bigblank_remove_wp_ver_css_js($src) {
-    if (strpos($src, 'ver='))
+    if (strpos($src, 'ver=')){
         $src = remove_query_arg('ver', $src);
+    }
     return $src;
 }
 
@@ -158,8 +159,8 @@ function bigblank_scripts() {
     // Load our main stylesheet.
     wp_enqueue_style('style', get_stylesheet_uri());
     // Load the Internet Explorer specific stylesheet.
-    wp_enqueue_style('ie', get_template_directory_uri() . '/css/ie.css', false, '20140222');
-    wp_style_add_data('ie', 'conditional', 'lt IE 9');
+    wp_enqueue_style('ie-styles', get_template_directory_uri() . '/css/ie.css', false, '20140416');
+    wp_style_add_data('ie-styles', 'conditional', 'lt IE 9');
 
     // jQuery.js
     // 1. load the latest jQuery from theme library
@@ -171,8 +172,6 @@ function bigblank_scripts() {
     //    for some plugins to not work since they do not register jQuery as dependancy 
     //    wp_register_script('jquery', false, false, false, true);
     // 4. or do nothing and jQuery will load from current WordPress install
-    $options = bigblank_get_theme_options();
-    $comments = $options['page_comments'];
     if (is_singular() && comments_open() && get_option('thread_comments')) {
         wp_enqueue_script('comment-reply', false, false, false, true);
     }
