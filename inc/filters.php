@@ -1,4 +1,5 @@
 <?php
+
 /**
  * Filters are functions that WordPress passes data through, at certain points 
  * in execution, just before taking some action with the data (such as adding 
@@ -110,6 +111,7 @@ function bigblank_body_classes($classes) {
     $classes[] = 'hfeed site';
     return $classes;
 }
+
 add_filter('body_class', 'bigblank_body_classes');
 
 /**
@@ -200,8 +202,8 @@ function bigblank_remove_ptags_around_embeds($content) {
     $content = preg_replace('/<p.*?>\s?(<iframe .*>*.<\/iframe>)\s*<\/p>/iU', '\1', $content);
     return $content;
 }
-add_filter('the_content', 'bigblank_remove_ptags_around_embeds');
 
+add_filter('the_content', 'bigblank_remove_ptags_around_embeds');
 
 /**
  * Improves the caption shortcode with HTML5 figure & figcaption; microdata & wai-aria attributes
@@ -213,25 +215,41 @@ add_filter('the_content', 'bigblank_remove_ptags_around_embeds');
  * @link http://codex.wordpress.org/Plugin_API/Filter_Reference/img_caption_shortcode
  * @link http://joostkiens.com/improving-wp-caption-shortcode/
  */
-function bigblank_img_caption_shortcode_filter($val, $attr, $content = null)
-{
-	extract(shortcode_atts(array(
-		'id'      => '',
-		'align'   => 'aligncenter',
-		'width'   => '',
-		'caption' => ''
-	), $attr));
-	
-	// No caption, no dice... But why width? 
-	if ( 1 > (int) $width || empty($caption) )
-		return $val;
- 
-	if ( $id )
-		$id = esc_attr( $id );
-     
-	// Add itemprop="contentURL" to image - Ugly hack
-	$content = str_replace('<img', '<img itemprop="contentURL"', $content);
+function bigblank_img_caption_shortcode_filter($val, $attr, $content = null) {
+    extract(shortcode_atts(array(
+        'id' => '',
+        'align' => 'aligncenter',
+        'width' => '',
+        'caption' => ''
+                    ), $attr));
 
-	return '<figure id="' . $id . '" aria-describedby="figcaption_' . $id . '" class="wp-caption ' . esc_attr($align) . '">' . do_shortcode( $content ) . '<figcaption id="figcaption_'. $id . '" class="wp-caption-text" itemprop="description" style="width: ' . (0 + (int) $width) . 'px">' . $caption . '</figcaption></figure>';
+    // No caption, no dice... But why width? 
+    if (1 > (int) $width || empty($caption))
+        return $val;
+
+    if ($id)
+        $id = esc_attr($id);
+
+    // Add itemprop="contentURL" to image - Ugly hack
+    $content = str_replace('<img', '<img itemprop="contentURL"', $content);
+
+    return '<figure id="' . $id . '" aria-describedby="figcaption_' . $id . '" class="wp-caption ' . esc_attr($align) . '">' . do_shortcode($content) . '<figcaption id="figcaption_' . $id . '" class="wp-caption-text" itemprop="description" style="width: ' . (0 + (int) $width) . 'px">' . $caption . '</figcaption></figure>';
 }
-add_filter( 'img_caption_shortcode', 'bigblank_img_caption_shortcode_filter', 10, 3 );
+
+add_filter('img_caption_shortcode', 'bigblank_img_caption_shortcode_filter', 10, 3);
+
+/**
+ * Remove the text - 'You may use these <abbr title="HyperText Markup
+ * Language">HTML</abbr> tags ...'
+ * from below the comment entry box.
+ * 
+ * @return array    Returns the $defaults array.
+ * @link http://wordpress.org/support/topic/remove-html-tags-and-attributes?replies=35#post-2429820
+ */
+
+function bigblank_remove_comment_allowed_tags_notes($defaults) {
+    $defaults['comment_notes_after'] = '';
+    return $defaults;
+}
+
+add_filter('comment_form_defaults', 'bigblank_remove_comment_allowed_tags_notes');
