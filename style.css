@@ -1233,8 +1233,9 @@ figure.alignright figcaption{
 .page-content {
     margin-bottom: 48px;
 }
-.post .entry-content > p:first-of-type:first-letter,
-.page .entry-content > p:first-of-type:first-letter{
+/*.page .entry-content > p:first-of-type:first-letter,*/
+p.dropcap:first-of-type:first-letter,
+.post .entry-content > p:first-of-type:first-letter{
     font-size: 3.5em;
     line-height: 0.75em;
     text-transform: uppercase;
