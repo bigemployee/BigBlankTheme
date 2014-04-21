@@ -771,9 +771,10 @@ figure.alignright img{
 .site-content blockquote.alignright {
     width: 30%;
     margin-left: 20%;
+    margin-right: 1em;
 }
 .site-content blockquote.alignright {
-    margin-left: 14px;
+    margin-left: 1em;
     margin-right: 20%;
 }
 .content-sidebar blockquote.alignleft,
@@ -1523,7 +1524,7 @@ p.post-thumbnail-description a:hover{
 
 .entry-content table,
 .comment-content table {
-    font-size: 14px;
+    font-size: 0.8em;
     line-height: 1.2857142857;
     margin-bottom: 24px;
 }

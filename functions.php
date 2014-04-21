@@ -1,4 +1,5 @@
 <?php
+
 /**
  * Big Blank functions and definitions
  *
@@ -138,7 +139,7 @@ add_action('init', 'bigblank_head_cleanup');
  * @return string New URL query string.
  */
 function bigblank_remove_wp_ver_css_js($src) {
-    if (strpos($src, 'ver=')){
+    if (strpos($src, 'ver=')) {
         $src = remove_query_arg('ver', $src);
     }
     return $src;
@@ -197,3 +198,6 @@ require_once(get_template_directory() . '/inc/template-tags.php');
 
 // Add Theme Customizer functionality.
 require_once(get_template_directory() . '/inc/admin-customizer.php');
+
+// Modify TinyMCE to accomodate custom styles
+require_once(get_template_directory() . '/inc/admin-editor.php');
