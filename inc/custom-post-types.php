@@ -11,19 +11,19 @@
  */
 function bigblank_register_post_type() {
     $teamLabels = array(
-        'name' => 'Team',
-        'singular_name' => 'Team',
-        'add_new' => 'Add New',
-        'add_new_item' => 'Add New Profile',
-        'edit_item' => 'Edit Profile',
-        'new_item' => 'New Profile',
-        'all_items' => 'All Profiles',
-        'view_item' => 'View Profile',
-        'search_items' => 'Search Profiles',
-        'not_found' => 'No profile was found',
-        'not_found_in_trash' => 'No profile was found in Trash',
+        'name' => __('Team', 'bigblank'),
+        'singular_name' => __('Team', 'bigblank'),
+        'add_new' => __('Add New', 'bigblank'),
+        'add_new_item' => __('Add New Profile', 'bigblank'),
+        'edit_item' => __('Edit Profile', 'bigblank'),
+        'new_item' => __('New Profile', 'bigblank'),
+        'all_items' => __('All Profiles', 'bigblank'),
+        'view_item' => __('View Profile', 'bigblank'),
+        'search_items' => __('Search Profiles', 'bigblank'),
+        'not_found' => __('No profile was found', 'bigblank'),
+        'not_found_in_trash' => __('No profile was found in Trash', 'bigblank'),
         'parent_item_colon' => '',
-        'menu_name' => 'Team'
+        'menu_name' => __('Team', 'bigblank')
     );
 
     $teamArgs = array(
