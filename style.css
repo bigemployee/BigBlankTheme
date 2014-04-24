@@ -1791,6 +1791,10 @@ h2:hover a.anchor{
 .profile .entry-header h2{
     margin-top: 0;
 }
+.department{}
+.department:before{
+    content:"\f08a";
+}
 
 
 /**

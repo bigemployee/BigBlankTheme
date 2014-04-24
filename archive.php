@@ -16,22 +16,25 @@
 get_header();
 get_header('layout');
 ?>
-        <?php if (have_posts()) : ?>
-            <header class="page-header">
-                <h1 class="page-title">
-                    <?php
-                    if (is_day()) :
-                        printf(__('Daily Archives: %s', 'bigblank'), get_the_date());
-                    elseif (is_month()) :
-                        printf(__('Monthly Archives: %s', 'bigblank'), get_the_date(_x('F Y', 'monthly archives date format', 'bigblank')));
-                    elseif (is_year()) :
-                        printf(__('Yearly Archives: %s', 'bigblank'), get_the_date(_x('Y', 'yearly archives date format', 'bigblank')));
-                    else :
-                        _e('Archives', 'bigblank');
-                    endif;
-                    ?>
-                </h1>
-            </header><!-- .page-header -->
+<?php if (have_posts()) : ?>
+    <header class="page-header">
+        <h1 class="page-title">
+            <?php
+            if (is_day()) {
+                printf(__('Daily Archives: %s', 'bigblank'), get_the_date());
+            } elseif (is_month()) {
+                printf(__('Monthly Archives: %s', 'bigblank'), get_the_date(_x('F Y', 'monthly archives date format', 'bigblank')));
+            } elseif (is_year()) {
+                printf(__('Yearly Archives: %s', 'bigblank'), get_the_date(_x('Y', 'yearly archives date format', 'bigblank')));
+            } elseif (is_tax()) {
+                $term = get_term_by( 'slug', get_query_var( 'term' ), get_query_var( 'taxonomy' ) );
+                echo $term->name;
+            } else {
+                _e('Archives', 'bigblank');
+            }
+            ?>
+        </h1>
+    </header><!-- .page-header -->
             <?php
             // Start the Loop.
             while (have_posts()) : the_post();

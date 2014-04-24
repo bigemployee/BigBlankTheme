@@ -187,8 +187,9 @@ require_once(get_template_directory() . '/inc/widget-title.php');
 require_once(get_template_directory() . '/inc/widget-call-to-action.php');
 require_once(get_template_directory() . '/inc/widgets-sidebars.php');
 
-// Custom post types
+// Custom post types & Taxanomies
 require_once(get_template_directory() . '/inc/custom-post-types.php');
+require_once(get_template_directory() . '/inc/custom-taxanomies.php');
 
 // Filters and functions to manipulate content
 require_once(get_template_directory() . '/inc/filters.php');

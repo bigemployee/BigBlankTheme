@@ -22,7 +22,7 @@
             'post_type' => 'team',
             'posts_per_page' => -1,
             'order' => 'ASC',
-            'paged'=>$paged
+            'paged' => $paged
         ));
         ?>
         <?php if ($wp_query->have_posts()) : ?>
@@ -31,7 +31,7 @@
                     <?php $slug = sanitize_title_with_dashes(get_the_title()); ?>
                     <?php $title = get_post_meta(get_the_ID(), 'title', true); ?>
                     <?php $facebook = get_post_meta(get_the_ID(), 'facebook', true); ?>
-                    <h2 id="<?php echo $slug; ?>"><a class="anchor" href="#<?php echo $slug; ?>"><i class="fa fa-link"></i></a><?php the_title(); ?> <?php bigblank_print($title, '<em>(',')</em>'); ?></h2>
+                    <h2 id="<?php echo $slug; ?>"><a class="anchor" href="#<?php echo $slug; ?>"><i class="fa fa-link"></i></a><?php the_title(); ?> <?php bigblank_print($title, '<em>(', ')</em>'); ?></h2>
                     <?php if (has_post_thumbnail()): ?>
                         <?php the_post_thumbnail('medium', 'class=alignright portrait'); ?>
                     <?php endif ?>
@@ -40,6 +40,11 @@
                     $more = 0;
                     ?>
                     <?php the_content('Get to know ' . get_the_title()); ?>
+                    <?php if (has_term('', 'department')) : ?>
+                    <span class="entry-meta entry-categories department">
+                            <?php echo get_the_term_list($post->ID, 'department', '', ', ', ''); ?>
+                    </span>
+                    <?php endif; ?>
                 </div>
                 <?php edit_post_link(__('Edit', 'bigblank')); ?>
             <?php endwhile; ?>

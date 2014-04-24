@@ -26,6 +26,11 @@
         <?php bigblank_print($instagram, '<a href="', '"><i class="fa fa-instagram"></i></a>'); ?>
         <?php bigblank_print($youtube, '<a href="', '"><i class="fa fa-youtube-play"></i></a>'); ?>
         <?php bigblank_print($pinterest, '<a href="', '"><i class="fa fa-pinterest"></i></a>'); ?>
+        <?php if (has_term('', 'department')) : ?>
+        <span class="entry-meta entry-categories department">
+                <?php echo get_the_term_list($post->ID, 'department', '', ', ', ''); ?>
+        </span>
+        <?php endif; ?>
     </header>
     <section class="entry-content">
         <?php the_content(); ?>
