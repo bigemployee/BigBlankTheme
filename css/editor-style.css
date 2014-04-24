@@ -13,8 +13,6 @@ Author URI: http://bigemployee.com
  * 1.0 - Typography
  * 2.0 - Repeatable Patterns
  * 3.0 - Content
- * 4.0 - Alignment
- * 6.0 - RTL
  * ----------------------------------------------------------------------------
  */
 
@@ -929,7 +927,7 @@ p.post-thumbnail-description a:hover{
 }
 
 /**
- * 6.4 Entry Content
+ * 3.2 Entry Content
  * -----------------------------------------------------------------------------
  */
 .mceContentBody,
@@ -1027,7 +1025,7 @@ p.post-thumbnail-description a:hover{
 }
 
 /**
- * 6.5 Gallery
+ * 3.3 Gallery
  * -----------------------------------------------------------------------------
  */
 
