@@ -202,3 +202,6 @@ require_once(get_template_directory() . '/inc/admin-customizer.php');
 
 // Modify TinyMCE to accomodate custom styles
 require_once(get_template_directory() . '/inc/admin-editor.php');
+
+// Add Schema.org MicroData to our content
+require_once(get_template_directory() . '/inc/schema.php');

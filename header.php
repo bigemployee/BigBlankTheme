@@ -22,26 +22,15 @@
             <script src="//cdnjs.cloudflare.com/ajax/libs/respond.js/1.4.2/respond.min.js"></script>
         <![endif]-->
     </head>
-    <body <?php body_class(); ?>>
-            <header id="header" class="site-header" role="banner">
-                <?php
-                /**
-                 * Use Logo instead of site title. Also use double the size for 
-                 * logo to look sharp in Retina displays.
-                 */
-                ?>
-                <a id="logo" href="<?php echo home_url(); ?>" rel="home">
-                    <img src="<?php echo get_template_directory_uri(); ?>/images/bigblanktheme_logo.png" alt="<?php bloginfo('name'); ?> logo" width="200" height="29"/>
-                </a>
-                <?php
-                /**
-                 * Use this line to display site title as text, don't foget to comment above lines
-                 * <h1 class="site-title"><a href="<?php echo esc_url(home_url('/')); ?>" rel="home"><?php bloginfo('name'); ?></a></h1>
-                 */
-                ?>
-                <nav id="nav" role="navigation">
-                    <h1 id="menu-toggle"><i class="fa fa-bars"></i><?php _e('Primary Menu', 'bigblank'); ?></h1>
-                    <a class="screen-reader-text skip-link" href="#content"><?php _e('Skip to content', 'bigblank'); ?></a>
-                    <?php bigblank_main_menu(); ?>
-                </nav>
-            </header><!-- #header -->
+    <body <?php body_class(); ?> <?php schema(); ?>>
+        <header id="header" class="site-header" role="banner">
+            <a id="logo" href="<?php echo home_url(); ?>" title="<?php _e('Home', 'bigblank'); ?>" rel="home">
+                <img src="<?php echo get_template_directory_uri(); ?>/images/bigblanktheme_logo.png" alt="<?php bloginfo('name'); ?> logo" width="200" height="29"/>
+                <span><?php bloginfo('name'); ?></span>
+            </a>
+            <nav id="nav" role="navigation">
+                <h1 id="menu-toggle"><i class="fa fa-bars"></i><?php _e('Primary Menu', 'bigblank'); ?></h1>
+                <a class="screen-reader-text skip-link" href="#content"><?php _e('Skip to content', 'bigblank'); ?></a>
+                <?php bigblank_main_menu(); ?>
+            </nav>
+        </header><!-- #header -->
