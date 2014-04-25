@@ -55,11 +55,13 @@ function itemtype() {
  * @param string $itemtype Item Type in camelCase separated with a space.
  */
 function schema($itemprop = '', $itemtype = '') {
-    if (empty($itemprop)) {
+    if ($itemprop && $itemtype) {
+        $schema = itemprop($itemprop) . ' itemscope="" itemtype="http://schema.org/' . $itemtype . '"';
+    } elseif (empty($itemprop)) {
         if (empty($itemtype)) {
             $itemtype = itemtype();
         }
-        $schema .= 'itemscope="" itemtype="http://schema.org/' . $itemtype . '"';
+        $schema = 'itemscope="" itemtype="http://schema.org/' . $itemtype . '"';
     } else {
         $schema = itemprop($itemprop);
     }
