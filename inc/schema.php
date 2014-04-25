@@ -59,7 +59,7 @@ function schema($itemprop = '', $itemtype = '') {
         if (empty($itemtype)) {
             $itemtype = itemtype();
         }
-        $schema = 'itemscope="" itemtype="http://schema.org/' . $itemtype.'"';
+        $schema .= 'itemscope="" itemtype="http://schema.org/' . $itemtype . '"';
     } else {
         $schema = itemprop($itemprop);
     }
