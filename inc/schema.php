@@ -35,7 +35,7 @@ function itemtype() {
             $itemtype = 'AboutPage';
         }
     } elseif (is_home() || is_archive()) {
-        $itemtype = 'Blog';
+        $itemtype = 'BlogPosting';
     } elseif (is_search()) {
         $itemtype = 'search';
     } elseif (is_author()) {
