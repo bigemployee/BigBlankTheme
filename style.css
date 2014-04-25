@@ -988,6 +988,7 @@ figure.alignright figcaption{
     width: 200px;
     height: 29px;
     padding: 10px 7px 6px;
+    overflow: hidden;
 }
 
 /**
