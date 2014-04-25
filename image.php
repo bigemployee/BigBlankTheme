@@ -23,7 +23,7 @@ while (have_posts()) : the_post();
             </div><!-- .entry-meta -->
         </header><!-- .entry-header -->
         <div class="entry-content" <?php schema('mainContentOfPage'); ?>>
-            <div class="entry-attachment" <?php schema('', 'ImageObject'); ?>>
+            <div class="entry-attachment" <?php schema(false, 'ImageObject'); ?>>
                 <div class="attachment">
                     <?php bigblank_the_attached_image(); ?>
                 </div><!-- .attachment -->

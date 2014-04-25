@@ -4,14 +4,14 @@
  *
  */
 ?>
-<article id="post-<?php the_ID(); ?>" <?php post_class('profile'); ?> <?php schema('', 'Person'); ?>>
+<article id="post-<?php the_ID(); ?>" <?php post_class('profile'); ?> <?php schema(false, 'Person'); ?>>
     <header class="entry-header">
         <?php if (has_post_thumbnail()): ?>
             <div id="featured-header">
                 <?php the_post_thumbnail('post-thumbnail', 'itemprop=image'); ?>
             </div>
         <?php endif; ?>
-        <?php the_title('<h1 class="entry-title" ' . schema('name') . '>', '</h1>'); ?>
+        <?php the_title('<h1 class="entry-title" ' . schema('name', false, false) . '>', '</h1>'); ?>
         <?php $title = get_post_meta(get_the_ID(), 'title', true); ?>
         <?php $facebook = get_post_meta(get_the_ID(), 'facebook', true); ?>
         <?php $twitter = get_post_meta(get_the_ID(), 'twitter', true); ?>
@@ -19,7 +19,7 @@
         <?php $instagram = get_post_meta(get_the_ID(), 'instagram', true); ?>
         <?php $youtube = get_post_meta(get_the_ID(), 'youtube', true); ?>
         <?php $pinterest = get_post_meta(get_the_ID(), 'pinterest', true); ?>
-        <?php bigblank_print($title, '<h2 ' . schema('jobTitle') . '><em>(', ')</em></h2>'); ?>
+        <?php bigblank_print($title, '<h2 ' . schema('jobTitle', false, false) . '><em>(', ')</em></h2>'); ?>
         <?php bigblank_print($facebook, '<a href="', '"><i class="fa fa-facebook-square"></i></a>'); ?>
         <?php bigblank_print($twitter, '<a href="', '"><i class="fa fa-twitter-square"></i></a>'); ?>
         <?php bigblank_print($google_plus, '<a href="', '"><i class="fa fa-google-plus-square"></i></a>'); ?>

@@ -34,15 +34,11 @@ function itemtype() {
         if (is_page('about')) { /* Change the slug to your about page */
             $itemtype = 'AboutPage';
         }
-    } elseif (is_home() || is_archive()) {
-        $itemtype = 'BlogPosting';
     } elseif (is_search()) {
         $itemtype = 'search';
-    } elseif (is_author()) {
-        $itemtype = 'ProfilePage';
     } elseif (is_search()) {
         $itemtype = 'SearchResultsPage';
-    } elseif (is_single()) {
+    } elseif (is_single() || is_home() || is_archive()) {
         $itemtype = 'BlogPosting';
     } else {
         $itemtype = 'Thing';
@@ -56,7 +52,7 @@ function itemtype() {
  * @param string $itemprop Item Property in camelCase separated with a space.
  * @param string $itemtype Item Type in camelCase separated with a space.
  */
-function schema($itemprop = '', $itemtype = '') {
+function schema($itemprop = '', $itemtype = '', $echo = true) {
     if ($itemprop && $itemtype) {
         $schema = itemprop($itemprop) . ' itemscope="" itemtype="http://schema.org/' . $itemtype . '"';
     } elseif (empty($itemprop)) {
@@ -67,5 +63,10 @@ function schema($itemprop = '', $itemtype = '') {
     } else {
         $schema = itemprop($itemprop);
     }
-    echo $schema;
+
+    if ($echo) {
+        echo $schema;
+    } else {
+        return $schema;
+    }
 }

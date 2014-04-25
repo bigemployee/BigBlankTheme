@@ -10,7 +10,7 @@ get_header('layout');
 ?>
 <?php if (have_posts()) : ?>
     <header class="archive-header">
-        <h1 class="archive-title">
+        <h1 class="archive-title" <?php schema('name'); ?>>
             <?php
             /*
              * Queue the first post, that way we know what author
@@ -24,7 +24,7 @@ get_header('layout');
             ?>
         </h1>
         <?php if (get_the_author_meta('description')) : ?>
-            <div class="author-description"><?php the_author_meta('description'); ?></div>
+            <div class="author-description" <?php schema('description'); ?>><?php the_author_meta('description'); ?></div>
         <?php endif; ?>
     </header><!-- .archive-header -->
     <?php

@@ -195,7 +195,7 @@ if (!function_exists('bigblank_posted_on')) :
      */
     function bigblank_posted_on() {
         // Set up and print post meta information.
-        printf('<a href="%1$s" class="entry-date" rel="bookmark" ' . schema('url') . '><time class="published" datetime="%2$s" ' . schema('datePublished') . '>%3$s</time></a> <a class="author vcard url fn n" href="%4$s" rel="author" ' . schema('author') . '>%5$s</a>', esc_url(get_permalink()), esc_attr(get_the_date('c')), esc_html(get_the_date()), esc_url(get_author_posts_url(get_the_author_meta('ID'))), get_the_author());
+        printf('<a href="%1$s" class="entry-date" rel="bookmark" ' . schema('url', false, false) . '><time class="published" datetime="%2$s" ' . schema('datePublished', false, false) . '>%3$s</time></a> <a class="author vcard url fn n" href="%4$s" rel="author" ' . schema('author', false, false) . '>%5$s</a>', esc_url(get_permalink()), esc_attr(get_the_date('c')), esc_html(get_the_date()), esc_url(get_author_posts_url(get_the_author_meta('ID'))), get_the_author());
     }
 
 endif;

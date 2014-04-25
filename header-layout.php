@@ -5,8 +5,11 @@
  */
 $layout = bigblank_get_layout();
 if (is_home() || is_archive()) {
-    $schema = schema('', 'Blog');
+    $schema = schema(false, 'Blog', false);
+    if (is_author()) {
+        $schema =  schema(false, 'ProfilePage', false);
+    }
 }
 ?>
-<div id="content" class="site-content <?php echo $layout ?>  <?php $schema ?>">
+<div id="content" class="site-content <?php echo $layout; ?>  <?php $schema; ?>">
     <div id="main" role="main">

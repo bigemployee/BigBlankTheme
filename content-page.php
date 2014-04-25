@@ -8,7 +8,7 @@
     <?php
     // Page thumbnail and title.
     bigblank_post_thumbnail();
-    the_title('<header class="entry-header"><h1 class="entry-title" ' . schema('name') . '>', '</h1></header><!-- .entry-header -->');
+    the_title('<header class="entry-header"><h1 class="entry-title" ' . schema('name', false, false) . '>', '</h1></header><!-- .entry-header -->');
     ?>
     <div class="entry-content" <?php schema('mainContentOfPage'); ?>>
         <?php
