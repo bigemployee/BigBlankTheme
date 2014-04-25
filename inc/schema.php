@@ -28,14 +28,16 @@ function itemprop($itemprop = '') {
 function itemtype() {
     if (is_front_page() || is_page() || is_404()) {
         $itemtype = 'WebPage';
+        if (is_page('contact')) { /* Change the slug to your contact page */
+            $itemtype = 'ContactPage';
+        }
+        if (is_page('about')) { /* Change the slug to your about page */
+            $itemtype = 'AboutPage';
+        }
     } elseif (is_home() || is_archive()) {
         $itemtype = 'Blog';
     } elseif (is_search()) {
         $itemtype = 'search';
-    } elseif (is_page('contact')) { /* Change the slug to your contact page */
-        $itemtype = 'ContactPage';
-    } elseif (is_page('about')) { /* Change the slug to your about page */
-        $itemtype = 'AboutPage';
     } elseif (is_author()) {
         $itemtype = 'ProfilePage';
     } elseif (is_search()) {
