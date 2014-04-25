@@ -4,13 +4,13 @@
  *
  */
 ?>
-<article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
+<article id="post-<?php the_ID(); ?>" <?php post_class(); ?> <?php schema(); ?>>
     <?php
     // Page thumbnail and title.
     bigblank_post_thumbnail();
-    the_title('<header class="entry-header"><h1 class="entry-title">', '</h1></header><!-- .entry-header -->');
+    the_title('<header class="entry-header"><h1 class="entry-title" ' . schema('name') . '>', '</h1></header><!-- .entry-header -->');
     ?>
-    <div class="entry-content">
+    <div class="entry-content" <?php schema('mainContentOfPage'); ?>>
         <?php
         the_content();
         edit_post_link(__('Edit', 'bigblank'));
@@ -41,9 +41,9 @@
                     ?>
                     <?php the_content('Get to know ' . get_the_title()); ?>
                     <?php if (has_term('', 'department')) : ?>
-                    <span class="entry-meta entry-categories department">
+                        <span class="entry-meta entry-categories department">
                             <?php echo get_the_term_list($post->ID, 'department', '', ', ', ''); ?>
-                    </span>
+                        </span>
                     <?php endif; ?>
                 </div>
                 <?php edit_post_link(__('Edit', 'bigblank')); ?>

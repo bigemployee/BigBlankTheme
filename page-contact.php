@@ -11,14 +11,14 @@ get_header('layout');
 // Start the Loop.
 while (have_posts()) : the_post();
 ?>
-<article id="page-contact" <?php post_class(); ?>>
+<article id="page-contact" <?php post_class(); ?> <?php schema(); ?>>
     <header class="entry-header">
     <?php
     echo do_shortcode('[bigContact map=on]');
-    the_title('<h1 class="entry-title">', '</h1>');
+    the_title('<h1 class="entry-title"> ' . schema('name') . '>', '</h1>');
     ?>
     </header><!-- .entry-header -->
-    <div class="entry-content">
+    <div class="entry-content" <?php schema('mainContentOfPage'); ?>>
         <?php
         the_content();
         ?>

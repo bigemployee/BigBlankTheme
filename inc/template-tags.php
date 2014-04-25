@@ -195,7 +195,7 @@ if (!function_exists('bigblank_posted_on')) :
      */
     function bigblank_posted_on() {
         // Set up and print post meta information.
-        printf('<a href="%1$s" class="entry-date" rel="bookmark"><time class="published" datetime="%2$s">%3$s</time></a> <a class="author vcard url fn n" href="%4$s" rel="author">%5$s</a>', esc_url(get_permalink()), esc_attr(get_the_date('c')), esc_html(get_the_date()), esc_url(get_author_posts_url(get_the_author_meta('ID'))), get_the_author());
+        printf('<a href="%1$s" class="entry-date" rel="bookmark" ' . schema('url') . '><time class="published" datetime="%2$s" ' . schema('datePublished') . '>%3$s</time></a> <a class="author vcard url fn n" href="%4$s" rel="author" ' . schema('author') . '>%5$s</a>', esc_url(get_permalink()), esc_attr(get_the_date('c')), esc_html(get_the_date()), esc_url(get_author_posts_url(get_the_author_meta('ID'))), get_the_author());
     }
 
 endif;
@@ -265,9 +265,9 @@ function bigblank_post_thumbnail() {
             endif;
             ?>
         </div>
-        <?php else : ?>
+    <?php else : ?>
         <a class="post-thumbnail" href="<?php the_permalink(); ?>">
-        <?php the_post_thumbnail('post-thumbnail', 'itemprop=image'); ?>
+            <?php the_post_thumbnail('post-thumbnail', 'itemprop=image'); ?>
         </a>
     <?php
     endif; // End is_singular()
@@ -297,7 +297,7 @@ function bigblank_layout_metabox($post) {
                 <input type="radio" name="bigblank_post_layout"
                        value="<?php echo esc_attr($layout['value']); ?>" <?php checked($post_layout, $layout['value']); ?> />
                 <span>
-        <?php echo $layout['label']; ?>
+                    <?php echo $layout['label']; ?>
                     <br />
                     <img src="<?php echo esc_url($layout['thumbnail']); ?>" width="136" height="122" alt="" />
                 </span>
@@ -404,30 +404,31 @@ function bigblank_comments_open($open, $post_id) {
 
 add_filter('comments_open', 'bigblank_comments_open', 10, 2);
 
-
 /**
  * Social Media Share Buttons Template Inspired by Ghost Kasper Theme
  * @param string    $url    link to share
  * @param string    $title  the post title to be shared
  * @link https://github.com/rosario/kasper
  */
-
 function bigblank_share_post($url, $title) {
-?>
+    ?>
     <section class="share">
         <h5>Share</h5>
         <a class="fa fa-twitter fa-lg" href="http://twitter.com/share?text=<?php echo urlencode($title) ?>&amp;url=<?php echo urlencode($url) ?>"
-            onclick="window.open(this.href, 'twitter-share', 'width=550,height=235');return false;">
+           onclick="window.open(this.href, 'twitter-share', 'width=550,height=235');
+                        return false;">
             <span class="screen-reader-text">Twitter</span>
         </a>
         <a class="fa fa-facebook-square fa-lg" href="https://www.facebook.com/sharer/sharer.php?u=<?php echo urlencode($url) ?>"
-            onclick="window.open(this.href, 'facebook-share','width=580,height=296');return false;">
+           onclick="window.open(this.href, 'facebook-share', 'width=580,height=296');
+                        return false;">
             <span class="screen-reader-text">Facebook</span>
         </a>
         <a class="fa fa-google-plus-square fa-lg" href="https://plus.google.com/share?url=<?php echo urlencode($url) ?>"
-           onclick="window.open(this.href, 'google-plus-share', 'width=490,height=530');return false;">
+           onclick="window.open(this.href, 'google-plus-share', 'width=490,height=530');
+                       return false;">
             <span class="screen-reader-text">Google+</span>
         </a>
     </section>
-<?php
+    <?php
 }

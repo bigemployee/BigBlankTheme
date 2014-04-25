@@ -18,7 +18,7 @@ get_header('layout');
 ?>
 <?php if (have_posts()) : ?>
     <header class="page-header">
-        <h1 class="page-title">
+        <h1 class="page-title" <?php schema('name'); ?>>
             <?php
             if (is_day()) {
                 printf(__('Daily Archives: %s', 'bigblank'), get_the_date());

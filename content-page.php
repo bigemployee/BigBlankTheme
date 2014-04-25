@@ -4,13 +4,13 @@
  *
  */
 ?>
-<article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
+<article id="post-<?php the_ID(); ?>" <?php post_class(); ?> <?php schema(); ?>>
     <?php
     // Page thumbnail and title.
     bigblank_post_thumbnail();
-    the_title('<header class="entry-header"><h1 class="entry-title">', '</h1></header><!-- .entry-header -->');
+    the_title('<header class="entry-header"><h1 class="entry-title" ' . schema('name') . '>', '</h1></header><!-- .entry-header -->');
     ?>
-    <div class="entry-content">
+    <div class="entry-content" <?php schema('mainContentOfPage'); ?>>
         <?php
         the_content();
         wp_link_pages(array(

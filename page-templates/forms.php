@@ -9,13 +9,13 @@ get_header();
 <div id="forms" class="site-content">
     <div id="main" role="main">
         <?php while (have_posts()) : the_post(); ?>
-            <article id="content" <?php post_class(); ?>>
+            <article id="content" <?php post_class(); ?> <?php schema(); ?>>
                 <?php
                 // Page thumbnail and title.
                 bigblank_post_thumbnail();
-                the_title('<header class="entry-header"><h1 class="entry-title">', '</h1></header><!-- .entry-header -->');
+                the_title('<header class="entry-header"><h1 class="entry-title" ' . schema('name') . '>', '</h1></header><!-- .entry-header -->');
                 ?>
-                <div class="entry-content">
+                <div class="entry-content" <?php schema('mainContentOfPage'); ?>>
                     <?php the_content(); ?>
                     <?php edit_post_link(__('Edit', 'bigblank')); ?>
                     <p class="alert alert-success">

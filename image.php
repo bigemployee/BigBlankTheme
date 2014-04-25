@@ -12,9 +12,9 @@ get_header('layout');
 // Start the Loop.
 while (have_posts()) : the_post();
     ?>
-    <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
+    <article id="post-<?php the_ID(); ?>" <?php post_class(); ?> <?php schema(); ?>>
         <header class="entry-header">
-            <?php the_title('<h1 class="entry-title">', '</h1>'); ?>
+            <?php the_title('<h1 class="entry-title" ' . schema('name') . '>', '</h1>'); ?>
             <div class="entry-meta">
                 <time class="entry-date" datetime="<?php echo esc_attr(get_the_date('c')); ?>"><?php echo esc_html(get_the_date()); ?></time>
                 <a href="<?php echo wp_get_attachment_url(); ?>" class="full-size-link"><?php echo $metadata['width']; ?> &times; <?php echo $metadata['height']; ?></a>
@@ -22,13 +22,13 @@ while (have_posts()) : the_post();
                 <?php edit_post_link(__('Edit', 'bigblank')); ?>
             </div><!-- .entry-meta -->
         </header><!-- .entry-header -->
-        <div class="entry-content">
-            <div class="entry-attachment">
+        <div class="entry-content" <?php schema('mainContentOfPage'); ?>>
+            <div class="entry-attachment" <?php schema('', 'ImageObject'); ?>>
                 <div class="attachment">
                     <?php bigblank_the_attached_image(); ?>
                 </div><!-- .attachment -->
                 <?php if (has_excerpt()) : ?>
-                    <div class="entry-caption">
+                    <div class="entry-caption" <?php schema('caption'); ?>>
                         <?php the_excerpt(); ?>
                     </div><!-- .entry-caption -->
                 <?php endif; ?>
