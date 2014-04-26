@@ -36,6 +36,7 @@ Team
 
 Contribution
 -------------------------------------------------------------------
++ Please help us improve this theme by submitting any bugs you find.
 + All contributions are appreciated, even if it is just fixing a typo.
 + Fork and send a pull request. Will add more protocols if it gets unmanageable.
 + Will add credit for contributors.
@@ -48,19 +49,19 @@ projects put together:
 * [WordPress] - Code is Poetry
 * [jQuery] - duh
 * [Font Awesome] - The iconic font designed for Bootstrap
-* [HTML5 Boilerplate] - Based on HTML5 Boilerplate front-end template
-* [BigGallery] - Enchances our WordPress gallery
-* [jQuery.refineslide] - Starting Base of [BigGallery] plugin
-* [jQuery.event.swipe] - Handles our Swipe events
-* [jQuery.event.move] - Handles our Touchmove or Mousemove events
 * [Modernizr] - HTML5 and CSS3 features detection
-
+* [DeviceJS] - DeviceJs for Device detection
+* [TGM-Plugin-Activation] - For quick import of plugins necessary for your theme
+* [FluidVids] - Modified version of FluidVids for responsive videos
+* [Microdata] - Semantic code based on HTML5, [Schema.org], and Microformats
 
 Changelog
 -------------------------------------------------------------------
-**v2.0 (2014-02-20)**
+**v2.0-Alpha (2014-04-25)**
   - Let's start again
-  - Base bigblank && Twenty Fourteen
+  - Based on BigBlank && Twenty Fourteen
+  - Entire rewrite of BigBlank
+  - Delete key friendly, and well commented code
 
 **v1.2.2 (2013-12-12)**
   - Fallback menu support
@@ -79,19 +80,30 @@ Changelog
 
 License
 -------------------------------------------------------------------
-MIT & GPL
+MIT & GPL3
 
+Screenshot
+-------------------------------------------------------------------
+![BigBlank Preview](https://raw.githubusercontent.com/bigemployee/BigBlankTheme/master/screenshot-full.png)
+
+To Do
+-------------------------------------------------------------------
++ CSS Preprocessors files (SASS, LESS)
++ Online Documentation
++ Include Sample Data XML file
 
 [BigEmployee]: http://bigemployee.com
 [Big Blank Theme]: http://bigemployee.com/projects/big-blank-responsive-wordpress-theme/
 [@BigEmployee]: http://twitter.com/bigemployee
 [@NorikDavtian]: http://twitter.com/NorikDavtian
 [@ArianKhosravi]: http://twitter.com/ArianKhosravi
-[BigGallery]: http://bigemployee.com/projects/big-gallery/
 [Microdata]: http://www.w3.org/html/wg/drafts/microdata/master/
 [SEO Purposes]: https://support.google.com/webmasters/answer/176035?hl=en
 [WordPress]: http://wordpress.org
 [Font Awesome]: http://fortawesome.github.io/Font-Awesome/
 [jQuery]: http://jquery.com
-[HTML5 Boilerplate]: http://html5boilerplate.com/
 [Modernizr]: http://modernizr.com/
+[DeviceJS]: https://github.com/matthewhudson/device.js
+[TGM-Plugin-Activation]: https://github.com/thomasgriffin/TGM-Plugin-Activation
+[FluidVids]: https://github.com/toddmotto/fluidvids
+[Schema.org]: http://schema.org/
