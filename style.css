@@ -1177,6 +1177,11 @@ figure.alignright figcaption{
     max-width: 100% !important;
 }
 
+.featured_video_plus .fluid-width-video-wrapper {
+    position: absolute;
+    top: 0;
+}
+
 .content-area {
     padding-top: 48px;
 }
