@@ -87,7 +87,7 @@ To Do
 [@BigEmployee]: http://twitter.com/bigemployee
 [@NorikDavtian]: http://twitter.com/NorikDavtian
 [@ArianKhosravi]: http://twitter.com/ArianKhosravi
-[Microdata]: http://www.w3.org/html/wg/drafts/microdata/master/
+[Microdata]: http://www.w3.org/TR/microdata/
 [SEO Purposes]: https://support.google.com/webmasters/answer/176035?hl=en
 [WordPress]: http://wordpress.org
 [Font Awesome]: http://fortawesome.github.io/Font-Awesome/
