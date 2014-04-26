@@ -955,7 +955,6 @@ figure.alignright figcaption{
     position: relative;
     z-index: 3;
 }
-
 .site-header {
     /*background-color: #fcfcfc;*/
     max-width: 1260px;
@@ -963,12 +962,10 @@ figure.alignright figcaption{
     width: 100%;
     z-index: 4;
 }
-
 .header-main {
     min-height: 48px;
     padding: 0 10px;
 }
-
 .site-title {
     float: left;
     font-size: 18px;
@@ -976,12 +973,10 @@ figure.alignright figcaption{
     line-height: 48px;
     margin: 0;
 }
-
 .site-title a,
 .site-title a:hover {
     /*color: #fff;*/
 }
-
 #logo{
     float:  left;
     width: 200px;
@@ -1349,29 +1344,17 @@ p.post-thumbnail-description a:hover{
     position: relative;
     z-index: 1;
 }
-
 .entry-title {
     line-height: 1.1;
     text-transform: uppercase;
 }
-
 .entry-title a {
     color: #2b2b2b;
     text-decoration: none;
 }
-
 .entry-title a:hover {
     color: #c00;
 }
-
-.site-content .entry-header {
-    /*padding: 0 10px 12px;*/
-}
-
-.site-content .has-post-thumbnail .entry-header {
-    /*padding-top: 24px;*/
-}
-
 
 /**
  * 6.3 Entry Meta
