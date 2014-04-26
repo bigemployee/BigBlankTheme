@@ -84,7 +84,7 @@ MIT & GPL3
 
 Screenshot
 -------------------------------------------------------------------
-![BigBlank Preview](https://raw.githubusercontent.com/bigemployee/BigBlankTheme/master/screenshot-full.png)
+![BigBlank Preview](https://raw.githubusercontent.com/bigemployee/BigBlankTheme/master/screenshot-full.jpg)
 
 To Do
 -------------------------------------------------------------------
