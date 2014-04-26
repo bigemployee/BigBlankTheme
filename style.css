@@ -985,9 +985,14 @@ figure.alignright figcaption{
 #logo{
     float:  left;
     width: 200px;
-    height: 29px;
     padding: 10px 7px 6px;
     overflow: hidden;
+    position: relative;
+}
+#logo img{
+    float: left;
+    width: 100%;
+    height: auto;
 }
 
 /**
@@ -2681,16 +2686,17 @@ h2:hover a.anchor{
  * 8.0 Footer
  * -----------------------------------------------------------------------------
  */
-
-#supplementary {
-    padding: 0 10px;
+#footer{
+    border-top: 3px double #ccc;
+    padding-top: 1.5em;
+    padding-bottom: 0.2em;
 }
-
 .site-footer,
 .site-info,
 .site-info a {
     color: rgba(255, 255, 255, 0.7);
 }
+#footer:after,
 #footer-tel:after,
 #footer-address:after{
     content: ""; 
@@ -2707,26 +2713,14 @@ h2:hover a.anchor{
     position: relative;
     z-index: 3;
 }
-
 .footer-sidebar {
     padding-top: 48px;
 }
-
 .site-info {
     padding: 15px 10px;
 }
-
-#supplementary + .site-info {
-    border-top: 1px solid rgba(255, 255, 255, 0.2);
-}
-
 .site-info a:hover {
     color: #c00;
-}
-
-#footer-nav{
-    border-top: 3px double #ccc;
-    padding: 1.5em 0 0;
 }
 #footer-nav,
 #site-info,
