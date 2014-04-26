@@ -32,7 +32,7 @@
                     <?php $title = get_post_meta(get_the_ID(), 'title', true); ?>
                     <h2 id="<?php echo $slug; ?>"><a class="anchor" href="#<?php echo $slug; ?>"><i class="fa fa-link"></i></a><?php the_title(); ?> <?php bigblank_print($title, '<em>(', ')</em>'); ?></h2>
                     <?php if (has_post_thumbnail()): ?>
-                        <?php the_post_thumbnail('medium', 'class=alignright portrait'); ?>
+                        <?php the_post_thumbnail('medium', array('class'=>'alignright portrait', 'itemprop'=>'image')); ?>
                     <?php endif ?>
                     <?php
                     global $more;
