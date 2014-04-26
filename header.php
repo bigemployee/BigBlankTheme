@@ -26,7 +26,7 @@
         <header id="header" class="site-header" role="banner">
             <a id="logo" href="<?php echo home_url(); ?>" title="<?php _e('Home', 'bigblank'); ?>" rel="home">
                 <img src="<?php echo get_template_directory_uri(); ?>/images/bigblanktheme_logo.png" alt="<?php bloginfo('name'); ?> logo" width="200" height="29"/>
-                <span><?php bloginfo('name'); ?></span>
+                <span class="screen-reader-text"><?php bloginfo('name'); ?></span>
             </a>
             <nav id="nav" role="navigation">
                 <h1 id="menu-toggle"><i class="fa fa-bars"></i><?php _e('Primary Menu', 'bigblank'); ?></h1>
