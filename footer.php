@@ -13,7 +13,7 @@ $address = $options['address'];
 $footer_copyright = $options['footer_copyright'];
 $footer_text = $options['footer_text'];
 ?>
-<footer id="footer" role="contentinfo">
+<footer id="footer" class="site-footer" role="contentinfo">
     <?php get_sidebar('footer'); ?>
     <?php bigblank_footer_menu(); ?>
     <?php
