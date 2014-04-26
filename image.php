@@ -14,7 +14,7 @@ while (have_posts()) : the_post();
     ?>
     <article id="post-<?php the_ID(); ?>" <?php post_class(); ?> <?php schema(); ?>>
         <header class="entry-header">
-            <?php the_title('<h1 class="entry-title" ' . schema('name') . '>', '</h1>'); ?>
+            <?php the_title('<h1 class="entry-title" ' . schema('name', false, false) . '>', '</h1>'); ?>
             <div class="entry-meta">
                 <time class="entry-date" datetime="<?php echo esc_attr(get_the_date('c')); ?>"><?php echo esc_html(get_the_date()); ?></time>
                 <a href="<?php echo wp_get_attachment_url(); ?>" class="full-size-link"><?php echo $metadata['width']; ?> &times; <?php echo $metadata['height']; ?></a>
