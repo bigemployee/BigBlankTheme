@@ -14,7 +14,7 @@ while (have_posts()) : the_post();
         <header class="entry-header">
             <?php
             echo do_shortcode('[bigContact map=on]');
-            the_title('<h1 class="entry-title"> ' . schema('name', false, false) . '>', '</h1>');
+            the_title('<h1 class="entry-title" ' . schema('name', false, false) . '>', '</h1>');
             ?>
         </header><!-- .entry-header -->
         <div class="entry-content" <?php schema('mainContentOfPage'); ?>>
