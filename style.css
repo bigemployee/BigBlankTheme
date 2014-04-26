@@ -1172,7 +1172,7 @@ figure.alignright figcaption{
  */
 
 /* For Home Demo testing */
-#home .entry-content > .fluidvids{
+#home .fluidvids{
     width: 1440px;
     max-width: 100% !important;
 }
