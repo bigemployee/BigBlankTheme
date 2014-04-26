@@ -62,8 +62,10 @@ add_action('init', 'bigblank_register_post_type');
 /**
  * To get permalinks to work when you activate the theme
  */
-function bigblank_rewrite_flush() {
-    flush_rewrite_rules();
+if (!function_exists('bigblank_rewrite_flush')){
+    function bigblank_rewrite_flush() {
+        flush_rewrite_rules();
+    }
 }
 
 add_action('after_switch_theme', 'bigblank_rewrite_flush');
