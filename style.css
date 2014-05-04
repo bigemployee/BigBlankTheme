@@ -225,6 +225,9 @@ a:active,
 a:hover {
     text-decoration: underline;
 }
+a:active{
+    outline: 0;
+}
 h1,
 h2,
 h3,
