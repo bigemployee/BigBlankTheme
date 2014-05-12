@@ -1646,6 +1646,7 @@ h2:hover a.anchor{
 .fotorama--wp {
     margin: 0 auto 1.5em;
     display: inline-block;
+    max-width: 100%;
 }
 /**
  * 6.6 Custom Post Types (Team & Profile)
