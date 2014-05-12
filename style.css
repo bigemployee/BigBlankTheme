@@ -6,14 +6,11 @@ Author: Big Employee
 Author URI: http://bigemployee.com
 Version: 2.0-Alpha
 Tags: fluid-layout, responsive-layout, custom-menu, microformats, sticky-post, theme-options, translation-ready, one-column, two-columns, right-sidebar, left-sidebar, light, white
-
 License: GNU General Public License & MIT
 License URI: license.txt
 Text Domain: bigblank
 Domain Path: /languages/
-
 */
-
 /**
  * Table of Contents:
  *
@@ -43,8 +40,6 @@ Domain Path: /languages/
  * 11.0 - Print
  * -----------------------------------------------------------------------------
  */
-
-
 /**
  * 0.0 Reset
  *
@@ -57,7 +52,6 @@ Domain Path: /languages/
  *
  * -----------------------------------------------------------------------------
  */
-
 a,abbr,acronym,address,applet,big,blockquote,body,caption,cite,code,dd,del,dfn,div,dl,dt,em,fieldset,font,form,h1,h2,h3,h4,h5,h6,html,iframe,ins,kbd,label,legend,li,object,ol,p,pre,q,s,samp,small,span,strike,strong,sub,sup,table,tbody,td,tfoot,th,thead,tr,tt,ul,var{border:0;font-family:inherit;font-size:100%;font-style:inherit;font-weight:inherit;margin:0;padding:0;vertical-align:baseline}
 article,aside,details,figcaption,figure,footer,header,hgroup,nav,section{display:block}
 audio,canvas,video{display:inline-block;max-width:100%}
@@ -109,13 +103,11 @@ th{border-width:0 1px 1px 0;font-weight:700}
 td{border-width:0 1px 1px 0}
 del{color:#777}
 hr{background-color:rgba(0,0,0,.1);border:0;height:1px;margin-bottom:23px}
-
 /* Support a widely-adopted but non-standard selector for text selection styles
  * to achieve a better experience. See http://core.trac.wordpress.org/ticket/25898.
  */
 ::selection {background: #ffe26e; color: #000;text-shadow: none;}
 ::-moz-selection {background: #ffe26e; color: #000; text-shadow: none;}
-
 /**
  * 1.0 Typography
  * 
@@ -130,8 +122,6 @@ hr{background-color:rgba(0,0,0,.1);border:0;height:1px;margin-bottom:23px}
  */
 @font-face{font-family:'FontAwesome';src:url(fonts/fontawesome-webfont.eot?v=4.0.3);src:url(fonts/fontawesome-webfont.eot?#iefix&v=4.0.3) format('embedded-opentype'),url(fonts/fontawesome-webfont.woff?v=4.0.3) format('woff'),url(fonts/fontawesome-webfont.ttf?v=4.0.3) format('truetype'),url(fonts/fontawesome-webfont.svg?v=4.0.3#fontawesomeregular) format('svg');font-weight:400;font-style:normal}
 .fa{display:inline-block;font-family:FontAwesome;font-style:normal;font-weight:400;line-height:1;-webkit-font-smoothing:antialiased;-moz-osx-font-smoothing:grayscale}.fa-lg{font-size:1.3333333333333333em;line-height:.75em;vertical-align:-15%}.fa-2x{font-size:2em}.fa-3x{font-size:3em}.fa-4x{font-size:4em}.fa-5x{font-size:5em}.fa-fw{width:1.2857142857142858em;text-align:center}.fa-ul{padding-left:0;margin-left:2.142857142857143em;list-style-type:none}.fa-ul>li{position:relative}.fa-li{position:absolute;left:-2.142857142857143em;width:2.142857142857143em;top:.14285714285714285em;text-align:center}.fa-li.fa-lg{left:-1.8571428571428572em}.fa-border{padding:.2em .25em .15em;border:solid .08em #eee;border-radius:.1em}.pull-right{float:right}.pull-left{float:left}.fa.pull-left{margin-right:.3em}.fa.pull-right{margin-left:.3em}.fa-spin{-webkit-animation:spin 2s infinite linear;-moz-animation:spin 2s infinite linear;-o-animation:spin 2s infinite linear;animation:spin 2s infinite linear}@-moz-keyframes spin{0%{-moz-transform:rotate(0deg)}100%{-moz-transform:rotate(359deg)}}@-webkit-keyframes spin{0%{-webkit-transform:rotate(0deg)}100%{-webkit-transform:rotate(359deg)}}@-o-keyframes spin{0%{-o-transform:rotate(0deg)}100%{-o-transform:rotate(359deg)}}@-ms-keyframes spin{0%{-ms-transform:rotate(0deg)}100%{-ms-transform:rotate(359deg)}}@keyframes spin{0%{transform:rotate(0deg)}100%{transform:rotate(359deg)}}.fa-rotate-90{filter:progid:DXImageTransform.Microsoft.BasicImage(rotation=1);-webkit-transform:rotate(90deg);-moz-transform:rotate(90deg);-ms-transform:rotate(90deg);-o-transform:rotate(90deg);transform:rotate(90deg)}.fa-rotate-180{filter:progid:DXImageTransform.Microsoft.BasicImage(rotation=2);-webkit-transform:rotate(180deg);-moz-transform:rotate(180deg);-ms-transform:rotate(180deg);-o-transform:rotate(180deg);transform:rotate(180deg)}.fa-rotate-270{filter:progid:DXImageTransform.Microsoft.BasicImage(rotation=3);-webkit-transform:rotate(270deg);-moz-transform:rotate(270deg);-ms-transform:rotate(270deg);-o-transform:rotate(270deg);transform:rotate(270deg)}.fa-flip-horizontal{filter:progid:DXImageTransform.Microsoft.BasicImage(rotation=0, mirror=1);-webkit-transform:scale(-1,1);-moz-transform:scale(-1,1);-ms-transform:scale(-1,1);-o-transform:scale(-1,1);transform:scale(-1,1)}.fa-flip-vertical{filter:progid:DXImageTransform.Microsoft.BasicImage(rotation=2, mirror=1);-webkit-transform:scale(1,-1);-moz-transform:scale(1,-1);-ms-transform:scale(1,-1);-o-transform:scale(1,-1);transform:scale(1,-1)}.fa-stack{position:relative;display:inline-block;width:2em;height:2em;line-height:2em;vertical-align:middle}.fa-stack-1x,.fa-stack-2x{position:absolute;left:0;width:100%;text-align:center}.fa-stack-1x{line-height:inherit}.fa-stack-2x{font-size:2em}.fa-inverse{color:#fff}.fa-glass:before{content:"\f000"}.fa-music:before{content:"\f001"}.fa-search:before{content:"\f002"}.fa-envelope-o:before{content:"\f003"}.fa-heart:before{content:"\f004"}.fa-star:before{content:"\f005"}.fa-star-o:before{content:"\f006"}.fa-user:before{content:"\f007"}.fa-film:before{content:"\f008"}.fa-th-large:before{content:"\f009"}.fa-th:before{content:"\f00a"}.fa-th-list:before{content:"\f00b"}.fa-check:before{content:"\f00c"}.fa-times:before{content:"\f00d"}.fa-search-plus:before{content:"\f00e"}.fa-search-minus:before{content:"\f010"}.fa-power-off:before{content:"\f011"}.fa-signal:before{content:"\f012"}.fa-cog:before,.fa-gear:before{content:"\f013"}.fa-trash-o:before{content:"\f014"}.fa-home:before{content:"\f015"}.fa-file-o:before{content:"\f016"}.fa-clock-o:before{content:"\f017"}.fa-road:before{content:"\f018"}.fa-download:before{content:"\f019"}.fa-arrow-circle-o-down:before{content:"\f01a"}.fa-arrow-circle-o-up:before{content:"\f01b"}.fa-inbox:before{content:"\f01c"}.fa-play-circle-o:before{content:"\f01d"}.fa-repeat:before,.fa-rotate-right:before{content:"\f01e"}.fa-refresh:before{content:"\f021"}.fa-list-alt:before{content:"\f022"}.fa-lock:before{content:"\f023"}.fa-flag:before{content:"\f024"}.fa-headphones:before{content:"\f025"}.fa-volume-off:before{content:"\f026"}.fa-volume-down:before{content:"\f027"}.fa-volume-up:before{content:"\f028"}.fa-qrcode:before{content:"\f029"}.fa-barcode:before{content:"\f02a"}.fa-tag:before{content:"\f02b"}.fa-tags:before{content:"\f02c"}.fa-book:before{content:"\f02d"}.fa-bookmark:before{content:"\f02e"}.fa-print:before{content:"\f02f"}.fa-camera:before{content:"\f030"}.fa-font:before{content:"\f031"}.fa-bold:before{content:"\f032"}.fa-italic:before{content:"\f033"}.fa-text-height:before{content:"\f034"}.fa-text-width:before{content:"\f035"}.fa-align-left:before{content:"\f036"}.fa-align-center:before{content:"\f037"}.fa-align-right:before{content:"\f038"}.fa-align-justify:before{content:"\f039"}.fa-list:before{content:"\f03a"}.fa-dedent:before,.fa-outdent:before{content:"\f03b"}.fa-indent:before{content:"\f03c"}.fa-video-camera:before{content:"\f03d"}.fa-picture-o:before{content:"\f03e"}.fa-pencil:before{content:"\f040"}.fa-map-marker:before{content:"\f041"}.fa-adjust:before{content:"\f042"}.fa-tint:before{content:"\f043"}.fa-edit:before,.fa-pencil-square-o:before{content:"\f044"}.fa-share-square-o:before{content:"\f045"}.fa-check-square-o:before{content:"\f046"}.fa-arrows:before{content:"\f047"}.fa-step-backward:before{content:"\f048"}.fa-fast-backward:before{content:"\f049"}.fa-backward:before{content:"\f04a"}.fa-play:before{content:"\f04b"}.fa-pause:before{content:"\f04c"}.fa-stop:before{content:"\f04d"}.fa-forward:before{content:"\f04e"}.fa-fast-forward:before{content:"\f050"}.fa-step-forward:before{content:"\f051"}.fa-eject:before{content:"\f052"}.fa-chevron-left:before{content:"\f053"}.fa-chevron-right:before{content:"\f054"}.fa-plus-circle:before{content:"\f055"}.fa-minus-circle:before{content:"\f056"}.fa-times-circle:before{content:"\f057"}.fa-check-circle:before{content:"\f058"}.fa-question-circle:before{content:"\f059"}.fa-info-circle:before{content:"\f05a"}.fa-crosshairs:before{content:"\f05b"}.fa-times-circle-o:before{content:"\f05c"}.fa-check-circle-o:before{content:"\f05d"}.fa-ban:before{content:"\f05e"}.fa-arrow-left:before{content:"\f060"}.fa-arrow-right:before{content:"\f061"}.fa-arrow-up:before{content:"\f062"}.fa-arrow-down:before{content:"\f063"}.fa-mail-forward:before,.fa-share:before{content:"\f064"}.fa-expand:before{content:"\f065"}.fa-compress:before{content:"\f066"}.fa-plus:before{content:"\f067"}.fa-minus:before{content:"\f068"}.fa-asterisk:before{content:"\f069"}.fa-exclamation-circle:before{content:"\f06a"}.fa-gift:before{content:"\f06b"}.fa-leaf:before{content:"\f06c"}.fa-fire:before{content:"\f06d"}.fa-eye:before{content:"\f06e"}.fa-eye-slash:before{content:"\f070"}.fa-exclamation-triangle:before,.fa-warning:before{content:"\f071"}.fa-plane:before{content:"\f072"}.fa-calendar:before{content:"\f073"}.fa-random:before{content:"\f074"}.fa-comment:before{content:"\f075"}.fa-magnet:before{content:"\f076"}.fa-chevron-up:before{content:"\f077"}.fa-chevron-down:before{content:"\f078"}.fa-retweet:before{content:"\f079"}.fa-shopping-cart:before{content:"\f07a"}.fa-folder:before{content:"\f07b"}.fa-folder-open:before{content:"\f07c"}.fa-arrows-v:before{content:"\f07d"}.fa-arrows-h:before{content:"\f07e"}.fa-bar-chart-o:before{content:"\f080"}.fa-twitter-square:before{content:"\f081"}.fa-facebook-square:before{content:"\f082"}.fa-camera-retro:before{content:"\f083"}.fa-key:before{content:"\f084"}.fa-cogs:before,.fa-gears:before{content:"\f085"}.fa-comments:before{content:"\f086"}.fa-thumbs-o-up:before{content:"\f087"}.fa-thumbs-o-down:before{content:"\f088"}.fa-star-half:before{content:"\f089"}.fa-heart-o:before{content:"\f08a"}.fa-sign-out:before{content:"\f08b"}.fa-linkedin-square:before{content:"\f08c"}.fa-thumb-tack:before{content:"\f08d"}.fa-external-link:before{content:"\f08e"}.fa-sign-in:before{content:"\f090"}.fa-trophy:before{content:"\f091"}.fa-github-square:before{content:"\f092"}.fa-upload:before{content:"\f093"}.fa-lemon-o:before{content:"\f094"}.fa-phone:before{content:"\f095"}.fa-square-o:before{content:"\f096"}.fa-bookmark-o:before{content:"\f097"}.fa-phone-square:before{content:"\f098"}.fa-twitter:before{content:"\f099"}.fa-facebook:before{content:"\f09a"}.fa-github:before{content:"\f09b"}.fa-unlock:before{content:"\f09c"}.fa-credit-card:before{content:"\f09d"}.fa-rss:before{content:"\f09e"}.fa-hdd-o:before{content:"\f0a0"}.fa-bullhorn:before{content:"\f0a1"}.fa-bell:before{content:"\f0f3"}.fa-certificate:before{content:"\f0a3"}.fa-hand-o-right:before{content:"\f0a4"}.fa-hand-o-left:before{content:"\f0a5"}.fa-hand-o-up:before{content:"\f0a6"}.fa-hand-o-down:before{content:"\f0a7"}.fa-arrow-circle-left:before{content:"\f0a8"}.fa-arrow-circle-right:before{content:"\f0a9"}.fa-arrow-circle-up:before{content:"\f0aa"}.fa-arrow-circle-down:before{content:"\f0ab"}.fa-globe:before{content:"\f0ac"}.fa-wrench:before{content:"\f0ad"}.fa-tasks:before{content:"\f0ae"}.fa-filter:before{content:"\f0b0"}.fa-briefcase:before{content:"\f0b1"}.fa-arrows-alt:before{content:"\f0b2"}.fa-group:before,.fa-users:before{content:"\f0c0"}.fa-chain:before,.fa-link:before{content:"\f0c1"}.fa-cloud:before{content:"\f0c2"}.fa-flask:before{content:"\f0c3"}.fa-cut:before,.fa-scissors:before{content:"\f0c4"}.fa-copy:before,.fa-files-o:before{content:"\f0c5"}.fa-paperclip:before{content:"\f0c6"}.fa-floppy-o:before,.fa-save:before{content:"\f0c7"}.fa-square:before{content:"\f0c8"}.fa-bars:before{content:"\f0c9"}.fa-list-ul:before{content:"\f0ca"}.fa-list-ol:before{content:"\f0cb"}.fa-strikethrough:before{content:"\f0cc"}.fa-underline:before{content:"\f0cd"}.fa-table:before{content:"\f0ce"}.fa-magic:before{content:"\f0d0"}.fa-truck:before{content:"\f0d1"}.fa-pinterest:before{content:"\f0d2"}.fa-pinterest-square:before{content:"\f0d3"}.fa-google-plus-square:before{content:"\f0d4"}.fa-google-plus:before{content:"\f0d5"}.fa-money:before{content:"\f0d6"}.fa-caret-down:before{content:"\f0d7"}.fa-caret-up:before{content:"\f0d8"}.fa-caret-left:before{content:"\f0d9"}.fa-caret-right:before{content:"\f0da"}.fa-columns:before{content:"\f0db"}.fa-sort:before,.fa-unsorted:before{content:"\f0dc"}.fa-sort-asc:before,.fa-sort-down:before{content:"\f0dd"}.fa-sort-desc:before,.fa-sort-up:before{content:"\f0de"}.fa-envelope:before{content:"\f0e0"}.fa-linkedin:before{content:"\f0e1"}.fa-rotate-left:before,.fa-undo:before{content:"\f0e2"}.fa-gavel:before,.fa-legal:before{content:"\f0e3"}.fa-dashboard:before,.fa-tachometer:before{content:"\f0e4"}.fa-comment-o:before{content:"\f0e5"}.fa-comments-o:before{content:"\f0e6"}.fa-bolt:before,.fa-flash:before{content:"\f0e7"}.fa-sitemap:before{content:"\f0e8"}.fa-umbrella:before{content:"\f0e9"}.fa-clipboard:before,.fa-paste:before{content:"\f0ea"}.fa-lightbulb-o:before{content:"\f0eb"}.fa-exchange:before{content:"\f0ec"}.fa-cloud-download:before{content:"\f0ed"}.fa-cloud-upload:before{content:"\f0ee"}.fa-user-md:before{content:"\f0f0"}.fa-stethoscope:before{content:"\f0f1"}.fa-suitcase:before{content:"\f0f2"}.fa-bell-o:before{content:"\f0a2"}.fa-coffee:before{content:"\f0f4"}.fa-cutlery:before{content:"\f0f5"}.fa-file-text-o:before{content:"\f0f6"}.fa-building-o:before{content:"\f0f7"}.fa-hospital-o:before{content:"\f0f8"}.fa-ambulance:before{content:"\f0f9"}.fa-medkit:before{content:"\f0fa"}.fa-fighter-jet:before{content:"\f0fb"}.fa-beer:before{content:"\f0fc"}.fa-h-square:before{content:"\f0fd"}.fa-plus-square:before{content:"\f0fe"}.fa-angle-double-left:before{content:"\f100"}.fa-angle-double-right:before{content:"\f101"}.fa-angle-double-up:before{content:"\f102"}.fa-angle-double-down:before{content:"\f103"}.fa-angle-left:before{content:"\f104"}.fa-angle-right:before{content:"\f105"}.fa-angle-up:before{content:"\f106"}.fa-angle-down:before{content:"\f107"}.fa-desktop:before{content:"\f108"}.fa-laptop:before{content:"\f109"}.fa-tablet:before{content:"\f10a"}.fa-mobile-phone:before,.fa-mobile:before{content:"\f10b"}.fa-circle-o:before{content:"\f10c"}.fa-quote-left:before{content:"\f10d"}.fa-quote-right:before{content:"\f10e"}.fa-spinner:before{content:"\f110"}.fa-circle:before{content:"\f111"}.fa-mail-reply:before,.fa-reply:before{content:"\f112"}.fa-github-alt:before{content:"\f113"}.fa-folder-o:before{content:"\f114"}.fa-folder-open-o:before{content:"\f115"}.fa-smile-o:before{content:"\f118"}.fa-frown-o:before{content:"\f119"}.fa-meh-o:before{content:"\f11a"}.fa-gamepad:before{content:"\f11b"}.fa-keyboard-o:before{content:"\f11c"}.fa-flag-o:before{content:"\f11d"}.fa-flag-checkered:before{content:"\f11e"}.fa-terminal:before{content:"\f120"}.fa-code:before{content:"\f121"}.fa-mail-reply-all:before,.fa-reply-all:before{content:"\f122"}.fa-star-half-empty:before,.fa-star-half-full:before,.fa-star-half-o:before{content:"\f123"}.fa-location-arrow:before{content:"\f124"}.fa-crop:before{content:"\f125"}.fa-code-fork:before{content:"\f126"}.fa-chain-broken:before,.fa-unlink:before{content:"\f127"}.fa-question:before{content:"\f128"}.fa-info:before{content:"\f129"}.fa-exclamation:before{content:"\f12a"}.fa-superscript:before{content:"\f12b"}.fa-subscript:before{content:"\f12c"}.fa-eraser:before{content:"\f12d"}.fa-puzzle-piece:before{content:"\f12e"}.fa-microphone:before{content:"\f130"}.fa-microphone-slash:before{content:"\f131"}.fa-shield:before{content:"\f132"}.fa-calendar-o:before{content:"\f133"}.fa-fire-extinguisher:before{content:"\f134"}.fa-rocket:before{content:"\f135"}.fa-maxcdn:before{content:"\f136"}.fa-chevron-circle-left:before{content:"\f137"}.fa-chevron-circle-right:before{content:"\f138"}.fa-chevron-circle-up:before{content:"\f139"}.fa-chevron-circle-down:before{content:"\f13a"}.fa-html5:before{content:"\f13b"}.fa-css3:before{content:"\f13c"}.fa-anchor:before{content:"\f13d"}.fa-unlock-alt:before{content:"\f13e"}.fa-bullseye:before{content:"\f140"}.fa-ellipsis-h:before{content:"\f141"}.fa-ellipsis-v:before{content:"\f142"}.fa-rss-square:before{content:"\f143"}.fa-play-circle:before{content:"\f144"}.fa-ticket:before{content:"\f145"}.fa-minus-square:before{content:"\f146"}.fa-minus-square-o:before{content:"\f147"}.fa-level-up:before{content:"\f148"}.fa-level-down:before{content:"\f149"}.fa-check-square:before{content:"\f14a"}.fa-pencil-square:before{content:"\f14b"}.fa-external-link-square:before{content:"\f14c"}.fa-share-square:before{content:"\f14d"}.fa-compass:before{content:"\f14e"}.fa-caret-square-o-down:before,.fa-toggle-down:before{content:"\f150"}.fa-caret-square-o-up:before,.fa-toggle-up:before{content:"\f151"}.fa-caret-square-o-right:before,.fa-toggle-right:before{content:"\f152"}.fa-eur:before,.fa-euro:before{content:"\f153"}.fa-gbp:before{content:"\f154"}.fa-dollar:before,.fa-usd:before{content:"\f155"}.fa-inr:before,.fa-rupee:before{content:"\f156"}.fa-cny:before,.fa-jpy:before,.fa-rmb:before,.fa-yen:before{content:"\f157"}.fa-rouble:before,.fa-rub:before,.fa-ruble:before{content:"\f158"}.fa-krw:before,.fa-won:before{content:"\f159"}.fa-bitcoin:before,.fa-btc:before{content:"\f15a"}.fa-file:before{content:"\f15b"}.fa-file-text:before{content:"\f15c"}.fa-sort-alpha-asc:before{content:"\f15d"}.fa-sort-alpha-desc:before{content:"\f15e"}.fa-sort-amount-asc:before{content:"\f160"}.fa-sort-amount-desc:before{content:"\f161"}.fa-sort-numeric-asc:before{content:"\f162"}.fa-sort-numeric-desc:before{content:"\f163"}.fa-thumbs-up:before{content:"\f164"}.fa-thumbs-down:before{content:"\f165"}.fa-youtube-square:before{content:"\f166"}.fa-youtube:before{content:"\f167"}.fa-xing:before{content:"\f168"}.fa-xing-square:before{content:"\f169"}.fa-youtube-play:before{content:"\f16a"}.fa-dropbox:before{content:"\f16b"}.fa-stack-overflow:before{content:"\f16c"}.fa-instagram:before{content:"\f16d"}.fa-flickr:before{content:"\f16e"}.fa-adn:before{content:"\f170"}.fa-bitbucket:before{content:"\f171"}.fa-bitbucket-square:before{content:"\f172"}.fa-tumblr:before{content:"\f173"}.fa-tumblr-square:before{content:"\f174"}.fa-long-arrow-down:before{content:"\f175"}.fa-long-arrow-up:before{content:"\f176"}.fa-long-arrow-left:before{content:"\f177"}.fa-long-arrow-right:before{content:"\f178"}.fa-apple:before{content:"\f179"}.fa-windows:before{content:"\f17a"}.fa-android:before{content:"\f17b"}.fa-linux:before{content:"\f17c"}.fa-dribbble:before{content:"\f17d"}.fa-skype:before{content:"\f17e"}.fa-foursquare:before{content:"\f180"}.fa-trello:before{content:"\f181"}.fa-female:before{content:"\f182"}.fa-male:before{content:"\f183"}.fa-gittip:before{content:"\f184"}.fa-sun-o:before{content:"\f185"}.fa-moon-o:before{content:"\f186"}.fa-archive:before{content:"\f187"}.fa-bug:before{content:"\f188"}.fa-vk:before{content:"\f189"}.fa-weibo:before{content:"\f18a"}.fa-renren:before{content:"\f18b"}.fa-pagelines:before{content:"\f18c"}.fa-stack-exchange:before{content:"\f18d"}.fa-arrow-circle-o-right:before{content:"\f18e"}.fa-arrow-circle-o-left:before{content:"\f190"}.fa-caret-square-o-left:before,.fa-toggle-left:before{content:"\f191"}.fa-dot-circle-o:before{content:"\f192"}.fa-wheelchair:before{content:"\f193"}.fa-vimeo-square:before{content:"\f194"}.fa-try:before,.fa-turkish-lira:before{content:"\f195"}.fa-plus-square-o:before{content:"\f196"}
-
-
 /**
  * Define our Web Fonts
  * Default: 'Source Sans Pro'
@@ -185,7 +175,6 @@ hr{background-color:rgba(0,0,0,.1);border:0;height:1px;margin-bottom:23px}
     font-weight: 900;
     src: local('Source Sans Pro Black'), local('SourceSansPro-Black'), url(http://themes.googleusercontent.com/static/fonts/sourcesanspro/v7/toadOcfmlt9b38dHJxOBGHiec-hVyr2k4iOzEQsW1iE.woff) format('woff');
 }
-
 html{
     background: #fcfcfc;
 }
@@ -193,7 +182,6 @@ body{
     background: #fff;
     box-shadow: 0 0 6px rgba(0,0,0,0.1);
 }
-
 body,
 button,
 input,
@@ -235,44 +223,35 @@ h6 {
     max-width: 580px;
     text-align: left;
 }
-
 h1 {
     font-size: 34px;
     font-weight: 900;
     line-height: 1.3846153846;
 }
-
 h2 {
     font-size: 28px;
     line-height: 1;
 }
-
 h3 {
     font-size: 22px;
     line-height: 1.0909090909;
 }
-
 h4 {
     font-size: 20px;
     line-height: 1.2;
 }
-
 h5 {
     font-size: 18px;
     line-height: 1.3333333333;
 }
-
 h6 {
     font-size: 16px;
     line-height: 1.5;
 }
-
-
 /**
  * 2.0 Repeatable Patterns
  * -----------------------------------------------------------------------------
  */
-
 button,
 .button,
 .button:visited,
@@ -363,7 +342,6 @@ fieldset[disabled] .button:focus{
     box-shadow: 0 5px #999;
     top: 0;
 }
-
 /* Forms styling simialr to Bootstrap */
 /* http://getbootstrap.com/css/#forms */
 ::-webkit-input-placeholder {
@@ -562,8 +540,6 @@ fieldset[disabled] .checkbox label{
     margin-bottom: 10px;
     color: #737373;
 }
-
-
 /* Alert and Notifications */
 /* http://getbootstrap.com/components/#alerts */
 .alert {
@@ -633,13 +609,11 @@ fieldset[disabled] .checkbox label{
 .alert-danger a {
     color: #843534;
 }
-
 /* Responsive images. Fluid images for posts, comments, and widgets */
 .site-content img{
     max-width: 100%;
     height: auto;
 }
-
 /* Make sure embeds and iframes fit their containers */
 embed,
 iframe,
@@ -656,7 +630,6 @@ span > iframe,
 span > object {
     margin-bottom: 0;
 }
-
 /* Blockquote */
 blockquote{
     margin: 0 auto 1.5em;
@@ -699,7 +672,6 @@ blockquote:after{
     display: table;
     clear: both;
 }
-
 /* Code */
 pre, address{
     padding: 5px 10px;
@@ -723,7 +695,6 @@ code{
 pre code{
     padding: 0;
 }
-
 /* Alignment */
 .alignleft{
     float: left;
@@ -818,14 +789,11 @@ figure.alignright figcaption{
     margin-top: 0;
     padding: 0;
 }
-
-
 /* Assistive text */
 .screen-reader-text {
     clip: rect(1px, 1px, 1px, 1px);
     position: absolute;
 }
-
 .screen-reader-text:focus {
     background: #c00;
     color: #fff;
@@ -838,11 +806,9 @@ figure.alignright figcaption{
     text-transform: none;
     z-index: 100000; /* Above WP toolbar */
 }
-
 .hide {
     display: none;
 }
-
 /* Clearing floats */
 .hentry:before,
 .hentry:after,
@@ -853,28 +819,23 @@ figure.alignright figcaption{
     content: "";
     display: table;
 }
-
 .hentry:after,
 [class*="content"]:after,
 [class*="site"]:after {
     clear: both;
 }
-
 /**
  * 3.0 Basic Structure
  * -----------------------------------------------------------------------------
  */
-
 .site {
     max-width: 1440px;
     position: relative;
     margin: 0 auto;
 }
-
 .main-content {
     width: 100%;
 }
-
 #header{
     padding: 10px 0;
     box-shadow: 0 5px 7px -7px rgba(0,0,0,0.2);
@@ -890,7 +851,6 @@ figure.alignright figcaption{
     -moz-box-sizing: border-box;
     box-sizing: border-box;
 }
-
 .content-sidebar #main,
 .sidebar-content #main{
     width: 66.66666%;
@@ -901,7 +861,6 @@ figure.alignright figcaption{
 #sidebar li{
     list-style: none;
 }
-
 /* 2 Column content=sidebar
 ============================================================================ */
 .content-sidebar{}
@@ -911,7 +870,6 @@ figure.alignright figcaption{
 .content-sidebar #sidebar{
     float: right;
 }
-
 /* 2 Column sidebar-content
 ============================================================================ */
 .sidebar-content{}
@@ -932,19 +890,15 @@ figure.alignright figcaption{
     -ms-word-wrap: break-word;
     word-wrap: break-word;
 }
-
-
 /**
  * 4.0 Header
  * -----------------------------------------------------------------------------
  */
-
 /* Ensure that there is no gap between the header and
    the admin bar for WordPress versions before 3.8. */
 #wpadminbar {
     min-height: 32px;
 }
-
 #site-header {
     position: relative;
     z-index: 3;
@@ -983,7 +937,6 @@ figure.alignright figcaption{
     width: 100%;
     height: auto;
 }
-
 /**
  * 5.0 Navigation
  * -----------------------------------------------------------------------------
@@ -1159,27 +1112,22 @@ figure.alignright figcaption{
 #nav.toggled-on #nav .menu{
     /*display: block;*/
 }
-
 /**
  * 6.0 Content
  * -----------------------------------------------------------------------------
  */
-
 /* For Home Demo testing */
 #home .fluidvids{
     width: 1440px;
     max-width: 100% !important;
 }
-
 .featured_video_plus .fluid-width-video-wrapper {
     position: absolute;
     top: 0;
 }
-
 .content-area {
     padding-top: 48px;
 }
-
 .hentry {
     margin: 0 auto 48px;
 }
@@ -1284,13 +1232,10 @@ figure.alignright img{
     -moz-box-sizing: border-box;
     box-sizing: border-box;
 }
-
-
 /**
  * 6.1 Post Thumbnail
  * -----------------------------------------------------------------------------
  */
-
 .post-thumbnail {
     display: block;
     text-align: center;
@@ -1298,10 +1243,8 @@ figure.alignright img{
     width: 100%;
     z-index: 0;
 }
-
 a.post-thumbnail:hover {
 }
-
 .full-width .post-thumbnail img {
     display: block;
     margin: 0 auto;
@@ -1328,12 +1271,10 @@ p.post-thumbnail-description a{
 p.post-thumbnail-description a:hover{
     border-bottom: 1px solid #ccc;
 }
-
 /**
  * 6.2 Entry Header
  * -----------------------------------------------------------------------------
  */
-
 .entry-header {
     position: relative;
     z-index: 1;
@@ -1349,12 +1290,10 @@ p.post-thumbnail-description a:hover{
 .entry-title a:hover {
     color: #c00;
 }
-
 /**
  * 6.3 Entry Meta
  * -----------------------------------------------------------------------------
  */
-
 .entry-meta {
     clear: both;
     color: #777;
@@ -1429,7 +1368,6 @@ p.post-thumbnail-description a:hover{
 .featured-post:before{
     content:"\f087";
 }
-
 .share{
     float: left;
     width: 100%;
@@ -1450,13 +1388,10 @@ p.post-thumbnail-description a:hover{
     margin: 3px 7px 0;
     line-height: 1.3em;
 }
-
-
 /**
  * 6.4 Entry Content
  * -----------------------------------------------------------------------------
  */
-
 .entry-content,
 .entry-summary,
 .page-content {
@@ -1465,17 +1400,14 @@ p.post-thumbnail-description a:hover{
     -ms-hyphens:     auto;
     hyphens:         auto;
 }
-
 .site-content .entry-content,
 .site-content .entry-summary,
 .page-content {
     /*padding: 0 7px;*/
 }
-
 .page .entry-content {
     padding-top: 0;
 }
-
 .entry-content h1:first-child,
 .entry-content h2:first-child,
 .entry-content h3:first-child,
@@ -1496,84 +1428,68 @@ p.post-thumbnail-description a:hover{
 .page-content h6:first-child {
     margin-top: 0;
 }
-
 .entry-content a,
 .entry-summary a,
 .page-content a,
 .comment-content a {
 }
-
 .entry-content a:hover,
 .entry-summary a:hover,
 .page-content a:hover,
 .comment-content a:hover {
 }
-
 .entry-content table,
 .comment-content table {
     font-size: 0.8em;
     line-height: 1.2857142857;
     margin-bottom: 24px;
 }
-
 .entry-content th,
 .comment-content th {
     font-weight: 700;
     padding: 8px;
     text-transform: uppercase;
 }
-
 .entry-content td,
 .comment-content td {
     padding: 8px;
 }
-
 .post-edit-link {
     margin: 0 auto 1.5em;
 }
 .post-edit-link:hover {
     color: #c00;
 }
-
 /* Media Elements */
-
 .hentry .mejs-container {
     margin: 12px 0 18px;
 }
-
 .hentry .mejs-mediaelement,
 .hentry .mejs-container .mejs-controls {
     background: #000;
 }
-
 .hentry .mejs-controls .mejs-time-rail .mejs-time-loaded,
 .hentry .mejs-controls .mejs-horizontal-volume-slider .mejs-horizontal-volume-current {
     background: #fff;
 }
-
 .hentry .mejs-controls .mejs-time-rail .mejs-time-current {
     background: #c00;
 }
-
 .hentry .mejs-controls .mejs-time-rail .mejs-time-total,
 .hentry .mejs-controls .mejs-horizontal-volume-slider .mejs-horizontal-volume-total {
     background: rgba(255,255,255,.33);
 }
-
 .hentry .mejs-container .mejs-controls .mejs-time {
     padding-top: 9px;
 }
-
 .hentry .mejs-controls .mejs-time-rail span,
 .hentry .mejs-controls .mejs-horizontal-volume-slider .mejs-horizontal-volume-total,
 .hentry .mejs-controls .mejs-horizontal-volume-slider .mejs-horizontal-volume-current {
     border-radius: 0;
 }
-
 .hentry .mejs-overlay-loading {
     background: transparent;
 }
-
 /* Page links */
 .page-links {
     clear: both;
@@ -1601,12 +1517,10 @@ p.post-thumbnail-description a:hover{
     margin: 0;
     padding-right: 7px;
 }
-
 /* Twitter embed */
 .twitter-tweet{
     margin: 0 auto 1.5em !important;
 }
-
 /* H2 Anchors */
 .entry-content h2{
     position: relative;
@@ -1626,77 +1540,63 @@ a.anchor{
 h2:hover a.anchor{
     display: block;
 }
-
-
 /**
  * 6.5 Gallery
  * -----------------------------------------------------------------------------
  */
-
 .gallery {
     margin: 0 auto 1.5em;
     text-align: center;
 }
-
 .gallery-item {
     display: inline-block;
     margin: 0 4px 4px 0;
     overflow: hidden;
     position: relative;
 }
-
 .gallery-columns-1 .gallery-item {
     max-width: 100%;
 }
-
 .gallery-columns-2 .gallery-item {
     max-width: 48%;
     max-width: -webkit-calc(50% - 4px);
     max-width:         calc(50% - 4px);
 }
-
 .gallery-columns-3 .gallery-item {
     max-width: 32%;
     max-width: -webkit-calc(33.3% - 4px);
     max-width:         calc(33.3% - 4px);
 }
-
 .gallery-columns-4 .gallery-item {
     max-width: 23%;
     max-width: -webkit-calc(25% - 4px);
     max-width:         calc(25% - 4px);
 }
-
 .gallery-columns-5 .gallery-item {
     max-width: 19%;
     max-width: -webkit-calc(20% - 4px);
     max-width:         calc(20% - 4px);
 }
-
 .gallery-columns-6 .gallery-item {
     max-width: 15%;
     max-width: -webkit-calc(16.7% - 4px);
     max-width:         calc(16.7% - 4px);
 }
-
 .gallery-columns-7 .gallery-item {
     max-width: 13%;
     max-width: -webkit-calc(14.28% - 4px);
     max-width:         calc(14.28% - 4px);
 }
-
 .gallery-columns-8 .gallery-item {
     max-width: 11%;
     max-width: -webkit-calc(12.5% - 4px);
     max-width:         calc(12.5% - 4px);
 }
-
 .gallery-columns-9 .gallery-item {
     max-width: 9%;
     max-width: -webkit-calc(11.1% - 4px);
     max-width:         calc(11.1% - 4px);
 }
-
 .gallery-columns-1 .gallery-item:nth-of-type(1n),
 .gallery-columns-2 .gallery-item:nth-of-type(2n),
 .gallery-columns-3 .gallery-item:nth-of-type(3n),
@@ -1708,7 +1608,6 @@ h2:hover a.anchor{
 .gallery-columns-9 .gallery-item:nth-of-type(9n) {
     margin-right: 0;
 }
-
 .gallery-caption {
     background-color: rgba(0, 0, 0, 0.7);
     -webkit-box-sizing: border-box;
@@ -1727,7 +1626,6 @@ h2:hover a.anchor{
     text-align: left;
     width: 100%;
 }
-
 .gallery-caption:before {
     content: "";
     height: 100%;
@@ -1737,23 +1635,18 @@ h2:hover a.anchor{
     left: 0;
     width: 100%;
 }
-
 .gallery-item:hover .gallery-caption {
     opacity: 1;
 }
-
 .gallery-columns-7 .gallery-caption,
 .gallery-columns-8 .gallery-caption,
 .gallery-columns-9 .gallery-caption {
     display: none;
 }
-
 .fotorama--wp {
     margin: 0 auto 1.5em;
     display: inline-block;
 }
-
-
 /**
  * 6.6 Custom Post Types (Team & Profile)
  * -----------------------------------------------------------------------------
@@ -1782,8 +1675,6 @@ h2:hover a.anchor{
 .department:before{
     content:"\f08a";
 }
-
-
 /**
  * 6.7 Post/Image/Paging Navigation
  * -----------------------------------------------------------------------------
@@ -1857,7 +1748,6 @@ h2:hover a.anchor{
 .nav-links  a:hover .meta-nav {
     color: #fff;
 }
-
 /* Paging Navigation */
 .paging-navigation {
     margin: 1em 0 2em;
@@ -1881,8 +1771,6 @@ h2:hover a.anchor{
     background: #c00;
     color: #fff;
 }
-
-
 /**
  * 6.8 Attachments
  * -----------------------------------------------------------------------------
@@ -1900,8 +1788,6 @@ h2:hover a.anchor{
 .entry-attachment .attachment {
     margin-bottom: 24px;
 }
-
-
 /**
  * 6.9 Archives
  * -----------------------------------------------------------------------------
@@ -1911,8 +1797,6 @@ h2:hover a.anchor{
     font-weight: 200;
     text-align: center;
 }
-
-
 /**
  * 6.10 Author Info
  * -----------------------------------------------------------------------------
@@ -1959,13 +1843,10 @@ h2:hover a.anchor{
     font-size: 18px;
     font-size: 1rem;
 }
-
-
 /**
  * 6.11 Comments
  * -----------------------------------------------------------------------------
  */
-
 .says {
     display: none;
 }
@@ -2014,7 +1895,6 @@ h2:hover a.anchor{
     background: #c00;
     text-decoration: none;
 }
-
 /* Comments */
 #comments{
     margin: 20px auto;
@@ -2162,13 +2042,10 @@ h2:hover a.anchor{
 #respond p{
     margin-bottom: 0.5em;
 }
-
-
 /**
  * 6.12 Contact Page
  * -----------------------------------------------------------------------------
  */
-
 #page-contact .entry-content > p:first-of-type:first-letter{
     font-size: inherit;
     line-height: inherit;
@@ -2249,8 +2126,6 @@ h2:hover a.anchor{
 #page-contact .bigContact-halfSize:nth-child(odd){
     padding-right: 0 !important;    
 }
-
-
 /** 
  * Flat jQuery UI Datepicker
   */
@@ -2281,21 +2156,17 @@ h2:hover a.anchor{
 #page-contact .ui-datepicker td{
     width: 14.2857%; /* 100/7days */
 }
-
 /* Calendar Header */
 #page-contact .ui-datepicker-title { text-align: center; }
-
 /* Month */
 #page-contact .ui-datepicker-month {
     position: relative;
     color: #565656;
 }
-
 /* Year */
 #page-contact .ui-datepicker-year {
     font-weight: 200;
 }
-
 /* Prev Next Month */
 #page-contact .ui-datepicker-prev,
 #page-contact .ui-datepicker-next {
@@ -2306,12 +2177,10 @@ h2:hover a.anchor{
     -moz-border-radius: 0px;
     border-radius: 0px;
 }
-
 #page-contact .ui-datepicker-prev {
     left: 0;
     padding-left: 0;
 }
-
 #page-contact .ui-datepicker-next {
     right: 0;
     padding-right: 0;
@@ -2348,8 +2217,6 @@ h2:hover a.anchor{
 #page-contact .ui-datepicker-next span:before{
     content:"\f105";
 }
-
-
 /* Calendar "Days" */
 #page-contact .ui-datepicker-calendar th {
     line-height: 1.5;
@@ -2357,13 +2224,11 @@ h2:hover a.anchor{
     font-weight: normal;
     color: #777;
 }
-
 #page-contact .ui-datepicker-calendar td {
     padding: 0 7px;
     text-align: center;
     line-height: 26px;
 }
-
 #page-contact .ui-datepicker-calendar .ui-state-default {
     display: block;
     outline: none;
@@ -2371,13 +2236,11 @@ h2:hover a.anchor{
     color: #a8a8a8;
     border: 1px solid transparent;
 }
-
 /* Day Active State*/
 #page-contact .ui-datepicker-calendar .ui-state-active {
     color: #6a9113;
     border-color: #6a9113;
 }
-
 /* Other Months Days*/
 #page-contact .ui-datepicker-other-month .ui-state-default { color: #565656; }
 #page-contact .ui-widget-content {
@@ -2486,7 +2349,6 @@ h2:hover a.anchor{
     cursor: -moz-grabbing;
     cursor: -webkit-grabbing;
 }
-
 #page-contact .ui-slider-handle.ui-state-default{
     background: #c00;
     width: 1em;
@@ -2501,7 +2363,6 @@ h2:hover a.anchor{
 #page-contact .bigContact .ui-timepicker-div .ui_tpicker_time_label {
     line-height: 34px;
 }
-
 /**
  * 7.0 Sidebars
  * -----------------------------------------------------------------------------
@@ -2516,7 +2377,6 @@ h2:hover a.anchor{
 #sidebar ol{
     margin: 0;
 }
-
 #sidebar h2,
 #sidebar h3,
 #sidebar h4,
@@ -2528,12 +2388,10 @@ h2:hover a.anchor{
     margin-bottom: 0;
     line-height: 0;
 }
-
 /**
  * 7.1 Widgets
  * -----------------------------------------------------------------------------
  */
-
 /* Primary Sidebar, Footer Sidebar */
 .widget {
     float: left;
@@ -2544,7 +2402,6 @@ h2:hover a.anchor{
     -ms-hyphens:     auto;
     hyphens:         auto;
 }
-
 /* Search Form */
 .search-form,
 .search-form .search-field{
@@ -2556,7 +2413,6 @@ h2:hover a.anchor{
     position: relative;
 }
 .search-form{
-
 }
 .search-form label{
     width: 100%;
@@ -2618,7 +2474,6 @@ h2:hover a.anchor{
 .search-form label:focus:after{
     color: #ccc;
 }
-
 /* Calendar Widget */
 .widget_calendar table {
     line-height: 2;
@@ -2658,7 +2513,6 @@ h2:hover a.anchor{
     padding-right: 5px;
     text-align: right;
 }
-
 /**
  * 8.0 Footer
  * -----------------------------------------------------------------------------
@@ -2721,7 +2575,6 @@ h2:hover a.anchor{
 #footer-nav li:last-child:after{
     display: none;
 }
-
 .social-media a,
 .social-media a:visited{
     font-size: 1.1em;
@@ -2763,12 +2616,10 @@ h2:hover a.anchor{
 .social-media .fa-pinterest:hover{
     background: #cc2127;
 }
-
 /**
  * 10.0 Media Queries
  * -----------------------------------------------------------------------------
  */
-
 /* Does the same thing as <meta name="viewport" content="width=device-width">,
  * but in the future W3C standard way. -ms- prefix is required for IE10+ to
  * render responsive styling in Windows 8 "snapped" views; IE10+ does not honor
@@ -2777,11 +2628,9 @@ h2:hover a.anchor{
 @-ms-viewport {
     width: device-width;
 }
-
 @viewport {
     width: device-width;
 }
-
 @media screen and (max-width: 768px) {
     #logo{
         float: none;
@@ -2920,12 +2769,10 @@ h2:hover a.anchor{
         margin-left: 0;
     }
 }
-
 /**
  * 11.0 Print
  * -----------------------------------------------------------------------------
  */
-
 @media print {
     body{
         background: none !important; /* Brute force since user agents all print differently. */
