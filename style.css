@@ -36,12 +36,11 @@ Domain Path: /languages/
  *   6.10 - Author Info
  *   6.11 - Comments
  *   6.12 - Contact Page
- * 7.0 - Sidebar
+ *   7.0 - Sidebar
  *   7.1 - Widgets
  * 8.0 - Footer
- * 10.0 - Multisite
- * 11.0 - Media Queries
- * 12.0 - Print
+ * 10.0 - Media Queries
+ * 11.0 - Print
  * -----------------------------------------------------------------------------
  */
 
@@ -2766,39 +2765,7 @@ h2:hover a.anchor{
 }
 
 /**
- * 10.0 Multisite
- * -----------------------------------------------------------------------------
- */
-
-/*.site-main .widecolumn {
-    padding-top: 72px;
-    width: auto;
-}
-.site-main .mu_register,
-.widecolumn > h2,
-.widecolumn > form {
-    margin: 0 auto 48px;
-    max-width: 474px;
-    padding: 0 30px;
-}
-
-.site-main .mu_register #blog_title,
-.site-main .mu_register #user_email,
-.site-main .mu_register #blogname,
-.site-main .mu_register #user_name {
-    font-size: inherit;
-    width: 90%;
-}
-
-.site-main .mu_register input[type="submit"],
-.widecolumn #submit {
-    font-size: inherit;
-    width: auto;
-}*/
-
-
-/**
- * 11.0 Media Queries
+ * 10.0 Media Queries
  * -----------------------------------------------------------------------------
  */
 
@@ -2816,9 +2783,6 @@ h2:hover a.anchor{
 }
 
 @media screen and (max-width: 768px) {
-    body{
-        /*background: red;*/
-    }
     #logo{
         float: none;
         display: inline-block;
@@ -2837,9 +2801,6 @@ h2:hover a.anchor{
         float: none;
         margin: 0 5px;
     }
-    #grid div.first-line {
-        margin-top: 34px !important;
-    }
 }
 @media screen and (max-width: 640px) {
     .content-sidebar #main,
@@ -2850,12 +2811,8 @@ h2:hover a.anchor{
     h2:hover a.anchor{
         display: none;
     }
-
 }
 @media screen and (max-width: 480px) {
-    body{
-        /*background: pink;*/
-    }
     #logo{
         float: left;
     }
@@ -2965,7 +2922,7 @@ h2:hover a.anchor{
 }
 
 /**
- * 12.0 Print
+ * 11.0 Print
  * -----------------------------------------------------------------------------
  */
 
