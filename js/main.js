@@ -26,7 +26,7 @@
         }
 
         // Hide button if menu is missing or empty.
-        menu = nav.find('#menu');
+        menu = nav.find('.menu');
         if (!menu || !menu.children().length) {
             button.hide();
             return;
