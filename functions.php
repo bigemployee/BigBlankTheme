@@ -197,6 +197,9 @@ require_once(get_template_directory() . '/inc/filters.php');
 // Custom template tags for this theme.
 require_once(get_template_directory() . '/inc/template-tags.php');
 
+// Custom shortcodes.
+require_once(get_template_directory() . '/inc/shortcodes.php');
+
 // Add Theme Customizer functionality.
 require_once(get_template_directory() . '/inc/admin-customizer.php');
 
