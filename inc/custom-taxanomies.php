@@ -24,7 +24,7 @@ function bigblank_register_taxonomies() {
 //        'separate_items_with_commas' => __('Separate departments with commas', 'bigblank'),
         'add_or_remove_items' => __('Add or remove departments', 'bigblank'),
 //        'choose_from_most_used' => __('Choose from the most used departments', 'bigblank'),
-        'not_found' => __('No writers found.', 'bigblank'),
+        'not_found' => __('No departments found.', 'bigblank'),
         'menu_name' => __('Departments', 'bigblank'),
     );
 
