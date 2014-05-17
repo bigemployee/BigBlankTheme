@@ -814,8 +814,9 @@ figure.alignright figcaption{
 .page-content {
     margin-bottom: 48px;
 }
+/* Not playing well with tinymce editor */
 /*.post-type-page.mceContentBody > p:first-of-type:first-letter,*/
-.mceContentBody > p.dropcap:first-of-type:first-letter,
+/*.mceContentBody > p.dropcap:first-of-type:first-letter,
 .post-type-post.mceContentBody > p:first-of-type:first-letter{
     font-size: 3.5em;
     line-height: 0.75em;
@@ -823,7 +824,7 @@ figure.alignright figcaption{
     font-weight: 900;
     float: left;
     margin: 0 5px 0 0;
-}
+}*/
 figure.alignnone,
 figure.aligncenter{
     display: inline-block;

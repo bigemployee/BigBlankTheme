@@ -22,12 +22,12 @@ function bigblank_custom_editor_styles($settings) {
             'title' => __('Default Style', 'bigblank'),
             'format' => 'p'
         ),
-        array(
-            'title' => __('Drop Cap', 'bigblank'),
-            'block' => 'p',
-            'classes' => 'dropcap',
-            'remove' => 'all'
-        ),
+//        array(
+//            'title' => __('Drop Cap', 'bigblank'),
+//            'block' => 'p',
+//            'classes' => 'dropcap',
+//            'remove' => 'all'
+//        ),
 //        array(
 //            'title' => __('Button', 'bigblank'),
 //            'selector' => 'a',
