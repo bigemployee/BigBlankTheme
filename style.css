@@ -2082,7 +2082,8 @@ h2:hover a.anchor{
 #page-contact .bigContact-phone,
 #page-contact .bigContact-emails,
 #page-contact .bigContact-hours,
-#page-contact #bigContact-form{
+#page-contact #bigContact-form,
+.bigContact #bigContact-results{
     margin: 0 auto 1.5em;
     max-width: 580px;
     text-align: left;
@@ -2111,9 +2112,9 @@ h2:hover a.anchor{
 #page-contact .bigContact-hours h3{
     padding: 0;
 }
-#page-contact .bigContact-halfSize,
-#page-contact .bigContact-halfSize:nth-child(even),
-#page-contact .bigContact-halfSize:nth-child(odd){
+.bigContact .bigContact-halfSize,
+.bigContact .bigContact-halfSize:nth-child(even),
+.bigContact .bigContact-halfSize:nth-child(odd){
     width: 50%;
     padding-left: 5px !important;
     padding-right: 5px !important;
@@ -2121,10 +2122,10 @@ h2:hover a.anchor{
     -moz-box-sizing: border-box;
     box-sizing: border-box;
 }
-#page-contact .bigContact-halfSize:nth-child(even){
+.bigContact .bigContact-halfSize:nth-child(even){
     padding-left: 0 !important;    
 }
-#page-contact .bigContact-halfSize:nth-child(odd){
+.bigContact .bigContact-halfSize:nth-child(odd){
     padding-right: 0 !important;    
 }
 /** 
@@ -2660,6 +2661,12 @@ h2:hover a.anchor{
     }
     h2:hover a.anchor{
         display: none;
+    }
+    .bigContact .bigContact-halfSize,
+    .bigContact .bigContact-halfSize:nth-child(even),
+    .bigContact .bigContact-halfSize:nth-child(odd){
+        width: 100%;
+        padding: 0 !important;
     }
 }
 @media screen and (max-width: 480px) {
