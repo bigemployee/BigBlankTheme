@@ -763,6 +763,9 @@ figure.wp-caption{
 figure.wp-caption img{
     margin-bottom: 0;
 }
+.wp-caption-text{
+    // inherit from parent
+}
 figcaption{
     -webkit-box-sizing: border-box;
     -moz-box-sizing: border-box;
@@ -1776,6 +1779,9 @@ h2:hover a.anchor{
 .paging-navigation a:hover{
     background: #c00;
     color: #fff;
+}
+.sticky{
+    // using .featured-post to identify sticky posts
 }
 /**
  * 6.8 Attachments
