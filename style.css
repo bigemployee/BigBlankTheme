@@ -1178,6 +1178,9 @@ figure.alignright figcaption{
 .site-content blockquote p{
     max-width: 100%;
 }
+.site-content blockquote p:last-of-type{
+    margin-bottom: 0;
+}
 .page-content {
     margin-bottom: 48px;
 }

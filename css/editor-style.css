@@ -811,6 +811,9 @@ figure.alignright figcaption{
 .mceContentBody blockquote p{
     max-width: 100%;
 }
+.mceContentBody blockquote p:last-of-type{
+    margin-bottom: 0;
+}
 .page-content {
     margin-bottom: 48px;
 }
