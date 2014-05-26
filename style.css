@@ -1847,6 +1847,7 @@ h2:hover a.anchor{
     line-height: 1.5;
     font-size: 18px;
     font-size: 1rem;
+    text-transform: none;
 }
 /**
  * 6.11 Comments
