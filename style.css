@@ -2051,6 +2051,10 @@ h2:hover a.anchor{
  * 6.12 Contact Page
  * -----------------------------------------------------------------------------
  */
+/**
+ * 6.12 Contact Page
+ * -----------------------------------------------------------------------------
+ */
 #page-contact .entry-content > p:first-of-type:first-letter{
     font-size: inherit;
     line-height: inherit;
@@ -2059,34 +2063,34 @@ h2:hover a.anchor{
     float: none;
     margin: auto;
 }
-#page-contact .ui-widget {
+div.bigContact .ui-widget {
     font: 400 1em/1 "Source Sans Pro", Helvetica, Arial, sans-serif;
     text-align: center;
 }
-#page-contact .entry-header,
-#page-contact .bigContact-map{
+div.bigContact .entry-header,
+div.bigContact .bigContact-map{
     float: left;
     width: 100%;
     max-width: 100%;
     clear: both;
     margin: 0 auto;
 }
-#page-contact .bigContact-map{
+div.bigContact .bigContact-map{
     margin-bottom: 1.5em;
 }
-#page-contact .bigContact-map p:empty{
+div.bigContact .bigContact-map p:empty{
     margin: 0 !important;
 }
-#page-contact .bigContact .bigContact-map ul{
+div.bigContact .bigContact-map ul{
     margin-bottom: 0 !important;
 }
-#page-contact .bigContact-map li:last-child{
+div.bigContact .bigContact-map li:last-child{
     text-align: center;
 }
-#page-contact .bigContact-phone,
-#page-contact .bigContact-emails,
-#page-contact .bigContact-hours,
-#page-contact #bigContact-form,
+div.bigContact .bigContact-phone,
+div.bigContact .bigContact-emails,
+div.bigContact .bigContact-hours,
+div.bigContact #bigContact-form,
 .bigContact #bigContact-results{
     margin: 0 auto 1.5em;
     max-width: 580px;
@@ -2097,28 +2101,28 @@ h2:hover a.anchor{
     -moz-box-sizing: border-box;
     box-sizing: border-box;
 }
-#page-contact .bigContact-phone:after,
-#page-contact .bigContact-emails:after,
-#page-contact .bigContact-hours:after,
-#page-contact #bigContact-form:after{
+div.bigContact .bigContact-phone:after,
+div.bigContact .bigContact-emails:after,
+div.bigContact .bigContact-hours:after,
+div.bigContact #bigContact-form:after{
     content: ""; 
     display: table;
     clear: both;
 }
-#page-contact .bigContact-phone ul,
-#page-contact .bigContact-emails ul,
-#page-contact .bigContact-hours ul{
+div.bigContact .bigContact-phone ul,
+div.bigContact .bigContact-emails ul,
+div.bigContact .bigContact-hours ul{
     float: left;
     width: 100%;
 }
-#page-contact .bigContact-phone h3,
-#page-contact .bigContact-emails h3,
-#page-contact .bigContact-hours h3{
+div.bigContact .bigContact-phone h3,
+div.bigContact .bigContact-emails h3,
+div.bigContact .bigContact-hours h3{
     padding: 0;
 }
-.bigContact .bigContact-halfSize,
-.bigContact .bigContact-halfSize:nth-child(even),
-.bigContact .bigContact-halfSize:nth-child(odd){
+div.bigContact .bigContact-halfSize,
+div.bigContact .bigContact-halfSize:nth-child(even),
+div.bigContact .bigContact-halfSize:nth-child(odd){
     width: 50%;
     padding-left: 5px !important;
     padding-right: 5px !important;
@@ -2136,18 +2140,18 @@ h2:hover a.anchor{
  * Flat jQuery UI Datepicker
   */
 /* Reset */
-#page-contact .ui-datepicker,
-#page-contact .ui-datepicker table,
-#page-contact .ui-datepicker tr,
-#page-contact .ui-datepicker td,
-#page-contact .ui-datepicker th {
+div.bigContact .ui-datepicker,
+div.bigContact .ui-datepicker table,
+div.bigContact .ui-datepicker tr,
+div.bigContact .ui-datepicker td,
+div.bigContact .ui-datepicker th {
     margin: 0;
     padding: 0 !important;
     border: none;
     border-spacing: 0;
 }
 /* Calendar Wrapper */
-#page-contact .ui-datepicker {
+div.bigContact .ui-datepicker {
     display: none;
     padding: 0;
     cursor: default;
@@ -2159,23 +2163,23 @@ h2:hover a.anchor{
     border-radius: 0px;
     overflow: hidden;
 }
-#page-contact .ui-datepicker td{
+div.bigContact .ui-datepicker td{
     width: 14.2857%; /* 100/7days */
 }
 /* Calendar Header */
-#page-contact .ui-datepicker-title { text-align: center; }
+div.bigContact .ui-datepicker-title { text-align: center; }
 /* Month */
-#page-contact .ui-datepicker-month {
+div.bigContact .ui-datepicker-month {
     position: relative;
     color: #565656;
 }
 /* Year */
-#page-contact .ui-datepicker-year {
+div.bigContact .ui-datepicker-year {
     font-weight: 200;
 }
 /* Prev Next Month */
-#page-contact .ui-datepicker-prev,
-#page-contact .ui-datepicker-next {
+div.bigContact .ui-datepicker-prev,
+div.bigContact .ui-datepicker-next {
     position: absolute;
     cursor: pointer;
     line-height: 2;
@@ -2183,16 +2187,16 @@ h2:hover a.anchor{
     -moz-border-radius: 0px;
     border-radius: 0px;
 }
-#page-contact .ui-datepicker-prev {
+div.bigContact .ui-datepicker-prev {
     left: 0;
     padding-left: 0;
 }
-#page-contact .ui-datepicker-next {
+div.bigContact .ui-datepicker-next {
     right: 0;
     padding-right: 0;
 }
-#page-contact .ui-datepicker-prev span,
-#page-contact .ui-datepicker-next span{
+div.bigContact .ui-datepicker-prev span,
+div.bigContact .ui-datepicker-next span{
     display: block;
     text-indent: -9999px;
     float: left;
@@ -2203,8 +2207,8 @@ h2:hover a.anchor{
     top: 0;
     left: 0;
 }
-#page-contact .ui-datepicker-prev span:before,
-#page-contact .ui-datepicker-next span:before{
+div.bigContact .ui-datepicker-prev span:before,
+div.bigContact .ui-datepicker-next span:before{
     float: left;
     width: 100%;
     line-height: 1.8;
@@ -2217,25 +2221,25 @@ h2:hover a.anchor{
     -moz-osx-font-smoothing:grayscale;
     text-indent: 0;
 }
-#page-contact .ui-datepicker-prev span:before{
+div.bigContact .ui-datepicker-prev span:before{
     content:"\f104";
 }
-#page-contact .ui-datepicker-next span:before{
+div.bigContact .ui-datepicker-next span:before{
     content:"\f105";
 }
 /* Calendar "Days" */
-#page-contact .ui-datepicker-calendar th {
+div.bigContact .ui-datepicker-calendar th {
     line-height: 1.5;
     text-align: center;
     font-weight: normal;
     color: #777;
 }
-#page-contact .ui-datepicker-calendar td {
+div.bigContact .ui-datepicker-calendar td {
     padding: 0 7px;
     text-align: center;
     line-height: 26px;
 }
-#page-contact .ui-datepicker-calendar .ui-state-default {
+div.bigContact .ui-datepicker-calendar .ui-state-default {
     display: block;
     outline: none;
     text-decoration: none;
@@ -2243,21 +2247,21 @@ h2:hover a.anchor{
     border: 1px solid transparent;
 }
 /* Day Active State*/
-#page-contact .ui-datepicker-calendar .ui-state-active {
+div.bigContact .ui-datepicker-calendar .ui-state-active {
     color: #6a9113;
     border-color: #6a9113;
 }
 /* Other Months Days*/
-#page-contact .ui-datepicker-other-month .ui-state-default { color: #565656; }
-#page-contact .ui-widget-content {
+div.bigContact .ui-datepicker-other-month .ui-state-default { color: #565656; }
+div.bigContact .ui-widget-content {
     border: 0 none;
     background: #fff;
     color: #222;
 }
-#page-contact .ui-widget-content a {
+div.bigContact .ui-widget-content a {
     color: #222;
 }
-#page-contact .ui-widget-header {
+div.bigContact .ui-widget-header {
     border: 0 none;
     border-bottom: 1px solid #ccc;
     padding: 0;
@@ -2268,14 +2272,14 @@ h2:hover a.anchor{
     -moz-border-radius: 0;
     border-radius: 0;
 }
-#page-contact .ui-widget-header a {
+div.bigContact .ui-widget-header a {
     color: #222;
     position: absolute;
     top: 0;
 }
-#page-contact .ui-state-default, 
-#page-contact .ui-widget-content .ui-state-default, 
-#page-contact .ui-widget-header .ui-state-default {
+div.bigContact .ui-state-default, 
+div.bigContact .ui-widget-content .ui-state-default, 
+div.bigContact .ui-widget-header .ui-state-default {
     border: 0 none;
     background: none;
     font-weight: 400;
@@ -2286,52 +2290,52 @@ h2:hover a.anchor{
     -moz-box-sizing: border-box;
     box-sizing: border-box;
 }
-#page-contact .ui-state-hover,
-#page-contact .ui-widget-content .ui-state-hover,
-#page-contact .ui-widget-header .ui-state-hover,
-#page-contact .ui-state-focus,
-#page-contact .ui-widget-content .ui-state-focus,
-#page-contact .ui-widget-header .ui-state-focus {
+div.bigContact .ui-state-hover,
+div.bigContact .ui-widget-content .ui-state-hover,
+div.bigContact .ui-widget-header .ui-state-hover,
+div.bigContact .ui-state-focus,
+div.bigContact .ui-widget-content .ui-state-focus,
+div.bigContact .ui-widget-header .ui-state-focus {
     border: 0 none;
     background: none;
     font-weight: bold;
     color: #c00;
 }
-#page-contact .ui-state-hover a,
-#page-contact .ui-state-hover a:hover,
-#page-contact .ui-state-hover a:link,
-#page-contact .ui-state-hover a:visited,
-#page-contact .ui-state-focus a,
-#page-contact .ui-state-focus a:hover,
-#page-contact .ui-state-focus a:link,
-#page-contact .ui-state-focus a:visited {
+div.bigContact .ui-state-hover a,
+div.bigContact .ui-state-hover a:hover,
+div.bigContact .ui-state-hover a:link,
+div.bigContact .ui-state-hover a:visited,
+div.bigContact .ui-state-focus a,
+div.bigContact .ui-state-focus a:hover,
+div.bigContact .ui-state-focus a:link,
+div.bigContact .ui-state-focus a:visited {
     color: #c00;
     text-decoration: none;
 }
-#page-contact .ui-state-active,
-#page-contact .ui-widget-content .ui-state-active,
-#page-contact .ui-widget-header .ui-state-active {
+div.bigContact .ui-state-active,
+div.bigContact .ui-widget-content .ui-state-active,
+div.bigContact .ui-widget-header .ui-state-active {
     background: #c00;
     font-weight: bold;
     color: #fff;
 }
-#page-contact .ui-state-active a,
-#page-contact .ui-state-active a:link,
-#page-contact .ui-state-active a:visited {
+div.bigContact .ui-state-active a,
+div.bigContact .ui-state-active a:link,
+div.bigContact .ui-state-active a:visited {
     color: #c00;
     text-decoration: none;
 }
-#page-contact .ui-state-highlight,
-#page-contact .ui-widget-content .ui-state-highlight,
-#page-contact .ui-widget-header .ui-state-highlight {
+div.bigContact .ui-state-highlight,
+div.bigContact .ui-widget-content .ui-state-highlight,
+div.bigContact .ui-widget-header .ui-state-highlight {
     border: 0 none;
     background: #fbec88;
     color: #363636;
     font-weight: bold;
 }
-#page-contact .ui-state-highlight a,
-#page-contact .ui-widget-content .ui-state-highlight a,
-#page-contact .ui-widget-header .ui-state-highlight a {
+div.bigContact .ui-state-highlight a,
+div.bigContact .ui-widget-content .ui-state-highlight a,
+div.bigContact .ui-widget-header .ui-state-highlight a {
     color: #363636;
 }
 #page-contact #ui-timepicker-div-datepicker{
@@ -2340,22 +2344,22 @@ h2:hover a.anchor{
     -moz-box-sizing: border-box;
     box-sizing: border-box;    
 }
-#page-contact .ui-slider{
+div.bigContact .ui-slider{
     background: #ccc;
     height: 0.6em;
 }
-#page-contact .ui-slider-handle{
+div.bigContact .ui-slider-handle{
     cursor: move; /* fallback if grab cursor is unsupported */
     cursor: grab;
     cursor: -moz-grab;
     cursor: -webkit-grab;
 }
-#page-contact .ui-slider-handle:active { 
+div.bigContact .ui-slider-handle:active { 
     cursor: grabbing;
     cursor: -moz-grabbing;
     cursor: -webkit-grabbing;
 }
-#page-contact .ui-slider-handle.ui-state-default{
+div.bigContact .ui-slider-handle.ui-state-default{
     background: #c00;
     width: 1em;
     height: 1em;
@@ -2363,10 +2367,10 @@ h2:hover a.anchor{
     margin-left: -0.5em;
     border-radius: 0.5em;
 }
-#page-contact .bigContact .ui-timepicker-div dl dd {
+div.bigContact .ui-timepicker-div dl dd {
     margin: 8px 10px 10px 85px;
 }
-#page-contact .bigContact .ui-timepicker-div .ui_tpicker_time_label {
+div.bigContact .ui-timepicker-div .ui_tpicker_time_label {
     line-height: 34px;
 }
 /**
@@ -2672,9 +2676,9 @@ h2:hover a.anchor{
     h2:hover a.anchor{
         display: none;
     }
-    .bigContact .bigContact-halfSize,
-    .bigContact .bigContact-halfSize:nth-child(even),
-    .bigContact .bigContact-halfSize:nth-child(odd){
+    div.bigContact .bigContact-halfSize,
+    div.bigContact .bigContact-halfSize:nth-child(even),
+    div.bigContact .bigContact-halfSize:nth-child(odd){
         width: 100%;
         padding: 0 !important;
     }
