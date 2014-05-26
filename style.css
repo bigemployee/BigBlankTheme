@@ -78,7 +78,7 @@ sub{top:.5ex}
 dl{margin-bottom:24px}
 dt{font-weight:700}
 dd{margin-bottom:24px}
-ol,ul{margin:0 0 24px 20px;-webkit-box-sizing:border-box;-moz-box-sizing:border-box;box-sizing:border-box;}
+ol,ul{margin:0 0 24px 20px;-webkit-box-sizing:border-box;-moz-box-sizing:border-box;box-sizing:border-box;list-style-position: inside;}
 ul{list-style:disc}
 ol{list-style:decimal}
 li>ol,li>ul{margin:0 0 0 20px}
@@ -1174,7 +1174,7 @@ figure.alignright figcaption{
 .entry-content ol ul,
 .entry-content ul ol,
 .entry-content ul ul{
-    padding: 0 0 0 0.5em;
+    padding: 0 0 0 20px;
     margin: 0;
 }
 .site-content blockquote p{
@@ -1920,10 +1920,6 @@ h2:hover a.anchor{
 #comment-list .comment,
 #commentform li{
     list-style: none;
-}
-#comment-list ul,
-#comment-list ol{
-    margin-left: 25px;
 }
 .comment-body{
     float: left;
