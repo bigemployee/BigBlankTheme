@@ -1175,6 +1175,7 @@ figure.alignright figcaption{
 .entry-content ul ol,
 .entry-content ul ul{
     padding: 0 0 0 0.5em;
+    margin: 0;
 }
 .site-content blockquote p{
     max-width: 100%;
