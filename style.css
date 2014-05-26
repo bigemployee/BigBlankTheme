@@ -2067,24 +2067,24 @@ div.bigContact .ui-widget {
     font: 400 1em/1 "Source Sans Pro", Helvetica, Arial, sans-serif;
     text-align: center;
 }
-div.bigContact .entry-header,
-div.bigContact .bigContact-map{
+#page-contact .entry-header,
+#page-contact .bigContact-map{
     float: left;
     width: 100%;
     max-width: 100%;
     clear: both;
     margin: 0 auto;
 }
-div.bigContact .bigContact-map{
+#page-contact .bigContact-map{
     margin-bottom: 1.5em;
 }
-div.bigContact .bigContact-map p:empty{
+#page-contact .bigContact-map p:empty{
     margin: 0 !important;
 }
-div.bigContact .bigContact-map ul{
+#page-contact .bigContact-map ul{
     margin-bottom: 0 !important;
 }
-div.bigContact .bigContact-map li:last-child{
+#page-contact .bigContact-map li:last-child{
     text-align: center;
 }
 div.bigContact .bigContact-phone,
