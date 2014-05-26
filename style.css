@@ -2130,10 +2130,10 @@ div.bigContact .bigContact-halfSize:nth-child(odd){
     -moz-box-sizing: border-box;
     box-sizing: border-box;
 }
-.bigContact .bigContact-halfSize:nth-child(even){
+div.bigContact .bigContact-halfSize:nth-child(even){
     padding-left: 0 !important;    
 }
-.bigContact .bigContact-halfSize:nth-child(odd){
+div.bigContact .bigContact-halfSize:nth-child(odd){
     padding-right: 0 !important;    
 }
 /** 
