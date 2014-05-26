@@ -106,8 +106,8 @@ hr{background-color:rgba(0,0,0,.1);border:0;height:1px;margin-bottom:23px}
 /* Support a widely-adopted but non-standard selector for text selection styles
  * to achieve a better experience. See http://core.trac.wordpress.org/ticket/25898.
  */
-::selection {background: #ffe26e; color: #000;text-shadow: none;}
-::-moz-selection {background: #ffe26e; color: #000; text-shadow: none;}
+::selection{background: #ffe26e; color: #000;text-shadow: none;}
+::-moz-selection{background: #ffe26e; color: #000; text-shadow: none;}
 /**
  * 1.0 Typography
  * 
@@ -127,49 +127,49 @@ hr{background-color:rgba(0,0,0,.1);border:0;height:1px;margin-bottom:23px}
  * Default: 'Source Sans Pro'
  * http://www.google.com/fonts
  */
-@font-face {
+@font-face{
     font-family: 'Playfair Display';
     font-style: italic;
     font-weight: 400;
     src: local('Playfair Display Italic'), local('PlayfairDisplay-Italic'), url(http://themes.googleusercontent.com/static/fonts/playfairdisplay/v8/9MkijrV-dEJ0-_NWV7E6N3aqFElqJjV-H5EUExnZgmU.woff) format('woff');
 }
-@font-face {
+@font-face{
     font-family: 'Source Sans Pro';
     font-style: normal;
     font-weight: 200;
     src: local('Source Sans Pro ExtraLight'), local('SourceSansPro-ExtraLight'), url(http://themes.googleusercontent.com/static/fonts/sourcesanspro/v7/toadOcfmlt9b38dHJxOBGMa9awK0IKUjIWABZIchFI8.woff) format('woff');
 }
-@font-face {
+@font-face{
     font-family: 'Source Sans Pro';
     font-style: normal;
     font-weight: 300;
     src: local('Source Sans Pro Light'), local('SourceSansPro-Light'), url(http://themes.googleusercontent.com/static/fonts/sourcesanspro/v7/toadOcfmlt9b38dHJxOBGNbE_oMaV8t2eFeISPpzbdE.woff) format('woff');
 }
-@font-face {
+@font-face{
     font-family: 'Source Sans Pro';
     font-style: normal;
     font-weight: 400;
     src: local('Source Sans Pro'), local('SourceSansPro-Regular'), url(http://themes.googleusercontent.com/static/fonts/sourcesanspro/v7/ODelI1aHBYDBqgeIAH2zlBM0YzuT7MdOe03otPbuUS0.woff) format('woff');
 }
-@font-face {
+@font-face{
     font-family: 'Source Sans Pro';
     font-style: italic;
     font-weight: 400;
     src: local('Source Sans Pro Italic'), local('SourceSansPro-It'), url(http://themes.googleusercontent.com/static/fonts/sourcesanspro/v7/M2Jd71oPJhLKp0zdtTvoMzNrcjQuD0pTu1za2FULaMs.woff) format('woff');
 }
-@font-face {
+@font-face{
     font-family: 'Source Sans Pro';
     font-style: normal;
     font-weight: 600;
     src: local('Source Sans Pro Semibold'), local('SourceSansPro-Semibold'), url(http://themes.googleusercontent.com/static/fonts/sourcesanspro/v7/toadOcfmlt9b38dHJxOBGJ6-ys_j0H4QL65VLqzI3wI.woff) format('woff');
 }
-@font-face {
+@font-face{
     font-family: 'Source Sans Pro';
     font-style: normal;
     font-weight: 700;
     src: local('Source Sans Pro Bold'), local('SourceSansPro-Bold'), url(http://themes.googleusercontent.com/static/fonts/sourcesanspro/v7/toadOcfmlt9b38dHJxOBGFkQc6VGVFSmCnC_l7QZG60.woff) format('woff');
 }
-@font-face {
+@font-face{
     font-family: 'Source Sans Pro';
     font-style: normal;
     font-weight: 900;
@@ -186,7 +186,7 @@ body,
 button,
 input,
 select,
-textarea {
+textarea{
     color: #333;
     font-family: "Source Sans Pro", Helvetica, Arial, sans-serif;
     font-size: 18px;
@@ -204,7 +204,7 @@ a:visited{
     outline-offset: 3px;
 }
 a:active,
-a:hover {
+a:hover{
     text-decoration: underline;
 }
 h1,
@@ -212,7 +212,7 @@ h2,
 h3,
 h4,
 h5,
-h6 {
+h6{
     clear: both;
     font-weight: 700;
     font-smooth: always;
@@ -223,28 +223,28 @@ h6 {
     max-width: 580px;
     text-align: left;
 }
-h1 {
+h1{
     font-size: 34px;
     font-weight: 900;
     line-height: 1.3846153846;
 }
-h2 {
+h2{
     font-size: 28px;
     line-height: 1;
 }
-h3 {
+h3{
     font-size: 22px;
     line-height: 1.0909090909;
 }
-h4 {
+h4{
     font-size: 20px;
     line-height: 1.2;
 }
-h5 {
+h5{
     font-size: 18px;
     line-height: 1.3333333333;
 }
-h6 {
+h6{
     font-size: 16px;
     line-height: 1.5;
 }
@@ -257,7 +257,7 @@ button,
 .button:visited,
 input[type="button"],
 input[type="reset"],
-input[type="submit"] {
+input[type="submit"]{
     border: none;
     font-family: inherit;
     font-size: inherit;
@@ -291,7 +291,7 @@ button:before,
 .button:before,
 input[type="button"]:before,
 input[type="reset"]:before,
-input[type="submit"]:before {
+input[type="submit"]:before{
     font-family: 'FontAwesome';
     float: right;
     speak: none;
@@ -313,7 +313,7 @@ input[type="button"]:focus,
 input[type="reset"]:hover,
 input[type="reset"]:focus,
 input[type="submit"]:hover,
-input[type="submit"]:focus {
+input[type="submit"]:focus{
     box-shadow: 0 3px #900;
     top: 2px;
     color: #fff;
@@ -323,7 +323,7 @@ button:active,
 .button:active,
 input[type="button"]:active,
 input[type="reset"]:active,
-input[type="submit"]:active {
+input[type="submit"]:active{
     box-shadow: 0 0 #900;
     top: 5px;
 }
@@ -345,26 +345,26 @@ fieldset[disabled] .button:focus{
 }
 /* Forms styling simialr to Bootstrap */
 /* http://getbootstrap.com/css/#forms */
-::-webkit-input-placeholder {
+::-webkit-input-placeholder{
     color: #999;
 }
-:-moz-placeholder {
+:-moz-placeholder{
     color: #999;
 }
-::-moz-placeholder {
+::-moz-placeholder{
     color: #999;
     opacity: 1;
 }
-:-ms-input-placeholder {
+:-ms-input-placeholder{
     color: #999;
 }
-fieldset {
+fieldset{
     min-width: 0;
     padding: 0;
     margin: 0;
     border: 0;
 }
-legend {
+legend{
     display: block;
     width: 100%;
     padding: 0;
@@ -373,7 +373,7 @@ legend {
     border-bottom: 1px solid #e5e5e5;
 }
 label,
-.label {
+.label{
     display: inline-block;
     margin-bottom: 5px;
     font-weight: 600;
@@ -384,27 +384,27 @@ label small,
     font-weight: 400;
 }
 input[type="radio"],
-input[type="checkbox"] {
+input[type="checkbox"]{
     margin: 0.5em 0 0;
     line-height: normal;
 }
 input[type="file"],
-input[type="range"] {
+input[type="range"]{
     display: block;
     width: 100%;
 }
 select[multiple],
-select[size] {
+select[size]{
     height: auto;
 }
 input[type="file"]:focus,
 input[type="radio"]:focus,
-input[type="checkbox"]:focus {
+input[type="checkbox"]:focus{
     outline: thin dotted;
     outline: 5px auto -webkit-focus-ring-color;
     outline-offset: -2px;
 }
-output {
+output{
     display: block;
     padding-top: 7px;
     line-height: 1.42857143;
@@ -420,7 +420,7 @@ input[type="time"],
 input[type="number"],
 select,
 textarea,
-.form-control {
+.form-control{
     display: block;
     width: 100%;
     color: #555;
@@ -445,7 +445,7 @@ input[type="time"]:focus,
 input[type="number"]:focus,
 select:focus,
 textarea:focus,
-.form-control:focus {
+.form-control:focus{
     border-color: #66afe9;
     outline: 0;
     -webkit-box-shadow: inset 0 1px 1px rgba(0,0,0,.075), 0 0 8px rgba(102, 175, 233, .6);
@@ -467,10 +467,10 @@ fieldset[disabled] .form-control{
     background-color: #eee;
     opacity: 1;
 }
-textarea.form-control {
+textarea.form-control{
     height: auto;
 }
-input[type="search"] {
+input[type="search"]{
     -webkit-appearance: none;
 }
 input[type="date"]{
@@ -481,7 +481,7 @@ textarea{
     margin-bottom: 1em;
 }
 .radio,
-.checkbox {
+.checkbox{
     display: block;
     min-height: 20px;
     padding-left: 20px;
@@ -489,7 +489,7 @@ textarea{
     margin-bottom: 10px;
 }
 .radio label,
-.checkbox label {
+.checkbox label{
     display: inline;
     font-weight: normal;
     cursor: pointer;
@@ -497,16 +497,16 @@ textarea{
 .radio input[type="radio"],
 .radio-inline input[type="radio"],
 .checkbox input[type="checkbox"],
-.checkbox-inline input[type="checkbox"] {
+.checkbox-inline input[type="checkbox"]{
     float: left;
     margin-left: -20px;
 }
 .radio + .radio,
-.checkbox + .checkbox {
+.checkbox + .checkbox{
     margin-top: -5px;
 }
 .radio-inline,
-.checkbox-inline {
+.checkbox-inline{
     display: inline-block;
     padding-left: 20px;
     margin-bottom: 0;
@@ -515,7 +515,7 @@ textarea{
     cursor: pointer;
 }
 .radio-inline + .radio-inline,
-.checkbox-inline + .checkbox-inline {
+.checkbox-inline + .checkbox-inline{
     margin-top: 0;
     margin-left: 10px;
 }
@@ -535,7 +535,7 @@ fieldset[disabled] .checkbox-inline,
 fieldset[disabled] .checkbox label{
     cursor: not-allowed;
 }
-.help-block {
+.help-block{
     display: block;
     margin-top: 5px;
     margin-bottom: 10px;
@@ -543,7 +543,7 @@ fieldset[disabled] .checkbox label{
 }
 /* Alert and Notifications */
 /* http://getbootstrap.com/components/#alerts */
-.alert {
+.alert{
     padding: 15px;
     margin-bottom: 20px;
     border: 1px solid transparent;
@@ -552,62 +552,62 @@ fieldset[disabled] .checkbox label{
     -moz-box-sizing: border-box;
     box-sizing: border-box;
 }
-.alert h4 {
+.alert h4{
     margin-top: 0;
     color: inherit;
 }
-.alert a {
+.alert a{
     font-weight: bold;
 }
 .alert > p,
-.alert > ul {
+.alert > ul{
     margin-bottom: 0;
 }
-.alert > p + p {
+.alert > p + p{
     margin-top: 5px;
 }
-.alert-success {
+.alert-success{
     color: #3c763d;
     background-color: #dff0d8;
     border-color: #d6e9c6;
 }
-.alert-success hr {
+.alert-success hr{
     border-top-color: #c9e2b3;
 }
-.alert-success a {
+.alert-success a{
     color: #2b542c;
 }
-.alert-info {
+.alert-info{
     color: #31708f;
     background-color: #d9edf7;
     border-color: #bce8f1;
 }
-.alert-info hr {
+.alert-info hr{
     border-top-color: #a6e1ec;
 }
-.alert-info a {
+.alert-info a{
     color: #245269;
 }
-.alert-warning {
+.alert-warning{
     color: #8a6d3b;
     background-color: #fcf8e3;
     border-color: #faebcc;
 }
-.alert-warning hr {
+.alert-warning hr{
     border-top-color: #f7e1b5;
 }
-.alert-warning a {
+.alert-warning a{
     color: #66512c;
 }
-.alert-danger {
+.alert-danger{
     color: #a94442;
     background-color: #f2dede;
     border-color: #ebccd1;
 }
-.alert-danger hr {
+.alert-danger hr{
     border-top-color: #e4b9c0;
 }
-.alert-danger a {
+.alert-danger a{
     color: #843534;
 }
 /* Responsive images. Fluid images for posts, comments, and widgets */
@@ -619,7 +619,7 @@ fieldset[disabled] .checkbox label{
 embed,
 iframe,
 object,
-video {
+video{
     margin-bottom: 1.5em;
     max-width: 100%;
 }
@@ -628,7 +628,7 @@ p > iframe,
 p > object,
 span > embed,
 span > iframe,
-span > object {
+span > object{
     margin-bottom: 0;
 }
 /* Blockquote */
@@ -707,7 +707,7 @@ figure.alignleft,
 figure.alignright{
     float: none;
 }
-.aligncenter {
+.aligncenter{
     display: block;
     margin-left: auto;
     margin-right: auto;
@@ -733,12 +733,12 @@ figure.alignright img{
     margin: 0.4em 0 0.4em 1em;
 }
 .site-content blockquote.alignleft,
-.site-content blockquote.alignright {
+.site-content blockquote.alignright{
     width: 30%;
     margin-left: 20%;
     margin-right: 1em;
 }
-.site-content blockquote.alignright {
+.site-content blockquote.alignright{
     margin-left: 1em;
     margin-right: 20%;
 }
@@ -747,14 +747,14 @@ figure.alignright img{
     margin-left: 0;
 }
 .content-sidebar blockquote.alignright,
-.sidebar-content blockquote.alignright {
+.sidebar-content blockquote.alignright{
     margin-right: 0;    
 }
 .site-content blockquote.alignleft p,
-.site-content blockquote.alignright p {
+.site-content blockquote.alignright p{
     margin-bottom: 0;
 }
-figure.wp-caption {
+figure.wp-caption{
     text-align: center;
 }
 .wp-caption{
@@ -763,7 +763,7 @@ figure.wp-caption {
 figure.wp-caption img{
     margin-bottom: 0;
 }
-figcaption {
+figcaption{
     -webkit-box-sizing: border-box;
     -moz-box-sizing: border-box;
     box-sizing: border-box;
@@ -784,18 +784,18 @@ figure.alignleft figcaption{
 figure.alignright figcaption{
     margin-left: 1em;
 }
-.wp-smiley {
+.wp-smiley{
     border: 0;
     margin-bottom: 0;
     margin-top: 0;
     padding: 0;
 }
 /* Assistive text */
-.screen-reader-text {
+.screen-reader-text{
     clip: rect(1px, 1px, 1px, 1px);
     position: absolute;
 }
-.screen-reader-text:focus {
+.screen-reader-text:focus{
     background: #c00;
     color: #fff;
     clip: auto;
@@ -807,7 +807,7 @@ figure.alignright figcaption{
     text-transform: none;
     z-index: 100000; /* Above WP toolbar */
 }
-.hide {
+.hide{
     display: none;
 }
 /* Clearing floats */
@@ -816,25 +816,25 @@ figure.alignright figcaption{
 [class*="content"]:before,
 [class*="content"]:after,
 [class*="site"]:before,
-[class*="site"]:after {
+[class*="site"]:after{
     content: "";
     display: table;
 }
 .hentry:after,
 [class*="content"]:after,
-[class*="site"]:after {
+[class*="site"]:after{
     clear: both;
 }
 /**
  * 3.0 Basic Structure
  * -----------------------------------------------------------------------------
  */
-.site {
+.site{
     max-width: 1440px;
     position: relative;
     margin: 0 auto;
 }
-.main-content {
+.main-content{
     width: 100%;
 }
 #header{
@@ -897,25 +897,25 @@ figure.alignright figcaption{
  */
 /* Ensure that there is no gap between the header and
    the admin bar for WordPress versions before 3.8. */
-#wpadminbar {
+#wpadminbar{
     min-height: 32px;
 }
-#site-header {
+#site-header{
     position: relative;
     z-index: 3;
 }
-.site-header {
+.site-header{
     /*background-color: #fcfcfc;*/
     max-width: 1260px;
     position: relative;
     width: 100%;
     z-index: 4;
 }
-.header-main {
+.header-main{
     min-height: 48px;
     padding: 0 10px;
 }
-.site-title {
+.site-title{
     float: left;
     font-size: 18px;
     font-weight: 700;
@@ -923,7 +923,7 @@ figure.alignright figcaption{
     margin: 0;
 }
 .site-title a,
-.site-title a:hover {
+.site-title a:hover{
     /*color: #fff;*/
 }
 #logo{
@@ -1090,7 +1090,7 @@ figure.alignright figcaption{
     margin-top: -2px;
     background: #c00;
 }
-#nav #menu-toggle {
+#nav #menu-toggle{
     cursor: pointer;
     font-size: 0;
     width: 48px;
@@ -1103,7 +1103,7 @@ figure.alignright figcaption{
     text-align: center;
     display: none;
 }
-#nav #menu-toggle i {
+#nav #menu-toggle i{
     float: left;
     height: 48px;
     width: 48px;
@@ -1122,14 +1122,14 @@ figure.alignright figcaption{
     width: 1440px;
     max-width: 100% !important;
 }
-.featured_video_plus .fluid-width-video-wrapper {
+.featured_video_plus .fluid-width-video-wrapper{
     position: absolute;
     top: 0;
 }
-.content-area {
+.content-area{
     padding-top: 48px;
 }
-.hentry {
+.hentry{
     margin: 0 auto 48px;
 }
 .site-content .entry-content{
@@ -1183,7 +1183,7 @@ figure.alignright figcaption{
 .site-content blockquote p:last-of-type{
     margin-bottom: 0;
 }
-.page-content {
+.page-content{
     margin-bottom: 48px;
 }
 /*.page .entry-content > p:first-of-type:first-letter,*/
@@ -1241,16 +1241,16 @@ figure.alignright img{
  * 6.1 Post Thumbnail
  * -----------------------------------------------------------------------------
  */
-.post-thumbnail {
+.post-thumbnail{
     display: block;
     text-align: center;
     position: relative;
     width: 100%;
     z-index: 0;
 }
-a.post-thumbnail:hover {
+a.post-thumbnail:hover{
 }
-.full-width .post-thumbnail img {
+.full-width .post-thumbnail img{
     display: block;
     margin: 0 auto;
 }
@@ -1280,37 +1280,37 @@ p.post-thumbnail-description a:hover{
  * 6.2 Entry Header
  * -----------------------------------------------------------------------------
  */
-.entry-header {
+.entry-header{
     position: relative;
     z-index: 1;
 }
-.entry-title {
+.entry-title{
     line-height: 1.1;
     text-transform: uppercase;
 }
-.entry-title a {
+.entry-title a{
     color: #2b2b2b;
     text-decoration: none;
 }
-.entry-title a:hover {
+.entry-title a:hover{
     color: #c00;
 }
 /**
  * 6.3 Entry Meta
  * -----------------------------------------------------------------------------
  */
-.entry-meta {
+.entry-meta{
     clear: both;
     color: #777;
     font-size: 0.8em;
     line-height: 1.3333333333;
     text-transform: capitalize;
 }
-.entry-meta a {
+.entry-meta a{
     color: #777;
     text-decoration: none;
 }
-.entry-meta a:hover {
+.entry-meta a:hover{
     color: #c00;
 }
 .entry-categories,
@@ -1399,7 +1399,7 @@ p.post-thumbnail-description a:hover{
  */
 .entry-content,
 .entry-summary,
-.page-content {
+.page-content{
     -webkit-hyphens: auto;
     -moz-hyphens:    auto;
     -ms-hyphens:     auto;
@@ -1407,10 +1407,10 @@ p.post-thumbnail-description a:hover{
 }
 .site-content .entry-content,
 .site-content .entry-summary,
-.page-content {
+.page-content{
     /*padding: 0 7px;*/
 }
-.page .entry-content {
+.page .entry-content{
     padding-top: 0;
 }
 .entry-content h1:first-child,
@@ -1430,80 +1430,80 @@ p.post-thumbnail-description a:hover{
 .page-content h3:first-child,
 .page-content h4:first-child,
 .page-content h5:first-child,
-.page-content h6:first-child {
+.page-content h6:first-child{
     margin-top: 0;
 }
 .entry-content a,
 .entry-summary a,
 .page-content a,
-.comment-content a {
+.comment-content a{
 }
 .entry-content a:hover,
 .entry-summary a:hover,
 .page-content a:hover,
-.comment-content a:hover {
+.comment-content a:hover{
 }
 .entry-content table,
-.comment-content table {
+.comment-content table{
     font-size: 0.8em;
     line-height: 1.2857142857;
     margin-bottom: 24px;
 }
 .entry-content th,
-.comment-content th {
+.comment-content th{
     font-weight: 700;
     padding: 8px;
     text-transform: uppercase;
 }
 .entry-content td,
-.comment-content td {
+.comment-content td{
     padding: 8px;
 }
-.post-edit-link {
+.post-edit-link{
     margin: 0 auto 1.5em;
 }
-.post-edit-link:hover {
+.post-edit-link:hover{
     color: #c00;
 }
 /* Media Elements */
-.hentry .mejs-container {
+.hentry .mejs-container{
     margin: 12px 0 18px;
 }
 .hentry .mejs-mediaelement,
-.hentry .mejs-container .mejs-controls {
+.hentry .mejs-container .mejs-controls{
     background: #000;
 }
 .hentry .mejs-controls .mejs-time-rail .mejs-time-loaded,
-.hentry .mejs-controls .mejs-horizontal-volume-slider .mejs-horizontal-volume-current {
+.hentry .mejs-controls .mejs-horizontal-volume-slider .mejs-horizontal-volume-current{
     background: #fff;
 }
-.hentry .mejs-controls .mejs-time-rail .mejs-time-current {
+.hentry .mejs-controls .mejs-time-rail .mejs-time-current{
     background: #c00;
 }
 .hentry .mejs-controls .mejs-time-rail .mejs-time-total,
-.hentry .mejs-controls .mejs-horizontal-volume-slider .mejs-horizontal-volume-total {
+.hentry .mejs-controls .mejs-horizontal-volume-slider .mejs-horizontal-volume-total{
     background: rgba(255,255,255,.33);
 }
-.hentry .mejs-container .mejs-controls .mejs-time {
+.hentry .mejs-container .mejs-controls .mejs-time{
     padding-top: 9px;
 }
 .hentry .mejs-controls .mejs-time-rail span,
 .hentry .mejs-controls .mejs-horizontal-volume-slider .mejs-horizontal-volume-total,
-.hentry .mejs-controls .mejs-horizontal-volume-slider .mejs-horizontal-volume-current {
+.hentry .mejs-controls .mejs-horizontal-volume-slider .mejs-horizontal-volume-current{
     border-radius: 0;
 }
-.hentry .mejs-overlay-loading {
+.hentry .mejs-overlay-loading{
     background: transparent;
 }
 /* Page links */
-.page-links {
+.page-links{
     clear: both;
     font-weight: 900;
     margin: 1em 0 1.5em;
     text-transform: uppercase;
 }
 .page-links a,
-.page-links > span {
+.page-links > span{
     display: inline-block;
     font-size: 0.8em;
     font-weight: 700;
@@ -1511,14 +1511,14 @@ p.post-thumbnail-description a:hover{
     padding: 7px 16px;
     text-align: center;
 }
-.page-links a {
+.page-links a{
     background: #222;
     color: #fff;
 }
-.page-links a:hover {
+.page-links a:hover{
     background: #c00;
 }
-.page-links > .page-links-title {
+.page-links > .page-links-title{
     margin: 0;
     padding-right: 7px;
 }
@@ -1549,55 +1549,55 @@ h2:hover a.anchor{
  * 6.5 Gallery
  * -----------------------------------------------------------------------------
  */
-.gallery {
+.gallery{
     margin: 0 auto 1.5em;
     text-align: center;
 }
-.gallery-item {
+.gallery-item{
     display: inline-block;
     margin: 0 4px 4px 0;
     overflow: hidden;
     position: relative;
 }
-.gallery-columns-1 .gallery-item {
+.gallery-columns-1 .gallery-item{
     max-width: 100%;
 }
-.gallery-columns-2 .gallery-item {
+.gallery-columns-2 .gallery-item{
     max-width: 48%;
     max-width: -webkit-calc(50% - 4px);
     max-width:         calc(50% - 4px);
 }
-.gallery-columns-3 .gallery-item {
+.gallery-columns-3 .gallery-item{
     max-width: 32%;
     max-width: -webkit-calc(33.3% - 4px);
     max-width:         calc(33.3% - 4px);
 }
-.gallery-columns-4 .gallery-item {
+.gallery-columns-4 .gallery-item{
     max-width: 23%;
     max-width: -webkit-calc(25% - 4px);
     max-width:         calc(25% - 4px);
 }
-.gallery-columns-5 .gallery-item {
+.gallery-columns-5 .gallery-item{
     max-width: 19%;
     max-width: -webkit-calc(20% - 4px);
     max-width:         calc(20% - 4px);
 }
-.gallery-columns-6 .gallery-item {
+.gallery-columns-6 .gallery-item{
     max-width: 15%;
     max-width: -webkit-calc(16.7% - 4px);
     max-width:         calc(16.7% - 4px);
 }
-.gallery-columns-7 .gallery-item {
+.gallery-columns-7 .gallery-item{
     max-width: 13%;
     max-width: -webkit-calc(14.28% - 4px);
     max-width:         calc(14.28% - 4px);
 }
-.gallery-columns-8 .gallery-item {
+.gallery-columns-8 .gallery-item{
     max-width: 11%;
     max-width: -webkit-calc(12.5% - 4px);
     max-width:         calc(12.5% - 4px);
 }
-.gallery-columns-9 .gallery-item {
+.gallery-columns-9 .gallery-item{
     max-width: 9%;
     max-width: -webkit-calc(11.1% - 4px);
     max-width:         calc(11.1% - 4px);
@@ -1610,10 +1610,10 @@ h2:hover a.anchor{
 .gallery-columns-6 .gallery-item:nth-of-type(6n),
 .gallery-columns-7 .gallery-item:nth-of-type(7n),
 .gallery-columns-8 .gallery-item:nth-of-type(8n),
-.gallery-columns-9 .gallery-item:nth-of-type(9n) {
+.gallery-columns-9 .gallery-item:nth-of-type(9n){
     margin-right: 0;
 }
-.gallery-caption {
+.gallery-caption{
     background-color: rgba(0, 0, 0, 0.7);
     -webkit-box-sizing: border-box;
     -moz-box-sizing:    border-box;
@@ -1631,7 +1631,7 @@ h2:hover a.anchor{
     text-align: left;
     width: 100%;
 }
-.gallery-caption:before {
+.gallery-caption:before{
     content: "";
     height: 100%;
     min-height: 49px;
@@ -1640,15 +1640,15 @@ h2:hover a.anchor{
     left: 0;
     width: 100%;
 }
-.gallery-item:hover .gallery-caption {
+.gallery-item:hover .gallery-caption{
     opacity: 1;
 }
 .gallery-columns-7 .gallery-caption,
 .gallery-columns-8 .gallery-caption,
-.gallery-columns-9 .gallery-caption {
+.gallery-columns-9 .gallery-caption{
     display: none;
 }
-.fotorama--wp {
+.fotorama--wp{
     margin: 0 auto 1.5em;
     display: inline-block;
     max-width: 100%;
@@ -1685,7 +1685,7 @@ h2:hover a.anchor{
  * 6.7 Post/Image/Paging Navigation
  * -----------------------------------------------------------------------------
  */
-.nav-links {
+.nav-links{
     float: left;
     width: 100%;
     margin-bottom: 1.5em;
@@ -1706,13 +1706,13 @@ h2:hover a.anchor{
     box-sizing: border-box;
 }
 .post-navigation,
-.image-navigation {
+.image-navigation{
     margin: 0 auto;
     max-width: 800px;
 }
 .post-navigation a,
 .image-navigation .previous-image,
-.image-navigation .next-image {
+.image-navigation .next-image{
     padding: 10px 25px;
     width: 50%;
     float: left;
@@ -1721,7 +1721,7 @@ h2:hover a.anchor{
     box-sizing: border-box;
 }
 .post-navigation a:last-child,
-.image-navigation .next-image {
+.image-navigation .next-image{
     float: right;
     text-align: right;
 }
@@ -1731,11 +1731,11 @@ h2:hover a.anchor{
 }
 .post-navigation a:hover,
 .image-navigation .previous-image:hover,
-.image-navigation .next-image:hover {
+.image-navigation .next-image:hover{
     background: #c00;
 }
 .image-navigation a,
-.post-navigation .meta-nav {
+.post-navigation .meta-nav{
     color: #777;
     font: 400 1.2rem/1.5 'Playfair Display', Georgia, Times, serif;
     font-style: italic;
@@ -1751,17 +1751,17 @@ h2:hover a.anchor{
     text-transform: none;
 }
 .nav-links a:hover,
-.nav-links  a:hover .meta-nav {
+.nav-links  a:hover .meta-nav{
     color: #fff;
 }
 /* Paging Navigation */
-.paging-navigation {
+.paging-navigation{
     margin: 1em 0 2em;
 }
-.paging-navigation .loop-pagination {
+.paging-navigation .loop-pagination{
     text-align: center;
 }
-.paging-navigation .page-numbers {
+.paging-navigation .page-numbers{
     display: inline-block;
     font-size: 0.8em;
     font-weight: 700;
@@ -1769,11 +1769,11 @@ h2:hover a.anchor{
     padding: 7px 16px;
     text-transform: uppercase;
 }
-.paging-navigation a {
+.paging-navigation a{
     color: #222;
 }
 .paging-navigation .page-numbers.current,
-.paging-navigation a:hover {
+.paging-navigation a:hover{
     background: #c00;
     color: #fff;
 }
@@ -1782,16 +1782,16 @@ h2:hover a.anchor{
  * -----------------------------------------------------------------------------
  */
 .attachment #sidebar,
-.attachment .post-thumbnail {
+.attachment .post-thumbnail{
     display: none;
 }
-.attachment .entry-content {
+.attachment .entry-content{
     padding-top: 0;
 }
-.attachment footer.entry-meta {
+.attachment footer.entry-meta{
     text-transform: none;
 }
-.entry-attachment .attachment {
+.entry-attachment .attachment{
     margin-bottom: 24px;
 }
 /**
@@ -1799,7 +1799,7 @@ h2:hover a.anchor{
  * -----------------------------------------------------------------------------
  */
 .archive-title,
-.page-title {
+.page-title{
     font-weight: 200;
     text-align: center;
 }
@@ -1854,13 +1854,13 @@ h2:hover a.anchor{
  * 6.11 Comments
  * -----------------------------------------------------------------------------
  */
-.says {
+.says{
     display: none;
 }
-.required {
+.required{
     color: #c0392b;
 }
-.comment-navigation {
+.comment-navigation{
     float: left;
     width: 100%;
     margin-bottom: 1.5em;
@@ -2013,7 +2013,7 @@ h2:hover a.anchor{
 .comment-edit-link{
     margin-left: 8px;
 }
-.comment-edit-link:hover {
+.comment-edit-link:hover{
     color: #c00;
 }
 .comment-content{
@@ -2061,7 +2061,7 @@ h2:hover a.anchor{
     float: none;
     margin: auto;
 }
-div.bigContact .ui-widget {
+div.bigContact .ui-widget{
     font: 400 1em/1 "Source Sans Pro", Helvetica, Arial, sans-serif;
     text-align: center;
 }
@@ -2142,14 +2142,14 @@ div.bigContact .ui-datepicker,
 div.bigContact .ui-datepicker table,
 div.bigContact .ui-datepicker tr,
 div.bigContact .ui-datepicker td,
-div.bigContact .ui-datepicker th {
+div.bigContact .ui-datepicker th{
     margin: 0;
     padding: 0 !important;
     border: none;
     border-spacing: 0;
 }
 /* Calendar Wrapper */
-div.bigContact .ui-datepicker {
+div.bigContact .ui-datepicker{
     display: none;
     padding: 0;
     cursor: default;
@@ -2165,19 +2165,19 @@ div.bigContact .ui-datepicker td{
     width: 14.2857%; /* 100/7days */
 }
 /* Calendar Header */
-div.bigContact .ui-datepicker-title { text-align: center; }
+div.bigContact .ui-datepicker-title{ text-align: center; }
 /* Month */
-div.bigContact .ui-datepicker-month {
+div.bigContact .ui-datepicker-month{
     position: relative;
     color: #565656;
 }
 /* Year */
-div.bigContact .ui-datepicker-year {
+div.bigContact .ui-datepicker-year{
     font-weight: 200;
 }
 /* Prev Next Month */
 div.bigContact .ui-datepicker-prev,
-div.bigContact .ui-datepicker-next {
+div.bigContact .ui-datepicker-next{
     position: absolute;
     cursor: pointer;
     line-height: 2;
@@ -2185,11 +2185,11 @@ div.bigContact .ui-datepicker-next {
     -moz-border-radius: 0px;
     border-radius: 0px;
 }
-div.bigContact .ui-datepicker-prev {
+div.bigContact .ui-datepicker-prev{
     left: 0;
     padding-left: 0;
 }
-div.bigContact .ui-datepicker-next {
+div.bigContact .ui-datepicker-next{
     right: 0;
     padding-right: 0;
 }
@@ -2226,18 +2226,18 @@ div.bigContact .ui-datepicker-next span:before{
     content:"\f105";
 }
 /* Calendar "Days" */
-div.bigContact .ui-datepicker-calendar th {
+div.bigContact .ui-datepicker-calendar th{
     line-height: 1.5;
     text-align: center;
     font-weight: normal;
     color: #777;
 }
-div.bigContact .ui-datepicker-calendar td {
+div.bigContact .ui-datepicker-calendar td{
     padding: 0 7px;
     text-align: center;
     line-height: 26px;
 }
-div.bigContact .ui-datepicker-calendar .ui-state-default {
+div.bigContact .ui-datepicker-calendar .ui-state-default{
     display: block;
     outline: none;
     text-decoration: none;
@@ -2245,21 +2245,21 @@ div.bigContact .ui-datepicker-calendar .ui-state-default {
     border: 1px solid transparent;
 }
 /* Day Active State*/
-div.bigContact .ui-datepicker-calendar .ui-state-active {
+div.bigContact .ui-datepicker-calendar .ui-state-active{
     color: #6a9113;
     border-color: #6a9113;
 }
 /* Other Months Days*/
-div.bigContact .ui-datepicker-other-month .ui-state-default { color: #565656; }
-div.bigContact .ui-widget-content {
+div.bigContact .ui-datepicker-other-month .ui-state-default{ color: #565656; }
+div.bigContact .ui-widget-content{
     border: 0 none;
     background: #fff;
     color: #222;
 }
-div.bigContact .ui-widget-content a {
+div.bigContact .ui-widget-content a{
     color: #222;
 }
-div.bigContact .ui-widget-header {
+div.bigContact .ui-widget-header{
     border: 0 none;
     border-bottom: 1px solid #ccc;
     padding: 0;
@@ -2270,14 +2270,14 @@ div.bigContact .ui-widget-header {
     -moz-border-radius: 0;
     border-radius: 0;
 }
-div.bigContact .ui-widget-header a {
+div.bigContact .ui-widget-header a{
     color: #222;
     position: absolute;
     top: 0;
 }
 div.bigContact .ui-state-default, 
 div.bigContact .ui-widget-content .ui-state-default, 
-div.bigContact .ui-widget-header .ui-state-default {
+div.bigContact .ui-widget-header .ui-state-default{
     border: 0 none;
     background: none;
     font-weight: 400;
@@ -2293,7 +2293,7 @@ div.bigContact .ui-widget-content .ui-state-hover,
 div.bigContact .ui-widget-header .ui-state-hover,
 div.bigContact .ui-state-focus,
 div.bigContact .ui-widget-content .ui-state-focus,
-div.bigContact .ui-widget-header .ui-state-focus {
+div.bigContact .ui-widget-header .ui-state-focus{
     border: 0 none;
     background: none;
     font-weight: bold;
@@ -2306,26 +2306,26 @@ div.bigContact .ui-state-hover a:visited,
 div.bigContact .ui-state-focus a,
 div.bigContact .ui-state-focus a:hover,
 div.bigContact .ui-state-focus a:link,
-div.bigContact .ui-state-focus a:visited {
+div.bigContact .ui-state-focus a:visited{
     color: #c00;
     text-decoration: none;
 }
 div.bigContact .ui-state-active,
 div.bigContact .ui-widget-content .ui-state-active,
-div.bigContact .ui-widget-header .ui-state-active {
+div.bigContact .ui-widget-header .ui-state-active{
     background: #c00;
     font-weight: bold;
     color: #fff;
 }
 div.bigContact .ui-state-active a,
 div.bigContact .ui-state-active a:link,
-div.bigContact .ui-state-active a:visited {
+div.bigContact .ui-state-active a:visited{
     color: #c00;
     text-decoration: none;
 }
 div.bigContact .ui-state-highlight,
 div.bigContact .ui-widget-content .ui-state-highlight,
-div.bigContact .ui-widget-header .ui-state-highlight {
+div.bigContact .ui-widget-header .ui-state-highlight{
     border: 0 none;
     background: #fbec88;
     color: #363636;
@@ -2333,7 +2333,7 @@ div.bigContact .ui-widget-header .ui-state-highlight {
 }
 div.bigContact .ui-state-highlight a,
 div.bigContact .ui-widget-content .ui-state-highlight a,
-div.bigContact .ui-widget-header .ui-state-highlight a {
+div.bigContact .ui-widget-header .ui-state-highlight a{
     color: #363636;
 }
 #page-contact #ui-timepicker-div-datepicker{
@@ -2352,7 +2352,7 @@ div.bigContact .ui-slider-handle{
     cursor: -moz-grab;
     cursor: -webkit-grab;
 }
-div.bigContact .ui-slider-handle:active { 
+div.bigContact .ui-slider-handle:active{ 
     cursor: grabbing;
     cursor: -moz-grabbing;
     cursor: -webkit-grabbing;
@@ -2365,17 +2365,17 @@ div.bigContact .ui-slider-handle.ui-state-default{
     margin-left: -0.5em;
     border-radius: 0.5em;
 }
-div.bigContact .ui-timepicker-div dl dd {
+div.bigContact .ui-timepicker-div dl dd{
     margin: 8px 10px 10px 85px;
 }
-div.bigContact .ui-timepicker-div .ui_tpicker_time_label {
+div.bigContact .ui-timepicker-div .ui_tpicker_time_label{
     line-height: 34px;
 }
 /**
  * 7.0 Sidebars
  * -----------------------------------------------------------------------------
  */
-#sidebar {
+#sidebar{
     -webkit-box-sizing: border-box;
     -moz-box-sizing:    border-box;
     box-sizing:         border-box;
@@ -2401,7 +2401,7 @@ div.bigContact .ui-timepicker-div .ui_tpicker_time_label {
  * -----------------------------------------------------------------------------
  */
 /* Primary Sidebar, Footer Sidebar */
-.widget {
+.widget{
     float: left;
     width: 100%;
     margin: 0 auto 1.5em;
@@ -2483,11 +2483,11 @@ div.bigContact .ui-timepicker-div .ui_tpicker_time_label {
     color: #ccc;
 }
 /* Calendar Widget */
-.widget_calendar table {
+.widget_calendar table{
     line-height: 2;
     margin: 0;
 }
-.widget_calendar caption {
+.widget_calendar caption{
     background: #444;
     color: #fff;
     font-weight: 700;
@@ -2500,24 +2500,24 @@ div.bigContact .ui-timepicker-div .ui_tpicker_time_label {
     position: relative;
 }
 .widget_calendar tbody td,
-.widget_calendar thead th {
+.widget_calendar thead th{
     text-align: center;
 }
-.widget_calendar tbody a {
+.widget_calendar tbody a{
     background-color: #c00;
     color: #fff;
     display: block;
 }
-.widget_calendar tbody a:hover {
+.widget_calendar tbody a:hover{
     background-color: #c00;
 }
-.widget_calendar tbody a:hover {
+.widget_calendar tbody a:hover{
     color: #fff;
 }
-.widget_calendar #prev {
+.widget_calendar #prev{
     padding-left: 5px;
 }
-.widget_calendar #next {
+.widget_calendar #next{
     padding-right: 5px;
     text-align: right;
 }
@@ -2546,7 +2546,7 @@ div.bigContact .ui-timepicker-div .ui_tpicker_time_label {
 #footer-address i{
     margin-right: 5px;
 }
-.footer-sidebar {
+.footer-sidebar{
     padding-top: 48px;
 }
 #footer-nav,
@@ -2639,13 +2639,13 @@ div.bigContact .ui-timepicker-div .ui_tpicker_time_label {
  * render responsive styling in Windows 8 "snapped" views; IE10+ does not honor
  * the meta tag. See http://core.trac.wordpress.org/ticket/25888.
  */
-@-ms-viewport {
+@-ms-viewport{
     width: device-width;
 }
-@viewport {
+@viewport{
     width: device-width;
 }
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 768px){
     #logo{
         float: none;
         display: inline-block;
@@ -2654,7 +2654,7 @@ div.bigContact .ui-timepicker-div .ui_tpicker_time_label {
         width: 100%;
         clear: both;
     }
-    #nav #menu-toggle {
+    #nav #menu-toggle{
         display: none;
     }
     #nav .menu{
@@ -2665,7 +2665,7 @@ div.bigContact .ui-timepicker-div .ui_tpicker_time_label {
         margin: 0 5px;
     }
 }
-@media screen and (max-width: 640px) {
+@media screen and (max-width: 640px){
     .content-sidebar #main,
     .sidebar-content #main,
     #sidebar{
@@ -2681,11 +2681,11 @@ div.bigContact .ui-timepicker-div .ui_tpicker_time_label {
         padding: 0 !important;
     }
 }
-@media screen and (max-width: 480px) {
+@media screen and (max-width: 480px){
     #logo{
         float: left;
     }
-    #nav #menu-toggle {
+    #nav #menu-toggle{
         display: block;
     }
     #nav .menu{
@@ -2785,7 +2785,7 @@ div.bigContact .ui-timepicker-div .ui_tpicker_time_label {
         width: 100%;
     }
     #comment-list ul, 
-    #comment-list ol {
+    #comment-list ol{
         margin-left: 0;
     }
 }
@@ -2793,7 +2793,7 @@ div.bigContact .ui-timepicker-div .ui_tpicker_time_label {
  * 11.0 Print
  * -----------------------------------------------------------------------------
  */
-@media print {
+@media print{
     body{
         background: none !important; /* Brute force since user agents all print differently. */
         color: #2b2b2b;
