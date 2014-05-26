@@ -4,8 +4,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Big Blank 2.0\n"
 "Report-Msgid-Bugs-To: http://wordpress.org/tags/bigblank\n"
-"POT-Creation-Date: 2014-04-25 20:26-0800\n"
-"PO-Revision-Date: 2014-04-25 20:26-0800\n"
+"POT-Creation-Date: 2014-05-26 03:37-0800\n"
+"PO-Revision-Date: 2014-05-26 03:37-0800\n"
 "Last-Translator: Norik Davtian <@NorikDavtian>\n"
 "Language-Team: Big Employee <@NorikDavtian>\n"
 "Language: en\n"
@@ -111,7 +111,7 @@ msgid "Pages:"
 msgstr ""
 
 #: content-page.php:26 content-profile.php:37 content-team.php:16
-#: content-team.php:49 content.php:28 image.php:22 page-contact.php:27
+#: content-team.php:48 content.php:28 image.php:22 page-contact.php:26
 #: page-templates/forms.php:20 page-templates/home.php:17
 msgid "Edit"
 msgstr ""
@@ -282,10 +282,6 @@ msgstr ""
 
 #: inc/admin-editor.php:22
 msgid "Default Style"
-msgstr ""
-
-#: inc/admin-editor.php:26
-msgid "Drop Cap"
 msgstr ""
 
 #: inc/admin-editor.php:38
@@ -712,7 +708,7 @@ msgid "Add or remove departments"
 msgstr ""
 
 #: inc/custom-taxanomies.php:27
-msgid "No writers found."
+msgid "No department was found."
 msgstr ""
 
 #: inc/filters.php:140
