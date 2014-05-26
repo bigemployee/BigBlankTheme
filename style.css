@@ -2443,7 +2443,7 @@ div.bigContact .ui-timepicker-div .ui_tpicker_time_label{
     background: #fff;
     text-shadow: none;
     box-shadow: none;
-    z-index: 8;
+    z-index: 3;
 }
 .search-form .search-submit:hover,
 .search-form .search-submit:active,
@@ -2476,7 +2476,7 @@ div.bigContact .ui-timepicker-div .ui_tpicker_time_label{
     line-height: 36px;
     color: #999;
     background: #fff; /* to hide html5 search cancel button */
-    z-index: 6;
+    z-index: 2;
     text-align: center;
 }
 .search-form label:focus:after{
