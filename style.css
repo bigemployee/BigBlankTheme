@@ -317,6 +317,7 @@ input[type="submit"]:focus {
     box-shadow: 0 3px #900;
     top: 2px;
     color: #fff;
+    text-decoration: none;
 }
 button:active,
 .button:active,
@@ -2517,6 +2518,12 @@ h2:hover a.anchor{
 .widget_calendar #next {
     padding-right: 5px;
     text-align: right;
+}
+.call2action{
+    text-align: center;
+}
+.call2action .button{
+    margin-right: 0;
 }
 /**
  * 8.0 Footer
