@@ -4,6 +4,7 @@
  * Always call get_footer('layout'); to close tags opened here.
  */
 $layout = bigblank_get_layout();
+$schema = '';
 if (is_home() || is_archive()) {
     $schema = schema(false, 'Blog', false);
     if (is_author()) {
