@@ -8,7 +8,7 @@
     <header class="entry-header">
         <?php if (has_post_thumbnail()): ?>
             <div id="featured-header">
-                <?php the_post_thumbnail('post-thumbnail', 'itemprop=image'); ?>
+                <?php the_post_thumbnail('post-thumbnail', 'property=schema:image'); ?>
             </div>
         <?php endif; ?>
         <?php the_title('<h1 class="entry-title" ' . schema('name', false, false) . '>', '</h1>'); ?>
