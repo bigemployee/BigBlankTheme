@@ -1,0 +1,844 @@
+# Based on Big Blank Theme // by BigEmployee.com
+# Dual Licensed under MIT and GPL3. Enjoy :]
+msgid ""
+msgstr ""
+"Project-Id-Version: Big Blank 2.0\n"
+"Report-Msgid-Bugs-To: http://wordpress.org/tags/bigblank\n"
+"POT-Creation-Date: 2014-05-26 03:37-0800\n"
+"PO-Revision-Date: 2014-05-28 10:16-0000\n"
+"Last-Translator: Jonadabe <jonadabe@hotmail.com>\n"
+"Language-Team: Big Employee <@NorikDavtian>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"X-Generator: Poedit 1.6.5\n"
+"X-Poedit-KeywordsList: __;_e;_n;_x;_ex;_nx\n"
+"X-Poedit-Basepath: ..\n"
+"Language: pt_PT\n"
+"X-Poedit-SearchPath-0: .\n"
+
+#: 404.php:10
+msgid "404 : Not Found"
+msgstr "404 : Página não encontrada"
+
+#: 404.php:13
+msgid "It looks like nothing was found at this location. Maybe try a search?"
+msgstr ""
+"Parece que nesta localização não foi encontrado absolutamente nada. Talvez "
+"seja melhor tentar uma pesquisa."
+
+#: archive.php:24
+#, php-format
+msgid "Daily Archives: %s"
+msgstr "Arquivos Diários: %s"
+
+#: archive.php:26
+#, php-format
+msgid "Monthly Archives: %s"
+msgstr "Arquivos Mensais: %s"
+
+#: archive.php:26
+msgid "F Y"
+msgstr ""
+
+#: archive.php:28
+#, php-format
+msgid "Yearly Archives: %s"
+msgstr "Arquivos Anuais: %s"
+
+#: archive.php:28
+msgid "Y"
+msgstr ""
+
+#: archive.php:33
+msgid "Archives"
+msgstr "Arquivos"
+
+#: author.php:23
+#, php-format
+msgid "All posts by %s"
+msgstr "Todos os artigos por %s"
+
+#: category.php:13
+#, php-format
+msgid "Category Archives: %s"
+msgstr "Arquivos por Categorias: %s"
+
+#: comments.php:20
+#, php-format
+msgid "One thought on &ldquo;%2$s&rdquo;"
+msgstr "Um pensamento sobre &ldquo;%2$s&rdquo;"
+
+#: comments.php:25 comments.php:42
+msgid "Comment navigation"
+msgstr "Navegar pelos comentários"
+
+#: comments.php:26 comments.php:43
+msgid "&larr; Older Comments"
+msgstr "&larr; Comentários antigos"
+
+#: comments.php:27 comments.php:44
+msgid "Newer Comments &rarr;"
+msgstr "Comentários recentes &rarr;"
+
+#: comments.php:48
+msgid "Comments are closed."
+msgstr "Comentários estão encerrados."
+
+#: content-none.php:8
+msgid "Nothing Found"
+msgstr "Nada encontrado"
+
+#: content-none.php:12
+#, php-format
+msgid ""
+"Ready to publish your first post? <a href=\"%1$s\">Get started here</a>."
+msgstr ""
+
+#: content-none.php:14
+msgid ""
+"Sorry, but nothing matched your search terms. Please try again with some "
+"different keywords."
+msgstr ""
+"Pedimos desculpa, mas não encontramos nada de acordo com os termos de "
+"pesquisa. Tente novamente com outros termos."
+
+#: content-none.php:17
+msgid ""
+"It seems we can&rsquo;t find what you&rsquo;re looking for. Perhaps "
+"searching can help."
+msgstr ""
+"Parece que não é possível encontrar o que procura. Talvez pesquisar ajude."
+
+#: content-page.php:17 content.php:41 image.php:39
+msgid "Pages:"
+msgstr "Páginas:"
+
+#: content-page.php:26 content-profile.php:37 content-team.php:16
+#: content-team.php:48 content.php:28 image.php:22 page-contact.php:26
+#: page-templates/forms.php:20 page-templates/home.php:17
+msgid "Edit"
+msgstr "Editar"
+
+#: content.php:25
+msgid "Leave a comment"
+msgstr "Deixar um comentário"
+
+#: content.php:25
+msgid "1 Comment"
+msgstr "1 Comentário"
+
+#: content.php:25
+msgid "% Comments"
+msgstr "% Comentários"
+
+#: content.php:39
+#, php-format
+msgid "Continue Reading %s <span class=\"meta-nav\">&rarr;</span>"
+msgstr "Continuar a ler %s <span class=\"meta-nav\">&rarr;</span>"
+
+#: content.php:52 content.php:55
+msgid ", "
+msgstr ""
+
+#: content.php:59
+msgid "Sticky"
+msgstr "Em destaque"
+
+#: content.php:68
+#, php-format
+msgid "About %s"
+msgstr "Acerca %s"
+
+#: content.php:71
+#, php-format
+msgid "View all posts by %s <span class=\"meta-nav\">&rarr;</span>"
+msgstr "Ver todos os artigos por %s <span class=\"meta-nav\">&rarr;</span>"
+
+#: footer.php:36
+msgid "theme by"
+msgstr ""
+
+#: footer.php:36
+msgid "http://bigemployee.com/"
+msgstr ""
+
+#: footer.php:36
+#, php-format
+msgid "%s"
+msgstr ""
+
+#: functions.php:83
+msgid "Top Primary Menu"
+msgstr ""
+
+#: functions.php:84
+msgid "Footer Menu"
+msgstr ""
+
+#: header.php:27
+msgid "Home"
+msgstr "Início"
+
+#: header.php:32
+msgid "Primary Menu"
+msgstr ""
+
+#: header.php:33
+msgid "Skip to content"
+msgstr ""
+
+#: image.php:49
+msgid "Previous Image"
+msgstr ""
+
+#: image.php:50
+msgid "Next Image"
+msgstr ""
+
+#: inc/admin-back-compat.php:38 inc/admin-back-compat.php:49
+#: inc/admin-back-compat.php:64
+#, php-format
+msgid ""
+"Big Blank requires at least WordPress version 3.8. You are running version "
+"%s. Please upgrade and try again."
+msgstr ""
+
+#: inc/admin-customizer.php:19
+msgid "Display Site Title &amp; Tagline"
+msgstr ""
+
+#: inc/admin-customizer.php:28 inc/admin-theme-options.php:23
+msgid "Contact Settings"
+msgstr "Definições de contacto"
+
+#: inc/admin-customizer.php:37 inc/admin-theme-options.php:28
+msgid "Phone Number"
+msgstr "Telefone"
+
+#: inc/admin-customizer.php:47 inc/admin-theme-options.php:29
+msgid "Address"
+msgstr "Endereço"
+
+#: inc/admin-customizer.php:54
+msgid "Social Links"
+msgstr "Redes Sociais"
+
+#: inc/admin-customizer.php:63 inc/admin-theme-options.php:30
+msgid "Twitter"
+msgstr ""
+
+#: inc/admin-customizer.php:73 inc/admin-theme-options.php:31
+msgid "Facebook"
+msgstr ""
+
+#: inc/admin-customizer.php:83 inc/admin-theme-options.php:32
+msgid "Google+"
+msgstr ""
+
+#: inc/admin-customizer.php:93 inc/admin-theme-options.php:33
+msgid "Instagram"
+msgstr ""
+
+#: inc/admin-customizer.php:103 inc/admin-theme-options.php:34
+msgid "Youtube"
+msgstr ""
+
+#: inc/admin-customizer.php:113 inc/admin-theme-options.php:35
+msgid "Pinterest"
+msgstr ""
+
+#: inc/admin-customizer.php:120
+msgid "Layout"
+msgstr "Apresentação"
+
+#: inc/admin-customizer.php:144 inc/admin-theme-options.php:26
+msgid "Footer Settings"
+msgstr "Definições de Rodapé"
+
+#: inc/admin-customizer.php:153
+msgid "Copyright Text"
+msgstr ""
+
+#: inc/admin-customizer.php:163 inc/admin-theme-options.php:39
+msgid "Footer Text"
+msgstr ""
+
+#: inc/admin-customizer.php:193
+msgid "Big Blank"
+msgstr ""
+
+#: inc/admin-customizer.php:196
+#, php-format
+msgid ""
+"Enhance your site design by using <a href=\"%s\">Featured Images</a> for "
+"posts you&rsquo;d like to stand out (also known as post thumbnails). This "
+"allows you to associate an image with your post without inserting it. Big "
+"Blank uses featured images for posts and pages&mdash;above the title."
+msgstr ""
+
+#: inc/admin-customizer.php:197
+#, php-format
+msgid ""
+"For an in-depth tutorial, and more tips and tricks, visit the <a href=\"%s"
+"\">Big Blank documentation</a>."
+msgstr ""
+
+#: inc/admin-editor.php:22
+msgid "Default Style"
+msgstr "Estilo padrão"
+
+#: inc/admin-editor.php:38
+msgid "Message Boxes"
+msgstr "Caixas de Mensagens"
+
+#: inc/admin-editor.php:41
+msgid "Success"
+msgstr "Sucesso"
+
+#: inc/admin-editor.php:47
+msgid "Info"
+msgstr "Informações"
+
+#: inc/admin-editor.php:53
+msgid "Warning"
+msgstr "Aviso"
+
+#: inc/admin-editor.php:59
+msgid "Danger"
+msgstr "Perigo"
+
+#: inc/admin-theme-options.php:24
+msgid "Social Media Links"
+msgstr ""
+
+#: inc/admin-theme-options.php:25
+msgid "General Layout Settings"
+msgstr ""
+
+#: inc/admin-theme-options.php:36
+msgid "Default Layout"
+msgstr ""
+
+#: inc/admin-theme-options.php:37
+msgid "Comment Settings"
+msgstr ""
+
+#: inc/admin-theme-options.php:38
+msgid "Footer Copyright"
+msgstr ""
+
+#: inc/admin-theme-options.php:40
+msgid "Analytics JavaScript"
+msgstr ""
+
+#: inc/admin-theme-options.php:59 inc/admin-theme-options.php:60
+msgid "Theme Options"
+msgstr "Opções de Tema"
+
+#: inc/admin-theme-options.php:77
+msgid "Few notes about these Theme Options:"
+msgstr ""
+
+#: inc/admin-theme-options.php:78
+msgid "Page and Post layout settings overwrite these Theme Option settings."
+msgstr ""
+
+#: inc/admin-theme-options.php:79
+msgid ""
+"Comment settings in Theme Options overwrite the individual Page and Post "
+"settings:"
+msgstr ""
+
+#: inc/admin-theme-options.php:80
+msgid ""
+"Remember to click \"Save Changes\" to save any changes you have made to the "
+"theme options."
+msgstr ""
+
+#: inc/admin-theme-options.php:82
+msgid "For more information:"
+msgstr ""
+
+#: inc/admin-theme-options.php:83
+msgid ""
+"<a href=\"http://codex.wordpress.org/Appearance_Theme_Options_Screen\" "
+"target=\"_blank\">Documentation on Theme Options</a>"
+msgstr ""
+
+#: inc/admin-theme-options.php:84
+msgid ""
+"<a href=\"http://wordpress.org/support/\" target=\"_blank\">Support Forums</"
+"a>"
+msgstr ""
+
+#: inc/admin-theme-options.php:90
+msgid "Overview"
+msgstr ""
+
+#: inc/admin-theme-options.php:106
+msgid "Content on left"
+msgstr ""
+
+#: inc/admin-theme-options.php:111
+msgid "Content on right"
+msgstr ""
+
+#: inc/admin-theme-options.php:116
+msgid "One-column, no sidebar"
+msgstr ""
+
+#: inc/admin-theme-options.php:139
+msgid "Copyright"
+msgstr ""
+
+#: inc/admin-theme-options.php:140
+#, php-format
+msgid "Proudly powered by %s"
+msgstr ""
+
+#: inc/admin-theme-options.php:261
+msgid "Show Comments on Pages"
+msgstr "Ver Comentários em Páginas"
+
+#: inc/admin-theme-options.php:265
+msgid "Show Comments on Posts"
+msgstr "Ver Comentários em Artigos"
+
+#: inc/admin-theme-options.php:329
+#, php-format
+msgid "%s Options"
+msgstr "%s Opções"
+
+#: inc/admin-theme-plugins.php:103 inc/class-tgm-plugin-activation.php:196
+msgid "Install Required Plugins"
+msgstr ""
+
+#: inc/admin-theme-plugins.php:104 inc/class-tgm-plugin-activation.php:197
+msgid "Install Plugins"
+msgstr ""
+
+#: inc/admin-theme-plugins.php:105 inc/class-tgm-plugin-activation.php:198
+#, php-format
+msgid "Installing Plugin: %s"
+msgstr ""
+
+#: inc/admin-theme-plugins.php:106
+msgid "Something went wrong with the plugin API."
+msgstr ""
+
+#: inc/admin-theme-plugins.php:117 inc/class-tgm-plugin-activation.php:210
+msgid "Return to Required Plugins Installer"
+msgstr ""
+
+#: inc/admin-theme-plugins.php:118 inc/class-tgm-plugin-activation.php:212
+#: inc/class-tgm-plugin-activation.php:1948
+msgid "Plugin activated successfully."
+msgstr ""
+
+#: inc/admin-theme-plugins.php:119
+#, php-format
+msgid "All plugins installed and activated successfully. %s"
+msgstr ""
+
+#: inc/class-tgm-plugin-activation.php:199
+msgid "Something went wrong."
+msgstr ""
+
+#: inc/class-tgm-plugin-activation.php:211
+msgid "Return to the dashboard"
+msgstr "Voltar ao Painel"
+
+#: inc/class-tgm-plugin-activation.php:213
+#: inc/class-tgm-plugin-activation.php:1638
+msgid "The following plugin was activated successfully:"
+msgstr ""
+
+#: inc/class-tgm-plugin-activation.php:214
+#, php-format
+msgid "All plugins installed and activated successfully. %1$s"
+msgstr ""
+
+#: inc/class-tgm-plugin-activation.php:215
+msgid "Dismiss this notice"
+msgstr ""
+
+#: inc/class-tgm-plugin-activation.php:544
+#: inc/class-tgm-plugin-activation.php:2165
+msgid "Return to the Dashboard"
+msgstr ""
+
+#: inc/class-tgm-plugin-activation.php:1174
+msgid "Private Repository"
+msgstr ""
+
+#: inc/class-tgm-plugin-activation.php:1177
+msgid "Pre-Packaged"
+msgstr ""
+
+#: inc/class-tgm-plugin-activation.php:1182
+msgid "WordPress Repository"
+msgstr ""
+
+#: inc/class-tgm-plugin-activation.php:1185
+msgid "Required"
+msgstr "Obrigatório"
+
+#: inc/class-tgm-plugin-activation.php:1185
+msgid "Recommended"
+msgstr "Recomendado"
+
+#: inc/class-tgm-plugin-activation.php:1188
+msgid "Not Installed"
+msgstr "Não instalado"
+
+#: inc/class-tgm-plugin-activation.php:1190
+msgid "Installed But Not Activated"
+msgstr "Instalado Mas Não Ativado"
+
+#: inc/class-tgm-plugin-activation.php:1290
+#: inc/class-tgm-plugin-activation.php:1398
+msgid "Install"
+msgstr "Instalar"
+
+#: inc/class-tgm-plugin-activation.php:1312
+#: inc/class-tgm-plugin-activation.php:1399
+msgid "Activate"
+msgstr "Ativar"
+
+#: inc/class-tgm-plugin-activation.php:1361
+#, php-format
+msgid ""
+"No plugins to install or activate. <a href=\"%1$s\" title=\"Return to the "
+"Dashboard\">Return to the Dashboard</a>"
+msgstr ""
+
+#: inc/class-tgm-plugin-activation.php:1377
+msgid "Plugin"
+msgstr ""
+
+#: inc/class-tgm-plugin-activation.php:1378
+msgid "Source"
+msgstr ""
+
+#: inc/class-tgm-plugin-activation.php:1379
+msgid "Type"
+msgstr "Tipo"
+
+#: inc/class-tgm-plugin-activation.php:1380
+msgid "Status"
+msgstr ""
+
+#: inc/class-tgm-plugin-activation.php:1508
+msgid "No plugins are available to be installed at this time."
+msgstr ""
+
+#: inc/class-tgm-plugin-activation.php:1616
+msgid "No plugins are available to be activated at this time."
+msgstr ""
+
+#: inc/class-tgm-plugin-activation.php:1931
+msgid "Install package not available."
+msgstr ""
+
+#: inc/class-tgm-plugin-activation.php:1932
+#, php-format
+msgid "Downloading install package from <span class=\"code\">%s</span>&#8230;"
+msgstr ""
+
+#: inc/class-tgm-plugin-activation.php:1933
+msgid "Unpacking the package&#8230;"
+msgstr ""
+
+#: inc/class-tgm-plugin-activation.php:1934
+msgid "Installing the plugin&#8230;"
+msgstr ""
+
+#: inc/class-tgm-plugin-activation.php:1935
+msgid "Plugin install failed."
+msgstr ""
+
+#: inc/class-tgm-plugin-activation.php:1936
+msgid "Plugin installed successfully."
+msgstr ""
+
+#: inc/class-tgm-plugin-activation.php:1947
+msgid "Plugin activation failed."
+msgstr ""
+
+#: inc/class-tgm-plugin-activation.php:2061
+msgid ""
+"The installation and activation process is starting. This process may take a "
+"while on some hosts, so please be patient."
+msgstr ""
+
+#: inc/class-tgm-plugin-activation.php:2062
+#, php-format
+msgid "%1$s installed and activated successfully."
+msgstr ""
+
+#: inc/class-tgm-plugin-activation.php:2062
+#: inc/class-tgm-plugin-activation.php:2071
+msgid "Show Details"
+msgstr "Ver Detalhes"
+
+#: inc/class-tgm-plugin-activation.php:2062
+#: inc/class-tgm-plugin-activation.php:2071
+msgid "Hide Details"
+msgstr "Esconder Detalhes"
+
+#: inc/class-tgm-plugin-activation.php:2063
+msgid "All installations and activations have been completed."
+msgstr ""
+
+#: inc/class-tgm-plugin-activation.php:2064
+#, php-format
+msgid "Installing and Activating Plugin %1$s (%2$d/%3$d)"
+msgstr ""
+
+#: inc/class-tgm-plugin-activation.php:2068
+msgid ""
+"The installation process is starting. This process may take a while on some "
+"hosts, so please be patient."
+msgstr ""
+
+#: inc/class-tgm-plugin-activation.php:2069
+#, php-format
+msgid "An error occurred while installing %1$s: <strong>%2$s</strong>."
+msgstr ""
+
+#: inc/class-tgm-plugin-activation.php:2070
+#, php-format
+msgid "The installation of %1$s failed."
+msgstr ""
+
+#: inc/class-tgm-plugin-activation.php:2071
+#, php-format
+msgid "%1$s installed successfully."
+msgstr ""
+
+#: inc/class-tgm-plugin-activation.php:2072
+msgid "All installations have been completed."
+msgstr ""
+
+#: inc/class-tgm-plugin-activation.php:2073
+#, php-format
+msgid "Installing Plugin %1$s (%2$d/%3$d)"
+msgstr ""
+
+#: inc/custom-post-types.php:14 inc/custom-post-types.php:15
+#: inc/custom-post-types.php:26
+msgid "Team"
+msgstr "Equipa"
+
+#: inc/custom-post-types.php:16
+msgid "Add New"
+msgstr "Adicionar Novo"
+
+#: inc/custom-post-types.php:17
+msgid "Add New Profile"
+msgstr "Adicionar Novo Perfil"
+
+#: inc/custom-post-types.php:18
+msgid "Edit Profile"
+msgstr "Editar Perfil"
+
+#: inc/custom-post-types.php:19
+msgid "New Profile"
+msgstr "Novo Perfil"
+
+#: inc/custom-post-types.php:20
+msgid "All Profiles"
+msgstr "Todos os Perfis"
+
+#: inc/custom-post-types.php:21
+msgid "View Profile"
+msgstr "Ver Perfil"
+
+#: inc/custom-post-types.php:22
+msgid "Search Profiles"
+msgstr "Pesquisar Perfil"
+
+#: inc/custom-post-types.php:23
+msgid "No profile was found"
+msgstr "Nenhum Perfil foi encontrado"
+
+#: inc/custom-post-types.php:24
+msgid "No profile was found in Trash"
+msgstr "Nenhum perfil foi encontrado no Lixo"
+
+#: inc/custom-taxanomies.php:14 inc/custom-taxanomies.php:28
+msgid "Departments"
+msgstr "Departamentos"
+
+#: inc/custom-taxanomies.php:15
+msgid "Department"
+msgstr "Departamento"
+
+#: inc/custom-taxanomies.php:16
+msgid "Search Departments"
+msgstr "Pesquisar Departamentos"
+
+#: inc/custom-taxanomies.php:17
+msgid "All Departments"
+msgstr "Todos os Departamentos"
+
+#: inc/custom-taxanomies.php:18
+msgid "Parent Department"
+msgstr "Departamento Parent"
+
+#: inc/custom-taxanomies.php:19
+msgid "Parent Department:"
+msgstr "Departamento Parente:"
+
+#: inc/custom-taxanomies.php:20
+msgid "Edit Department"
+msgstr "Editar Departamento"
+
+#: inc/custom-taxanomies.php:21
+msgid "Update Department"
+msgstr "Atualizar Departamento"
+
+#: inc/custom-taxanomies.php:22
+msgid "Add New Department"
+msgstr "Adicionar Novo Departamento"
+
+#: inc/custom-taxanomies.php:23
+msgid "New Department Name"
+msgstr "Novo Nome de Departamento"
+
+#: inc/custom-taxanomies.php:25
+msgid "Add or remove departments"
+msgstr "Adicionar ou Eliminar Departamentos"
+
+#: inc/custom-taxanomies.php:27
+msgid "No department was found."
+msgstr "Nenhum Departamento foi encontrado."
+
+#: inc/filters.php:140
+#, php-format
+msgid "Page %s"
+msgstr "Página %s"
+
+#: inc/template-tags.php:133
+msgid "&larr; Previous"
+msgstr "&larr; Anterior"
+
+#: inc/template-tags.php:134
+msgid "Next &rarr;"
+msgstr "Posterior &rarr;"
+
+#: inc/template-tags.php:139
+msgid "Posts navigation"
+msgstr "Navegação nos Artigos"
+
+#: inc/template-tags.php:171
+msgid "Post navigation"
+msgstr "Navegar no Artigo"
+
+#: inc/template-tags.php:175
+msgid "<span class=\"meta-nav\">Published In</span>%title"
+msgstr "<span class=\"meta-nav\">Publicado em</span>%title"
+
+#: inc/template-tags.php:177
+msgid "<span class=\"meta-nav\">Previous Post</span>%title"
+msgstr "<span class=\"meta-nav\">Artigo Anterior</span>%title"
+
+#: inc/template-tags.php:178
+msgid "<span class=\"meta-nav\">Next Post</span>%title"
+msgstr "<span class=\"meta-nav\">Artigo Seguinte</span>%title"
+
+#: inc/template-tags.php:316
+msgid "Post Layout"
+msgstr "Apresentação do Artigo"
+
+#: inc/template-tags.php:317
+msgid "Page Layout"
+msgstr "Página do Artigo"
+
+#: inc/widget-call-to-action.php:17
+msgid "Call to Action Widget"
+msgstr ""
+
+#: inc/widget-call-to-action.php:18
+msgid "A text widget with a Call to Action button."
+msgstr ""
+
+#: inc/widget-call-to-action.php:54
+msgid "Click Here"
+msgstr "Clique Aqui"
+
+#: inc/widget-call-to-action.php:55
+msgid "#"
+msgstr ""
+
+#: inc/widget-call-to-action.php:58 inc/widget-title.php:37
+msgid "Title:"
+msgstr ""
+
+#: inc/widget-call-to-action.php:62
+msgid "Content:"
+msgstr ""
+
+#: inc/widget-call-to-action.php:66
+msgid "Button Text:"
+msgstr ""
+
+#: inc/widget-call-to-action.php:70
+msgid "Button Link:"
+msgstr ""
+
+#: inc/widget-title.php:14
+msgid "Title Widget"
+msgstr ""
+
+#: inc/widget-title.php:15
+msgid "Widget Adds Title with a Heading tag"
+msgstr ""
+
+#: inc/widget-title.php:34
+msgid "Title"
+msgstr ""
+
+#: inc/widgets-sidebars.php:44
+msgid "Primary Sidebar"
+msgstr ""
+
+#: inc/widgets-sidebars.php:45
+msgid "Sidebar appears next to content."
+msgstr ""
+
+#: inc/widgets-sidebars.php:55
+msgid "Footer Call to Action"
+msgstr ""
+
+#: inc/widgets-sidebars.php:56
+msgid "This \"Call to Action\" area appears after our content"
+msgstr ""
+
+#: inc/widgets-sidebars.php:66
+msgid "Newsletter"
+msgstr ""
+
+#: inc/widgets-sidebars.php:67
+msgid "Newsletter widget appears in footer section on every page."
+msgstr ""
+
+#: inc/widgets-sidebars.php:77
+msgid "Footer"
+msgstr ""
+
+#: inc/widgets-sidebars.php:78
+msgid "Footer widget area"
+msgstr ""
+
+#: search.php:11
+#, php-format
+msgid "Search Results for: %s"
+msgstr "Resultados de Pesquisa para: %s"
+
+#: tag.php:15
+#, php-format
+msgid "Tag Archives: %s"
+msgstr "Arquivos de Tags: %s"
