@@ -108,7 +108,7 @@ endif;
  * @return array The filtered body class list.
  */
 function bigblank_body_classes($classes) {
-    $classes[] = 'hfeed site';
+    $classes[] = (is_front_page()) ? 'site' : 'hfeed site';
     return $classes;
 }
 
@@ -253,3 +253,16 @@ function bigblank_remove_comment_allowed_tags_notes($defaults) {
 }
 
 add_filter('comment_form_defaults', 'bigblank_remove_comment_allowed_tags_notes');
+
+/**
+ * Remove 'hentry' from post_class()
+ * @link https://gist.github.com/jaredatch/1629862
+ */
+function bigblank_remove_hentry_from_homepage($class) {
+    if(is_front_page()){
+        $class = array_diff($class, array('hentry'));
+    }
+    return $class;
+}
+
+add_filter('post_class', 'bigblank_remove_hentry_from_homepage');
