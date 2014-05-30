@@ -257,11 +257,12 @@ function bigblank_post_thumbnail() {
         <div class="post-thumbnail">
             <?php the_post_thumbnail('post-thumbnail', 'itemprop=image'); ?>
             <?php
-            $thumb_description = get_post(get_post_thumbnail_id())->post_content;
-            if (strlen($thumb_description) !== 0):
-                ?>
-                <p class="post-thumbnail-description"><?php echo get_post(get_post_thumbnail_id())->post_content; ?></p>
-                <?php
+            if ($post = get_post(get_post_thumbnail_id())):
+                if ($thumb_description = trim($post->post_content)):
+                    ?>
+                    <p class="post-thumbnail-description"><?php echo $thumb_description ?></p>
+                    <?php
+                endif;
             endif;
             ?>
         </div>
