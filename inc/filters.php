@@ -231,7 +231,7 @@ function bigblank_img_caption_shortcode_filter($val, $attr, $content = null) {
         $id = esc_attr($id);
 
     // Add itemprop="contentURL" to image - Ugly hack
-    $content = str_replace('<img', '<img itemprop="contentURL"', $content);
+    $content = str_replace('<img', '<img itemprop="image"', $content);
 
     return '<figure id="' . $id . '" aria-describedby="figcaption_' . $id . '" class="wp-caption ' . esc_attr($align) . '">' . do_shortcode($content) . '<figcaption id="figcaption_' . $id . '" class="wp-caption-text" itemprop="description" style="width: ' . (0 + (int) $width) . 'px">' . $caption . '</figcaption></figure>';
 }
