@@ -1,4 +1,4 @@
-; /* Let's make sure all functions close before we start writing our JS code */
+/* Let's make sure all functions close before we start writing our JS code */
 (function($, window, document) {
     //'use strict'; // I ♥ JS
 
