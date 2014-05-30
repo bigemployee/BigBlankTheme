@@ -255,7 +255,7 @@ function bigblank_post_thumbnail() {
     if (is_singular()) :
         ?>
         <div class="post-thumbnail">
-            <?php the_post_thumbnail('post-thumbnail', 'itemprop=image'); ?>
+            <?php the_post_thumbnail('post-thumbnail', 'property=schema:image'); ?>
             <?php
             if ($post = get_post(get_post_thumbnail_id())):
                 if ($thumb_description = trim($post->post_content)):
@@ -268,7 +268,7 @@ function bigblank_post_thumbnail() {
         </div>
     <?php else : ?>
         <a class="post-thumbnail" href="<?php the_permalink(); ?>">
-            <?php the_post_thumbnail('post-thumbnail', 'itemprop=image'); ?>
+            <?php the_post_thumbnail('post-thumbnail', 'property=schema:image'); ?>
         </a>
     <?php
     endif; // End is_singular()

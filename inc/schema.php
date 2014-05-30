@@ -14,7 +14,8 @@
  * @param string $itemprop Item Property in camelCase separated with a space.
  */
 function itemprop($itemprop = '') {
-    return 'itemprop="' . $itemprop . '"';
+    // changing from Microdata to RDFa Lite 1.1 notation
+    return 'property="schema:' . $itemprop . '"';
 }
 
 /**
@@ -54,12 +55,14 @@ function itemtype() {
  */
 function schema($itemprop = '', $itemtype = '', $echo = true) {
     if ($itemprop && $itemtype) {
-        $schema = itemprop($itemprop) . ' itemscope="" itemtype="http://schema.org/' . $itemtype . '"';
+        // changing from Microdata to RDFa Lite 1.1 notation
+        $schema = itemprop($itemprop) . 'typeof="schema:' . $itemtype . '"';
     } elseif (empty($itemprop)) {
         if (empty($itemtype)) {
             $itemtype = itemtype();
         }
-        $schema = 'itemscope="" itemtype="http://schema.org/' . $itemtype . '"';
+        // changing from Microdata to RDFa Lite 1.1 notation
+        $schema = 'typeof="schema:' . $itemtype . '"';
     } else {
         $schema = itemprop($itemprop);
     }

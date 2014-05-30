@@ -12,5 +12,5 @@ if (is_home() || is_archive()) {
     }
 }
 ?>
-<div id="content" class="site-content<?php echo $layout ? ' ' . $layout : '' ?>"<?php echo $schema ?>>
+<div id="content" class="site-content<?php echo $layout ? ' ' . $layout : '' ?>"<?php echo $schema ? ' ' . $schema : '' ?>>
     <div id="main" role="main">
