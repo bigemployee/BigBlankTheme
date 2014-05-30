@@ -694,6 +694,7 @@ code{
     border-radius: 3px;
 }
 pre code{
+    border: 0 none;
     padding: 0;
 }
 /* Alignment */
