@@ -906,12 +906,7 @@ figure.alignright figcaption{
 #wpadminbar{
     min-height: 32px;
 }
-#site-header{
-    position: relative;
-    z-index: 3;
-}
 .site-header{
-    /*background-color: #fcfcfc;*/
     max-width: 1260px;
     position: relative;
     width: 100%;
@@ -1020,7 +1015,6 @@ figure.alignright figcaption{
 #nav .menu li.focus ul,
 #nav .menu li:hover ul{
     margin-left: -90px;
-    /*display: block;*/
 }
 #nav .menu li li{
     margin: 0;
@@ -1116,15 +1110,11 @@ figure.alignright figcaption{
     line-height: 48px;
     font-size: 32px;
 }
-#nav.toggled-on #nav .menu{
-    /*display: block;*/
-}
 /**
  * 6.0 Content
  * -----------------------------------------------------------------------------
  */
-/* For Home Demo testing */
-#home .fluidvids{
+#home .fluidvids{ /* For Home Demo testing */
     width: 1440px;
     max-width: 100% !important;
 }
@@ -1215,13 +1205,13 @@ figure.alignright{
 figure.alignleft figcaption,
 figure.alignleft img{
     float: left;
-    /*margin-left: -100px;*/
+    /*margin-left: -100px;*/ /* pull images out */
 }
 .site-content p img.alignright,
 figure.alignright figcaption,
 figure.alignright img{
     float: right;
-    /*margin-right: -100px;*/
+    /*margin-right: -100px;*/ /* pull images out */
 }
 .site-content p,
 .site-content dl,
@@ -2058,10 +2048,6 @@ h2:hover a.anchor{
  * 6.12 Contact Page
  * -----------------------------------------------------------------------------
  */
-/**
- * 6.12 Contact Page
- * -----------------------------------------------------------------------------
- */
 #page-contact .entry-content > p:first-of-type:first-letter{
     font-size: inherit;
     line-height: inherit;
@@ -2145,7 +2131,7 @@ div.bigContact .bigContact-halfSize:nth-child(odd){
 }
 /** 
  * Flat jQuery UI Datepicker
-  */
+ */
 /* Reset */
 div.bigContact .ui-datepicker,
 div.bigContact .ui-datepicker table,
