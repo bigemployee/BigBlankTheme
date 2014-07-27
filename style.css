@@ -692,6 +692,8 @@ code{
     padding: 0 3px;
     border: 1px solid #ffc42f;
     border-radius: 3px;
+    -ms-word-wrap: break-word;
+    word-wrap: break-word;
 }
 pre code{
     border: 0 none;
