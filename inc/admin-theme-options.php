@@ -33,6 +33,7 @@ function bigblank_theme_options_init() {
     add_settings_field('social-instagram', __('Instagram', 'bigblank'), 'bigblank_settings_field_instagram', 'theme_options', 'social', array('label_for' => 'social-instagram'));
     add_settings_field('social-youtube', __('Youtube', 'bigblank'), 'bigblank_settings_field_youtube', 'theme_options', 'social', array('label_for' => 'social-youtube'));
     add_settings_field('social-pinterest', __('Pinterest', 'bigblank'), 'bigblank_settings_field_pinterest', 'theme_options', 'social', array('label_for' => 'social-pinterest'));
+	    add_settings_field('social-whatsapp', __('Whatsapp', 'bigblank'), 'bigblank_settings_field_pinterest', 'theme_options', 'social', array('label_for' => 'social-whatsapp'));
     add_settings_field('layout', __('Default Layout', 'bigblank'), 'bigblank_settings_field_layout', 'theme_options', 'general');
     add_settings_field('comments', __('Comment Settings', 'bigblank'), 'bigblank_settings_field_comments', 'theme_options', 'general');
     add_settings_field('footer-copyright', __('Footer Copyright', 'bigblank'), 'bigblank_settings_field_footer_copyright', 'theme_options', 'footer', array('label_for' => 'footer-copyright'));
@@ -133,6 +134,7 @@ function bigblank_get_default_theme_options() {
         'instagram' => '',
         'youtube' => '',
         'pinterest' => '',
+		'whatsapp' => '',
         'theme_layout' => 'content-sidebar',
         'page_comments' => 'on',
         'post_comments' => 'on',
@@ -221,12 +223,22 @@ function bigblank_settings_field_youtube() {
 }
 
 /**
- * render the youtube settings
+ * render the pinterest settings
  */
 function bigblank_settings_field_pinterest() {
     $options = bigblank_get_theme_options();
     ?>
     <input type="text" class="large-text" id="social-pinterest" name="bigblank_theme_options[pinterest]" value="<?php echo esc_attr($options['pinterest']); ?>" />
+    <?php
+}
+
+/**
+ * render the whatsapp settings
+ */
+function bigblank_settings_field_whatsapp() {
+    $options = bigblank_get_theme_options();
+    ?>
+    <input type="text" class="large-text" id="social-whatsapp" name="bigblank_theme_options[whatsapp]" value="<?php echo esc_attr($options['whatsapp']); ?>" />
     <?php
 }
 
@@ -368,6 +380,9 @@ function bigblank_theme_options_validate($input) {
     }
     if (isset($input['pinterest'])) {
         $output['pinterest'] = $input['pinterest'];
+    }
+	if (isset($input['whatsapp'])) {
+        $output['whatsapp'] = $input['whatsapp'];
     }
     if (isset($input['theme_layout']) && array_key_exists($input['theme_layout'], bigblank_layouts())) {
         $output['theme_layout'] = $input['theme_layout'];

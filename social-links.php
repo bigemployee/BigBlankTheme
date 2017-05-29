@@ -12,8 +12,9 @@ $googleplus = $options['googleplus'];
 $instagram = $options['instagram'];
 $youtube = $options['youtube'];
 $pinterest = $options['pinterest'];
+$whatsapp = $options['whatsapp'];
 ?>
-<?php if ($facebook || $twitter || $googleplus || $instagram || $youtube || $pinterest) : ?>
+<?php if ($facebook || $twitter || $googleplus || $instagram || $youtube || $pinterest|| $whatsapp) : ?>
     <div class="social-media">
         <?php if ($facebook) : ?>
             <a href="<?php echo $facebook; ?>" class="fa fa-facebook"></a>
@@ -32,6 +33,9 @@ $pinterest = $options['pinterest'];
         <?php endif; ?>
         <?php if ($pinterest) : ?>
             <a href="<?php echo $pinterest; ?>" class="fa fa-pinterest"></a>
+        <?php endif; ?>
+        <?php if ($whatsapp) : ?>
+            <a href="<?php echo $whatsapp; ?>" class="fa fa-whatsapp"></a>
         <?php endif; ?>
     </div><!-- .social-media -->
 <?php endif; ?>

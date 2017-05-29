@@ -114,6 +114,16 @@ function bigblank_customize_register($wp_customize) {
         'section' => 'social',
         'settings' => 'bigblank_theme_options[pinterest]',
     ));
+	    // whatsapp
+    $wp_customize->add_setting('bigblank_theme_options[whatsapp]', array(
+        'type' => 'option',
+        'default' => $defaults['whatsapp'],
+    ));
+    $wp_customize->add_control('bigblank_theme_options[whatsapp]', array(
+        'label' => __('Whatsapp', 'bigblank'),
+        'section' => 'social',
+        'settings' => 'bigblank_theme_options[whatsapp]',
+    ));
 
     // Default Layout
     $wp_customize->add_section('bigblank_layout', array(

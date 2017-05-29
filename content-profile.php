@@ -19,6 +19,7 @@
         <?php $instagram = get_post_meta(get_the_ID(), 'instagram', true); ?>
         <?php $youtube = get_post_meta(get_the_ID(), 'youtube', true); ?>
         <?php $pinterest = get_post_meta(get_the_ID(), 'pinterest', true); ?>
+        <?php $whatsapp = get_post_meta(get_the_ID(), 'whatsapp', true); ?>
         <?php bigblank_print($title, '<h2 ' . schema('jobTitle', false, false) . '><em>(', ')</em></h2>'); ?>
         <?php bigblank_print($facebook, '<a href="', '"><i class="fa fa-facebook-square"></i></a>'); ?>
         <?php bigblank_print($twitter, '<a href="', '"><i class="fa fa-twitter-square"></i></a>'); ?>
@@ -26,6 +27,7 @@
         <?php bigblank_print($instagram, '<a href="', '"><i class="fa fa-instagram"></i></a>'); ?>
         <?php bigblank_print($youtube, '<a href="', '"><i class="fa fa-youtube-play"></i></a>'); ?>
         <?php bigblank_print($pinterest, '<a href="', '"><i class="fa fa-pinterest"></i></a>'); ?>
+        <?php bigblank_print($whatsapp, '<a href="', '"><i class="fa fa-whatsapp"></i></a>'); ?>
         <?php if (has_term('', 'department')) : ?>
             <span class="entry-meta entry-categories department">
                 <?php echo get_the_term_list($post->ID, 'department', '', ', ', ''); ?>
